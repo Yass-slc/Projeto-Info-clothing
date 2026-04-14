@@ -24,26 +24,3 @@ body{
   
    object-fit: cover;
   }
-
-  <button class="botao-animado">Animado</button>
-  
-
-<style>
-.botao-animado {
-background-color: #f44336; /* Vermelho */
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 16px;
-transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.botao-animado:hover {
-background-color: #d32f2f; /* Vermelho mais escuro */
-transform: scale(1.1); /* Aumenta levemente no hover */
-}
-</style>
-   
- }
