@@ -41,6 +41,7 @@ align-items: flex-start
    border-radius: 5px;
    width: 300px;
    height: 300px;
+<<<<<<< HEAD
 }
 
 /* O Botão Flash Card */
@@ -99,4 +100,6 @@ align-items: flex-start
 
 .flashcard-btn-1:hover .card-image {
    transform: scale(1.1); /* Zoom suave na imagem */
+=======
+>>>>>>> fdc6c72f337152271c3385e9897fe617caaa239e
 }
