@@ -6,8 +6,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Bem-vindo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      /* Container para agrupar cada opção */
+      .opcao-container {
+        display: flex;
+        align-items: center; /* Alinha verticalmente o radio e o texto */
+        margin-bottom: 8px;  /* Espaçamento entre as linhas */
+      }
     
-    
+      /* Espaçamento entre o radio e o texto */
+      .opcao-container input {
+        margin-right: 10px;
+      }
+    </style>    
     </head>
 <body style="background-color: lightblue; text-align: center;">
   <div class="posicao-imagem">
@@ -18,6 +29,7 @@
      <p>Nosso trabalho facilitará sua vida, feito com muito carinho e pensado em cada um de nossos clientes. Vocês são muito importantes, e devem se sentir bem escolhendo suas vestes.</p>
      <p>Aproveite!</p>
      <p>Para iniciar, coloque suas informações.</p>
+
      <input type="radio"value="PP"id="p1a"name="pergunta1">
        <label for=PP> PP</label><br> 
 
