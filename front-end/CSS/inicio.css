@@ -26,4 +26,32 @@ body{
     
     object-fit: cover;
 }
+ #evase{
+    height: 27%;
+    width: 27%;
+    border: 5px dotted #804423;
+ }
 
+ #sereia{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
+
+ #império{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
+
+ #princesa{
+    height: 27%;
+    width: 27%;
+    border: 5px dotted #804423;
+ }
+
+ #reto{
+    height: 25.4%;
+    width: 25.4%;
+    border: 5px dotted #804423;
+ }
