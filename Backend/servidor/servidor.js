@@ -7,6 +7,9 @@ const app = express();
 // Middleware do Express para entender JSON no corpo da requisição (req.body)
 app.use(express.json());
 
+// rota GET para listar as tarefas do BD
+
+
 /**
  * Rota raiz (teste rápido)
  * GET http://localhost:3000/
