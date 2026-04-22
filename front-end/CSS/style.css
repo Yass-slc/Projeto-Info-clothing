@@ -25,5 +25,36 @@ body{
    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
   
    object-fit: cover;
-}
+
+  }
+
+.BOTAO {
+   background-color: #804423; 
+   color: white;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+  text-decoration: none;
+  width: 500px;
+  height: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+ }
+ .BOTAO2 {
+   background-color: #804423; 
+   color: white;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+  text-decoration: none;
+  width: 500px;
+  height: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+ }
+
+ 
+
+
+
 

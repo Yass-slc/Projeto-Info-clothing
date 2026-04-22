@@ -8,6 +8,7 @@ body{
    text-align: center;
 }
 
+
 .posicao-imagem {
            
     position: fixed;
@@ -25,4 +26,5 @@ body{
     
     object-fit: cover;
 }
+
 
