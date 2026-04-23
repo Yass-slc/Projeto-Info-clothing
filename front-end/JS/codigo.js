@@ -1,17 +1,19 @@
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
+const carousel = document.getElementById('carousel');
+const images = carousel.querySelectorAll('img');
 let index = 0;
 
-function showSlide(i) {
-  index = (i + images.length) % images.length;
-  slides.style.transform = `translateX(${-index * 500}px)`;
+function autoSlide() {
+  index++;
+  
+  // Se chegar na última imagem, volta para a primeira
+  if (index >= images.length) {
+    index = 0;
+  }
+  
+  // Calcula o deslocamento
+  const offset = -index * 100;
+  carousel.style.transform = `translateX(${offset}%)`;
 }
 
-prevBtn.addEventListener('click', () => showSlide(index - 1));
-nextBtn.addEventListener('click', () => showSlide(index + 1));
-
-// Troca automática a cada 3 segundos
-setInterval(() => showSlide(index + 1), 3000);
+// Define o intervalo (3000ms = 3 segundos)
+setInterval(autoSlide, 2000);
