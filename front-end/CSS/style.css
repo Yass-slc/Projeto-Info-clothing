@@ -8,26 +8,6 @@ body{
    text-align: center;
 }
 
-
-   .posicao-imagem {
-         
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-  }
-
-  .minha-foto {
-   width: 45px;
-   height: 45px;
-   
-   border-radius: 50%; 
-   border: 2px solid #fff; 
-   box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
-  
-   object-fit: cover;
-
-  }
-
 .BOTAO {
    background-color: #804423; 
    color: white;
@@ -81,9 +61,32 @@ body{
  .email-btn:hover {
    background-color: #aab300;
  }
+<<<<<<< HEAD
  
  .container {
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 20px; /* Espaço entre imagem e texto */
 }
+=======
+
+
+ 
+.carousel {
+   width: 100%;
+   max-width: 10000px;
+   overflow: hidden;
+   margin: auto;
+ }
+ 
+ .carousel-inner {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+ }
+ 
+ .container2 {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 20px; /* Espaço entre imagem e texto */
+
+ }
