@@ -81,3 +81,9 @@ body{
  .email-btn:hover {
    background-color: #aab300;
  }
+ 
+ .container {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 20px; /* Espaço entre imagem e texto */
+}
