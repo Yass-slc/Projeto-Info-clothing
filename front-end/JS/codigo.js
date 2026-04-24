@@ -15,5 +15,17 @@ function autoSlide() {
   carousel.style.transform = `translateX(${offset}%)`;
 }
 
+ HEAD
 // Define o intervalo (3000ms = 3 segundos)
 setInterval(autoSlide, 2000);
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-inner img');
+    slides[currentSlide].classList.remove('active');
+    
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    
+    slides[currentSlide].classList.add('active');
+
+}
+ 

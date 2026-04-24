@@ -20,8 +20,8 @@ body{
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
   transition: all 0.3s ease; 
-
  }
+
  .BOTAO:hover {
   transform: translateY(-10px);
   box-shadow: 0 5px 15px rgba(4,4.4,0.3);
@@ -40,16 +40,13 @@ body{
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
   transition: all 0.3s ease; 
+
  }
 
  .BOTAO2:hover {
   transform: translateY(-10px);
   box-shadow: 0 5px 15px rgba(4,4.4,0.3);
  }
-
-
-
-
 
  .btn-instagram {
    display: inline-block;
@@ -93,9 +90,15 @@ body{
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+
 .youtube-bnt:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px;
+}
+ .container {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 20px; /* Espaço entre imagem e texto */
 }
 
 
