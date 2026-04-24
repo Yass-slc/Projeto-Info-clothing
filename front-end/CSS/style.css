@@ -19,6 +19,7 @@ body{
   height: 100px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+ 
  }
  .BOTAO2 {
    background-color: #804423; 
@@ -31,6 +32,7 @@ body{
   height: 100px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+  
  }
 
  .btn-instagram {
@@ -61,14 +63,14 @@ body{
  .email-btn:hover {
    background-color: #aab300;
  }
-<<<<<<< HEAD
- 
+ HEAD
+
  .container {
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 20px; /* Espaço entre imagem e texto */
 }
-=======
+
 
 
  
