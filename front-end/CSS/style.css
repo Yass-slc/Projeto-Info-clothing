@@ -4,12 +4,12 @@ body{
    color:#804423;
    font-family: "Cinzel", sans-serif;
    font-weight: 400;
-   background-color: lightblue;
+   background-color: #DAC8B3;
    text-align: center;
 }
 
 .BOTAO {
-   background-color: #804423; 
+   background: linear-gradient(45deg, #b08350, #804423, #b08350);
    color: white;
    border: none;
    border-radius: 5px;
@@ -19,10 +19,18 @@ body{
   height: 100px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+  transition: all 0.3s ease; 
+
  }
- .BOTAO2 {
-   background-color: #804423; 
-   color: white;
+ .BOTAO:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
+ }
+
+
+ .BOTAO2{
+  background: linear-gradient(45deg, #b08350, #804423, #b08350);
+   color: rgb(255, 255, 255);
    border: none;
    border-radius: 5px;
    text-align: center;
@@ -31,7 +39,17 @@ body{
   height: 100px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+  transition: all 0.3s ease; 
  }
+
+ .BOTAO2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
+ }
+
+
+
+
 
  .btn-instagram {
    display: inline-block;
@@ -46,34 +64,44 @@ body{
 
 .btn-instagram:hover {
    transform: scale(1.05);
-   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+   box-shadow: 0 4px 12px;
 }
 
 .email-btn {
-   background-color: #ff0000;
-   color: white;
-   padding: 12px 20px;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #61c70e, #0c6d13, #61c70e);
+  color: white;
+  font-weight: bold;
+   border-radius: 8px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   text-decoration: none;
  }
  .email-btn:hover {
-   background-color: #aab300;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px;
  }
+.youtube-bnt {
+  background-color: #FF0000;
+  background: linear-gradient(45deg,#FF0000, #ea9c9c,#FF0000);
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none; 
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
- 
- .container {
-   display: flex;
-   align-items: center; /* Alinha verticalmente no centro */
-   gap: 20px; /* Espaço entre imagem e texto */
+.youtube-bnt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px;
 }
 
 
-
- 
 .carousel {
    width: 100%;
+   height: 100vh;
    max-width: 10000px;
    overflow: hidden;
    margin: auto;
@@ -81,7 +109,7 @@ body{
  
  .carousel-inner {
    display: flex;
-   transition: transform 1.0s ease-in-out;
+   transition: transform 0.5s ease-in-out;
  }
  
  .container2 {
