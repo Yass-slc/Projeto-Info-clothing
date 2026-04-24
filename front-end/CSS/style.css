@@ -61,14 +61,14 @@ body{
  .email-btn:hover {
    background-color: #aab300;
  }
-<<<<<<< HEAD
+
  
  .container {
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 20px; /* Espaço entre imagem e texto */
 }
-=======
+
 
 
  
@@ -81,7 +81,7 @@ body{
  
  .carousel-inner {
    display: flex;
-   transition: transform 0.5s ease-in-out;
+   transition: transform 1.0s ease-in-out;
  }
  
  .container2 {
