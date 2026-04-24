@@ -1,5 +1,5 @@
 // Importa o framework Express (cria servidor e rotas HTTP)
-const express = require("express");
+import express from 'express'
 
 // Cria a aplicação (servidor)
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.json());
  * Rota raiz (teste rápido)
  * GET http://localhost:3000/
  */
-app.get("/", (req, res) => {
+app.get("/vestidos", (req, res) => {
   // Retorna um JSON simples
   return res.json({ mensagem: "Servidor OK!!" });
 });
