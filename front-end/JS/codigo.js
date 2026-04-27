@@ -15,7 +15,7 @@ function autoSlide() {
   carousel.style.transform = `translateX(${offset}%)`;
 }
 
- HEAD
+
 // Define o intervalo (3000ms = 3 segundos)
 setInterval(autoSlide, 2000);
 

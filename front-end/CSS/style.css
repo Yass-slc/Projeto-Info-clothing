@@ -119,5 +119,6 @@ body{
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 20px; /* Espaço entre imagem e texto */
+   border: 22px outset #804423;
 
  }
