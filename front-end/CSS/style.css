@@ -6,7 +6,30 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   
 }
+
+nav ul{
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
+}
+
 
 .BOTAO {
    background: linear-gradient(45deg, #b08350, #804423, #b08350);
@@ -119,6 +142,14 @@ body{
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
    gap: 20px; /* Espaço entre imagem e texto */
-   border: 22px outset #804423;
+   border: 22px outset #fffefe;
 
  }
+.sabotage{
+  border: 5px dashed #804423;
+  padding-bottom: 50px;
+}
+
+footer{
+  padding-bottom: 5px;
+}
