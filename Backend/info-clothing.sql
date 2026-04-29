@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29/04/2026 às 21:08
+-- Tempo de geração: 30/04/2026 às 01:22
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -54,6 +54,13 @@ CREATE TABLE `vestidos` (
   `Império` text DEFAULT NULL,
   `Reto` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `vestidos`
+--
+
+INSERT INTO `vestidos` (`Sereia`, `Evasê`, `Princesa`, `Império`, `Reto`) VALUES
+('Um vestido que tem uma cauda de sereia e você consegue nadar com ela!,', 'Um vestido que invade tudo, ele entra dentro do casamento estourando tudo!!!!', 'Diva, linda e babilônica, há descrção melhor pra piripinpincesa?', 'Imperiamos, ou lacramos? Aqui vemos a lacração pura, você arrasa agro e pop, com certeza!', 'É reto');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

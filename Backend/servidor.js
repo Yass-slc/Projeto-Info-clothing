@@ -1,5 +1,5 @@
 // Importa o framework Express (cria servidor e rotas HTTP)
-import express from 'express'
+const express = require('express')
 
 // Cria a aplicação (servidor)
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.json());
  * Rota raiz (teste rápido)
  * GET http://localhost:3000/
  */
-app.get("/vestidos", (req, res) => {
+app.get("Servidor", (req, res) => {
   // Retorna um JSON simples
   return res.json({ mensagem: "Servidor OK!!" });
 });
@@ -32,9 +32,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-
-import {MySQL} from './database.js';
-
-function main() {
-  const mysql = new MySQL();
-}

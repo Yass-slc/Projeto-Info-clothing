@@ -2,7 +2,6 @@
   "dependencies": {
     "express": "^5.2.1",
     "http": "^0.0.1-security",
-    "type": "module",
-    "mysql2": "^3.22.2"
+    "mysql2": "^3.22.3"
   }
 }
