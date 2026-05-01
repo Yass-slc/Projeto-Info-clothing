@@ -27,3 +27,9 @@ body{
     object-fit: cover;
 }
 
+img { id:"FOTO4";
+    width: 80vw;
+    height: 30vw;
+    object-fit: fill;
+}
+
