@@ -4,32 +4,47 @@ body{
    color:#804423;
    font-family: "Cinzel", sans-serif;
    font-weight: 400;
-   background-color: lightblue;
+   background-color: #DAC8B3;
    text-align: center;
 }
 
 
-.posicao-imagem {
-           
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
+ #evase{
+    height: 27%;
+    width: 27%;
+    border: 5px dotted #804423;
+ }
 
-.minha-foto {
-    width: 45px;
-    height: 45px;
-    
-    border-radius: 50%; 
-    border: 2px solid #fff; 
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
-    
-    object-fit: cover;
-}
+ #sereia{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
 
+<<<<<<< HEAD
 img { id:"FOTO4";
     width: 80vw;
     height: 30vw;
     object-fit: fill;
 }
 
+=======
+ #império{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
+
+ #princesa{
+    height: 27%;
+    width: 27%;
+    border: 5px dotted #804423;
+ }
+
+ #reto{
+    height: 25.4%;
+    width: 25.4%;
+    border: 5px dotted #804423;
+    
+ }
+>>>>>>> 861366a9bf9ff846e92b29dbe8869efab2276a26

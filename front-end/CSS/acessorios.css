@@ -4,25 +4,15 @@ body{
    color:#804423;
    font-family: "Cinzel", sans-serif;
    font-weight: 400;
-   background-color: lightblue;
+   background-color: #DAC8B3;
    text-align: center;
+
+#Comprimentos Véu{
+height: 27%;
+width: 27%;
 }
 
-.posicao-imagem {
-           
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
 }
 
-.minha-foto {
-    width: 45px;
-    height: 45px;
-    
-    border-radius: 50%; 
-    border: 2px solid #fff; 
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
-    
-    object-fit: cover;
-}
+
 

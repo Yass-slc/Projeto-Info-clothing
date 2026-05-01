@@ -4,55 +4,158 @@ body{
    color:#804423;
    font-family: "Cinzel", sans-serif;
    font-weight: 400;
-   background-color: lightblue;
+   background-color: #DAC8B3;
    text-align: center;
+   
+}
+
+nav ul{
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
 }
 
 
-   .posicao-imagem {
-         
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-  }
-
-  .minha-foto {
-   width: 45px;
-   height: 45px;
-   
-   border-radius: 50%; 
-   border: 2px solid #fff; 
-   box-shadow: 0px 4px 15px rgba(0,0,0,0.3); 
-  
-   object-fit: cover;
-
-  }
-
 .BOTAO {
-   background-color: #804423; 
+   background: linear-gradient(45deg, #b08350, #804423, #b08350);
    color: white;
    border: none;
    border-radius: 5px;
    text-align: center;
   text-decoration: none;
-  width: 500px;
-  height: 100px;
+  width: 600px;
+  height: 150px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+  transition: all 0.3s ease; 
  }
- .BOTAO2 {
-   background-color: #804423; 
-   color: white;
+
+ .BOTAO:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
+ }
+
+
+ .BOTAO2{
+  background: linear-gradient(45deg, #b08350, #804423, #b08350);
+   color: rgb(255, 255, 255);
    border: none;
    border-radius: 5px;
    text-align: center;
   text-decoration: none;
-  width: 500px;
-  height: 100px;
+  width: 600px;
+  height: 150px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
+  transition: all 0.3s ease; 
+
+
  }
 
+ .BOTAO2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
+ }
 
+ .btn-instagram {
+   display: inline-block;
+   padding: 12px 20px;
+   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+   color: white;
+   font-weight: bold;
+   text-decoration: none;
+   border-radius: 8px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.btn-instagram:hover {
+   transform: scale(1.05);
+   box-shadow: 0 4px 12px rgba(4,4.4,0.3);
+}
 
+.email-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #61c70e, #0c6d13, #61c70e);
+  color: white;
+  font-weight: bold;
+   border-radius: 8px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   text-decoration: none;
+ }
+
+ .email-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
+ }
+ 
+.youtube-bnt {
+  background-color: #FF0000;
+  background: linear-gradient(45deg,#FF0000, #ea9c9c,#FF0000);
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none; 
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.youtube-bnt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
+}
+
+ .container {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 20px; /* Espaço entre imagem e texto */
+}
+
+.carousel {
+  width: 100%;
+  max-width: 10000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+  width: 100%;
+  flex-shrink: 0;
+}
+ 
+ .container2 {
+   display: flex;
+   align-items: center; /* Alinha verticalmente no centro */
+   gap: 20px; /* Espaço entre imagem e texto */
+   border: 22px outset #fffefe;
+}
+
+.sabotage{
+  border: 5px dashed #804423;
+  padding-bottom: 50px;
+}
+
+footer{
+  padding-bottom: 5px;
+}
