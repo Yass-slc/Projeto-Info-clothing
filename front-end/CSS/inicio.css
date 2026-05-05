@@ -8,6 +8,40 @@ body{
    text-align: center;
 }
 
+nav ul{
+   list-style: none;
+   text-transform: uppercase;
+ }
+ 
+ nav li{
+   display:inline-block;
+   padding: 10px;
+   margin: 2px;
+ }
+ 
+ header{
+   background-color: rgb(255, 255, 255);
+   padding-bottom: 40px;
+   position: relative;
+   padding-top: 20px;
+ }
+
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+ .logo-container {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 60px;
+   width: auto;
+   object-fit: contain;
+ }
 
  #evase{
     height: 27%;
@@ -21,14 +55,14 @@ body{
     border: 5px dotted #804423;
  }
 
-<<<<<<< HEAD
+
 img { id:"FOTO4";
     width: 80vw;
     height: 30vw;
     object-fit: fill;
 }
 
-=======
+
  #império{
     height: 24%;
     width: 24%;
@@ -47,4 +81,39 @@ img { id:"FOTO4";
     border: 5px dotted #804423;
     
  }
->>>>>>> 861366a9bf9ff846e92b29dbe8869efab2276a26
+
+ .botão3{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão4{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão5{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão6{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão7{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   background-color: white;
+   font-size: medium;
+ }

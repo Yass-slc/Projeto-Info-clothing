@@ -6,48 +6,42 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-
-
-nav ul{
-      list-style: none;
-      text-transform: uppercase;
-    }
-    
-nav li{
-      display:inline-block;
-      padding: 10px;
-      margin: 2px;
-    }
-    
-header{
-      background-color: rgb(255, 255, 255);
-      padding-bottom: 40px;
-      position: relative;
-      padding-top: 20px;
-    }
-
-    h1{
-      font-size: 40px;
-      color:#804423;
-    }
-
-    .logo-container{
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
-  
-  .logo {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-  }
-
-#Comprimentos Véu{
-height: 27%;
-width: 27%;
+   
 }
 
+nav ul{
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
 }
 
 .botão3{
@@ -85,4 +79,3 @@ width: 27%;
   background-color: white;
   font-size: medium;
 }
-
