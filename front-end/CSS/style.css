@@ -23,6 +23,20 @@ nav li{
 header{
   background-color: rgb(255, 255, 255);
   padding-bottom: 40px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 h1{
