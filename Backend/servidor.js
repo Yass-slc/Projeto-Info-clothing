@@ -33,8 +33,4 @@ app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
-import {MySQL} from './database.js';
-
-function main() {
-  const mysql = new MySQL();
-}
+import { MySQL } from './database.js';
