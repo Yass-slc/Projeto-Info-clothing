@@ -2,10 +2,10 @@ import mysql from './database.js';
     
 
 const connection = mysql.createConnection({
-  host: " http://localhost:${PORT}",
+  host: " localhost",
   user: "root",
   password: "2026ARROCHA",
-  database: "info_clthing.sql"
+  database: "info_clothing.sql"
 
 });
 
