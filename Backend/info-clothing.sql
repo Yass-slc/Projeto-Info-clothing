@@ -24,15 +24,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+
+-- Estrutura para tabela `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `Nome` varchar(50) DEFAULT NULL,
+  `Telefone` varchar(20) DEFAULT NULL,
+  `CPF_OU_CNPJ` varchar(30) NOT NULL,
+  `Endereço` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `clientes`
+--
+
+INSERT INTO `clientes` (`Nome`, `Telefone`, `CPF_OU_CNPJ`, `Endereço`) VALUES
+('José Silva Santos', '11 99897-9999', '99.888.879/0001-98', 'Rua Cereal Matinal, 222');
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 6996411a067f04e04d696643c22374a59dfaeb2a
 -- Estrutura para tabela `vestidos`
 --
 
 CREATE TABLE `vestidos` (
-  `Sereia` varchar(500) DEFAULT NULL,
-  `Evasê` varchar(100) DEFAULT NULL,
-  `Império` varchar(100) DEFAULT NULL,
-  `Reto` varchar(100) DEFAULT NULL,
-  `Princesa` varchar(100) DEFAULT NULL
+
+  `Sereia` text DEFAULT NULL,
+  `Evasê` text DEFAULT NULL,
+  `Princesa` text DEFAULT NULL,
+  `Império` text DEFAULT NULL,
+  `Reto` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
