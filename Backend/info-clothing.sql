@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/05/2026 às 17:00
+-- Tempo de geração: 06/05/2026 às 21:22
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Versão do PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-
 -- Estrutura para tabela `clientes`
 --
 
@@ -45,12 +44,10 @@ INSERT INTO `clientes` (`Nome`, `Telefone`, `CPF_OU_CNPJ`, `Endereço`) VALUES
 -- --------------------------------------------------------
 
 --
->>>>>>> 6996411a067f04e04d696643c22374a59dfaeb2a
 -- Estrutura para tabela `vestidos`
 --
 
 CREATE TABLE `vestidos` (
-
   `Sereia` text DEFAULT NULL,
   `Evasê` text DEFAULT NULL,
   `Princesa` text DEFAULT NULL,
@@ -62,8 +59,8 @@ CREATE TABLE `vestidos` (
 -- Despejando dados para a tabela `vestidos`
 --
 
-INSERT INTO `vestidos` (`Sereia`, `Evasê`, `Império`, `Reto`, `Princesa`) VALUES
-('Este vestido passará para quem for utilizado o ar de delicadeza e empoderamento. Em uma data especia', NULL, NULL, NULL, NULL);
+INSERT INTO `vestidos` (`Sereia`, `Evasê`, `Princesa`, `Império`, `Reto`) VALUES
+('Um vestido que tem uma cauda de sereia e você consegue nadar com ela!,', 'Um vestido que invade tudo, ele entra dentro do casamento estourando tudo!!!!', 'Diva, linda e babilônica, há descrção melhor pra piripinpincesa?', 'Imperiamos, ou lacramos? Aqui vemos a lacração pura, você arrasa agro e pop, com certeza!', 'É reto');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
