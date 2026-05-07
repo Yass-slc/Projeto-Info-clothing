@@ -6,8 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-   
 }
+
 
 nav ul{
   list-style: none;
@@ -23,6 +23,20 @@ nav li{
 header{
   background-color: rgb(255, 255, 255);
   padding-bottom: 40px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
 }
 
 h1{
@@ -63,8 +77,6 @@ h1{
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
   transition: all 0.3s ease; 
-
-
  }
 
  .BOTAO2:hover {
@@ -73,53 +85,29 @@ h1{
  }
 
  .btn-instagram {
-   display: inline-block;
-   padding: 12px 20px;
-   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-   color: white;
-   font-weight: bold;
-   text-decoration: none;
-   border-radius: 8px;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-instagram:hover {
-   transform: scale(1.05);
-   box-shadow: 0 4px 12px rgba(4,4.4,0.3);
-}
-
-.email-btn {
   display: inline-block;
-  padding: 12px 20px;
-  background: linear-gradient(45deg, #61c70e, #0c6d13, #61c70e);
-  color: white;
-  font-weight: bold;
-   border-radius: 8px;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-   text-decoration: none;
- }
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
 
- .email-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
- }
- 
-.youtube-bnt {
-  background-color: #FF0000;
-  background: linear-gradient(45deg,#FF0000, #ea9c9c,#FF0000);
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none; 
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
   display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
 }
 
-.youtube-bnt:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
 }
+
 
  .container {
    display: flex;
@@ -144,18 +132,114 @@ h1{
   flex-shrink: 0;
 }
  
- .container2 {
-   display: flex;
-   align-items: center; /* Alinha verticalmente no centro */
-   gap: 20px; /* Espaço entre imagem e texto */
-   border: 22px outset #fffefe;
-}
-
-.sabotage{
-  border: 5px dashed #804423;
-  padding-bottom: 50px;
+ .cards {
+  display: flex;
+  flex-wrap: wrap; /* Faz quebrar linha se nao couber */
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards na tela */
 }
 
 footer{
   padding-bottom: 5px;
+}
+
+
+/* CADRS FOFINHES*/
+.card {
+  position: relative;
+  width: 380px;
+  height: 250px;
+  background: linear-gradient(-45deg, #804423 0%, #DAC8B3 100% );
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+.botão3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão4{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão5{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão6{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão7{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
 }

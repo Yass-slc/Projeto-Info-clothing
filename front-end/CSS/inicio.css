@@ -8,36 +8,168 @@ body{
    text-align: center;
 }
 
-
- #evase{
-    height: 27%;
-    width: 27%;
-    border: 5px dotted #804423;
+nav ul{
+   list-style: none;
+   text-transform: uppercase;
+ }
+ 
+ nav li{
+   display:inline-block;
+   padding: 10px;
+   margin: 2px;
+ }
+ 
+ header{
+   background-color: rgb(255, 255, 255);
+   padding-bottom: 40px;
+   position: relative;
+   padding-top: 20px;
  }
 
- #sereia{
-    height: 24%;
-    width: 24%;
-    border: 5px dotted #804423;
+ h1{
+   font-size: 40px;
+   color:#804423;
  }
 
 
-img { id:"FOTO4";
-    width: 80vw;
-    height: 30vw;
-    object-fit: fill;
+ .logo-container {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
+
+ .botão3{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão4{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão5{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão6{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão7{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   background-color: white;
+   font-size: medium;
+ }
+
+
+ /* fotoss*/
+ .container1 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: white;
+}
+.container1 img {
+  max-width: 250px; /* Define tamanho da imagem */
+  height: auto;
+}
+ 
+
+.container2 {
+  display: flex; 
+  align-items: normal; 
+  gap: 20px; 
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: white;
+}
+.container2 img {
+  max-width: 250px; 
+  height: auto;
 }
 
 
- #império{
+.container3 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: white;
+}
+
+.container3 img {
+  max-width: 250px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+.container4 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: white;
+}
+
+.container4 img {
+  max-width: 250px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+.container5 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: white;
+}
+
+.container5 img {
+  max-width: 250px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+#império{
     height: 24%;
     width: 24%;
-    border: 5px dotted #804423;
- }
-
- #princesa{
-    height: 27%;
-    width: 27%;
     border: 5px dotted #804423;
  }
 
@@ -47,4 +179,3 @@ img { id:"FOTO4";
     border: 5px dotted #804423;
     
  }
-
