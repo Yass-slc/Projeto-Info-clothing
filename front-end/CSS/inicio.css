@@ -91,10 +91,11 @@ nav ul{
   border-color: #804423;
   text-align: left;
   font-size: large;
-  background-color: white;
+  background-color: #a67b5b;
+  color: #DAC8B3;
 }
 .container1 img {
-  max-width: 250px; /* Define tamanho da imagem */
+  max-width: 280px; /* Define tamanho da imagem */
   height: auto;
 }
  
@@ -108,10 +109,11 @@ nav ul{
   border-color: #804423;
   text-align: left;
   font-size: large;
-  background-color: white;
+  background-color: #a67b5b;
+  color: #DAC8B3;
 }
 .container2 img {
-  max-width: 250px; 
+  max-width: 280px; 
   height: auto;
 }
 
@@ -125,13 +127,14 @@ nav ul{
   border-color: #804423;
   text-align: left;
   font-size: large;
-  background-color: white;
+  background-color: #a67b5b;
+  color: #DAC8B3;
 }
-
 .container3 img {
-  max-width: 250px; /* Define tamanho da imagem */
+  max-width: 280px; /* Define tamanho da imagem */
   height: auto;
 }
+
 
 .container4 {
   display: flex; /* Ativa o flexbox */
@@ -142,13 +145,14 @@ nav ul{
   border-color: #804423;
   text-align: left;
   font-size: large;
-  background-color: white;
+  background-color: #a67b5b;
+  color:#DAC8B3;
 }
-
 .container4 img {
-  max-width: 250px; /* Define tamanho da imagem */
+  max-width: 280px; /* Define tamanho da imagem */
   height: auto;
 }
+
 
 .container5 {
   display: flex; /* Ativa o flexbox */
@@ -159,11 +163,11 @@ nav ul{
   border-color: #804423;
   text-align: left;
   font-size: large;
-  background-color: white;
+  background-color: #a67b5b;
+  color:#DAC8B3;
 }
-
 .container5 img {
-  max-width: 250px; /* Define tamanho da imagem */
+  max-width: 280px; /* Define tamanho da imagem */
   height: auto;
 }
 
@@ -179,3 +183,27 @@ nav ul{
     border: 5px dotted #804423;
     
  }
+
+ .btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
