@@ -31,6 +31,7 @@ nav ul{
    color:#804423;
  }
 
+
  .logo-container {
    position: absolute;
    top: 10px;
@@ -92,12 +93,12 @@ nav ul{
   font-size: large;
   background-color: white;
 }
-
 .container1 img {
   max-width: 250px; /* Define tamanho da imagem */
   height: auto;
 }
  
+
 .container2 {
   display: flex; 
   align-items: normal; 
@@ -109,11 +110,11 @@ nav ul{
   font-size: large;
   background-color: white;
 }
-
 .container2 img {
   max-width: 250px; 
   height: auto;
 }
+
 
 .container3 {
   display: flex; /* Ativa o flexbox */
@@ -165,3 +166,16 @@ nav ul{
   max-width: 250px; /* Define tamanho da imagem */
   height: auto;
 }
+
+#império{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
+
+ #reto{
+    height: 25.4%;
+    width: 25.4%;
+    border: 5px dotted #804423;
+    
+ }
