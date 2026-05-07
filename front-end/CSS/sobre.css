@@ -34,7 +34,7 @@ header{
 }
 
 .logo {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -79,3 +79,33 @@ h1{
   background-color: white;
   font-size: medium;
 }
+
+
+.btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
+
+
+
+
+
