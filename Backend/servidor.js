@@ -10,6 +10,7 @@ app.use(express.json());
 // rota GET para listar as tarefas do BD
 
 
+
 /**
  * Rota raiz (teste rápido)
  * GET http://localhost:3000/
@@ -34,6 +35,6 @@ app.listen(PORT, () => {
 
 });
 
-import { MySQL } from './database.js';
+
 
 

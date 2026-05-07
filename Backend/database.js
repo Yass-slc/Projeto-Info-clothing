@@ -1,6 +1,5 @@
-import mysql from './database.js';
-    
-
+const { MySQL } = require('./database.js')
+export const MySQL = servidor.js
 const connection = mysql.createConnection({
   host: " localhost",
   user: "root",
