@@ -27,4 +27,4 @@ function moveSlide(direction) {
     slides[currentSlide].classList.add('active');
 
 }
-import {MySQL} from './database.js'
+
