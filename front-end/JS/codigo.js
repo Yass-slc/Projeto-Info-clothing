@@ -28,3 +28,5 @@ function moveSlide(direction) {
 
 }
 import {MySQL} from './database.js'
+
+
