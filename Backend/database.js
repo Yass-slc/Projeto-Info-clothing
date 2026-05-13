@@ -1,18 +1,38 @@
-const { MySQL } = require('./database.js')
-export const MySQL = servidor.js
-const connection = mysql.createConnection({
-  host: " localhost",
-  user: "root",
-  password: "2026ARROCHA",
-  database: "info_clothing.sql"
+function Enviar() {
+  var Nome = document.getElementById("Nome").value;
+  var Email = document.getElementById("Email").value;
+  var Telefone = document.getElementById("Telefone").value;
+  var Assunto = document.getElementById("Assunto").value;
+  var Mensagem = document.getElementById("Mensagem").value;
 
-});
+  console.log(JSON.stringify({
+    Nome: Nome,
+    Email: Email,
+    Telefone: Telefone,
+    Assunto: Assunto,
+    Mensagem: Mensagem
+  }));
 
-connection.connect((err) => {
-    if(err) {
-        console.log('Erro ao conectar ao banco de dados: ', err);
+  fetch('feedback', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      Nome: Nome,
+      Email: Email,
+      Telefone: Telefone,
+      Assunto: Assunto,
+      Mensagem: Mensagem
+    })
+  , 
+  headers: {"content-type" : "application/json"}
+    
+.then(async (response) => {
+    var status = response.text();
+    console.log(status);
+    if(status == 'conectado') {
+        location.href = '/acesso-restrito/acesso-html';
     } else {
-        console.log('Conectado ao banco de dados');
-    }
-})
-module.exports = connection;
+        alert('Erro ao enviar feedback. Tente novamente mais tarde.');
+    }})
