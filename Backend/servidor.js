@@ -34,6 +34,6 @@ app.listen(PORT, () => {
 
 });
 
-import { MySQL } from './database.js';
+import  MySQL  from './database.js';
 
 
