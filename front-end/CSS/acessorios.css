@@ -6,7 +6,7 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-
+}
 
 nav ul{
       list-style: none;
@@ -38,17 +38,11 @@ header{
   }
   
   .logo {
-    height: 60px;
+    height: 100px;
     width: auto;
     object-fit: contain;
   }
 
-#Comprimentos Véu{
-height: 27%;
-width: 27%;
-}
-
-}
 
 .botão3{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -86,3 +80,8 @@ width: 27%;
   font-size: medium;
 }
 
+.img-lateral {
+  display: inline-block;
+  height: 200px;
+  width: auto;
+}

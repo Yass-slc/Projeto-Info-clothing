@@ -34,7 +34,7 @@ header{
 }
 
 .logo {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -77,8 +77,6 @@ h1{
   font-family: 'Times New Roman', Times, serif;
   font-size: 17px;
   transition: all 0.3s ease; 
-
-
  }
 
  .BOTAO2:hover {
@@ -87,54 +85,29 @@ h1{
  }
 
  .btn-instagram {
-   display: inline-block;
-   padding: 12px 20px;
-   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-   color: white;
-   font-weight: bold;
-   text-decoration: none;
-   border-radius: 8px;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-   
-}
-
-.btn-instagram:hover {
-   transform: scale(1.05);
-   box-shadow: 0 4px 12px rgba(4,4.4,0.3);
-}
-
-.email-btn {
   display: inline-block;
-  padding: 12px 20px;
-  background: linear-gradient(45deg, #61c70e, #0c6d13, #61c70e);
-  color: white;
-  font-weight: bold;
-   border-radius: 8px;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-   text-decoration: none;
- }
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
 
- .email-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
- }
- 
-.youtube-bnt {
-  background-color: #FF0000;
-  background: linear-gradient(45deg,#FF0000, #ea9c9c,#FF0000);
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none; 
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
   display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
 }
 
-.youtube-bnt:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(4,4.4,0.3);
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
 }
+
 
  .container {
    display: flex;

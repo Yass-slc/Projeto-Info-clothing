@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/05/2026 às 17:00
+-- Tempo de geração: 13/05/2026 às 16:15
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -24,7 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-
 -- Estrutura para tabela `clientes`
 --
 
@@ -45,25 +44,18 @@ INSERT INTO `clientes` (`Nome`, `Telefone`, `CPF_OU_CNPJ`, `Endereço`) VALUES
 -- --------------------------------------------------------
 
 --
->>>>>>> 6996411a067f04e04d696643c22374a59dfaeb2a
--- Estrutura para tabela `vestidos`
+-- Estrutura para tabela `formulario_de_contato`
 --
 
-CREATE TABLE `vestidos` (
-
-  `Sereia` text DEFAULT NULL,
-  `Evasê` text DEFAULT NULL,
-  `Princesa` text DEFAULT NULL,
-  `Império` text DEFAULT NULL,
-  `Reto` text DEFAULT NULL
+CREATE TABLE `formulario_de_contato` (
+  `Nome` varchar(90) DEFAULT NULL,
+  `Sobrenome` varchar(60) DEFAULT NULL,
+  `Email` varchar(70) DEFAULT NULL,
+  `Telefone` varchar(20) DEFAULT NULL,
+  `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') DEFAULT NULL,
+  `Mensagem` text DEFAULT NULL,
+  `Data_mensagem` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `vestidos`
---
-
-INSERT INTO `vestidos` (`Sereia`, `Evasê`, `Império`, `Reto`, `Princesa`) VALUES
-('Este vestido passará para quem for utilizado o ar de delicadeza e empoderamento. Em uma data especia', NULL, NULL, NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
