@@ -31,6 +31,7 @@ nav ul{
    color:#804423;
  }
 
+
  .logo-container {
    position: absolute;
    top: 10px;
@@ -38,48 +39,9 @@ nav ul{
  }
  
  .logo {
-   height: 60px;
+   height: 100px;
    width: auto;
    object-fit: contain;
- }
-
- #evase{
-    height: 27%;
-    width: 27%;
-    border: 5px dotted #804423;
- }
-
- #sereia{
-    height: 24%;
-    width: 24%;
-    border: 5px dotted #804423;
- }
-
-
-img { id:"FOTO4";
-    width: 80vw;
-    height: 30vw;
-    object-fit: fill;
-}
-
-
- #império{
-    height: 24%;
-    width: 24%;
-    border: 5px dotted #804423;
- }
-
- #princesa{
-    height: 27%;
-    width: 27%;
-    border: 5px dotted #804423;
- }
-
- #reto{
-    height: 25.4%;
-    width: 25.4%;
-    border: 5px dotted #804423;
-    
  }
 
  .botão3{
@@ -117,3 +79,131 @@ img { id:"FOTO4";
    background-color: white;
    font-size: medium;
  }
+
+
+ /* fotoss*/
+ .container1 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+}
+.container1 img {
+  max-width: 280px; /* Define tamanho da imagem */
+  height: auto;
+}
+ 
+
+.container2 {
+  display: flex; 
+  align-items: normal; 
+  gap: 20px; 
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+}
+.container2 img {
+  max-width: 280px; 
+  height: auto;
+}
+
+
+.container3 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+}
+.container3 img {
+  max-width: 280px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+
+.container4 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color:#DAC8B3;
+}
+.container4 img {
+  max-width: 280px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+
+.container5 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color:#DAC8B3;
+}
+.container5 img {
+  max-width: 280px; /* Define tamanho da imagem */
+  height: auto;
+}
+
+#império{
+    height: 24%;
+    width: 24%;
+    border: 5px dotted #804423;
+ }
+
+ #reto{
+    height: 25.4%;
+    width: 25.4%;
+    border: 5px dotted #804423;
+    
+ }
+
+ .btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}

@@ -6,8 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-   
 }
+
 
 nav ul{
   list-style: none;
@@ -27,6 +27,7 @@ header{
   padding-top: 20px;
 }
 
+
 .logo-container {
   position: absolute;
   top: 10px;
@@ -37,11 +38,6 @@ header{
   height: 100px;
   width: auto;
   object-fit: contain;
-}
-
-h1{
-  font-size: 40px;
-  color:#804423;
 }
 
 .botão3{
@@ -78,30 +74,4 @@ h1{
   border: none;
   background-color: white;
   font-size: medium;
-}
-
-
-
-.btn-instagram {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff; /* Cor do Instagram */
-  transition: background-color 0.3s;
-}
-
-.instagram-icon {
-  width: 24px; /* Tamanho do ícone */
-  height: 24px;
-}
-
- .btn-gmail {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff;  
-  transition: background-color 0.3s;
-}
-
-.gmail-icon {
-  width: 26px; /* Tamanho do ícone */
-  height: 26px;
 }

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/05/2026 às 21:22
+-- Tempo de geração: 13/05/2026 às 16:15
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,23 +44,18 @@ INSERT INTO `clientes` (`Nome`, `Telefone`, `CPF_OU_CNPJ`, `Endereço`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `vestidos`
+-- Estrutura para tabela `formulario_de_contato`
 --
 
-CREATE TABLE `vestidos` (
-  `Sereia` text DEFAULT NULL,
-  `Evasê` text DEFAULT NULL,
-  `Princesa` text DEFAULT NULL,
-  `Império` text DEFAULT NULL,
-  `Reto` text DEFAULT NULL
+CREATE TABLE `formulario_de_contato` (
+  `Nome` varchar(90) DEFAULT NULL,
+  `Sobrenome` varchar(60) DEFAULT NULL,
+  `Email` varchar(70) DEFAULT NULL,
+  `Telefone` varchar(20) DEFAULT NULL,
+  `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') DEFAULT NULL,
+  `Mensagem` text DEFAULT NULL,
+  `Data_mensagem` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `vestidos`
---
-
-INSERT INTO `vestidos` (`Sereia`, `Evasê`, `Princesa`, `Império`, `Reto`) VALUES
-('Um vestido que tem uma cauda de sereia e você consegue nadar com ela!,', 'Um vestido que invade tudo, ele entra dentro do casamento estourando tudo!!!!', 'Diva, linda e babilônica, há descrção melhor pra piripinpincesa?', 'Imperiamos, ou lacramos? Aqui vemos a lacração pura, você arrasa agro e pop, com certeza!', 'É reto');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
