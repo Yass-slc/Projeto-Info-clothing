@@ -1,42 +1,29 @@
-// Importa o framework Express (cria servidor e rotas HTTP)
-const express = require('express')
+import express from 'express'
+import dotenv from 'dotenv'
+import Rotas from './formulariocontatoRotas.js'
 
-// Cria a aplicação (servidor)
-const app = express();
+dotenv.config()
 
-// Middleware do Express para entender JSON no corpo da requisição (req.body)
-app.use(express.json());
+const app = express()
 
-// rota GET para listar as tarefas do BD
+app.use(express.json())
 
+// Monta as rotas do formulário em /contato
+app.use('/contato', Rotas)
 
+// rota raiz para checagem rápida
+app.get('/', (req, res) => {
+  return res.json({ mensagem: 'Servidor OK!!' })
+})
 
-/**
- * Rota raiz (teste rápido)
- * GET http://localhost:3000/
- */
-app.get("Servidor", (req, res) => {
-  // Retorna um JSON simples
-  return res.json({ mensagem: "Servidor OK!!" });
-});
+const PORT = process.env.PORT || 3000
 
-
-// GET = listar usuarios /users => listar todos; /users:id
-// POST =  faz a criação do usuario /users
-// PUT = atualização do usuario /users:id
-// DELETE = faz a deleçãoo do usuario /users:id
-
-// Define a porta (padrão 3000)
-const PORT = process.env.PORT || 3000;
-
-// Inicia o servidor
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`)
+})
 
-});
 
 
-import  MySQL  from './database.js';
 
 
 

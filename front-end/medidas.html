@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css">
-  <title>Bem-vindo</title>
+  <title>Medidas</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="./Assets/IMG/favicon.ico" type="image/x-icon">
   </head>
@@ -18,7 +18,7 @@
       <ul>
 
         <div class="Inicioo">
-          <a href="URL_DO_SEU_LINK">
+          <a href="index.html">
             <li><button class="botão3">
               Inicio</button></li>
           </a>
@@ -33,7 +33,7 @@
               Acessórios</button></li>
           </a>
 
-          <a href="URL_DO_SEU_LINK">
+          <a href="contato.html">
             <li><button class="botão5">
               Contato</button></li>
           </a>
@@ -51,6 +51,117 @@
   <h1>Identifique seu tipo de corpo</h1>
   <img src="Assets/IMG/Tipos de Cuerpo.png" alt="casamento católico" style="width: 1200px; height: 570px;">
 <br> <br>
+
+<h1>Como descobrir meu tipo de corpo</h1>
+
+<h3>Maçã</h3>
+O corpo maçã ou oval é característico das mulheres mais cheinhas, que têm a cintura e a barriga como as maiores proporções da silhueta se comparadas aos ombros e quadris
+
+<h3>Retângulo</h3>
+O corpo retangular é aquele que tem proporções muito similares nos ombros e quadris, com uma cintura mais reta e pouco delineada. É uma silhueta mais reta, comum em mulheres altas, magras e com pernas longas.
+
+<h3>Ampulheta</h3>
+O corpo ampulheta ou violão, como é mais conhecido, é o mais desejado entre as mulheres. Ele tem curvas bem definidas, com ombros e quadris na mesma proporção e combinados com uma cintura bem marcada. As mulheres com essa silhueta também costumam ter seios fartos e quadris largos.
+
+<h3>Pera</h3>
+O formato pêra ou triangular é o contrário do triângulo invertido. Aqui, os quadris são mais largos do que os ombros e a cintura é fina. Esse é o biotipo mais comum entre as brasileiras, que costumam ter coxas grossas, bumbum grande e seios de pequenos a médios.
+
+<h3>Triângulo invertido</h3>
+Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que são mais estreitos. Em geral, essas mulheres costumam ter pernas mais finas, cintura pouco marcada e seios grandes, com a parte de cima mais destacada.
+<br><br>
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<body>
+    <h3>1. Qual o meu tipo de corpo?</h3>
+    <input type="radio" name="q1" value="Triângulo"> Ombros mais largos que os quadris <br> <!--Triângulo invertido-->
+    <input type="radio" name="q1" value="Retângulo"> Ombros retos e estrutura linear <br> <!--Retângulo-->
+    <input type="radio" name="q1" value="Maçã"> Volume concentrado no centro do tronco, cintura pouco definida <br> <!--Maçã-->
+    <input type="radio" name="q1" value="Pera"> Ombros mais estreitos que os quadris <br> <!--Pera-->
+    <input type="radio" name="q1" value="Ampulheta"> Busto e quadris proporcionais <br> <!-- Ampulhea-->
+
+
+
+    <button onclick="verificarRespostas()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarRespostas() {
+            const resposta = document.querySelector('input[name="q1"]:checked').value;
+            if(resposta === 'Triângulo') {
+                document.getElementById('resultado').innerText = "Seu tipo de corpo é TRIÂNGULO";
+            } 
+          
+            else {
+            document.getElementById('resultado').innerText = "Seu tipo de corpo é TRIÂNGULO.";
+            }
+        }
+        
+
+  
+        function verificarRespostas() {
+            const resposta = document.querySelector('input[name="q1"]:checked').value;
+            if(resposta === 'Retângulo') {
+                document.getElementById('resultado').innerText = "Seu tipo de corpo é RETÂNGULO";
+            } 
+
+        else {
+            document.getElementById('resultado').innerText = "Tente novamente.";
+            }
+        }
+
+        function verificarRespostas() {
+            const resposta = document.querySelector('input[name="q1"]:checked').value;
+            if(resposta === 'Maçã') {
+                document.getElementById('resultado').innerText = "Seu tipo de corpo é MAÇÃ";
+            } 
+
+        else {
+            document.getElementById('resultado').innerText = "Tente novamente.";
+            }
+        }
+
+
+        function verificarRespostas() {
+            const resposta = document.querySelector('input[name="q1"]:checked').value;
+            if(resposta === 'Pera') {
+                document.getElementById('resultado').innerText = "Seu tipo de corpo é PERA";
+            } 
+
+        else {
+            document.getElementById('resultado').innerText = "Tente novamente.";
+            }
+        }
+
+
+        function verificarRespostas() {
+            const resposta = document.querySelector('input[name="q1"]:checked').value;
+            if(resposta === 'Ampulheta') {
+                document.getElementById('resultado').innerText = "Seu tipo de corpo é AMPULHETA";
+            } 
+
+        else {
+            document.getElementById('resultado').innerText = "Tente novamente.";
+            }
+          }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <footer style="background-color: #ffffff; text-align: center">
