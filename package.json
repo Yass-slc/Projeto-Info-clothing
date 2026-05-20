@@ -1,8 +1,11 @@
- { 
+{
+  "type": "module",
+  "scripts": {
+    "start": "node Backend/servidor.js"
+  },
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "http": "^0.0.1-security",
-    "mysql2": "^3.22.2",
-    "type": "module"
+    "mysql2": "^3.22.2"
   }
 }
