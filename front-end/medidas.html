@@ -72,81 +72,43 @@ Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que s
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<body>
-    <h3>1. Qual o meu tipo de corpo?</h3>
-    <input type="radio" name="q1" value="Triângulo"> Ombros mais largos que os quadris <br> <!--Triângulo invertido-->
-    <input type="radio" name="q1" value="Retângulo"> Ombros retos e estrutura linear <br> <!--Retângulo-->
-    <input type="radio" name="q1" value="Maçã"> Volume concentrado no centro do tronco, cintura pouco definida <br> <!--Maçã-->
-    <input type="radio" name="q1" value="Pera"> Ombros mais estreitos que os quadris <br> <!--Pera-->
-    <input type="radio" name="q1" value="Ampulheta"> Busto e quadris proporcionais <br> <!-- Ampulhea-->
+
+
+    <h2>Descubra seu tipo de corpo</h2>
+
+<div class="container.">
+  <div class="corpo">
+      <button id="bnt" onclick="responder('Triângulo invertido')">Ombros mais largos que os quadris</button>
+
+      <button class="bnt" onclick="responder('Retângulo')">Ombros retos e estrutura linear</button>
+
+      <button class="bnt" onclick="responder('Maçã')">Volume concentrado no centro do tronco, cintura pouco definida</button>
+      
+      <button class="bnt" onclick="responder('Pera')">Ombros mais estreitos que os quadris</button>
+
+      <button class="bnt" onclick="responder('Ampulheta')">Busto e quadris peoporcionais</button>
+
+      </div>
+
+<p id="resposta"></p>
+</div>
+
+<script>
+    function responder(mensagem) {
+        document.getElementById("resposta").textContent = mensagem;
+    }
+</script>
 
 
 
-    <button onclick="verificarRespostas()">Verificar</button>
-    <p id="resultado"></p>
-
-    <script>
-        function verificarRespostas() {
-            const resposta = document.querySelector('input[name="q1"]:checked').value;
-            if(resposta === 'Triângulo') {
-                document.getElementById('resultado').innerText = "Seu tipo de corpo é TRIÂNGULO";
-            } 
-          
-            else {
-            document.getElementById('resultado').innerText = "Seu tipo de corpo é TRIÂNGULO.";
-            }
-        }
-        
-
-  
-        function verificarRespostas() {
-            const resposta = document.querySelector('input[name="q1"]:checked').value;
-            if(resposta === 'Retângulo') {
-                document.getElementById('resultado').innerText = "Seu tipo de corpo é RETÂNGULO";
-            } 
-
-        else {
-            document.getElementById('resultado').innerText = "Tente novamente.";
-            }
-        }
-
-        function verificarRespostas() {
-            const resposta = document.querySelector('input[name="q1"]:checked').value;
-            if(resposta === 'Maçã') {
-                document.getElementById('resultado').innerText = "Seu tipo de corpo é MAÇÃ";
-            } 
-
-        else {
-            document.getElementById('resultado').innerText = "Tente novamente.";
-            }
-        }
 
 
-        function verificarRespostas() {
-            const resposta = document.querySelector('input[name="q1"]:checked').value;
-            if(resposta === 'Pera') {
-                document.getElementById('resultado').innerText = "Seu tipo de corpo é PERA";
-            } 
-
-        else {
-            document.getElementById('resultado').innerText = "Tente novamente.";
-            }
-        }
 
 
-        function verificarRespostas() {
-            const resposta = document.querySelector('input[name="q1"]:checked').value;
-            if(resposta === 'Ampulheta') {
-                document.getElementById('resultado').innerText = "Seu tipo de corpo é AMPULHETA";
-            } 
 
-        else {
-            document.getElementById('resultado').innerText = "Tente novamente.";
-            }
-          }
 
-    </script>
 
+    
 </body>
 </html>
 
