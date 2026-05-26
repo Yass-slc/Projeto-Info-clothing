@@ -85,7 +85,7 @@ nav ul{
  .container1 {
   display: flex; /* Ativa o flexbox */
   align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
+  gap: 10px; /* Espaçamento entre imagem e texto */
   border-width: 10px;
   border-style: double;
   border-color: #804423;
@@ -93,9 +93,10 @@ nav ul{
   font-size: large;
   background-color: #a67b5b;
   color: #DAC8B3;
+  font-family:initial;
 }
 .container1 img {
-  max-width: 280px; /* Define tamanho da imagem */
+  max-width: 150px; /* Define tamanho da imagem */
   height: auto;
 }
  
@@ -111,6 +112,7 @@ nav ul{
   font-size: large;
   background-color: #a67b5b;
   color: #DAC8B3;
+  font-family:initial;
 }
 .container2 img {
   max-width: 280px; 
@@ -129,6 +131,7 @@ nav ul{
   font-size: large;
   background-color: #a67b5b;
   color: #DAC8B3;
+  font-family:initial;
 }
 .container3 img {
   max-width: 280px; /* Define tamanho da imagem */
@@ -147,6 +150,7 @@ nav ul{
   font-size: large;
   background-color: #a67b5b;
   color:#DAC8B3;
+  font-family:initial;
 }
 .container4 img {
   max-width: 280px; /* Define tamanho da imagem */
@@ -165,6 +169,7 @@ nav ul{
   font-size: large;
   background-color: #a67b5b;
   color:#DAC8B3;
+  font-family:initial;
 }
 .container5 img {
   max-width: 280px; /* Define tamanho da imagem */
@@ -206,4 +211,34 @@ nav ul{
 .gmail-icon {
   width: 26px; /* Tamanho do ícone */
   height: 26px;
+}
+
+.img-lateral2 {
+  display:flex;
+  width: 50%;
+  align-items: normal; 
+  gap: 20px; 
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align:left;
+  font-size:larger;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+  font-family:initial;
+}
+
+.container6{
+  display: flex; 
+    gap: 5px;
+}
+
+.container7{
+  display: flex;
+  gap: 5px;
+}
+
+.container8{
+  display: flex;
+  gap: 5px;
 }
