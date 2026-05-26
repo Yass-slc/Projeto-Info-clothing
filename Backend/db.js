@@ -6,8 +6,8 @@ const db = "info-clothing";
 const connection = mysql.createConnection({
   host: process.env.DB_host,
   user: process.env.DB_root,
-  password: process.env.DB_123456,
-  database: process.env.DB_Guilherme
+  password: process.env.DB_password,
+  database: process.env.DB_
   
 });
 

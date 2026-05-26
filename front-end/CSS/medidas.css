@@ -105,3 +105,23 @@ h1{
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
+
+
+
+
+
+.corpo{
+font-family: 'Times New Roman', Times, serif;
+color: aqua;
+
+}
+
+.bnt{
+  font-family: 'Courier New', Courier, monospace;
+  color: aqua;
+}
+
+.container{
+  font-family:'Courier New', Courier, monospace;
+  color: aqua;
+}

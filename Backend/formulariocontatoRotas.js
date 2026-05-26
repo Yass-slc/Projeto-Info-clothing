@@ -1,10 +1,10 @@
 import express from 'express'
 import { listarDadosContato, inserirDadosContato } from './formulariocontato.js'
 
-const Rotas = express.Router()
+const Router = express.Router()
 
-Rotas.get('/', listarDadosContato)
-Rotas.post('/', inserirDadosContato)
+Router.get('/', listarDadosContato)
+Router.post('/', inserirDadosContato)
 
-export default Rotas
+export default Router
 
