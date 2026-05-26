@@ -75,3 +75,11 @@ header{
   background-color: white;
   font-size: medium;
 }
+
+.contatinho{
+font-size: medium;
+display: inline-block;
+height: 200px;
+width: auto;
+
+}
