@@ -221,8 +221,8 @@ nav ul{
   border-width: 10px;
   border-style: double;
   border-color: #804423;
-  text-align: left;
-  font-size: large;
+  text-align:left;
+  font-size:larger;
   background-color: #a67b5b;
   color: #DAC8B3;
   font-family:initial;
@@ -231,5 +231,14 @@ nav ul{
 .container6{
   display: flex; 
     gap: 5px;
-    
+}
+
+.container7{
+  display: flex;
+  gap: 5px;
+}
+
+.container8{
+  display: flex;
+  gap: 5px;
 }
