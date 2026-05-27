@@ -75,3 +75,145 @@ header{
   background-color: white;
   font-size: medium;
 }
+
+.btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
+
+
+
+/* From Uiverse.io by DavidTM96 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative; top: -1%; left: 15%;
+  font-family:initial;
+  gap: 10px;
+  padding-inline: 20em;
+  padding-bottom: 1em;
+  background-color: #804423;
+  border-radius:50px;
+height: 400px;
+width: 220px;
+}
+
+
+.form-heading {
+  text-align: center;
+  margin: 0.6em;
+  color:  #DAC8B3;
+  font-size: 1.5em;
+  background-color: transparent;
+  align-self: center;
+  font-family: initial;
+  position: relative; left: 70%;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #ffffff;
+  box-shadow: inset 2px 5px 10px #ffffff;
+  font-family: initial;
+  position: relative; left: 70%;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #000000;
+  padding-inline: 0.2em;
+  font-family: initial;
+ 
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  outline: 1px solid white;
+  transition: all ease-in-out 0.3s;
+  font-family: initial;
+  position: relative; left: 70%;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.3s;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px #fffffe;
+  font-size: medium;
+}
+
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
