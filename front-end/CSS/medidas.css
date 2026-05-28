@@ -112,16 +112,7 @@ h1{
 
 .corpo{
 font-family: 'Times New Roman', Times, serif;
+font-size: x-large;
 color: aqua;
 
-}
-
-.bnt{
-  font-family: 'Courier New', Courier, monospace;
-  color: aqua;
-}
-
-.container{
-  font-family:'Courier New', Courier, monospace;
-  color: aqua;
 }

@@ -48,12 +48,6 @@
   </header>
   <br>
 
-  <h1>Identifique seu tipo de corpo</h1>
-  <img src="Assets/IMG/Tipos de Cuerpo.png" alt="casamento católico" style="width: 1200px; height: 570px;">
-<br> <br>
-
-
-oi
 
 
 
@@ -67,29 +61,6 @@ oi
 
 
 
-
-
-
-
-  <footer style="background-color: #ffffff; text-align: center">
-    <br>
-        <h3>Entre em contato conosco</h3>
-    
-        <div>
-        <a href="https://www.instagram.com/infoclothing526" target="_blank" class="btn-instagram">
-          <img src="Assets/IMG/instagram (2).png" alt="Instagram" class="instagram-icon">
-      </a>
-          
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infoclothing526@gmail.com&su=Assunto&body=Mensagem">
-        <img src="Assets/IMG/o-email.png" alt="Gmail" class="gmail-icon">
-        </a>
-        </div>
-    
-        <p>Copyright 2026 - by aulas PW © Facebook | Twitter</p>
-    
-        Desenvolvido com muito ♥
-      </footer>
-      </div>
 
 
 
@@ -98,7 +69,7 @@ oi
   <img src="Assets/IMG/Tipos de Cuerpo.png" alt="casamento católico" style="width: 1200px; height: 570px;">
 <br> <br>
 
-<h1>Como descobrir meu tipo de corpo</h1>
+
 
 <h3>Maçã</h3>
 O corpo maçã ou oval é característico das mulheres mais cheinhas, que têm a cintura e a barriga como as maiores proporções da silhueta se comparadas aos ombros e quadris
@@ -123,16 +94,15 @@ Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que s
     <h2>Descubra seu tipo de corpo</h2>
 
 <div class="container.">
-  <div class="corpo">
-      <button id="bnt" onclick="responder('Triângulo invertido')">Ombros mais largos que os quadris</button>
+      <button onclick="responder('Triângulo invertido')">Ombros mais largos que os quadris</button>
 
-      <button class="bnt" onclick="responder('Retângulo')">Ombros retos e estrutura linear</button>
+      <button onclick="responder('Retângulo')">Ombros retos e estrutura linear</button>
 
-      <button class="bnt" onclick="responder('Maçã')">Volume concentrado no centro do tronco, cintura pouco definida</button>
+      <button onclick="responder('Maçã')">Volume concentrado no centro do tronco, cintura pouco definida</button>
       
-      <button class="bnt" onclick="responder('Pera')">Ombros mais estreitos que os quadris</button>
+      <button onclick="responder('Pera')">Ombros mais estreitos que os quadris</button>
 
-      <button class="bnt" onclick="responder('Ampulheta')">Busto e quadris peoporcionais</button>
+      <button onclick="responder('Ampulheta')">Busto e quadris peoporcionais</button>
 
       </div>
 
@@ -147,12 +117,14 @@ Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que s
 
 
 
-<<<<<<< HEAD
-=======
+
     <button onclick="verificarRespostas()">Verificar</button>
     <p id="resultado"></p>
 
+
+    <div class="corpo">
     <script>
+      
         function verificarRespostas() {
             const resposta = document.querySelector('input[name="q1"]:checked').value;
             if(resposta === 'Triângulo') {
@@ -186,28 +158,31 @@ Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que s
             document.getElementById('resultado').innerText = "Tente novamente.";
             }
         }
->>>>>>> cfc3318de94f867bd87d1a4b448df26ebd1a2628
+</script>
+</div>
 
 
 
+ <footer style="background-color: #ffffff;">
+<br>
+    <h3>Entre em contato conosco</h3>
 
-
-
-
-    
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div>
+    <a href="https://www.instagram.com/infoclothing526" target="_blank" class="btn-instagram">
+      <img src="Assets/IMG/instagram (2).png" alt="Instagram" class="instagram-icon">
+  </a>
       
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infoclothing526@gmail.com&su=Assunto&body=Mensagem">
+    <img src="Assets/IMG/o-email.png" alt="Gmail" class="gmail-icon">
+    </a>
+    </div>
+
+    <p>Copyright 2026 - by aulas PW © Facebook | Twitter</p>
+
+    Desenvolvido com muito ♥
+  </footer>
+  </div>
+
+</body>
+
+</html>      
