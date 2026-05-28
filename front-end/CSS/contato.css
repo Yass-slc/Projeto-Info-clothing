@@ -115,26 +115,35 @@ width: auto;
 .form {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  position: relative; top: -1%; left: 15%;
   font-family:initial;
   gap: 10px;
-  padding-inline: 2em;
-  padding-bottom: 0.4em;
+  padding-inline: 20em;
+  padding-bottom: 1em;
   background-color: #804423;
-  background-color: #804423;
-  border-radius: 20px;
+  border-radius:50px;
+height: 400px;
+width: 220px;
 }
+
 
 .form-heading {
   text-align: center;
+<<<<<<< HEAD
   margin: 2em;
   color: #DAC8B3;
   font-size
 ] 
 x-large;
+=======
+  margin: 0.6em;
+  color:  #DAC8B3;
+  font-size: 1.5em;
+>>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
   background-color: transparent;
   align-self: center;
   font-family: initial;
+  position: relative; left: 70%;
 }
 
 .form-field {
@@ -148,8 +157,13 @@ x-large;
   outline: none;
   color: white;
   background-color: #ffffff;
+<<<<<<< HEAD
   box-shadow: inset 2px 5px 10px rgb(119, 117, 117);
+=======
+  box-shadow: inset 2px 5px 10px #ffffff;
+>>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
   font-family: initial;
+  position: relative; left: 70%;
 }
 
 .input-field {
@@ -158,8 +172,13 @@ x-large;
   outline: none;
   width: 100%;
   color: #000000;
+<<<<<<< HEAD
   padding-inline: 1em;
+=======
+  padding-inline: 0.2em;
+>>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
   font-family: initial;
+ 
 }
 
 .sendMessage-btn {
@@ -175,6 +194,7 @@ x-large;
   outline: 1px solid white;
   transition: all ease-in-out 0.3s;
   font-family: initial;
+  position: relative; left: 70%;
 }
 
 .sendMessage-btn:hover {
@@ -182,6 +202,7 @@ x-large;
   background-color: white;
   color: #000;
   cursor: pointer;
+<<<<<<< HEAD
   box-shadow: inset 2px 5px 10px rgb(119, 119, 119);
   font-size: medium;
 }
@@ -196,15 +217,22 @@ x-large;
 .form-card1:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.3);
 }
+=======
+  box-shadow: inset 2px 5px 10px #fffffe;
+  font-size: medium;
+}
+
+>>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
 
 .form-card2 {
   border-radius: 0;
   transition: all 0.2s;
 }
 
+
 .form-card2:hover {
   transform: scale(0.98);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 
