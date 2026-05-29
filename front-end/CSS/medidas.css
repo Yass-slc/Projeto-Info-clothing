@@ -124,6 +124,9 @@ h1 {
   perspective: 1000px;
   font-family: initial;
   font-size: large;
+  height: 400px;
+  width: 550px;
+  font-size: medium;
 
 }
 
@@ -186,4 +189,37 @@ h1 {
 .flip-card.flip-card-inner.flip-card-front.image {
   height: 5px;
   width: 5px;
+}
+.flip-card.flip-card-inner.flip-card-front.image{
+height: 5px;
+width: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#corpo{
+font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+#bnt{
+  font-family:initial;
+  color: #804423;
+  font-size: medium;
+
+}
+
+#container-1{
+  font-family:'Courier New', Courier, monospace;
+  
 }

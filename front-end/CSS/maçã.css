@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+   color:#804423;
+   font-family: "Cinzel", sans-serif;
+   font-weight: 400;
+   background-color: #DAC8B3;
+   text-align: center;
+   
+}
+
+nav ul{
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
+}
+
+.botão3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão4{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão5{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão6{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão7{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
+
+
+.btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
+
+.maçã{
+  color: aqua;
+}
+
+
+/* From Uiverse.io by codebykay101 */ 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+
+
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
