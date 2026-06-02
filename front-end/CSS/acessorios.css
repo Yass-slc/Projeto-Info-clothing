@@ -167,6 +167,14 @@ padding: 20px;
   padding: 20px;
 }
 
+.conteiner3{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
 .btn-instagram {
   display: inline-block;
   padding: 10px;
