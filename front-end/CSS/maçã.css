@@ -106,12 +106,7 @@ h1{
   height: 26px;
 }
 
-<<<<<<< HEAD
-=======
-.maçã{
-  color: aqua;
-}
->>>>>>> 8b589e86aeb86695485daa3a0169714a14b3c25d
+
 
 
 /* From Uiverse.io by codebykay101 */ 
@@ -120,12 +115,13 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-style: dotted;
 }
 
 .container .glass {
   position: relative;
-  width: 180px;
-  height: 200px;
+  width: 300px;
+  height: 310px;
   background: linear-gradient(#fff2, transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
@@ -154,15 +150,15 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #000000;
+  font-size: large;
 }
 .container .glass svg {
   font-size: 2.5em;
   fill: #fff;
 }
 
-<<<<<<< HEAD
-=======
+
 
 
 .cards-list {
@@ -175,12 +171,13 @@ h1{
 
 .card {
   margin: 30px auto;
-  width: 300px;
-  height: 300px;
+  width: 1350px;
+  height: 1350px;
   border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
   transition: 0.4s;
+
 }
 
 .card .card_image {
@@ -228,7 +225,7 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 }
 
 
-/*
+
 .card {
   margin: 30px auto;
   width: 300px;
@@ -242,5 +239,4 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   transition: 0.4s;
 }
-*/
->>>>>>> 8b589e86aeb86695485daa3a0169714a14b3c25d
+
