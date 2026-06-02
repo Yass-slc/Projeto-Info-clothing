@@ -129,17 +129,18 @@ width: 220px;
 
 .form-heading {
   text-align: center;
-<<<<<<< HEAD
+
   margin: 2em;
   color: #DAC8B3;
-  font-size
-] 
-x-large;
+  font-size: x-large;
+<<<<<<< HEAD
 =======
+
+>>>>>>> 72e9523f81358cc98317b57f04e5091ef6b066e2
   margin: 0.6em;
   color:  #DAC8B3;
   font-size: 1.5em;
->>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
+
   background-color: transparent;
   align-self: center;
   font-family: initial;
@@ -157,11 +158,11 @@ x-large;
   outline: none;
   color: white;
   background-color: #ffffff;
-<<<<<<< HEAD
+
   box-shadow: inset 2px 5px 10px rgb(119, 117, 117);
-=======
+
   box-shadow: inset 2px 5px 10px #ffffff;
->>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
+
   font-family: initial;
   position: relative; left: 70%;
 }
@@ -172,11 +173,11 @@ x-large;
   outline: none;
   width: 100%;
   color: #000000;
-<<<<<<< HEAD
+
   padding-inline: 1em;
-=======
+
   padding-inline: 0.2em;
->>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
+
   font-family: initial;
  
 }
@@ -202,7 +203,7 @@ x-large;
   background-color: white;
   color: #000;
   cursor: pointer;
-<<<<<<< HEAD
+
   box-shadow: inset 2px 5px 10px rgb(119, 119, 119);
   font-size: medium;
 }
@@ -216,13 +217,11 @@ x-large;
 
 .form-card1:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.3);
-}
-=======
   box-shadow: inset 2px 5px 10px #fffffe;
   font-size: medium;
 }
 
->>>>>>> 139102a5c9ac626a64ea62822b0cd513b71e9cf6
+
 
 .form-card2 {
   border-radius: 0;
@@ -259,4 +258,4 @@ x-large;
 
 
 
->>>>>>> 323fa09275f0d750522b26fd695629d15dad36c1
+

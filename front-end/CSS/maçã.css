@@ -106,9 +106,12 @@ h1{
   height: 26px;
 }
 
+<<<<<<< HEAD
+=======
 .maçã{
   color: aqua;
 }
+>>>>>>> 8b589e86aeb86695485daa3a0169714a14b3c25d
 
 
 /* From Uiverse.io by codebykay101 */ 
@@ -158,6 +161,8 @@ h1{
   fill: #fff;
 }
 
+<<<<<<< HEAD
+=======
 
 
 .cards-list {
@@ -238,6 +243,7 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
   transition: 0.4s;
 }
 */
+<<<<<<< HEAD
 
 /* From Uiverse.io by ElSombrero2 */ 
 .card {
@@ -320,3 +326,6 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
     transform: rotate(360deg);
   }
 }
+=======
+>>>>>>> 8b589e86aeb86695485daa3a0169714a14b3c25d
+>>>>>>> 93db405a90f3db163ea81593cf919898d90016ba
