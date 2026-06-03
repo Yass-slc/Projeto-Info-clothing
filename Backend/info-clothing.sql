@@ -51,10 +51,8 @@ CREATE TABLE `formulario_de_contato` (
   `Nome` varchar(90) DEFAULT NULL,
   `Sobrenome` varchar(60) DEFAULT NULL,
   `Email` varchar(70) DEFAULT NULL,
-  `Telefone` varchar(20) DEFAULT NULL,
   `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') DEFAULT NULL,
   `Mensagem` text DEFAULT NULL,
-  `Data_mensagem` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
