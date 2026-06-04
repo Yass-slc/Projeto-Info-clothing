@@ -127,6 +127,7 @@ h1 {
   height: 400px;
   width: 550px;
   font-size: medium;
+  font-family: initial;
 
 }
 
@@ -135,6 +136,7 @@ h1 {
   font-weight: 20;
   text-align: center;
   margin: 0;
+  font-family: initial;
 }
 
 .flip-card-inner {
@@ -184,6 +186,7 @@ h1 {
 .tomandinho {
   display: flex;
   gap: 97px;
+  font-family: initial;
 }
 
 .flip-card.flip-card-inner.flip-card-front.image {
@@ -195,21 +198,8 @@ height: 5px;
 width: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 #corpo{
-font-family: 'Times New Roman', Times, serif;
-
-
+font-family:initial;
 }
 
 #bnt{
@@ -220,8 +210,9 @@ font-family: 'Times New Roman', Times, serif;
 }
 
 #container-1{
-  font-family:'Courier New', Courier, monospace;
+  font-family:initial;
 }
+
 
 
 
