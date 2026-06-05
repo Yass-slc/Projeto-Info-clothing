@@ -406,6 +406,8 @@ article:nth-child(4){
 
 footer{
   text-align: center;
+  color:#804423;
+   font-family: "Cinzel", sans-serif;
 }
 
 /*-- MEDIA QUERIES --*/
