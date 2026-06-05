@@ -96,11 +96,6 @@ img {
 }
 
 
-.yasmin{
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .btn-instagram {
   display: inline-block;
   padding: 10px;
@@ -137,7 +132,7 @@ img {
 
 .container .glass {
   position: relative;
-  width: 750px;
+  width: 700px;
   height: 400px;
   background: linear-gradient(#fff2, transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
