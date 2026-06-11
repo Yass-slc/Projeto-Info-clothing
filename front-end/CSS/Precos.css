@@ -167,3 +167,31 @@ h1{
    justify-content: center;
    
 }
+
+.bulbassaur{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
+
+.charmander{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
+
+.pikachu{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
+
+.evee{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
