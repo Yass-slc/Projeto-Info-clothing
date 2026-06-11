@@ -122,11 +122,11 @@ h1 {
   width: 300px;
   height: 450px;
   perspective: 1000px;
-  font-family: initial;
   font-size: large;
   height: 400px;
   width: 550px;
   font-size: medium;
+  font-family: initial;
 
 }
 
@@ -135,6 +135,7 @@ h1 {
   font-weight: 20;
   text-align: center;
   margin: 0;
+  font-family: initial;
 }
 
 .flip-card-inner {
@@ -184,6 +185,7 @@ h1 {
 .tomandinho {
   display: flex;
   gap: 97px;
+  font-family: initial;
 }
 
 .flip-card.flip-card-inner.flip-card-front.image {
@@ -196,32 +198,6 @@ width: 5px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-#corpo{
-font-family: 'Times New Roman', Times, serif;
-
-
-}
-
-#bnt{
-  font-family:initial;
-  color: #804423;
-  font-size: medium;
-
-}
-
-#container-1{
-  font-family:'Courier New', Courier, monospace;
-}
 
 
 
