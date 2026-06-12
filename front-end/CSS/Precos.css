@@ -202,3 +202,17 @@ h1{
    justify-content: center;
    
 }
+
+.diglett{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
+
+.magicarp{
+  display: flex;
+   gap: 50px;
+   justify-content: center;
+   
+}
