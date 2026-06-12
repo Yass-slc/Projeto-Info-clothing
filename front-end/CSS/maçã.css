@@ -6,7 +6,6 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-   
 }
 
 nav ul{
@@ -115,13 +114,12 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: dotted;
 }
 
 .container .glass {
   position: relative;
   width: 300px;
-  height: 310px;
+  height: 350px;
   background: linear-gradient(#fff2, transparent);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
@@ -159,174 +157,10 @@ h1{
 }
 
 
-
-
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.maçã{
+  font-family: initial;
+  font-size: larger;
+  max-width: 1300px;
+  margin: 10px auto;
+  border-radius: 20px;
 }
-
-.card {
-  margin: 30px auto;
-  width: 1350px;
-  height: 1350px;
-  border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
-
-}
-
-.card .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
-
-.card .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
-}
-
-.card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
-
-.card:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-.title-white {
-  color: white;
-}
-
-.title-black {
-  color: black;
-}
-
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
-
-
-
-.card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  transition: 0.4s;
-}
-<<<<<<< HEAD
-
-=======
-*/
-<<<<<<< HEAD
-
-/* From Uiverse.io by ElSombrero2 */ 
-.card {
-  width: 190px;
-  height: 254px;
-  background: #171717;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 0px 3px 1px #00000088;
-  cursor: pointer;
-}
-
-.card .content {
-  border-radius: 5px;
-  background: #171717;
-  width: 186px;
-  height: 250px;
-  z-index: 1;
-  padding: 20px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content::before {
-  opacity: 0;
-  transition: opacity 300ms;
-  content: " ";
-  display: block;
-  background: white;
-  width: 5px;
-  height: 50px;
-  position: absolute;
-  filter: blur(50px);
-  overflow: hidden;
-}
-
-.card:hover .content::before {
-  opacity: 1;
-}
-
-.card::before {
-  opacity: 0;
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 80px;
-  height: 360px;
-  background: linear-gradient(#ff2288, #387ef0);
-  transition: opacity 300ms;
-  animation: rotation_9018 8000ms infinite linear;
-  animation-play-state: paused;
-}
-
-.card:hover::before {
-  opacity: 1;
-  animation-play-state: running;
-}
-
-.card::after {
-  position: absolute;
-  content: " ";
-  display: block;
-  width: 250px;
-  height: 360px;
-  background: #17171733;
-  backdrop-filter: blur(50px);
-}
-
-@keyframes rotation_9018 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-=======
->>>>>>> 8b589e86aeb86695485daa3a0169714a14b3c25d
->>>>>>> 93db405a90f3db163ea81593cf919898d90016ba
->>>>>>> 23c46f70bd89c23d41a5abe56b4a2d68537ed7ea

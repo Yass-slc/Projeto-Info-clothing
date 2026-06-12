@@ -176,19 +176,6 @@ nav ul{
   height: auto;
 }
 
-#império{
-    height: 24%;
-    width: 24%;
-    border: 5px dotted #804423;
- }
-
- #reto{
-    height: 25.4%;
-    width: 25.4%;
-    border: 5px dotted #804423;
-    
- }
-
  .btn-instagram {
   display: inline-block;
   padding: 10px;
@@ -419,6 +406,8 @@ article:nth-child(4){
 
 footer{
   text-align: center;
+  color:#804423;
+   font-family: "Cinzel", sans-serif;
 }
 
 /*-- MEDIA QUERIES --*/
