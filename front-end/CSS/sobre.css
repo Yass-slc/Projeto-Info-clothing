@@ -164,41 +164,50 @@ h1{
     text-align: center;
 }
 
-/* Container principal que centraliza a fileira de fotos */
-.zigzag-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    gap: 16px;              
-    width: 100%;
-    max-width: 1200px;
-    margin-top: -60px;     
-    padding: 40px 20px;
+/*fotos carrossel */
+/* Container que esconde as imagens fora da tela */
+.carousel-slider {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
 }
 
-/* Estilo de cada caixinha de foto */
-.zigzag-item {
-    width: 220px;           
-    height: 160px;          
-    border-radius: 8px;     
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+/* A "fita" que vai se mover */
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollContinuous 20s linear infinite;
 }
 
-/* Garante que a imagem preencha o espaço sem distorcer */
-.zigzag-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Grupo de imagens */
+.carousel-group {
+  display: flex;
+  gap: 20px; /* Espaçamento entre as fotos */
+  padding-right: 20px; /* Mantém o espaçamento no final do grupo */
 }
 
-/* Pega a 1ª, 3ª, 5ª foto (ímpares) e empurra um pouco para BAIXO */
-.zigzag-item:nth-child(odd) {
-    transform: translateY(10px);
+/* Estilização das imagens (cantos arredondados iguais aos da foto) */
+.carousel-group img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Pega a 2ª, 4ª, 6ª foto (pares) e puxa um pouco para CIMA */
-.zigzag-item:nth-child(even) {
-    transform: translateY(-10px);
+/* Animação que faz o movimento acontecer */
+@keyframes scrollContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move exatamente metade do tamanho da fita */
+  }
 }
+
+/* Opcional: Pausar o carrossel quando o usuário passar o mouse por cima */
+.carousel-slider:hover .carousel-track {
+  animation-play-state: paused;
+}
+
