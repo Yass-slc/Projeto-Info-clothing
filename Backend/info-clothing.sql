@@ -24,26 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `clientes`
---
-
-CREATE TABLE `clientes` (
-  `Nome` varchar(50) DEFAULT NULL,
-  `Telefone` varchar(20) DEFAULT NULL,
-  `CPF_OU_CNPJ` varchar(30) NOT NULL,
-  `Endereço` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `clientes`
---
-
-INSERT INTO `clientes` (`Nome`, `Telefone`, `CPF_OU_CNPJ`, `Endereço`) VALUES
-('José Silva Santos', '11 99897-9999', '99.888.879/0001-98', 'Rua Cereal Matinal, 222');
-
--- --------------------------------------------------------
-
---
 -- Estrutura para tabela `formulario_de_contato`
 --
 
