@@ -146,7 +146,7 @@ footer{
 
 
 
-/* CADRS FOFINHES*/
+/* CADRS TESTE*/
 .cardo {
   position: relative;
   width: 280px;
@@ -221,34 +221,7 @@ footer{
   font-size: medium;
   background-color: white;
 }
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
+
 
 
 
@@ -267,6 +240,7 @@ footer{
   padding: 0.5em;
   padding-bottom: 3.4em;
   border-radius: 1.5rem;
+  
 }
 
 
@@ -277,12 +251,13 @@ footer{
 
 .card .title {
   font-family: initial;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   position: absolute;
   left: 0.625em;
-  bottom: 1.875em;
+  bottom: 0.5em;
   font-weight: 400;
   color: #DAC8B3;
+ 
 }
 
 .card .price {
@@ -317,7 +292,8 @@ footer{
 }
 
 .title{
-  text-align: center;
+  text-align:center;
+  
 }
 
 
@@ -416,13 +392,13 @@ footer{
   margin-left: -20px;
   text-align: center;
   font-size: 20px !important;
-  background: #D64B4B;
-  background: -webkit-gradient(linear, left top, left bottom, from(#D64B4B), to(#AB2C2C));
-  background: -webkit-linear-gradient(top, #804423, #804423);
-  background: -moz-linear-gradient(top, #D64B4B, #AB2C2C);
-  background: -ms-linear-gradient(top, #D64B4B, #AB2C2C);
-  background: -o-linear-gradient(top, #D64B4B, #AB2C2C);
-  background-image: -ms-linear-gradient(top, #D64B4B 0%, #AB2C2C 100%);
+  background: #804423;
+  background: -webkit-gradient(linear, left top, left bottom, from(#804423), to(#64351b));
+  background: -webkit-linear-gradient(top, #804423, #64351b);
+  background: -moz-linear-gradient(top, #804423, #64351b);
+  background: -ms-linear-gradient(top, #804423, #64351b);
+  background: -o-linear-gradient(top, #804423, #64351b);
+  background-image: -ms-linear-gradient(top, #804423 0%, #64351b 100%);
   -webkit-box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
   -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
   box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
@@ -431,7 +407,7 @@ footer{
   
   .ribbon span {
   font-size: 35px !important;
-  color: #ffffff;
+  color: #DAC8B3;
   text-shadow: #000000 0 1px 0;
   margin: 0px;
   padding: 19px 10px;
@@ -442,7 +418,7 @@ footer{
   position: absolute;
   display: block;
   bottom: -1em;
-  border: 1.5em solid #C23A3A;
+  border: 1.5em solid #824b2e;
   z-index: -1;
   }
   
@@ -465,7 +441,7 @@ footer{
   }
   
   .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-  border-color: #871616 transparent transparent transparent;
+  border-color: #432414 transparent transparent transparent;
   position: absolute;
   display: block;
   border-style: solid;
