@@ -44,44 +44,6 @@ h1{
 }
 
 
-.BOTAO {
-   background: linear-gradient(45deg, #b08350, #804423, #b08350);
-   color: white;
-   border: none;
-   border-radius: 5px;
-   text-align: center;
-  text-decoration: none;
-  width: 600px;
-  height: 150px;
-  font-family:initial;
-  font-size:x-large;
-  transition: all 0.3s ease; 
- }
-
- .BOTAO:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
- }
-
-
- .BOTAO2{
-  background: linear-gradient(45deg, #b08350, #804423, #b08350);
-   color: rgb(255, 255, 255);
-   border: none;
-   border-radius: 5px;
-   text-align: center;
-  text-decoration: none;
-  width: 600px;
-  height: 150px;
-  font-family:initial;
-  font-size:x-large;
-  transition: all 0.3s ease; 
- }
-
- .BOTAO2:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
- }
 
 
  .btn-instagram {
