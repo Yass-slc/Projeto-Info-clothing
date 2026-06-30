@@ -81,100 +81,13 @@ nav ul{
  }
 
 
- /* fotoss*/
- .container1 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 10px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container1 img {
-  max-width: 150px; /* Define tamanho da imagem */
-  height: auto;
-}
  
 
-.container2 {
-  display: flex; 
-  align-items: normal; 
-  gap: 20px; 
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container2 img {
-  max-width: 280px; 
-  height: auto;
-}
 
 
-.container3 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container3 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
 
 
-.container4 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color:#DAC8B3;
-  font-family:initial;
-}
-.container4 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
 
-
-.container5 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color:#DAC8B3;
-  font-family:initial;
-}
-.container5 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
 
  .btn-instagram {
   display: inline-block;
@@ -200,68 +113,15 @@ nav ul{
   height: 26px;
 }
 
-.img-lateral2 {
-  display:flex;
-  width: 50%;
-  align-items: normal; 
-  gap: 20px; 
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align:left;
-  font-size:larger;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-
-.container6{
-  display: flex; 
-    gap: 5px;
-}
-
-.container7{
-  display: flex;
-  gap: 5px;
-}
-
-.container8{
-  display: flex;
-  gap: 5px;
-}
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .card {
-  width: 300px;
-  height: 375px;
+  width: 350px;
+  height: 425px;
   background: #804423;
   padding: .4em;
-  border-radius: 6px;
+  border-radius: 9px;
+  
 }
 
 .card-image {
@@ -279,8 +139,8 @@ nav ul{
   text-transform: none;
   font-size: 1.1em;
   font-weight: 600;
-  color: #e69a71;
-  padding: 10px 7px 0;
+  color: white;
+  padding: 10px;
 }
 
 .category:hover {
@@ -288,10 +148,10 @@ nav ul{
 }
 
 .heading {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1em;
-  color: #ffff;
-  padding: 7px;
+  color: #DAC8B3;
+  padding: 5px;
   text-transform: none;
 }
 
@@ -308,5 +168,4 @@ gap: 20px; /* Espaçamento entre um card e outro */
 flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
 padding: 20px;
 }
-=======
->>>>>>> 4365306ec20888e47129d81595e54062eccdef89
+

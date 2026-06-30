@@ -140,9 +140,9 @@ header{
 }
 
 .heading {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1em;
-  color: #ffff;
+  color: #DAC8B3;
   padding: 7px;
   text-transform: none;
 }
