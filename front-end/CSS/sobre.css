@@ -283,6 +283,7 @@ h1{
   align-items: center;
   min-height: 100vh;
   padding: 40px 20px;
+  position: relative; left: 7%;
 }
 
 /* Mosaico de Imagens */

@@ -224,3 +224,109 @@ h1{
    justify-content: center;
    
 }
+
+/* caculadora */
+/* Container principal da calculadora */
+.calculator {
+    width: 45%;
+    max-width: 360px; /* Tamanho perfeito para telas de celular */
+    background-color: #804423;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* Tela de exibição */
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 80px;
+    background: #422312;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Grade de botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Botão padrão */
+.btn {
+    height: 35px;
+    border-radius: 16px;
+    border: none;
+    background-color: #95461b;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul no mobile */
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Cores específicas dos botões */
+.btn.operator {
+    background-color: #461901;
+    color: #ffffff;
+}
+
+.btn.clear {
+    background-color: #693316;
+    color: #ffffff;
+}
+
+.btn.equal {
+    background-color: #461901;
+    grid-row: span 2; /* Faz o botão de igual ocupar duas linhas */
+    height: 100%;
+}
+
+.btn.zero {
+    grid-column: span 2; /* Faz o botão zero ocupar duas colunas */
+}
+
+/* Efeito de hover para computadores */
+@media (hover: hover) {
+    .btn:hover { background-color: #693316; }
+    .btn.operator:hover { background-color: #2f1101; }
+    .btn.clear:hover { background-color: #562a12; }
+}
+
+/* Modifique o estilo da sua .calculator */
+.calculator {
+    position: fixed;    /* Faz flutuar e acompanhar o scroll da tela */
+    top: 40px;          /* Posição inicial no topo */
+    right: 20px;        /* Posição inicial na direita */
+    z-index: 9999;      /* Garante que ela vai ficar na frente de QUALQUER elemento do site */
+}
+
+/* Novo estilo para a barra de arrastar */
+.calculator-header {
+    padding: 6px;
+    cursor: move; /* Mostra a batedeira de "mover" no computador */
+    background-color: #422312;
+    border-radius: 12px;
+    margin: -10px -10px 15px -10px;
+    text-align: center;
+    color: #804423;
+    font-size: 0.8rem;
+    font-weight: bold;
+    user-select: none; /* Impede que o usuário selecione o texto enquanto arrasta */
+}
