@@ -8,7 +8,6 @@ body{
    text-align: center;
 }
 
-
 nav ul{
   list-style: none;
   text-transform: uppercase;
@@ -21,16 +20,20 @@ nav li{
 }
 
 header{
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding-bottom: 40px;
-  position: relative;
-  padding-top: 20px;
+  padding: 20px;
+  width: 1460px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
-
 
 .logo-container {
   position: absolute;
-  top: 10px;
+  top: 3px;
   left: 20px;
 }
 
@@ -40,40 +43,51 @@ header{
   object-fit: contain;
 }
 
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
+h1{
+  font-size: 40px;
+  color:#804423;
 }
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
   color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
   border: none;
-  font-size: medium;
-  background-color: white;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+button:focus,
+button:hover {
   color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
 }
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
 }
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 
