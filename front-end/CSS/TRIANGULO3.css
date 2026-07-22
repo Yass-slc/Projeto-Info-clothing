@@ -6,7 +6,6 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-   
 }
 
 nav ul{
@@ -49,65 +48,73 @@ h1{
   color:#804423;
 }
 
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
   color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
   border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
 
 .btn-instagram {
   display: inline-block;
   padding: 10px;
-  background-color: #ffffff; /* Cor do Instagram */
+  background-color: #ffffff;
+  /* Cor do Instagram */
   transition: background-color 0.3s;
 }
 
 .instagram-icon {
-  width: 24px; /* Tamanho do ícone */
+  width: 24px;
+  /* Tamanho do ícone */
   height: 24px;
 }
 
- .btn-gmail {
+.btn-gmail {
   display: inline-block;
   padding: 10px;
-  background-color: #ffffff;  
+  background-color: #ffffff;
   transition: background-color 0.3s;
 }
 
 .gmail-icon {
-  width: 26px; /* Tamanho do ícone */
+  width: 26px;
+  /* Tamanho do ícone */
   height: 26px;
 }
 
@@ -116,7 +123,7 @@ h1{
 .container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 
@@ -160,14 +167,15 @@ h1{
   fill: #fff;
 }
 
+
 .maçã{
+  background-color: #a32727;
   font-family: initial;
   font-size: larger;
   max-width: 1300px;
   margin: 10px auto;
   border-radius: 20px;
 }
-
 
 
 
@@ -184,6 +192,7 @@ button1 {
  cursor: pointer;
  border: none;
  background: #fff;
+ 
 }
 
 button1 > svg {
@@ -201,49 +210,4 @@ button1:hover > svg {
 button1:hover {
  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
  transform: translateY(-2px);
-}
-
-
-
-
-/*aqui ó o cabeçalhinho*/
-button {
-  font-size: 18px;
-  color: #804423;
-  height: 60px;
-  font-family: initial;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background: white;
-  text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
-}
-
-button:focus,
-button:hover {
-  color: #804423;
-}
-
-button:focus:after,
-button:hover:after {
-  width: 100%;
-  left: 0%;
-}
-
-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #804423;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
 }
