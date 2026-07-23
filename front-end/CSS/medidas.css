@@ -289,3 +289,312 @@ height: 5px;
 width: 5px;
 }
 
+
+
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+
+.card-3d {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 20s linear infinite;
+  will-change: transform;
+  margin:auto 550px;
+}
+
+.card-3d div {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  background-color: rgb(199, 199, 199);
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+}
+
+.card-3d:hover {
+  animation-play-state: paused !important;
+}
+
+.card-3d:hover div {
+  animation-play-state: paused !important;
+}
+
+.card-3d div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: -0s;
+}
+
+.card-3d div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d div:nth-child(3) {
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d div:nth-child(4) {
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d div:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d div:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d div:nth-child(7) {
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d div:nth-child(8) {
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d div:nth-child(9) {
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d div:nth-child(10) {
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+
+.card-3d2 {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 20s linear infinite;
+  will-change: transform;
+  margin:auto 550px;
+}
+
+.card-3d2 div {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  background-color: rgb(199, 199, 199);
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+}
+
+.card-3d2:hover {
+  animation-play-state: paused !important;
+}
+
+.card-3d2:hover div {
+  animation-play-state: paused !important;
+}
+
+.card-3d2 div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: -0s;
+}
+
+.card-3d2 div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d2 div:nth-child(3) {
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d2 div:nth-child(4) {
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d2 div:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d2 div:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d2 div:nth-child(7) {
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d2 div:nth-child(8) {
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d2 div:nth-child(9) {
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d2 div:nth-child(10) {
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+
