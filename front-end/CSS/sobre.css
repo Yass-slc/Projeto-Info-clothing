@@ -66,42 +66,49 @@ h1{
 
 
 
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
 
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+button:focus,
+button:hover {
   color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
 }
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
 }
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
+
+ 
 
 
 .btn-instagram {

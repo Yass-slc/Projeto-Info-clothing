@@ -5,7 +5,7 @@ body{
    font-family: "Cinzel", sans-serif;
    font-weight: 400;
    background-color: #DAC8B3;
-   text-align: center;  
+   text-align: center;
 }
 
 nav ul{
@@ -22,15 +22,18 @@ nav li{
 header{
   background-color: white;
   padding-bottom: 40px;
-  position: center;
-  padding: 10px 1;
-  width: 100%;
-  height: 40px;
+  padding: 20px;
+  width: 1460px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .logo-container {
   position: absolute;
-  top: 10px;
+  top: 3px;
   left: 20px;
 }
 
@@ -45,16 +48,48 @@ h1{
   color:#804423;
 }
 
-
-
-.botão3{
-  font-family:initial;
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
   color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
   border: none;
-  font-size: 20px;
-  background-color: white;
-  text-align: center;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
+
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
 
  .btn-instagram {
   display: inline-block;

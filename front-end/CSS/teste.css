@@ -23,8 +23,11 @@ header{
   background-color: white;
   padding-bottom: 40px;
   padding: 20px;
-  width: 100%;
+  width: 1460px;
   height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -49,12 +52,13 @@ h1{
 button {
   font-size: 18px;
   color: #804423;
-  font-family: inherit;
+  height: 60px;
+  font-family: initial;
   font-weight: 500;
   cursor: pointer;
   position: relative;
   border: none;
-  background: none;
+  background: white;
   text-transform: uppercase;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
@@ -223,6 +227,12 @@ button:after {
   transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
   animation-delay: -18s;
 }
+
+
+
+
+
+
 
 
 
