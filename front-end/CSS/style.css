@@ -174,8 +174,6 @@ footer{
 
 
 
-
-
 .botão3{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: #804423;
@@ -468,3 +466,56 @@ footer{
 
 
 
+
+.card {
+  width: 300px;
+  height: 375px;
+  background: #804423;
+  padding: .4em;
+  border-radius: 6px;
+}
+
+.card-image {
+  background-color: rgba(236, 236, 236, 0.151);
+  width: 100%;
+  height: 250px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #e69a71;
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 1em;
+  color: #ffff;
+  padding: 7px;
+  text-transform: none;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+/* Container que agrupa todos os cards */
+.conteiner1 {
+font-family: initial;
+display: flex; /* Coloca os cards lado a lado */
+justify-content: center; /* Centraliza os cards na tela */
+gap: 20px; /* Espaçamento entre um card e outro */
+flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
+padding: 20px;
+}
