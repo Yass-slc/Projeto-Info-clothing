@@ -9,39 +9,101 @@ body{
 }
 
 nav ul{
-      list-style: none;
-      text-transform: uppercase;
-    }
-    
+  list-style: none;
+  text-transform: uppercase;
+}
+
 nav li{
-      display:inline-block;
-      padding: 10px;
-      margin: 2px;
-    }
-    
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
 header{
-      background-color: rgb(255, 255, 255);
-      padding-bottom: 40px;
-      position: relative;
-      padding-top: 20px;
-    }
-
-    h1{
-      font-size: 40px;
-      color:#804423;
-    }
-
-    .logo-container{
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
+  background-color: white;
+  padding-bottom: 40px;
+  padding: 20px;
+  width: 1460px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  .logo {
-    height: 100px;
-    width: auto;
-    object-fit: contain;
-  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
+}
+
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .btn-instagram {
@@ -63,43 +125,6 @@ header{
     transition: background-color 0.3s;
   }
   
-
-
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
 
 .img-lateral {
   display: inline-block;
@@ -140,9 +165,9 @@ header{
 }
 
 .heading {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1em;
-  color: #ffff;
+  color: #DAC8B3;
   padding: 7px;
   text-transform: none;
 }
@@ -184,3 +209,72 @@ padding: 20px;
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
+
+
+
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+

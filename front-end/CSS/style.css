@@ -20,15 +20,20 @@ nav li{
 }
 
 header{
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding-bottom: 40px;
-  position: relative;
-  padding-top: 20px;
+  padding: 20px;
+  width: 1200px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .logo-container {
   position: absolute;
-  top: 10px;
+  top: 3px;
   left: 20px;
 }
 
@@ -43,8 +48,47 @@ h1{
   color:#804423;
 }
 
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
 
+button:focus,
+button:hover {
+  color: #804423;
+}
 
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
  .btn-instagram {
   display: inline-block;
@@ -171,20 +215,6 @@ footer{
   scale: 0;
   transform: rotate(-45deg);
 }
-
-
-
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-
-
-
-
 
 
 
@@ -438,35 +468,6 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
   width: 300px;
   height: 375px;
@@ -510,12 +511,83 @@ footer{
   cursor: pointer;
 }
 
-/* Container que agrupa todos os cards */
 .conteiner1 {
 font-family: initial;
-display: flex; /* Coloca os cards lado a lado */
-justify-content: center; /* Centraliza os cards na tela */
-gap: 20px; /* Espaçamento entre um card e outro */
-flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
+display: flex; 
+justify-content: center; 
+gap: 20px; 
+flex-wrap: wrap; 
 padding: 20px;
 }
+
+
+
+
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+
+
+

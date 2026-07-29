@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+   color:#804423;
+   font-family: "Cinzel", sans-serif;
+   font-weight: 400;
+   background-color: #DAC8B3;
+   text-align: center;
+}
+
+nav ul{
+      list-style: none;
+      text-transform: uppercase;
+    }
+    
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: white;
+  padding-bottom: 40px;
+  padding: 20px;
+  width: 1460px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logo-container {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
+}
+
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
+
+  .btn-instagram {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff; /* Cor do Instagram */
+    transition: background-color 0.3s;
+  }
+  
+  .instagram-icon {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+  }
+  
+   .btn-gmail {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;  
+    transition: background-color 0.3s;
+  }
+  
+
+.img-lateral {
+  display: inline-block;
+  height: 200px;
+  width: auto;
+}
+
+.card {
+  width: 300px;
+  height: 375px;
+  background: #804423;
+  padding: .4em;
+  border-radius: 6px;
+}
+
+.card-image {
+  background-color: rgba(236, 236, 236, 0.151);
+  width: 100%;
+  height: 250px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #e69a71;
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: normal;
+  font-size: 1em;
+  color: #DAC8B3;
+  padding: 7px;
+  text-transform: none;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+/* Container que agrupa todos os cards */
+.conteiner1 {
+font-family: initial;
+display: flex; /* Coloca os cards lado a lado */
+justify-content: center; /* Centraliza os cards na tela */
+gap: 20px; /* Espaçamento entre um card e outro */
+flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
+padding: 20px;
+}
+
+.btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
+
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+
+

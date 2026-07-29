@@ -20,20 +20,25 @@ nav li{
 }
 
 header{
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding-bottom: 40px;
-  position: relative;
-  padding-top: 20px;
+  padding: 20px;
+  width: 1323px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .logo-container {
   position: absolute;
-  top: 10px;
+  top: 0.1px;
   left: 20px;
 }
 
 .logo {
-  height: 100px;
+  height: 94px;
   width: auto;
   object-fit: contain;
 }
@@ -41,6 +46,48 @@ header{
 h1{
   font-size: 40px;
   color:#804423;
+}
+
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 16px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 
@@ -67,46 +114,6 @@ h1{
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
-
-
-
-.botão3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão4{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão5{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão6{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  font-size: medium;
-  background-color: white;
-}
-.botão7{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
-
-
 
 
 
@@ -217,10 +224,181 @@ h1{
    
 }
 
-
 .charizard{
   display: flex;
    gap: 50px;
    justify-content: center;
    
 }
+
+/* caculadora */
+/* Container principal da calculadora */
+.calculator {
+    width: 45%;
+    max-width: 360px; /* Tamanho perfeito para telas de celular */
+    background-color: #804423;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* Tela de exibição */
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 80px;
+    background: #422312;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Grade de botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Botão padrão */
+.btn {
+    height: 35px;
+    border-radius: 16px;
+    border: none;
+    background-color: #95461b;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul no mobile */
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Cores específicas dos botões */
+.btn.operator {
+    background-color: #461901;
+    color: #ffffff;
+}
+
+.btn.clear {
+    background-color: #693316;
+    color: #ffffff;
+}
+
+.btn.equal {
+    background-color: #461901;
+    grid-row: span 2; 
+    height: 100%;
+}
+
+.btn.zero {
+    grid-column: span 2; 
+}
+
+@media (hover: hover) {
+    .btn:hover { background-color: #693316; }
+    .btn.operator:hover { background-color: #2f1101; }
+    .btn.clear:hover { background-color: #562a12; }
+}
+
+
+.calculator {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.calculator-header {
+    padding: 6px;
+    cursor: move; 
+    background-color: #422312;
+    border-radius: 12px;
+    margin: -10px -10px 15px -10px;
+    text-align: center;
+    color: #804423;
+    font-size: 0.8rem;
+    font-weight: bold;
+    user-select: none; 
+}
+
+
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+

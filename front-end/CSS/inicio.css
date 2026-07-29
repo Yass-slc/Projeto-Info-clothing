@@ -9,172 +9,88 @@ body{
 }
 
 nav ul{
-   list-style: none;
-   text-transform: uppercase;
- }
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li{
+  display:inline-block;
+  padding: 10px;
+  margin: 2px;
+}
+
+header{
+  background-color: white;
+  padding-bottom: 40px;
+  padding: 20px;
+  width: 1460px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logo-container {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 40px;
+  color:#804423;
+}
+
+/*aqui ó o cabeçalhinho*/
+button {
+  font-size: 18px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+button:focus,
+button:hover {
+  color: #804423;
+}
+
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
  
- nav li{
-   display:inline-block;
-   padding: 10px;
-   margin: 2px;
- }
- 
- header{
-   background-color: rgb(255, 255, 255);
-   padding-bottom: 40px;
-   position: relative;
-   padding-top: 20px;
- }
-
- h1{
-   font-size: 40px;
-   color:#804423;
- }
-
-
- .logo-container {
-   position: absolute;
-   top: 10px;
-   left: 20px;
- }
- 
- .logo {
-   height: 100px;
-   width: auto;
-   object-fit: contain;
- }
-
- .botão3{
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   color: #804423;
-   border: none;
-   font-size: medium;
-   background-color: white;
- }
- .botão4{
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   color: #804423;
-   border: none;
-   font-size: medium;
-   background-color: white;
- }
- .botão5{
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   color: #804423;
-   border: none;
-   font-size: medium;
-   background-color: white;
- }
- .botão6{
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   color: #804423;
-   border: none;
-   font-size: medium;
-   background-color: white;
- }
- .botão7{
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
-   color: #804423;
-   border: none;
-   background-color: white;
-   font-size: medium;
- }
-
-
- /* fotoss*/
- .container1 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 10px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container1 img {
-  max-width: 150px; /* Define tamanho da imagem */
-  height: auto;
-}
- 
-
-.container2 {
-  display: flex; 
-  align-items: normal; 
-  gap: 20px; 
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container2 img {
-  max-width: 280px; 
-  height: auto;
-}
-
-
-.container3 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-}
-.container3 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
-
-
-.container4 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color:#DAC8B3;
-  font-family:initial;
-}
-.container4 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
-
-
-.container5 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 20px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color:#DAC8B3;
-  font-family:initial;
-}
-.container5 img {
-  max-width: 280px; /* Define tamanho da imagem */
-  height: auto;
-}
 
  .btn-instagram {
   display: inline-block;
@@ -199,6 +115,7 @@ nav ul{
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
+
 
 .img-lateral2 {
   display:flex;
@@ -233,36 +150,19 @@ nav ul{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
-  width: 300px;
-  height: 375px;
+  width: 350px;
+  height: 425px;
   background: #804423;
   padding: .4em;
-  border-radius: 6px;
+  border-radius: 9px;
 }
 
 .card-image {
   background-color: rgba(236, 236, 236, 0.151);
   width: 100%;
   height: 250px;
-  border-radius: 6px 6px 0 0;
+  border-radius: 9px 6px 0 0;
 }
 
 .card-image:hover {
@@ -273,8 +173,8 @@ nav ul{
   text-transform: none;
   font-size: 1.1em;
   font-weight: 600;
-  color: #e69a71;
-  padding: 10px 7px 0;
+  color: black;
+  padding: 10px;
 }
 
 .category:hover {
@@ -282,10 +182,10 @@ nav ul{
 }
 
 .heading {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1em;
-  color: #ffff;
-  padding: 7px;
+  color: #DAC8B3;
+  padding: 5px;
   text-transform: none;
 }
 
@@ -293,14 +193,88 @@ nav ul{
   cursor: pointer;
 }
 
-/* Container que agrupa todos os cards */
 .conteiner1 {
 font-family: initial;
-display: flex; /* Coloca os cards lado a lado */
-justify-content: center; /* Centraliza os cards na tela */
-gap: 20px; /* Espaçamento entre um card e outro */
-flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
+display: flex; 
+justify-content: center; 
+gap: 20px; 
+flex-wrap: wrap; 
 padding: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+
 
 
