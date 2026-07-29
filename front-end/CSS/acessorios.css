@@ -126,6 +126,52 @@ button:after {
   }
   
 
+
+.botão3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão4{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão5{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão6{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  font-size: medium;
+  background-color: white;
+}
+.botão7{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
+
 .img-lateral {
   display: inline-block;
   height: 200px;

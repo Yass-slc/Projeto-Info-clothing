@@ -68,6 +68,15 @@ button {
   transition-property: color;
 }
 
+
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
 button:focus,
 button:hover {
   color: #804423;
@@ -92,6 +101,7 @@ button:after {
   transition-duration: 400ms;
   transition-property: width, left;
 }
+
 
 
 .btn-instagram {

@@ -108,8 +108,18 @@ button:after {
   transition-property: width, left;
 }
 
+<<<<<<< HEAD
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+=======
  
 
+>>>>>>> a04c439d63888739ff4643058851ed2207bb56bd
 
 .btn-instagram {
   display: inline-block;

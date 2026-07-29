@@ -9,8 +9,104 @@ body{
 }
 
 nav ul{
+
+   list-style: none;
+   text-transform: uppercase;
+ }
+ 
+ nav li{
+   display:inline-block;
+   padding: 10px;
+   margin: 2px;
+ }
+ 
+ header{
+   background-color: rgb(255, 255, 255);
+   padding-bottom: 40px;
+   position: relative;
+   padding-top: 20px;
+ }
+
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
+
+ .botão3{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão4{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão5{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão6{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   font-size: medium;
+   background-color: white;
+ }
+ .botão7{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   color: #804423;
+   border: none;
+   background-color: white;
+   font-size: medium;
+ }
+
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
+
+ /* fotoss*/
+ .container1 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+  font-family:initial;
+
   list-style: none;
   text-transform: uppercase;
+
 }
 
 nav li{
@@ -123,6 +219,61 @@ button:after {
 }
 
 
+.img-lateral2 {
+  display:flex;
+  width: 50%;
+  align-items: normal; 
+  gap: 20px; 
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align:left;
+  font-size:larger;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+  font-family:initial;
+}
+
+.container6{
+  display: flex; 
+    gap: 5px;
+}
+
+.container7{
+  display: flex;
+  gap: 5px;
+}
+
+.container8{
+  display: flex;
+  gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .card {
   width: 350px;
@@ -175,7 +326,6 @@ gap: 20px;
 flex-wrap: wrap; 
 padding: 20px;
 }
-
 
 
 
