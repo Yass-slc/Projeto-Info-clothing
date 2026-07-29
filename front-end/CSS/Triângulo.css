@@ -80,7 +80,13 @@ h1{
   font-size: medium;
 }
 
-
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
 
 .btn-instagram {
   display: inline-block;

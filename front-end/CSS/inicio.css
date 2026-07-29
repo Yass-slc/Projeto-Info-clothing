@@ -80,6 +80,14 @@ nav ul{
    font-size: medium;
  }
 
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
 
  /* fotoss*/
  .container1 {
@@ -236,7 +244,6 @@ nav ul{
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -308,5 +315,3 @@ gap: 20px; /* Espaçamento entre um card e outro */
 flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
 padding: 20px;
 }
-=======
->>>>>>> 4365306ec20888e47129d81595e54062eccdef89
