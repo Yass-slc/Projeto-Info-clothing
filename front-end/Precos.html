@@ -4,13 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/style.css">
-
   <title>Preços</title>
   <link rel="stylesheet" type="text/css" href="./CSS/Precos.css">
   <link rel="icon" href="./Assets/IMG/favicon.ico" type="image/x-icon"> 
 </head>
-
 <body style="background-color: #DAC8B3; text-align: center">
 
 
@@ -25,22 +22,26 @@
 
 
           <a href="index.html">
-            <li><button class="botão3">
-              Inicio
-            </button></li>
+            <li><button>
+    Início
+</button></li>
           </a>
 
           <a href="inicio.html">
-            <li><button class="botão4"> 
-              Vestidos
-            </button></li>
+            <li><button>
+    Vestidos
+</button></li>
           </a>
 
-          <a href="acessorios.html">
-            <li><button class="botão5">
-              Acessórios
-            </button></li>
-          </a>
+          
+            <li><div class="paste-button">
+  <button class="button2">Acessórios &nbsp; ▼</button>
+  <div class="dropdown-content">
+    <a id="top" href="acessorios.html">Feminino</a>
+    <a id="middle" href="noivoAcessório.html">Masculino</a>
+
+  </div>
+</div></li>
 
             <a href="Ternos.html">
             <li><button class="botão8">
@@ -49,23 +50,20 @@
             </a>
             
           <a href="contato.html">
-            <li><button class="botão6">
-              Contato
-            </button></li>
+            <li><button>
+    Contato
+</button></li>
           </a>
 
           <a href="sobre.html">
-            <li><button class="botão7">
-              Sobre nós
-            </button></li>
+            <li><button>
+    Sobre nós
+</button></li>
           </a>
       </ul>
     </nav>
-    
-    <h1>Preços de um casamento</h1>
   </header>
   <br>
-
 
 
 <!--card 03 ITENS QUE PESAM NO ORÇAMENTO-->
@@ -564,6 +562,41 @@ Renomado: <b>R$ 5.000 a R$ 10.000</b> ou mais. Profissionais com grande históri
 
 
 
+<div class="calculator" id="myCalculator">
+    
+    <div class="calculator-header" id="calculatorHeader">
+        <span>⠿ Arraste por aqui</span>
+    </div>
+    <div class="display">
+        <input type="text" id="result" readonly placeholder="0">
+    </div>
+    <div class="buttons">
+        <button class="btn clear" onclick="clearDisplay()">C</button>
+        <button class="btn operator" onclick="appendValue('/')">/</button>
+        <button class="btn operator" onclick="appendValue('*')">×</button>
+        <button class="btn operator" onclick="deleteLast()">⌫</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn operator" onclick="appendValue('-')">-</button>
+
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn operator" onclick="appendValue('+')">+</button>
+
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn equal" onclick="calculate()">=</button>
+
+        <button class="btn zero" onclick="appendValue('0')">0</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+    </div>
+</div>
+
+<script src="JS/precos.js"></script>
 
 
 
@@ -607,9 +640,7 @@ Renomado: <b>R$ 5.000 a R$ 10.000</b> ou mais. Profissionais com grande históri
 
 
 
-
-
-
+>>>>>>> 409c0f503d3fec886fa1a2899b58fe912299d69d
 </div>
 <br><br><br>
 
