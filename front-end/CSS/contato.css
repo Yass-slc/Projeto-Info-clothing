@@ -198,7 +198,7 @@ width: 220px;
 .sendMessage-btn {
   cursor: pointer;
   margin-bottom: 3em;
-  padding: 10px 90px;
+  padding: -1px 50px;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -209,6 +209,8 @@ width: 220px;
   transition: all ease-in-out 0.3s;
   font-family: initial;
   position: relative; left: 70%;
+  height: 45px;
+  width: 215px;
 }
 
 .sendMessage-btn:hover {
