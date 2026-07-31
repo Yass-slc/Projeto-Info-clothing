@@ -408,3 +408,19 @@ button:after {
   height: 40px;
   background: #50a92600;
 }
+
+
+
+
+th, td{
+  border: 2px solid #804423;
+  font-family: initial;
+  text-align: center;
+  padding: 15px 25px;
+}
+
+table{
+  width: 70%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
