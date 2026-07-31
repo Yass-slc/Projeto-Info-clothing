@@ -182,20 +182,6 @@ button:after {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes autoRun3d {
   from {
     transform: perspective(800px) rotateY(-360deg);
@@ -416,6 +402,9 @@ button:after {
 .noiva::before {
   content: "\1F470";
 }
-.button03{
-  height: 10em;
+
+.botão01{
+  height: 30px;
+  height: 40px;
+  background: #50a92600;
 }
