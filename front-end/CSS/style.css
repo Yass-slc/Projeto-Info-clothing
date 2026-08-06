@@ -15,6 +15,7 @@ nav ul{
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
+  gap:5px;
 }
 
 nav li{
@@ -25,14 +26,13 @@ nav li{
 
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 15px;
+  padding-bottom: 40px; /*CUIDADO AQUI*/
+  padding: 0.1px;
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90px;
+  min-height: 20px;
   flex-wrap: wrap;
 }
 
