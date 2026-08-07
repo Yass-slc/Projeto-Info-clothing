@@ -43,28 +43,6 @@ nav ul{
    object-fit: contain;
  }
 
-
-
- /* fotoss*/
- .container1 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 10px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-
-  list-style: none;
-  text-transform: uppercase;
-
-}
-
-
 header{
   background-color: white;
   padding: 0.1px;
@@ -165,6 +143,10 @@ button:after {
 }
 
 
+
+
+
+/*imagens dos cards*/
 .img-lateral2 {
   display:flex;
   width: 50%;
@@ -216,17 +198,6 @@ button:after {
   transform: scale(0.98);
 }
 
-.category {
-  text-transform: none;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: black;
-  padding: 10px;
-}
-
-.category:hover {
-  cursor: pointer;
-}
 
 .heading {
   font-weight: normal;
@@ -324,7 +295,7 @@ button:after {
 
 .img-card{
   width: 100%;
-  height: 290px;
+  height: 400px;
   object-fit: cover;
   display: block;
 }

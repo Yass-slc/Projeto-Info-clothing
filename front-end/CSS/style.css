@@ -14,48 +14,79 @@ nav ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5px;
   padding: 0;
-  gap:5px;
+  margin: 0;
+}
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
+
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: 10px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
+
+
+
+ /* fotoss*/
+ .container1 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+  font-family:initial;
+
+  list-style: none;
+  text-transform: uppercase;
+
 }
 
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
 
 header{
   background-color: white;
-  padding-bottom: 40px; /*CUIDADO AQUI*/
   padding: 0.1px;
-  width: 100%;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20px;
   flex-wrap: wrap;
-}
-
-
-*{
+  width: 100%;
   box-sizing: border-box;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-.logo-container {
+.logo-container{
   position: absolute;
-  top: 3px;
   left: 20px;
+  top: 10px;
 }
 
-.logo {
-  height: auto;
-  width: 120px;
-  object-fit: contain;
+.logo{
+  width: auto;
+  height: 90px;
+  max-width: 100%;
 }
 
 h1{
@@ -65,7 +96,9 @@ h1{
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -105,6 +138,8 @@ button:after {
   transition-property: width, left;
 }
 
+ 
+
  .btn-instagram {
   display: inline-block;
   padding: 10px;
@@ -130,6 +165,7 @@ button:after {
 }
 
 
+/*conteúdo*/
  .container {
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
