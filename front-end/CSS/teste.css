@@ -413,7 +413,7 @@ button:after {
 
 
 th, td{
-  border: 2px solid #804423;
+  border: 2px solid #372318;
   font-family: initial;
   text-align: center;
   padding: 15px 25px;
@@ -424,6 +424,13 @@ table{
   margin: 0 auto;
   border-collapse: collapse;
 }
+
+
+thead {
+  background-color: #804423;
+  color: #ffffff;
+}
+
 
 
 
