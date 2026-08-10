@@ -14,58 +14,74 @@ nav ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5px;
   padding: 0;
-  gap:5px;
+  margin: 0;
+}
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
+
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: -5px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
+
+
+ /* fotoss*/
+ .container1 {
+  display: flex; /* Ativa o flexbox */
+  align-items: normal; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaçamento entre imagem e texto */
+  border-width: 10px;
+  border-style: double;
+  border-color: #804423;
+  text-align: left;
+  font-size: large;
+  background-color: #a67b5b;
+  color: #DAC8B3;
+  font-family:initial;
+
+  list-style: none;
+  text-transform: uppercase;
+
 }
 
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
 
 header{
   background-color: white;
-  padding-bottom: 40px; /*CUIDADO AQUI*/
   padding: 0.1px;
-  width: 100%;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20px;
   flex-wrap: wrap;
-}
-
-
-*{
+  width: 100%;
   box-sizing: border-box;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: auto;
-  width: 120px;
-  object-fit: contain;
-}
-
-h1{
-  font-size: 40px;
-  color:#804423;
-}
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -105,6 +121,8 @@ button:after {
   transition-property: width, left;
 }
 
+ 
+
  .btn-instagram {
   display: inline-block;
   padding: 10px;
@@ -130,6 +148,7 @@ button:after {
 }
 
 
+/*conteúdo*/
  .container {
    display: flex;
    align-items: center; /* Alinha verticalmente no centro */
@@ -652,23 +671,50 @@ img{
    CELULARES
 ========================== */
 
+
+/*PARA CELULARES*/
 @media (max-width: 768px){
 
-  nav li{
-    display: block;
-    width: 100%;
-    padding: 5px;
+  header{
+    padding-top: 110px;
   }
 
-  button,
-  .button2{
-    width: 100%;
-    font-size: 16px;
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    margin-top: 8px;
+
+  }
+
+  .logo{
+    height: 70px;
   }
 
   h1{
     font-size: 28px;
   }
+
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  button,
+  .button2{
+    width: 220px;
+    font-size: 15px;
+  }
+
+
+  .dropdown-content{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 
   h2{
     font-size: 22px;
@@ -709,7 +755,6 @@ img{
   footer{
     padding: 20px;
   }
-}
 
 /* ==========================
    CELULARES PEQUENOS
@@ -875,4 +920,3 @@ img{
 justify-content: center;
 border-radius: 50%;
 }
-
