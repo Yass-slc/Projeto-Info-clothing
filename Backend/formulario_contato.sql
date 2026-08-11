@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/05/2026 às 16:15
+-- Tempo de geração: 09/08/2026 às 19:37
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -18,22 +18,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `info-clothing`
+-- Banco de dados: `formulario_contato`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `formulario_de_contato`
+-- Estrutura para tabela `formulario`
 --
 
-CREATE TABLE `formulario_de_contato` (
-  `Nome` varchar(90) DEFAULT NULL,
-  `Sobrenome` varchar(60) DEFAULT NULL,
-  `Email` varchar(70) DEFAULT NULL,
-  `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') DEFAULT NULL,
-  `Mensagem` text DEFAULT NULL,
+CREATE TABLE `formulario` (
+  `Nome` varchar(90) NOT NULL,
+  `Email` varchar(70) NOT NULL,
+  `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') NOT NULL,
+  `Mensagem` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `formulario`
+--
+ALTER TABLE `formulario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `formulario`
+--
+ALTER TABLE `formulario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
