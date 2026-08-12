@@ -187,17 +187,19 @@ justify-content: center;
 }
 
 .card {
-  width: 350px;
-  height: 425px;
+  width: min(350px, 100%);
+  min-height: 425px;
+
   background: #804423;
   padding: .4em;
   border-radius: 9px;
+  
 }
 
 
 .imagem img{
   width: 350px;
-  height: 260px;
+  height: 290px;
   border-radius: 9px 6px 0 0;
 }
 

@@ -9,23 +9,21 @@ body{
 }
 
 nav ul{
-
-   list-style: none;
-   text-transform: uppercase;
- }
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
  
  nav li{
    display:inline-block;
-   padding: 10px;
-   margin: 2px;
+   padding: 5px;
  }
  
- header{
-   background-color: rgb(255, 255, 255);
-   padding-bottom: 40px;
-   position: relative;
-   padding-top: 20px;
- }
 
  h1{
    font-size: 40px;
@@ -35,7 +33,7 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: 10px;
+   top: -5px;
    left: 20px;
  }
  
@@ -45,56 +43,18 @@ nav ul{
    object-fit: contain;
  }
 
-
-
- /* fotoss*/
- .container1 {
-  display: flex; /* Ativa o flexbox */
-  align-items: normal; /* Alinha verticalmente no centro */
-  gap: 10px; /* Espaçamento entre imagem e texto */
-  border-width: 10px;
-  border-style: double;
-  border-color: #804423;
-  text-align: left;
-  font-size: large;
-  background-color: #a67b5b;
-  color: #DAC8B3;
-  font-family:initial;
-
-  list-style: none;
-  text-transform: uppercase;
-
-}
-
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
-
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1460px;
-  height: 35px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
 
 h1{
   font-size: 40px;
@@ -103,7 +63,9 @@ h1{
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -170,6 +132,21 @@ button:after {
 }
 
 
+
+
+
+.category {
+  text-transform: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #e69a71;
+  padding: 10px 7px 0;
+  margin-top: 50px;
+}
+
+
+
+/*imagens dos cards*/
 .img-lateral2 {
   display:flex;
   width: 50%;
@@ -200,14 +177,15 @@ button:after {
   gap: 5px;
 }
 
+.card{
+  width: min(350px, 100%);
+  min-height: 425px;
 
-.card {
-  width: 350px;
-  height: 425px;
   background: #804423;
   padding: .4em;
   border-radius: 9px;
 }
+
 
 .card-image {
   background-color: rgba(236, 236, 236, 0.151);
@@ -220,17 +198,6 @@ button:after {
   transform: scale(0.98);
 }
 
-.category {
-  text-transform: none;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: black;
-  padding: 10px;
-}
-
-.category:hover {
-  cursor: pointer;
-}
 
 .heading {
   font-weight: normal;
@@ -244,23 +211,20 @@ button:after {
   cursor: pointer;
 }
 
-.conteiner1 {
-font-family: initial;
-display: flex; 
-justify-content: center; 
-gap: 20px; 
-flex-wrap: wrap; 
-padding: 20px;
+.conteiner1{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-
 
 
 .paste-button {
@@ -329,3 +293,103 @@ padding: 20px;
 
 
 
+.img-card{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.footer{
+  background: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/*PARA CELULARES*/
+@media (max-width: 768px){
+
+  header{
+    padding-top: 110px;
+  }
+
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }
+
+  .logo{
+    height: 70px;
+  }
+
+  h1{
+    font-size: 28px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  button,
+  .button2{
+    width: 220px;
+    font-size: 15px;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .img-card{
+    height: 240px;
+  }
+
+  .dropdown-content{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/*CELULARES BEM PEQUENOS KKK*/
+@media (max-width: 480px){
+
+
+  .logo{
+    width: 90px;
+  }
+
+  h1{
+    font-size: 24px;
+  }
+
+  .card{
+    max-width: 100%;
+  }
+
+  .img-card{
+    height: 220px;
+  }
+
+  button,
+  .button2{
+    width: 180px;
+    font-size: 14px;
+  }
+
+  .instagram-icon,
+  .gmail-icon{
+    width: 22px;
+    height: 22px;
+  }
+}

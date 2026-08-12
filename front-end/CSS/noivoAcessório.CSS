@@ -9,38 +9,52 @@ body{
 }
 
 nav ul{
-      list-style: none;
-      text-transform: uppercase;
-    }
-    
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+
 }
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+   
+ }
+ 
+
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
 
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1460px;
-  height: 35px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
+.logo-container{
   position: absolute;
-  top: 3px;
   left: 20px;
+  top: 10px;
 }
 
-.logo {
-  height: 100px;
+.logo{
   width: auto;
-  object-fit: contain;
+  height: 90px;
+  max-width: 100%;
 }
 
 h1{
@@ -50,7 +64,9 @@ h1{
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -90,27 +106,54 @@ button:after {
   transition-property: width, left;
 }
 
+ 
+
+ .btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
+}
+
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+}
+
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
 
 
-  .btn-instagram {
-    display: inline-block;
-    padding: 10px;
-    background-color: #ffffff; /* Cor do Instagram */
-    transition: background-color 0.3s;
-  }
-  
-  .instagram-icon {
-    width: 24px; /* Tamanho do ícone */
-    height: 24px;
-  }
-  
-   .btn-gmail {
-    display: inline-block;
-    padding: 10px;
-    background-color: #ffffff;  
-    transition: background-color 0.3s;
-  }
-  
+
+
+
+
+
+
+.conteiner1 {
+  font-family: initial;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
 .img-lateral {
   display: inline-block;
@@ -119,11 +162,12 @@ button:after {
 }
 
 .card {
-  width: 300px;
-  height: 375px;
+  width: min(300px, 100%);
+  min-height: 375px;
   background: #804423;
   padding: .4em;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .card-image {
@@ -160,48 +204,20 @@ button:after {
 .heading:hover {
   cursor: pointer;
 }
-
-/* Container que agrupa todos os cards */
-.conteiner1 {
-font-family: initial;
-display: flex; /* Coloca os cards lado a lado */
-justify-content: center; /* Centraliza os cards na tela */
-gap: 20px; /* Espaçamento entre um card e outro */
-flex-wrap: wrap; /* Faz os cards irem para a linha debaixo se a tela for muito pequena */
-padding: 20px;
-}
-
-.btn-instagram {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff; /* Cor do Instagram */
-  transition: background-color 0.3s;
-}
-
-.instagram-icon {
-  width: 24px; /* Tamanho do ícone */
-  height: 24px;
-}
-
- .btn-gmail {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff;  
-  transition: background-color 0.3s;
-}
-
-.gmail-icon {
-  width: 26px; /* Tamanho do ícone */
-  height: 26px;
-}
-
-
-
 .paste-button {
   position: relative;
   display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.img-card{
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px 6px 0 0;
+}
+
 
 .button2 {
   background-color: #ffffff;
@@ -261,4 +277,102 @@ padding: 20px;
   display: block;
 }
 
+@media (max-width: 1024px){
 
+  .logo{
+    height: 75px;
+  }
+
+  h1{
+    font-size: 32px;
+  }
+
+  .card{
+    width: 280px;
+  }
+
+}
+
+
+@media (max-width: 768px){
+
+  header{
+    padding-top: 100px;
+  }
+
+  .logo-container{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }
+
+  .logo{
+    height: 65px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  button,
+  .button2{
+    width: 220px;
+    font-size: 15px;
+  }
+
+  h1{
+    font-size: 28px;
+  }
+
+  .card{
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .img-card{
+    height: 240px;
+  }
+
+  .dropdown-content{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+
+@media (max-width: 480px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-size: 24px;
+  }
+
+  .logo{
+    height: 55px;
+  }
+
+  button,
+  .button2{
+    width: 180px;
+    font-size: 14px;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+  .img-card{
+    height: 220px;
+  }
+
+  .instagram-icon,
+  .gmail-icon{
+    width: 22px;
+    height: 22px;
+  }
+}

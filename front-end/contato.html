@@ -17,20 +17,22 @@
         <nav id="Topo">
           <ul>
     
-            <div class="Inicioo">
-    
-          <a href="index.html">
-            <li><button>
-    Início
-</button></li>
-          </a>
+            
+        <div class="Inicioo">
+          
+          <li> <a href="index.html">
+           <button>
+                   Início
+          </button>
+          </a></li>
 
-          <a href="inicio.html">
-            <li><button>
-    Vestidos
-</button></li>
-          </a>
+          <li><a href="inicio.html">
+            <button>
+                   Vestidos
+            </button>
+          </a></li>
 
+         
             <li><div class="paste-button">
   <button class="button2">Acessórios &nbsp; ▼</button>
   <div class="dropdown-content">
@@ -40,35 +42,28 @@
   </div>
 </div></li>
 
+            <li><a href="Ternos.html">
+            <button>
+                    Ternos
+            </button>
+            </a></li>
+            
+         <li> <a href="contato.html">
+            <button>
+                    Contato
+          </button>
+          </a></li>
 
-<a href="Ternos.html">
-  <li><button>
-    Ternos</button></li>
-  </a>
-  
-
-          <a href="contato.html">
-            <li><button>
-    Contato
-</button></li>
-          </a>
-
-          <a href="sobre.html">
-            <li><button>
-    Sobre nós
-</button></li>
-          </a>
+         <li> <a href="sobre.html">
+            <button>
+                    Sobre nós
+            </button>
+          </a></li>
       </ul>
     </nav>
   </header>
   <br>
-
-
-
-
-
-
-<script src="./JS/contato.js"></script>      
+  
 
 
 
@@ -90,7 +85,7 @@
 <div class="form-card2">
 
   
-    <form class="form"> 
+    <form class="form" id="formContato"> 
 
       <div class="noivas" >
         <img src="Assets/IMG/Noivasssss.png" style="width: 180%; height: auto; border-radius: 35px;">
@@ -102,7 +97,12 @@
       <p class="form-heading">Envie-nos sua mensagem</p>
 
       <div class="form-field">
-        <input required="" placeholder="Nome" class="input-field" type="text" />
+        <input
+         required="" 
+         placeholder="Nome"
+        class="input-field" 
+        id="Nome"
+        type="text" />
       </div>
      
       <div class="form-field">
@@ -110,6 +110,7 @@
           required=""
           placeholder="Email"
           class="input-field"
+          id="Email"
           type="email"
         />
       </div>
@@ -119,6 +120,7 @@
           required=""
           placeholder="Assunto"
           class="input-field"
+          id="Assunto"
           type="text"
         />
       </div>
@@ -129,11 +131,13 @@
           placeholder="Mensagem"
           cols="30"
           rows="3"
+          id="Mensagem"
           class="input-field"
         ></textarea>
       </div>
  
-      <button class="sendMessage-btn">Enviar</button>
+      <button class="sendMessage-btn" type="submit">Enviar</button>
+
     </div>
   </div>
     </form>
@@ -180,7 +184,7 @@
     </div>
 
 
-
+<script src="contato.js"></script>
 
 </body>
 </html>

@@ -39,21 +39,8 @@ CREATE TABLE `formulario` (
 --
 
 --
--- Índices de tabela `formulario`
---
-ALTER TABLE `formulario`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT para tabelas despejadas
 --
 
---
--- AUTO_INCREMENT de tabela `formulario`
---
-ALTER TABLE `formulario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

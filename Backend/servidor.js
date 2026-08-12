@@ -35,6 +35,9 @@ app.get("/contato", (req, res) => {
 
 // cadastrar no bd o contato do form
 app.post('/contato', (req, res) => {
+
+  console.log("DADOS RECEBIDOS:", req.body);
+  
   const { Nome, Email, Assunto, Mensagem } = req.body;
 
   if (!Nome || Nome.trim() === '' || !Email || Email.trim() === '' || !Assunto || Assunto.trim() === '' || !Mensagem || Mensagem.trim() === '') 
