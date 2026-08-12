@@ -487,7 +487,7 @@ footer{
   
 
 .botão8{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:initial;
   color: #804423;
   border: none;
   background-color: white;
@@ -512,7 +512,6 @@ footer{
 .card-image {
   background-color: rgba(236, 236, 236, 0.151);
   width: 100%;
-  height: 250px;
   border-radius: 6px 6px 0 0;
 }
 
@@ -843,7 +842,7 @@ img{
 
 /*card do inicio noivos e acessórios*/
 .card05 {
-  max-width: 300px;
+  max-width: 3000px;
   border-radius: 0.5rem;
   background-color: #c9977d;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -862,8 +861,6 @@ img{
   transform: translateY(-10px);
   box-shadow: 0 5px 15px rgba(4,4.4,0.3);
  }
-
- 
 
 .content {
   padding: 1.1rem;
@@ -888,7 +885,7 @@ img{
 .desc {
   margin-top: 0.5rem;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.25rem;
 }
 
@@ -916,6 +913,7 @@ img{
 
 .card-inicio{
   display: flex;
+  height: 450px;
   gap: 20px;
 justify-content: center;
 border-radius: 50%;
