@@ -839,82 +839,65 @@ img{
 
 
 
-
-/*card do inicio noivos e acessórios*/
-.card05 {
-  max-width: 3000px;
-  border-radius: 0.5rem;
-  background-color: #c9977d;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
-}
-
-.card05 a {
-  text-decoration: none
-}
-
-.card05:active {
-  transform: scale(0.98);
-}
-
-.card05:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(4,4.4,0.3);
- }
-
-.content {
-  padding: 1.1rem;
-}
-
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
-  background-color: rgb(239, 205, 255);
-}
-
-.card05 .price {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 0.9em;
-  position: absolute;
-  left: 0.625em;
-  bottom: 0.625em;
-  color: #000;
-}
-
-.desc {
-  margin-top: 0.5rem;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.action {
-  display: inline-flex;
-  margin-top: 1rem;
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  align-items: center;
-  gap: 0.25rem;
-  background-color: #804423;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.action span {
-  transition: .3s ease;
-}
-
-.action:hover span {
-  transform: translateX(4px);
-}
-
+/* Container dos cards principais */
 .card-inicio{
-  display: flex;
-  height: 450px;
-  gap: 20px;
-justify-content: center;
-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 20px;
+}
+
+/* Card */
+.card05{
+    flex: 1 1 450px;
+    max-width: 500px;
+    min-width: 280px;
+    border-radius: 10px;
+    background-color: #c9977d;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card05:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Imagens dos cards */
+.card05 img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.content{
+    padding: 1.1rem;
+}
+
+.desc{
+    margin-top: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.action{
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #804423;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
 }
