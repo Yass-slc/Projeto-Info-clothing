@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `formulario` (
   `Nome` varchar(90) NOT NULL,
   `Email` varchar(70) NOT NULL,
-  `Assunto` enum('Assunto 1','Assunto 2','Assunto 3') NOT NULL,
+  `Assunto` varchar(100) NOT NULL,
   `Mensagem` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

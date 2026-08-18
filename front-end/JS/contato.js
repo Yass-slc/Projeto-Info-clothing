@@ -1,4 +1,4 @@
-console.log("JavaScript carregou!");
+
 
 const formulario = document.getElementById("formContato");
 
@@ -39,4 +39,5 @@ formulario.addEventListener("submit", async (event) => {
     } catch (erro) {
         console.error("ERRO NO FETCH:", erro);
     }
+    
 });

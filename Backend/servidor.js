@@ -1,6 +1,11 @@
 import express from 'express'
 import db from './db.js'
+import cors from 'cors';
 const app = express()
+
+app.use(cors({
+  origin: 'http://127.0.0.1:5500'
+}));
 
 app.use(express.json())
 
@@ -80,7 +85,7 @@ app.put('/contato/:id', (req, res) => {
   const { id } = req.params;
   const { Nome, Email, Assunto, Mensagem } = req.body;
 
-  if (!Nome || Nome.trim() === '' || !Email || Email.trim() === '' || !Assunto || Assunto.trim() === '' || !Mensagem || Mensagem.trim() === '') {
+  if ( !Nome || Nome.trim() === '' || !Email || Email.trim() === '' || !Assunto || Assunto.trim() === '' || !Mensagem || Mensagem.trim() === '') {
     return res.status(400).json({
       erro: "Todos os campos são obrigatórios."
     });
@@ -195,7 +200,7 @@ app.delete('/contato/:id', (req, res) => {
         erro: "Erro ao deletar contato."
       });
     }
-//VERIFICA SE DELETOU OR NOT 😪
+//VERIFICA SE DELETOU OR NOT    
     if (resultados.affectedRows === 0) {
       return res.status(404).json({
         erro: "Contato não encontrado."
