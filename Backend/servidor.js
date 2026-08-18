@@ -1,8 +1,7 @@
 import express from 'express'
 import db from './db.js'
 import cors from 'cors';
-import path from 'path';
-import { fileURLToPath } from 'url';
+
 
 const app = express()
 
