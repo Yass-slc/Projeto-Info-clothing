@@ -19,22 +19,21 @@ nav li{
   margin: 2px;
 }
 
+
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1200px;
-  height: 70px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
+.logo-container{
+  position: static;
 }
 
 .logo {
@@ -444,56 +443,78 @@ thead {
 
 
 
-
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 .menu-mobile{
-    display: none;
-    font-size: 35px;
-    cursor: pointer;
-    color: #804423;
-    padding: 10px;
-    font-weight: bold;
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
 }
 
-
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
 
 @media (max-width: 768px){
 
-    header{
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        padding: 15px;
-    }
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
 
-    .logo-container{
-        position: static;
-        margin-bottom: 10px;
-    }
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
 
-    .menu-mobile{
-        display: block;
-    }
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
 
-    #Topo ul{
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
-        margin-top: 15px;
-    }
+  .menu-mobile{
+      display: block;
+  }
 
-    #Topo ul.ativo{
-        display: flex;
-    }
+  #Topo{
+      width: 100%;
+  }
 
-    nav li{
-        width: 100%;
-        text-align: center;
-    }
+  #Topo ul{
+      display: none;
 
-    button,
-    .button2{
-        width: 100%;
-    }
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
 
 }
