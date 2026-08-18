@@ -1,4 +1,4 @@
-
+console.log ("Javascript rodano")
 
 const formulario = document.getElementById("formContato");
 
@@ -29,6 +29,12 @@ formulario.addEventListener("submit", async (event) => {
                 Mensagem: Mensagem
             })
         });
+     
+        if (resposta.ok) {
+            console.log('Dados enviados com sucesso!');
+
+            form.reset();
+        }
 
         console.log("STATUS:", resposta.status);
 

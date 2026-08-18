@@ -1,13 +1,16 @@
 import express from 'express'
 import db from './db.js'
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 const app = express()
 
 app.use(cors({
   origin: 'http://127.0.0.1:5500'
 }));
 
-app.use(express.json())
+app.use(express.json());
 
 //const db = require('../Backend/db.js')
 
