@@ -431,3 +431,69 @@ thead {
   color: #ffffff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-mobile{
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #804423;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px){
+
+    header{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo-container{
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+
+    #Topo ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    #Topo ul.ativo{
+        display: flex;
+    }
+
+    nav li{
+        width: 100%;
+        text-align: center;
+    }
+
+    button,
+    .button2{
+        width: 100%;
+    }
+
+}
