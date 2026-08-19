@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/08/2026 às 19:37
+-- Tempo de geração: 18/08/2026 às 20:07
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Versão do PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `formulario` (
+  `id` int(11) NOT NULL,
   `Nome` varchar(90) NOT NULL,
   `Email` varchar(70) NOT NULL,
   `Assunto` varchar(100) NOT NULL,
@@ -39,8 +40,21 @@ CREATE TABLE `formulario` (
 --
 
 --
+-- Índices de tabela `formulario`
+--
+ALTER TABLE `formulario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
+--
+-- AUTO_INCREMENT de tabela `formulario`
+--
+ALTER TABLE `formulario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

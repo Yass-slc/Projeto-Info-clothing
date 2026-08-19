@@ -27,14 +27,32 @@ formulario.addEventListener("submit", async (event) => {
                 Email: Email,
                 Assunto: Assunto,
                 Mensagem: Mensagem
+
+                
             })
         });
-
+     
+       
         console.log("STATUS:", resposta.status);
 
+        
         const dados = await resposta.json();
 
+        if (resposta.ok) {
+            console.log('Dados enviados com sucesso!');
+        
+            formulario.reset();
+
+            const botao = formulario.querySelector('.sendMessage-btn');
+
+            botao.style.display = 'block';
+            botao.style.visibility = 'visible';
+            botao.style.opacity = '1';
+
+        }
+
         console.log("RESPOSTA:", dados);
+       
 
     } catch (erro) {
         console.error("ERRO NO FETCH:", erro);

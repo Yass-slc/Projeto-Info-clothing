@@ -214,11 +214,10 @@ width: 220px;
 }
 
 .sendMessage-btn:hover {
-  transition: all ease-in-out 0.3s;
   background-color: white;
   color: #000;
   cursor: pointer;
-
+  transition: all ease-in-out 0.3s;
   box-shadow: inset 2px 5px 10px rgb(255, 255, 255);
   font-size: medium;
 }
