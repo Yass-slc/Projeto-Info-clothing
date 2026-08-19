@@ -682,13 +682,13 @@ img{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 10px;
-    margin-top: 8px;
-
+    margin-top: 2px;
+    
   }
 
   .logo{
     height: 70px;
+
   }
 
   h1{
@@ -900,4 +900,85 @@ img{
     padding: 8px 12px;
     border-radius: 4px;
     text-decoration: none;
+}
+
+
+
+
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+      gap: 2px;
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
+
 }
