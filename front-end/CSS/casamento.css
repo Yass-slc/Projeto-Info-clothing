@@ -11,37 +11,50 @@ body{
 nav ul{
   list-style: none;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
 }
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
 
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: -5px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
 
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1460px;
-  height: 35px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
 
 h1{
   font-size: 40px;
@@ -50,7 +63,9 @@ h1{
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -90,31 +105,9 @@ button:after {
   transition-property: width, left;
 }
 
-.botão8{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
+ 
 
-/* styles.css */
-img {
- width: 100px;
- height: 100px;
-}
-
-.card {
-  width: 190px;
-  height: 254px;
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
-}
-
-
-.btn-instagram {
+ .btn-instagram {
   display: inline-block;
   padding: 10px;
   background-color: #ffffff; /* Cor do Instagram */
@@ -137,57 +130,6 @@ img {
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
-
-
-
-/* From Uiverse.io by codebykay101 */ 
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container .glass {
-  position: relative;
-  width: 600px;
-  height: 300px;
-  background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10px;
-  margin: 0 -45px;
-  backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg));
-}
-
-.container:hover .glass {
-  transform: rotate(0deg);
-  margin: 0 10px;
-}
-
-.container .glass::before {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  font-size: large;
-}
-.container .glass svg {
-  font-size: 2.5em;
-  fill: #fff;
-}
-
 
 
 .paste-button {
@@ -253,4 +195,220 @@ img {
 .paste-button:hover .dropdown-content {
   display: block;
 }
+/*fim do cabeçalho*/
 
+
+/*celucar*/
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+
+
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
+
+}
+
+
+/* styles.css */
+img {
+  width: 100px;
+  height: 100px;
+ }
+ 
+ .card {
+   width: 190px;
+   height: 254px;
+   border-radius: 30px;
+   background: #e0e0e0;
+   box-shadow: 15px 15px 30px #bebebe,
+              -15px -15px 30px #ffffff;
+ }
+ 
+ 
+ 
+ /* From Uiverse.io by codebykay101 */ 
+ .container {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .container .glass {
+   position: relative;
+   width: 600px;
+   height: 300px;
+   background: linear-gradient(#fff2, transparent);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.5s;
+   border-radius: 10px;
+   margin: 0 -45px;
+   backdrop-filter: blur(10px);
+   transform: rotate(calc(var(--r) * 1deg));
+ }
+ 
+ .container:hover .glass {
+   transform: rotate(0deg);
+   margin: 0 10px;
+ }
+ 
+ .container .glass::before {
+   content: attr(data-text);
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 40px;
+   background: rgba(255, 255, 255, 0.05);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000000;
+   font-size: large;
+ }
+ .container .glass svg {
+   font-size: 2.5em;
+   fill: #fff;
+ }
+ 
+ 
+ 
+ .paste-button {
+   position: relative;
+   display: block;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ .button2 {
+   background-color: #ffffff;
+   color: #804423;
+   padding: 10px 15px;
+   font-size: 18px;
+   font-weight: 500;
+   border: 2px solid transparent;
+   border-radius: 15px;
+   cursor: pointer;
+   font-family: initial;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   font-size: 13px;
+   position: absolute;
+   z-index: 1;
+   min-width: 200px;
+   background-color: #804423;
+   border: 2px solid #DAC8B3;
+   border-radius: 0px 15px 15px 15px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
+ 
+ .dropdown-content a {
+   color: #ffffff;
+   padding: 8px 10px;
+   text-decoration: none;
+   display: block;
+   transition: 0.1s;
+ }
+ 
+ .dropdown-content a:hover {
+   background-color: #ffffff;
+   color: #804423;
+ }
+ 
+ .dropdown-content a:focus {
+   background-color: #212121;
+   color: #ffffff;
+ }
+ 
+ .dropdown-content #top:hover {
+   border-radius: 0px 13px 0px 0px;
+ }
+ 
+ .dropdown-content #bottom:hover {
+   border-radius: 0px 0px 13px 13px;
+ }
+ 
+ .paste-button:hover button {
+   border-radius: 15px 15px 0px 0px;
+ }
+ 
+ .paste-button:hover .dropdown-content {
+   display: block;
+ }
+ 
+ 
