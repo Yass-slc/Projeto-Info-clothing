@@ -11,59 +11,83 @@
 
 <body style="background-color: #DAC8B3; text-align: center">
 
-
   <header>
-    <div class="logo-container">
-      <img src="./Assets/IMG/logo png.png" alt="Logo Info Clothing" class="logo">
+
+    <div class="mobile-header">
+
+        <div class="logo-container">
+            <img src="./Assets/IMG/logo png.png"
+                 alt="Logo Info Clothing"
+                 class="logo">
+        </div>
+
+        <div class="menu-mobile" onclick="toggleMenu()">
+            ☰
+        </div>
+
     </div>
+
     <nav id="Topo">
-      <ul>
+        <ul>
 
-        <div class="Inicioo">
-          
-          <li> <a href="index.html">
-           <button>
-                   Início
-          </button>
-          </a></li>
+            <li>
+                <a href="index.html">
+                    <button>Início</button>
+                </a>
+            </li>
 
-          <li><a href="inicio.html">
-            <button>
-                   Vestidos
-            </button>
-          </a></li>
+            <li>
+                <a href="inicio.html">
+                    <button>Vestidos</button>
+                </a>
+            </li>
 
-         
-            <li><div class="paste-button">
-  <button class="button2">Acessórios &nbsp; ▼</button>
-  <div class="dropdown-content">
-    <a id="top" href="acessorios.html">Feminino</a>
-    <a id="middle" href="noivoAcessório.html">Masculino</a>
+            <li>
+                <div class="paste-button">
+                    <button class="button2">
+                        Acessórios ▼
+                    </button>
 
-  </div>
-</div></li>
+                    <div class="dropdown-content">
+                        <a href="acessorios.html">Feminino</a>
+                        <a href="noivoAcessório.html">Masculino</a>
+                    </div>
+                </div>
+            </li>
 
-            <li><a href="Ternos.html">
-            <button>
-                    Ternos
-            </button>
-            </a></li>
-            
-         <li> <a href="contato.html">
-            <button>
-                    Contato
-          </button>
-          </a></li>
+            <li>
+                <a href="Ternos.html">
+                    <button>Ternos</button>
+                </a>
+            </li>
 
-         <li> <a href="sobre.html">
-            <button>
-                    Sobre nós
-            </button>
-          </a></li>
-      </ul>
+            <li>
+                <a href="contato.html">
+                    <button>Contato</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="sobre.html">
+                    <button>Sobre nós</button>
+                </a>
+            </li>
+
+        </ul>
     </nav>
-  </header>
+
+</header>
   <br>
+
+  <script>
+    function toggleMenu() {
+    
+        const menu = document.querySelector("#Topo ul");
+    
+        menu.classList.toggle("ativo");
+    
+    }
+    </script>
 
 <h1>Tipos de acessórios</h1>
 
@@ -83,6 +107,7 @@
         antes da cerimônia e jogado para trás no altar.
       </div>
     </div>
+    
     
 
 
