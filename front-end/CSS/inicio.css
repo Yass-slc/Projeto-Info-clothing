@@ -316,11 +316,6 @@ button:after {
     padding-top: 110px;
   }
 
-  .logo-container{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
   .logo{
     height: 70px;
@@ -440,6 +435,13 @@ button:after {
       height: auto;
   }
 
+  
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .menu-mobile{
       display: block;
   }
@@ -475,3 +477,4 @@ button:after {
   }
 
 }
+/*Fim do seculaaaarr*/

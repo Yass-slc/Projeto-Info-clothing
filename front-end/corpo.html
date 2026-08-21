@@ -468,6 +468,8 @@
         Fazer nova avaliação
     </button>
 
+    
+
 </div>
 
 
@@ -582,7 +584,7 @@ function calcularCorpo() {
             cintura <= parteInferior * 0.78
         ) {
 
-            tipo = "Ampulheta";
+            tipo = "Ampulheta" ;
 
             descricao =
                 "Os ombros/busto e o quadril apresentam proporções semelhantes, " +
@@ -601,9 +603,7 @@ function calcularCorpo() {
             parteSuperior > parteInferior * 1.08 &&
             cintura >= quadril * 0.78
         ) {
-
             tipo = "Triângulo invertido";
-
             descricao =
                 "A região dos ombros e do busto tende a ser mais larga que " +
                 "a região do quadril, criando uma silhueta mais ampla na parte superior.";
@@ -840,7 +840,6 @@ function calcularCorpo() {
         ) {
 
             tipo = "Ampulheta";
-
             descricao =
                 "A parte superior e o quadril apresentam proporções semelhantes, " +
                 "com cintura significativamente mais estreita.";
