@@ -11,37 +11,50 @@ body{
 nav ul{
   list-style: none;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
 }
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
 
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: -5px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
 
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1460px;
-  height: 35px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
 
 h1{
   font-size: 40px;
@@ -50,7 +63,9 @@ h1{
 
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -90,23 +105,9 @@ button:after {
   transition-property: width, left;
 }
 
-.botão8{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
+ 
 
-.contatinho{
-font-size: medium;
-display: inline;
-height: 200px;
-width: auto;
-
-}
-
-.btn-instagram {
+ .btn-instagram {
   display: inline-block;
   padding: 10px;
   background-color: #ffffff; /* Cor do Instagram */
@@ -131,124 +132,6 @@ width: auto;
 }
 
 
-
-/* From Uiverse.io by DavidTM96 card para o*/ 
-.form {
-  
-  display: flex;
-  flex-direction: column;
-  position: relative; top: -1%; left: 26%;
-  font-family:initial;
-  gap: 10px;
-  padding-inline: 20em;
-  padding-bottom: 1em;
-  background-color: #804423;
-  border-radius:50px;
-height: 400px;
-width: 220px;
-}
-
-
-.form-heading {
-  text-align: center;
-  margin: 2em;
-  color: #DAC8B3;
-  font-size: x-large;
-  margin: 0.6em;
-  color:  #DAC8B3;
-  font-size: 1.5em;
-  background-color: transparent;
-  align-self: center;
-  font-family: initial;
-  position: relative; left: 70%;
-}
-
-.form-field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  border-radius: 10px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: #ffffff;
-  box-shadow: inset 2px 5px 10px rgb(119, 117, 117);
-  box-shadow: inset 2px 5px 10px #ffffff;
-  font-family: initial;
-  position: relative; left: 70%;
-  margin-bottom: 12px;
-  margin-top: 15px
-}
-
-.input-field {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: #000000;
-  padding-inline: 1em;
-  padding-inline: 0.2em;
-  font-family: initial;
- 
- 
-}
-
-.sendMessage-btn {
-  cursor: pointer;
-  margin-bottom: 3em;
-  padding: -1px 50px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  font-weight: bold;
-  outline: 1px solid white;
-  transition: all ease-in-out 0.3s;
-  font-family: initial;
-  position: relative; left: 70%;
-  height: 45px;
-  width: 215px;
-}
-
-.sendMessage-btn:hover {
-  background-color: white;
-  color: #000;
-  cursor: pointer;
-  transition: all ease-in-out 0.3s;
-  box-shadow: inset 2px 5px 10px rgb(255, 255, 255);
-  font-size: medium;
-}
-
-
-.form-card2 {
-  border-radius: 0;
-  transition: all 0.2s;
-}
-
-
-.form-card2:hover {
-  transform: scale(0.98);
-  border-radius: 10px;
-}
-
-.noivas{
-  display: flex;
-  position: relative; right: 140%;
-  position: relative; top: 2.5%;
- 
-}
-.contatos{
-position: relative; bottom: 100%;
-
-}
-
-
-
-
-
 .paste-button {
   position: relative;
   display: block;
@@ -259,7 +142,7 @@ position: relative; bottom: 100%;
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
@@ -312,4 +195,486 @@ position: relative; bottom: 100%;
 .paste-button:hover .dropdown-content {
   display: block;
 }
+/*fim do cabeçalho*/
 
+
+/*celucar*/
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+
+
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
+
+  
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
+
+}
+/*Fim do secular*/
+
+
+
+/* =========================================
+   ÁREA DE CONTATO
+   ========================================= */
+
+.form-card1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.form-card2 {
+    width: min(1100px, 100%);
+    transition: all 0.3s ease;
+}
+
+.form-card2:hover {
+    transform: none;
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+
+.form {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(300px, 1fr);
+    gap: 35px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background-color: #804423;
+    border-radius: 35px;
+
+    font-family: initial;
+}
+
+
+/* =========================================
+   IMAGEM
+   ========================================= */
+
+.noivas {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+}
+
+.noivas img {
+    display: block;
+
+    width: 100% !important;
+    max-width: 430px;
+
+    height: auto !important;
+
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   ÁREA DOS CONTATOS
+   ========================================= */
+
+.contatos {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: static;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.form-heading {
+    width: 100%;
+
+    margin: 0 0 25px 0;
+
+    text-align: center;
+
+    color: #DAC8B3;
+
+    font-family: initial;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    background-color: transparent;
+}
+
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+.form-field {
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    margin: 0 0 15px 0;
+    padding: 8px 12px;
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background-color: #ffffff;
+
+    box-shadow: inset 2px 5px 10px rgba(119, 117, 117, 0.25);
+
+    position: static;
+}
+
+
+.input-field {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: #000000;
+
+    padding: 8px;
+
+    font-family: initial;
+    font-size: 1rem;
+
+    resize: vertical;
+}
+
+
+.input-field::placeholder {
+    color: #777;
+}
+
+
+/* =========================================
+   BOTÃO
+   ========================================= */
+
+.sendMessage-btn {
+    width: 100%;
+    min-height: 48px;
+
+    margin: 10px 0 0 0;
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border: 1px solid white;
+    outline: none;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-family: initial;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    position: static;
+}
+
+
+.sendMessage-btn:hover {
+    background-color: white;
+    color: #804423;
+
+    box-shadow: inset 2px 5px 10px rgba(255, 255, 255, 0.8);
+
+    transform: translateY(-2px);
+}
+
+
+.sendMessage-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MENSAGEM DE SUCESSO
+   ========================================= */
+
+.mensagem-sucesso {
+    display: none;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 15px;
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background-color: #DAC8B3;
+    color: #804423;
+
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+
+/* Quando a mensagem estiver ativa */
+.mensagem-sucesso.ativa {
+    display: block;
+
+    animation: aparecerMensagem 0.4s ease;
+}
+
+
+@keyframes aparecerMensagem {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .form {
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        padding: 30px;
+
+        gap: 25px;
+    }
+
+    .noivas img {
+        max-width: 350px;
+    }
+
+    .form-heading {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .form-card1 {
+        padding: 25px 12px;
+    }
+
+    .form {
+        width: 100%;
+
+        padding: 20px 15px;
+
+        border-radius: 25px;
+
+        gap: 20px;
+    }
+
+    .noivas img {
+        width: 100% !important;
+        max-width: 280px;
+
+        border-radius: 22px;
+    }
+
+    .form-heading {
+        font-size: 1.3rem;
+
+        margin-bottom: 20px;
+    }
+
+    .form-field {
+        min-height: 48px;
+
+        padding: 7px 10px;
+    }
+
+    .input-field {
+        font-size: 0.95rem;
+    }
+
+    .sendMessage-btn {
+        min-height: 48px;
+
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .form-card1 {
+        padding: 20px 8px;
+    }
+
+    .form {
+        padding: 15px 12px;
+
+        border-radius: 20px;
+    }
+
+    .noivas img {
+        max-width: 230px;
+    }
+
+    .form-heading {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* =========================================
+   TELAS GRANDES
+   ========================================= */
+
+@media (min-width: 1400px) {
+
+    .form {
+        max-width: 1200px;
+
+        grid-template-columns: 1fr 1fr;
+
+        padding: 45px;
+
+        gap: 50px;
+    }
+
+    .noivas img {
+        max-width: 500px;
+    }
+
+    .form-heading {
+        font-size: 1.8rem;
+    }
+}
