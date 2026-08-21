@@ -1,8 +1,5 @@
 
-
 const formulario = document.getElementById("formContato");
-
-console.log("FORMULÁRIO ENCONTRADO:", formulario);
 
 formulario.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -39,17 +36,12 @@ formulario.addEventListener("submit", async (event) => {
         const dados = await resposta.json();
 
         if (resposta.ok) {
-            console.log('Dados enviados com sucesso!');
-        
+            
             formulario.reset();
-
+        }
             const botao = formulario.querySelector('.sendMessage-btn');
 
-            botao.style.display = 'block';
-            botao.style.visibility = 'visible';
-            botao.style.opacity = '1';
-
-        }
+        
 
         console.log("RESPOSTA:", dados);
        

@@ -202,7 +202,7 @@ app.delete('/contato/:id', (req, res) => {
         erro: "Erro ao deletar contato."
       });
     }
-//VERIFICA SE DELETOU OR NOT    
+//VERIFICA SE DELETOU AS COISA OU NÃO    
     if (resultados.affectedRows === 0) {
       return res.status(404).json({
         erro: "Contato não encontrado."

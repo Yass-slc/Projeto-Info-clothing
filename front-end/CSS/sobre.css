@@ -108,7 +108,7 @@ button:after {
   transition-property: width, left;
 }
 
-<<<<<<< HEAD
+
 .botão8{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: #804423;
@@ -116,10 +116,7 @@ button:after {
   background-color: white;
   font-size: medium;
 }
-=======
- 
 
->>>>>>> a04c439d63888739ff4643058851ed2207bb56bd
 
 .btn-instagram {
   display: inline-block;
@@ -178,9 +175,12 @@ button:after {
     max-width: 650px; 
     margin-top: 50px;
     margin-bottom: 80px;
-    text-align: center;
+    text-align: justify;
 }
 
+.titulo{
+  text-align: center;
+}
 /*fotos carrossel */
 /* Container que esconde as imagens fora da tela */
 .carousel-slider {
@@ -227,7 +227,7 @@ button:after {
   max-width: 650px; 
     margin-top: 50px;
     margin-bottom: 80px;
-    text-align: center;
+    text-align: justify;
     position: relative; left: 24%;
 }
 
@@ -248,6 +248,7 @@ button:after {
   flex: 1; /* Faz com que as 3 colunas tenham exatamente o mesmo tamanho */
   display: flex;
   flex-direction: column;
+  text-align: justify;
   align-items: center; /* Alinha os textos à esquerda */
 }
 
