@@ -142,7 +142,7 @@ button:after {
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
