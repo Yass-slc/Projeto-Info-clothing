@@ -105,9 +105,23 @@ button:after {
   transition-property: width, left;
 }
 
+<<<<<<< HEAD
  
 
  .btn-instagram {
+=======
+
+.botão8{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #804423;
+  border: none;
+  background-color: white;
+  font-size: medium;
+}
+
+
+.btn-instagram {
+>>>>>>> 51b13a896ed1dbc6cb3fb4ffc9ca06510a7b4d3a
   display: inline-block;
   padding: 10px;
   background-color: #ffffff; /* Cor do Instagram */
@@ -230,9 +244,12 @@ button:after {
     max-width: 650px; 
     margin-top: 50px;
     margin-bottom: 80px;
-    text-align: center;
+    text-align: justify;
 }
 
+.titulo{
+  text-align: center;
+}
 /*fotos carrossel */
 /* Container que esconde as imagens fora da tela */
 .carousel-slider {
@@ -279,7 +296,7 @@ button:after {
   max-width: 650px; 
     margin-top: 50px;
     margin-bottom: 80px;
-    text-align: center;
+    text-align: justify;
     position: relative; left: 24%;
 }
 
@@ -300,6 +317,7 @@ button:after {
   flex: 1; /* Faz com que as 3 colunas tenham exatamente o mesmo tamanho */
   display: flex;
   flex-direction: column;
+  text-align: justify;
   align-items: center; /* Alinha os textos à esquerda */
 }
 
