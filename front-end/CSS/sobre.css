@@ -104,24 +104,9 @@ button:after {
   transition-duration: 400ms;
   transition-property: width, left;
 }
-
-<<<<<<< HEAD
  
 
- .btn-instagram {
-=======
-
-.botão8{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
-
-
 .btn-instagram {
->>>>>>> 51b13a896ed1dbc6cb3fb4ffc9ca06510a7b4d3a
   display: inline-block;
   padding: 10px;
   background-color: #ffffff; /* Cor do Instagram */
@@ -210,6 +195,12 @@ button:after {
   display: block;
 }
 /*fim do cabeçalho*/
+
+
+
+
+
+
 
 .hero-section {
     background-color: rgb(255, 255, 255); 
