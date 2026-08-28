@@ -10,73 +10,97 @@
 </head>
 <body style="background-color: #DAC8B3; text-align: center">
 
+    <header>
 
-  <header>
-    <div class="logo-container">
-      <img src="./Assets/IMG/logo png.png" alt="Logo Info Clothing" class="logo">
-    </div>
-    <nav id="Topo">
-      <ul>
-
-        <div class="Inicioo">
-          
-          <li> <a href="index.html">
-           <button>
-                   Início
-          </button>
-          </a></li>
-
-          <li><a href="inicio.html">
-            <button>
-                   Vestidos
-            </button>
-          </a></li>
-
-         
-            <li><div class="paste-button">
-  <button class="button2">Acessórios &nbsp; ▼</button>
-  <div class="dropdown-content">
-    <a id="top" href="acessorios.html">Feminino</a>
-    <a id="middle" href="noivoAcessório.html">Masculino</a>
-
-  </div>
-</div></li>
-
-            <li><a href="Ternos.html">
-            <button>
-                    Ternos
-            </button>
-            </a></li>
-            
-         <li> <a href="contato.html">
-            <button>
-                    Contato
-          </button>
-          </a></li>
-
-         <li> <a href="sobre.html">
-            <button>
-                    Sobre nós
-            </button>
-          </a></li>
-      </ul>
-    </nav>
-  </header>
-  <br>
+        <div class="mobile-header">
+    
+            <div class="logo-container">
+                <img src="./Assets/IMG/logo png.png"
+                     alt="Logo Info Clothing"
+                     class="logo">
+            </div>
+    
+            <div class="menu-mobile" onclick="toggleMenu()">
+                ☰
+            </div>
+    
+        </div>
+    
+        <nav id="Topo">
+            <ul>
+    
+                <li>
+                    <a href="index.html">
+                        <button>Início</button>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="inicio.html">
+                        <button>Vestidos</button>
+                    </a>
+                </li>
+    
+                <li>
+                    <div class="paste-button">
+                        <button class="button2">
+                            Acessórios ▼
+                        </button>
+    
+                        <div class="dropdown-content">
+                            <a href="acessorios.html">Feminino</a>
+                            <a href="noivoAcessório.html">Masculino</a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li>
+                    <a href="Ternos.html">
+                        <button>Ternos</button>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="contato.html">
+                        <button>Contato</button>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="sobre.html">
+                        <button>Sobre nós</button>
+                    </a>
+                </li>
+    
+            </ul>
+        </nav>
+    
+    </header>
+      <br>
+    
+      <script>
+        function toggleMenu() {
+        
+            const menu = document.querySelector("#Topo ul");
+        
+            menu.classList.toggle("ativo");
+        
+        }
+        </script>
         
 
 
-<h1>Descubra seu tipo de corpo</h1>
+<h1>Descubra seu tipo de corpo</h1><br>
 <!--verificar como tirar as medidas fica melhor, em baixo ou em cima da calculadora-->
 
 <h2>Como tirar as medidas.</h2>
-<b>Use um espelho:</b> Para garantir que a fita não esteja torcida ou desnivelada.<br>
-<b>Remova roupas volumosas:</b> Use roupas íntimas para obter medidas precisas.<br>
+<b>Use um espelho:</b> Para garantir que a fita não esteja torcida ou desnivelada.<br><br>
+<b>Remova roupas volumosas:</b> Use roupas íntimas para obter medidas precisas.<br><br>
 <b>Coloque os pés juntos:</b> Evite separar os pés para uma medição mais precisa.<br><br>
 
-<b>Ombros:</b> Peça para alguém medir de uma ponta a outra na parte mais larga,<br> ou olhe no espelho a largura visual dos ombros.
-<br><b>Cintura:</b> Meça a parte mais fina do seu tronco, que fica logo acima do umbigo.
-<br><b>Quadril:</b> Meça a circunferência na parte mais larga do bumbum.
+<b>Ombros:</b> Peça para alguém medir de uma ponta a outra na parte mais larga,<br> ou olhe no espelho a largura visual dos ombros.<br>
+<br><b>Cintura:</b> Meça a parte mais fina do seu tronco, que fica logo acima do umbigo.<br>
+<br><b>Quadril:</b> Meça a circunferência na parte mais larga do bumbum.<br>
 <br><b>Busto:</b> passe a fita ao sobre os mamilos, e por baixo dos braços, envolvendo as costas.
 
 <br><br>

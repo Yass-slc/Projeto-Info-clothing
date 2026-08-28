@@ -1,117 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 body{
-  color:#804423;
-  font-family: "Cinzel", sans-serif;
-  font-weight: 400;
-  background-color: #DAC8B3;
-  text-align: center;
+   color:#804423;
+   font-family: "Cinzel", sans-serif;
+   font-weight: 400;
+   background-color: #DAC8B3;
+   text-align: center;
 }
 
 nav ul{
- list-style: none;
- text-transform: uppercase;
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
 }
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
 
-nav li{
- display:inline-block;
- padding: 10px;
- margin: 2px;
-}
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: -5px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
 
 header{
- background-color: white;
- padding-bottom: 40px;
- padding: 20px;
- width: 1200px;
- height: 35px;
- display: flex;
- justify-content: center;
- align-items: center;
- 
+  background-color: white;
+  padding: 0.1px;
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
- position: absolute;
- top: 3px;
- left: 20px;
-}
-
-.logo {
- height: 100px;
- width: auto;
- object-fit: contain;
-}
 
 h1{
- font-size: 40px;
- color:#804423;
+  font-size: 40px;
+  color:#804423;
 }
 
 /*aqui ó o cabeçalhinho*/
 button {
- font-size: 18px;
- color: #804423;
- height: 60px;
- font-family: initial;
- font-weight: 500;
- cursor: pointer;
- position: relative;
- border: none;
- background: white;
- text-transform: uppercase;
- transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
- transition-duration: 400ms;
- transition-property: color;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
+  color: #804423;
+  height: 60px;
+  font-family: initial;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: white;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
 button:focus,
 button:hover {
- color: #804423;
+  color: #804423;
 }
 
 button:focus:after,
 button:hover:after {
- width: 100%;
- left: 0%;
+  width: 100%;
+  left: 0%;
 }
 
 button:after {
- content: "";
- pointer-events: none;
- bottom: -2px;
- left: 50%;
- position: absolute;
- width: 0%;
- height: 2px;
- background-color: #804423;
- transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
- transition-duration: 400ms;
- transition-property: width, left;
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #804423;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
-.btn-instagram {
- display: inline-block;
- padding: 10px;
- background-color: #ffffff; /* Cor do Instagram */
- transition: background-color 0.3s;
+ 
+
+ .btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
 }
 
 .instagram-icon {
- width: 24px; /* Tamanho do ícone */
- height: 24px;
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
 }
 
-.btn-gmail {
- display: inline-block;
- padding: 10px;
- background-color: #ffffff;  
- transition: background-color 0.3s;
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
 }
 
 .gmail-icon {
- width: 26px; /* Tamanho do ícone */
- height: 26px;
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
 }
 
 
@@ -125,7 +142,7 @@ button:after {
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
@@ -178,6 +195,8 @@ button:after {
 .paste-button:hover .dropdown-content {
   display: block;
 }
+/*fim do cabeçalho*/
+
 
 
 .container {
@@ -345,6 +364,99 @@ justify-content: center;
 
 }
 
+
 .Categoria {
   text-align: Center;
 }
+
+
+
+/*celucar*/
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+
+
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
+
+  
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
+
+}
+/*Fim do seculaaaarr*/
+
