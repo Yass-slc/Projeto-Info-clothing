@@ -201,6 +201,7 @@ button:after {
   color: #DAC8B3;
   padding: 7px;
   text-transform: none;
+  text-align: justify;
 }
 
 .heading:hover {
