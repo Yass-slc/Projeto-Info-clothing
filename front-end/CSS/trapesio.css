@@ -278,4 +278,6 @@ button1:hover {
 .paste-button:hover .dropdown-content {
   display: block;
 }
-
+.text {
+  text-align: justify;
+}
