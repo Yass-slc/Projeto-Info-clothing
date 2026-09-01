@@ -232,10 +232,11 @@ justify-content: center;
 
 .descricao{
   font-weight: normal;
-  font-size: 1em;
+  font-size: 0.98em;
   color: #DAC8B3;
   padding: 5px;
   text-transform: none;
+  text-align: justify;
 
 }
 
@@ -315,11 +316,6 @@ justify-content: center;
   height: 250px;
   border-radius: 9px 6px 0 0;
 
-}
-
-
-.Categoria {
-  text-align: Center;
 }
 
 
