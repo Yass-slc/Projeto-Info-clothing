@@ -11,79 +11,61 @@ body{
 nav ul{
   list-style: none;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
 }
+ 
+ nav li{
+   display:inline-block;
+   padding: 5px;
+ }
+ 
 
-nav li{
-  display:inline-block;
-  padding: 10px;
-  margin: 2px;
-}
+ h1{
+   font-size: 40px;
+   color:#804423;
+ }
+
+
+ .logo-container {
+   position: absolute;
+   top: -5px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
 
 header{
   background-color: white;
-  padding-bottom: 40px;
-  padding: 20px;
-  width: 1460px;
-  height: 35px;
+  padding: 0.1px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
 
 h1{
   font-size: 40px;
   color:#804423;
 }
 
-
-.botão8{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
-
-.btn-instagram {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff; /* Cor do Instagram */
-  transition: background-color 0.3s;
-}
-
-.instagram-icon {
-  width: 24px; /* Tamanho do ícone */
-  height: 24px;
-}
-
- .btn-gmail {
-  display: inline-block;
-  padding: 10px;
-  background-color: #ffffff;  
-  transition: background-color 0.3s;
-}
-
-.gmail-icon {
-  width: 26px; /* Tamanho do ícone */
-  height: 26px;
-}
-
 /*aqui ó o cabeçalhinho*/
 button {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
+   min-height: 50px;
+  padding: 10px 15px;
   color: #804423;
   height: 60px;
   font-family: initial;
@@ -123,115 +105,31 @@ button:after {
   transition-property: width, left;
 }
 
-
-
-
-button1 {
- display: flex;
- height: 3em;
- width: 100px;
- align-items: center;
- justify-content: center;
- background-color: #804423;
- border-radius: 3px;
- letter-spacing: 1px;
- transition: all 0.2s linear;
- cursor: pointer;
- border: none;
- background: #fff;
  
+
+ .btn-instagram {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff; /* Cor do Instagram */
+  transition: background-color 0.3s;
 }
 
-button1 > svg {
- margin-right: 5px;
- margin-left: 5px;
- font-size: 20px;
- transition: all 0.4s ease-in;
+.instagram-icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
 }
 
-button1:hover > svg {
- font-size: 1.2em;
- transform: translateX(-5px);
+ .btn-gmail {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
 }
 
-button1:hover {
- box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
- transform: translateY(-2px);
+.gmail-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* From Uiverse.io by codebykay101 */ 
-.container {
-  position: relative;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-}
-
-.container .glass {
-  position: relative;
-  width: 300px;
-  height: 350px;
-  background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10px;
-  margin: 0 -45px;
-  backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg));
-}
-
-.container:hover .glass {
-  transform: rotate(0deg);
-  margin: 0 10px;
-}
-
-.container .glass::before {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  font-size: large;
-}
-.container .glass svg {
-  font-size: 2.5em;
-  fill: #fff;
-}
-
-
-.maçã{
-  background-color: #a32727;
-  font-family: initial;
-  font-size: larger;
-  max-width: 1300px;
-  margin: 10px auto;
-  border-radius: 20px;
-}
-
-
 
 
 .paste-button {
@@ -244,7 +142,7 @@ button1:hover {
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
@@ -297,8 +195,416 @@ button1:hover {
 .paste-button:hover .dropdown-content {
   display: block;
 }
+/*fim do cabeçalho*/
 
-.text {
-  text-align: justify;
+
+/*celucar*/
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+
+
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
+
+  
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
 
 }
+/*Fim do seculaaaarr*/
+
+
+
+
+
+
+
+/* =========================
+   CONTAINER DOS CARDS
+========================= */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   CARD GLASS
+========================= */
+
+.container .glass {
+  position: relative;
+
+  width: clamp(180px, 22vw, 300px);
+  height: clamp(250px, 28vw, 350px);
+
+  background: linear-gradient(#fff2, transparent);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+
+  border-radius: 10px;
+
+  margin: 0 -45px;
+
+  backdrop-filter: blur(10px);
+
+  transform: rotate(calc(var(--r) * 1deg));
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  flex-shrink: 1;
+}
+
+
+/* =========================
+   IMAGENS DOS CARDS
+========================= */
+
+.container .glass img {
+  width: 100%;
+  height: calc(100% - 40px);
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================
+   EFEITO ORIGINAL NO HOVER
+========================= */
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+
+/* =========================
+   TEXTO DO CARD
+========================= */
+
+.container .glass::before {
+  content: attr(data-text);
+
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  color: #000000;
+
+  font-size: clamp(14px, 2vw, 18px);
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   TELAS GRANDES
+========================= */
+
+@media (min-width: 1200px) {
+
+  .container {
+    padding: 30px 20px;
+  }
+
+}
+
+
+/* =========================
+   NOTEBOOK E TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 30px 20px;
+  }
+
+  .container .glass {
+    width: clamp(180px, 24vw, 260px);
+    height: clamp(250px, 32vw, 320px);
+
+    margin: 0 -35px;
+  }
+
+  .container:hover .glass {
+    margin: 0 5px;
+  }
+
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+
+    padding: 30px 15px;
+
+    justify-content: center;
+  }
+
+  .container .glass {
+    width: clamp(150px, 26vw, 220px);
+    height: clamp(220px, 38vw, 300px);
+
+    margin: 0 -25px;
+  }
+
+  .container:hover .glass {
+    margin: 0 4px;
+  }
+
+}
+
+
+/* =====/* =========================
+   CELULARES
+   CARDS MAIORES - 2x2
+========================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    padding: 20px 10px;
+
+    justify-items: center;
+    align-items: center;
+
+    overflow: visible;
+  }
+
+
+  /* CARDS MAIORES */
+  .container .glass {
+    width: 100%;
+    max-width: 250px;
+
+    height: 380px;
+
+    margin: 0;
+
+    /* Fotos retas inicialmente */
+    transform: rotate(0deg);
+
+    overflow: hidden;
+  }
+
+
+  /* Mantém os cards retos no celular */
+  .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0;
+  }
+
+
+  /* FOTO MAIOR */
+  .container .glass img {
+    width: 100%;
+    height: calc(100% - 45px);
+
+    object-fit: cover;
+
+    /* Mantém o vestido visível */
+    object-position: center top;
+
+    display: block;
+  }
+
+
+  /* Nome da vestimenta */
+  .container .glass::before {
+    height: 45px;
+
+    font-size: 15px;
+
+    text-align: center;
+  }
+
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px) {
+
+  .container {
+    padding: 20px 5px;
+  }
+
+  .container .glass {
+    width: clamp(95px, 26vw, 130px);
+    height: clamp(170px, 45vw, 220px);
+
+    margin: 0 -15px;
+  }
+
+  .container:hover .glass {
+    margin: 0 1px;
+  }
+
+  .container .glass::before {
+    height: 30px;
+
+    font-size: 10px;
+  }
+
+  .container .glass img {
+    height: calc(100% - 30px);
+  }
+
+}
+
+
+
+button1 {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #804423;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+ }
+ 
+ button1 > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+ }
+ 
+ button1:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ button1:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+ }
