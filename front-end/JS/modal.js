@@ -1,137 +1,232 @@
 
 
-    function abrirCard(tipo) {
+    // VARIÁVEIS DO CARROSSEL 
 
-      if (tipo === "voillet") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg";
-
-        document.getElementById("modalImagem-2").src =
-          "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909";
-        
-        document.getElementById("modalImagem-3").src =
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10";
-      }
+let imagensAtuais = [];
+let imagemAtual = 0;
 
 
-      else if (tipo === "ombro") {
+// FOTOS
 
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
+const fotos = {
 
-        document.getElementById("modalImagem-1").src =
-          "https://blog.usealtar.com.br/wp-content/uploads/2023/12/veu-de-noiva-ombro.jpg";
+    voillet: [
+        "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg",
 
-        document.getElementById("modalImagem-2").src =
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04Y7ySCWVpeXY14dARndV3Hl2__tA0R67hIqbNTUkLLc06pu2Be9hjHM&s=10";
-        
-        document.getElementById("modalImagem-3").src =
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ABHbMgMRfNHazGHubZsV-sgIaoeLwEqvpyl88YfWSgIx2HhSXifFhuU&s=10";
-      }
+        "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909",
+
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10"
+    ],
 
 
-      else if (tipo === "cotovelo") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    ombro: [
+        "", 
+        "", 
+        ""
+    ],
 
 
-      else if (tipo === "blusher") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    cotovelo: [
+        "",
+        "",
+        ""
+    ],
 
 
-      else if (tipo === "pontadededo") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    blusher: [
+        "",
+        "",
+        ""
+    ],
 
 
-      else if (tipo === "ballet") {
-
-       document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    pontadededo: [
+        "",
+        "",
+        ""
+    ],
 
 
-      else if (tipo === "capela") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    ballet: [
+        "",
+        "",
+        ""
+    ],
 
 
-      else if (tipo === "catedral") {
-
-        document.getElementById("modalTitulo").textContent = "Mais Opções:";
-
-        document.getElementById("modalImagem-1").src =
-          "";
-
-        document.getElementById("modalImagem-2").src =
-          "";
-        
-        document.getElementById("modalImagem-3").src =
-          "";
-      }
+    capela: [
+        "",
+        "",
+        ""
+    ],
 
 
-      // ABRIR MODAL
-      document.getElementById("meuModal").style.display = "flex";
+    catedral: [
+        "",
+        "",
+        ""
+    ]
+
+};
+
+
+// ABRIR CARD
+
+function abrirCard(tipo) {
+
+    imagensAtuais = fotos[tipo] || [];
+
+    /* Remove imagens vazias */
+
+    imagensAtuais = imagensAtuais.filter(
+        imagem => imagem !== ""
+    );
+
+    /* Se não houver imagens */
+
+    if (imagensAtuais.length === 0) {
+
+        document.getElementById("modalImagem").src = "";
+
+        document.getElementById("contadorImagem").textContent =
+            "Sem imagens disponíveis";
+
+        document.getElementById("meuModal").style.display = "flex";
+
+        return;
     }
 
 
-    function controlarModal(abrir) {
+    /* Começa pela primeira foto */
 
-      document.getElementById("meuModal").style.display =
+    imagemAtual = 0;
+
+    /* Atualiza imagem */
+
+    atualizarCarrossel();
+
+    /* Abre modal */
+
+    document.getElementById("meuModal").style.display = "flex";
+}
+
+
+// ATUALIZAR CARROSSEL
+
+function atualizarCarrossel() {
+
+    const imagem = document.getElementById("modalImagem");
+
+    const contador = document.getElementById("contadorImagem");
+
+    imagem.src = imagensAtuais[imagemAtual];
+
+    contador.textContent =
+        `${imagemAtual + 1} / ${imagensAtuais.length}`;
+}
+
+// PRÓXIMA IMAGEM
+
+function proximaImagem() {
+
+    if (imagensAtuais.length === 0) {
+        return;
+    }
+
+    imagemAtual++;
+
+    /* Volta para a primeira */
+
+    if (imagemAtual >= imagensAtuais.length) {
+
+        imagemAtual = 0;
+    }
+
+    atualizarCarrossel();
+}
+
+// IMAGEM ANTERIOR
+
+function imagemAnterior() {
+
+    if (imagensAtuais.length === 0) {
+        return;
+    }
+
+    imagemAtual--;
+
+    /* Vai para a última */
+
+    if (imagemAtual < 0) {
+
+        imagemAtual = imagensAtuais.length - 1;
+    }
+
+
+    atualizarCarrossel();
+}
+
+// CONTROLAR MODAL
+
+function controlarModal(abrir) {
+
+    document.getElementById("meuModal").style.display =
         abrir ? "flex" : "none";
+}
+
+
+// FECHAR CLICANDO FORA DO MODAL
+
+document.getElementById("meuModal").addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+
+            controlarModal(false);
+        }
+    }
+);
+
+
+/* TECLADO
+   ← = anterior
+   → = próxima
+   ESC = fechar */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        const modal =
+            document.getElementById("meuModal");
+
+        /* Só funciona quando o modal está aberto */
+
+        if (modal.style.display !== "flex") {
+            return;
+        }
+
+
+        if (event.key === "ArrowRight") {
+
+            proximaImagem();
+
+        }
+
+
+        else if (event.key === "ArrowLeft") {
+
+            imagemAnterior();
+
+        }
+
+
+        else if (event.key === "Escape") {
+
+            controlarModal(false);
+
+        }
 
     }
-
- 
+);
