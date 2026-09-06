@@ -571,7 +571,7 @@ width: 5px;
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
@@ -911,6 +911,14 @@ width: 5px;
       gap: 10px;
   }
 
+  .botao-flutuante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: x-small;
+  }
+
   .botao01 {
       width: 52px;
       height: 52px;
@@ -922,6 +930,17 @@ width: 5px;
       right: 62px;
       font-size: 12px;
       padding: 7px 10px;
+  }
+}
+.apenas-celular{
+  display: none;
+  gap: -85px;
+  color: #804423;
+}
+@media (max-width: 767px){
+  .apenas-celular{
+    display:block
+    
   }
 }
 
