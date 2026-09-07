@@ -279,3 +279,6 @@ button1:hover {
   display: block;
 }
 
+.text {
+  text-align: justify;
+}

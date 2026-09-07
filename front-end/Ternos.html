@@ -11,62 +11,85 @@
 
 <body style="background-color: #DAC8B3; text-align: center">
 
-
   <header>
-    <div class="logo-container">
-      <img src="./Assets/IMG/logo png.png" alt="Logo Info Clothing" class="logo">
+
+    <div class="mobile-header">
+
+        <div class="logo-container">
+            <img src="./Assets/IMG/logo png.png"
+                 alt="Logo Info Clothing"
+                 class="logo">
+        </div>
+
+        <div class="menu-mobile" onclick="toggleMenu()">
+            ☰
+        </div>
+
     </div>
+
     <nav id="Topo">
-      <ul>
+        <ul>
 
-        
-        <div class="Inicioo">
-          
-          <li> <a href="index.html">
-           <button>
-                   Início
-          </button>
-          </a></li>
+            <li>
+                <a href="index.html">
+                    <button>Início</button>
+                </a>
+            </li>
 
-          <li><a href="inicio.html">
-            <button>
-                   Vestidos
-            </button>
-          </a></li>
+            <li>
+                <a href="inicio.html">
+                    <button>Vestidos</button>
+                </a>
+            </li>
 
-         
-            <li><div class="paste-button">
-  <button class="button2">Acessórios &nbsp; ▼</button>
-  <div class="dropdown-content">
-    <a id="top" href="acessorios.html">Feminino</a>
-    <a id="middle" href="noivoAcessório.html">Masculino</a>
+            <li>
+                <div class="paste-button">
+                    <button class="button2">
+                        Acessórios ▼
+                    </button>
 
-  </div>
-</div></li>
+                    <div class="dropdown-content">
+                        <a href="acessorios.html">Feminino</a>
+                        <a href="noivoAcessório.html">Masculino</a>
+                    </div>
+                </div>
+            </li>
 
-            <li><a href="Ternos.html">
-            <button>
-                    Ternos
-            </button>
-            </a></li>
-            
-         <li> <a href="contato.html">
-            <button>
-                    Contato
-          </button>
-          </a></li>
+            <li>
+                <a href="Ternos.html">
+                    <button>Ternos</button>
+                </a>
+            </li>
 
-         <li> <a href="sobre.html">
-            <button>
-                    Sobre nós
-            </button>
-          </a></li>
-      </ul>
+            <li>
+                <a href="contato.html">
+                    <button>Contato</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="sobre.html">
+                    <button>Sobre nós</button>
+                </a>
+            </li>
+
+        </ul>
     </nav>
-    
-  </header>
+
+</header>
 
   <br>
+
+  <script>
+    function toggleMenu() {
+    
+        const menu = document.querySelector("#Topo ul");
+    
+        menu.classList.toggle("ativo");
+    
+    }
+    </script>
+
 
 <h1>Tipos de ternos</h1>
 
@@ -77,11 +100,13 @@
         <img src="./Assets/IMG/TERNO-CLASSICO.jpg" alt="Terno">
     </div>
     <BR>
-    <div class="descricao">
-
+    
+    <div class="Titulo">
          <h3>TRADICIONAL </h3>
-    <p><b>Caimento: </b> Caimento alinhado, estruturado e elegante, unindo conforto e sofisticação. </p>
-    <p><b>Versatilidade: </b>Versátil e atemporal, combina com diferentes estilos de casamento e acessórios.</p>
+    </div>
+         <div class="descricao">
+    <b>Caimento: </b> Caimento alinhado, estruturado e elegante, unindo conforto e sofisticação. <br><br>
+    <b>Versatilidade: </b>Versátil e atemporal, combina com diferentes estilos de casamento e acessórios.
 </div>
 </div>
 
@@ -91,11 +116,13 @@
       <img src="./Assets/IMG/SLIM-FIT-TERNITO.jpeg" alt="Terno">
   </div>
   <BR>
-  <div class="descricao2">
-
+ 
+    <div class="Titulo">
        <h3>SLIM FIT </h3>
-  <p><b>Caimento: </b> Ajustado ao corpo, contém um corte moderno e elegante.</p>
-  <p><b>Versatilidade: </b> Moderno, combinando com diferentes estilos de casamento. </p>
+    </div>
+    <div class="descricao">
+  <b>Caimento: </b> Ajustado ao corpo, contém um corte moderno e elegante. <br><br>
+  <b>Versatilidade: </b> Moderno, combinando com diferentes estilos de casamento. 
  
 </div>
 </div>
@@ -107,11 +134,13 @@
       <img src="./Assets/IMG/ITALIANO-TERNITO.jpeg" alt="Terno">
   </div>
   <BR>
-  <div class="descricao3">
-
+ 
+    <div class="Titulo">
        <h3>ITALIANO </h3>
-  <p><b>Caimento: </b> Corte aderente e elegante, com um toque de sofisticação.</p>
-  <p><b>Versatilidade: </b> Clássico, sendo ideal para diferentes estilos de casamento. </p>
+    </div>
+    <div class="descricao">
+  <b>Caimento: </b> Corte aderente e elegante, com um toque de sofisticação. <br><br>
+  <b>Versatilidade: </b> Clássico, sendo ideal para diferentes estilos de casamento. 
  
 </div>
 </div>
@@ -125,13 +154,17 @@
   <div class="imagem4">
       <img src="./Assets/IMG/FRAQUE-TERNITO.jpeg" alt="Terno">
   </div>
+
   <BR>
-  <div class="descricao4">
-
-       <h3>FRAQUE</h3>
-
-  <p><b>Caimento: </b> Corte elegante e estruturado, garante um visual refinado e único.</p>
-  <p><b>Versatilidade: </b> Sofisticado e tradicional, ideal para casamentos formais.</p>
+    
+  <div class="Titulo"> 
+   <h3>FRAQUE</h3>
+   
+  </div>
+       
+       <div class="descricao">
+  <b>Caimento: </b> Corte elegante e estruturado, garante um visual refinado e único. <br><br>
+  <b>Versatilidade: </b> Sofisticado e tradicional, ideal para casamentos formais.
  
 </div>
 </div>
@@ -142,12 +175,15 @@
       <img src="" alt="Terno">
   </div>
   <BR>
-  <div class="descricao5">
 
 
-       <h3>MEIO FRAQUE</h3>
-  <p><b>Caimento: </b> Quse como o fraque, é elegante e estruturado, com visual sofisticado.</p>
-  <p><b>Versatilidade: </b> Tradicional, sendo ideal para casamentos formais. </p>
+ <div class="Titulo">
+    <h3>MEIO FRAQUE</h3>
+</div>
+
+<div class="descricao">
+ <b>Caimento: </b> Quse como o fraque, é elegante e estruturado, com visual sofisticado. <br><br>
+ <b>Versatilidade: </b> Tradicional, sendo ideal para casamentos formais. 
 
  
 </div>
@@ -160,11 +196,12 @@
       <img src="" alt="Terno">
   </div>
   <BR>
-  <div class="descricao6">
-
+    <div class="Titulo">
        <h3>SMOKING</h3>
-  <p><b>Caimento: </b> Corte elegante e alinhado, com aparência sofisticada.</p>
-  <p><b>Versatilidade: </b> Clássico e refinado, ideal para casamentos formais e noturnos. </p>
+    </div>
+       <div class="descricao">
+ <b>Caimento: </b> Corte elegante e alinhado, com aparência sofisticada. <br><br>
+ <b>Versatilidade: </b> Clássico e refinado, ideal para casamentos formais e noturnos. 
  
 </div>
 </div>

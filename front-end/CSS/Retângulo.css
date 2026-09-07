@@ -321,4 +321,6 @@ button:after {
   display: block;
 }
 
-
+.text {
+  text-align: justify;
+}
