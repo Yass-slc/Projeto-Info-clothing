@@ -6,7 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
-   
+    margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -32,17 +33,17 @@ header{
   
 }
 
-.logo-container {
-  position: absolute;
-  top: 3px;
-  left: 20px;
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-}
+ .logo-container {
+   position: absolute;
+   top: -10px;
+   left: 20px;
+ }
+ 
+ .logo {
+   height: 100px;
+   width: auto;
+   object-fit: contain;
+ }
 
 h1{
   font-size: 40px;

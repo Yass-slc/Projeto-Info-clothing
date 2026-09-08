@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -33,7 +35,7 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: -5px;
+   top: -10px;
    left: 20px;
  }
  
@@ -198,6 +200,93 @@ button:after {
 /*fim do cabeçalho*/
 
 
+/*celucar*/
+.mobile-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-mobile{
+  display: none;
+  font-size: 35px;
+  color: #804423;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  transition: 0.3s;
+}
+
+
+.menu-mobile:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px){
+
+  header{
+      min-height: 70px;
+      padding: 10px 15px;
+  }
+
+  .mobile-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+  }
+
+  
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .menu-mobile{
+      display: block;
+  }
+
+  #Topo{
+      width: 100%;
+  }
+
+  #Topo ul{
+      display: none;
+
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+  }
+
+  #Topo ul.ativo{
+      display: flex;
+  }
+
+  #Topo li{
+      width: 100%;
+      padding: 3px;
+      text-align: center;
+  }
+
+  #Topo button,
+  #Topo .button2{
+      width: 100%;
+  }
+
+}
+/*Fim do seculaaaarr*/
+
 
 
 .category {
@@ -317,6 +406,11 @@ button:after {
     padding-top: 110px;
   }
 
+   .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   .logo{
     height: 70px;
@@ -390,92 +484,3 @@ button:after {
 
 
 
-
-/*celucar*/
-.mobile-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.menu-mobile{
-  display: none;
-  font-size: 35px;
-  color: #804423;
-  cursor: pointer;
-  padding: 5px 10px;
-
-  transition: 0.3s;
-}
-
-
-
-
-.menu-mobile:hover{
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px){
-
-  header{
-      min-height: 70px;
-      padding: 10px 15px;
-  }
-
-  .mobile-header{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-  }
-
-  .logo{
-      width: 180px;
-      max-width: 70%;
-      height: auto;
-  }
-
-  
-  .logo-container{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .menu-mobile{
-      display: block;
-  }
-
-  #Topo{
-      width: 100%;
-  }
-
-  #Topo ul{
-      display: none;
-
-      flex-direction: column;
-      align-items: center;
-
-      width: 100%;
-      margin-top: 15px;
-      gap: 5px;
-  }
-
-  #Topo ul.ativo{
-      display: flex;
-  }
-
-  #Topo li{
-      width: 100%;
-      padding: 3px;
-      text-align: center;
-  }
-
-  #Topo button,
-  #Topo .button2{
-      width: 100%;
-  }
-
-}
-/*Fim do seculaaaarr*/
