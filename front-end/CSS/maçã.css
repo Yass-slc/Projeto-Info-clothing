@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -33,7 +35,7 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: -5px;
+   top: -10px;
    left: 20px;
  }
  

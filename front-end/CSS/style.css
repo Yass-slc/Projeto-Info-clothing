@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -33,7 +35,7 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: -5px;
+   top: -10px;
    left: 20px;
  }
  
@@ -127,9 +129,6 @@ button:after {
   width: 26px; /* Tamanho do ícone */
   height: 26px;
 }
-
-
-
 
  .cards {
   display: flex;
@@ -328,15 +327,6 @@ footer{
   transform-origin: bottom left;
 }
 
-
-
-.botão8{
-  font-family:initial;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
 
 .card {
   width: 300px;

@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -33,7 +35,7 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: -8px;
+   top: -10px;
    left: 20px;
  }
  
@@ -143,7 +145,7 @@ button:after {
   background-color: #ffffff;
   color: #804423;
   padding: 10px 15px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   border: 2px solid transparent;
   border-radius: 15px;
@@ -415,6 +417,9 @@ img{
       max-width: 90%;
       margin: auto;
   }
+  .button2{
+    font-size: 14px;
+  }
 
 }
 
@@ -438,6 +443,7 @@ img{
       font-size: 14px;
       min-height: 35px;
   }
+  
 
 }
  
