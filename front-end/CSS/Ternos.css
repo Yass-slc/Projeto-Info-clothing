@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -38,7 +40,7 @@ nav ul{
  }
  
  .logo {
-   height: 100px;
+   height: 75px;
    width: auto;
    object-fit: contain;
  }
