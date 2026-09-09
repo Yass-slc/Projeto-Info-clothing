@@ -35,12 +35,12 @@ nav ul{
 
  .logo-container {
    position: absolute;
-   top: -10px;
+   top: -5px;
    left: 20px;
  }
  
  .logo {
-   height: 100px;
+   height: 75px;
    width: auto;
    object-fit: contain;
  }
