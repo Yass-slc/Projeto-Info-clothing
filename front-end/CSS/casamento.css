@@ -124,6 +124,7 @@ button:after {
   padding: 10px;
   background-color: #ffffff;  
   transition: background-color 0.3s;
+  right: px;
 }
 
 .gmail-icon {
@@ -199,7 +200,7 @@ button:after {
 
 
 
-
+/*responsivo*/
 
 /* =========================
    CONFIGURAÇÕES GERAIS
@@ -214,7 +215,7 @@ button:after {
 img{
   max-width: 100%;
   height: auto;
-  display: block;
+  
 }
 img{
   max-width: 100%;
@@ -440,6 +441,7 @@ img{
 
 }
  
+
 /*celucar*/
 .mobile-header{
   display: flex;
@@ -457,8 +459,6 @@ img{
 
   transition: 0.3s;
 }
-
-
 
 
 .menu-mobile:hover{
