@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -38,7 +40,7 @@ nav ul{
  }
  
  .logo {
-   height: 100px;
+   height: 75px;
    width: auto;
    object-fit: contain;
  }
@@ -218,7 +220,7 @@ justify-content: center;
 
 .imagem img{
   width: 350px;
-  height: 290px;
+  height: 300px;
   border-radius: 9px 6px 0 0;
 }
 
@@ -241,83 +243,31 @@ justify-content: center;
 }
 
 
-.imagem2 img{
-  width: 350px;
-  height: 290px;
-  border-radius: 9px 6px 0 0;
-}
-
-.imagem2 {
-  background-color: rgba(236, 236, 236, 0.151);
-  width: 100%;
-  height: 250px;
-  border-radius: 9px 6px 0 0;
-
-}
-
-.imagem3 img{
-  width: 350px;
-  height: 290px;
-  border-radius: 9px 6px 0 0;
-}
-
-.imagem3 {
-  background-color: rgba(236, 236, 236, 0.151);
-  width: 100%;
-  height: 250px;
-  border-radius: 9px 6px 0 0;
-
-}
-
 .container2 {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
+display: flex;
+gap: 12px;
+justify-content: center;
 }
-.imagem4 img{
+
+.imagem img{
   width: 350px;
-  height: 290px;
+  height: 300px;
   border-radius: 9px 6px 0 0;
 }
 
-.imagem4 {
+
+.imagem {
   background-color: rgba(236, 236, 236, 0.151);
   width: 100%;
   height: 250px;
   border-radius: 9px 6px 0 0;
-
 }
 
-.imagem5 img{
-  width: 350px;
-  height: 290px;
-  border-radius: 9px 6px 0 0;
+.container3 {
+display: flex;
+gap: 12px;
+justify-content: center;
 }
-
-.imagem5 {
-  background-color: rgba(236, 236, 236, 0.151);
-  width: 100%;
-  height: 250px;
-  border-radius: 9px 6px 0 0;
-
-}
-
-
-.imagem6 img{
-  width: 350px;
-  height: 290px;
-  border-radius: 9px 6px 0 0;
-}
-
-.imagem6 {
-  background-color: rgba(236, 236, 236, 0.151);
-  width: 100%;
-  height: 250px;
-  border-radius: 9px 6px 0 0;
-
-}
-
 
 
 /*celucar*/

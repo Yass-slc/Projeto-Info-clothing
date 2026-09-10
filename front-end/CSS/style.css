@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -38,7 +40,7 @@ nav ul{
  }
  
  .logo {
-   height: 100px;
+   height: 75px;
    width: auto;
    object-fit: contain;
  }
@@ -148,80 +150,11 @@ button:after {
   justify-content: center; /* Centraliza os cards na tela */
 }
 
-footer{
-  padding-bottom: 5px;
-}
 
 
 
-/* CADRS TESTE*/
-.cardo {
-  position: relative;
-  width: 280px;
-  height: 180px;
-  background: linear-gradient(-45deg, #804423 0%, #DAC8B3 100% );
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  margin: auto;
-  
-}
 
-.cardo svg {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.cardo:hover {
-  transform: rotate(-5deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.cardo__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #fff;
-  opacity: 0;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  
-}
-
-.cardo:hover .cardo__content {
-  transform: translate(-50%, -50%) rotate(0deg);
-  opacity: 1;
-}
-
-.cardo__title {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
-  font-weight: 700;
-}
-
-.cardo__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.4;
-}
-
-.cardo:hover svg {
-  scale: 0;
-  transform: rotate(-45deg);
-}
-
-
-
-.card {
+.card00 {
   position: relative;
   box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
   cursor: pointer;
@@ -236,12 +169,12 @@ footer{
 }
 
 
-.card:hover {
+.card00:hover {
   transform: translateY(-10px);
   box-shadow: 0 5px 15px rgba(4,4.4,0.3);
  }
 
-.card .title {
+.card00 .title00 {
   font-family: initial;
   font-size: 1.1rem;
   position: absolute;
@@ -251,7 +184,7 @@ footer{
   color: #DAC8B3;
 }
 
-.card .price {
+.card00 .price {
   font-family: initial;
   font-size: 0.9em;
   position: absolute;
@@ -260,12 +193,12 @@ footer{
   color: #000;
 }
 
-.card:hover::after {
+.card00:hover::after {
   bottom: 0;
   opacity: 1;
 }
 
-.card:active {
+.card00:active {
   transform: scale(0.98);
 }
 
@@ -281,7 +214,7 @@ footer{
   place-items: center;
 }
 
-.title{
+.title00{
   text-align:center;
   
 }
@@ -339,16 +272,7 @@ footer{
 }
 
 
-
-.botão8{
-  font-family:initial;
-  color: #804423;
-  border: none;
-  background-color: white;
-  font-size: medium;
-}
-
-.card {
+.card00 {
   width: 300px;
   max-height: 90%;
   background: #804423;
@@ -356,20 +280,20 @@ footer{
   border-radius: 6px;
 }
 
-.cards{
+.cards-final{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.card-image {
+.card00-image {
   background-color: rgba(236, 236, 236, 0.151);
   width: 100%;
   border-radius: 6px 6px 0 0;
 }
 
-.card-image:hover {
+.card00-image:hover {
   transform: scale(0.98);
 }
 
@@ -522,7 +446,7 @@ img{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 2px;
+    margin-top: -3px;
     
   }
 
@@ -816,3 +740,3369 @@ img{
 
 }
 
+
+
+
+
+
+/*teste do meu grande erro*/
+
+.cards-final {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PELO O AMOR DE DEUS ESSA É A PARTE DOS PREÇOS O CSS TODO DA PÁGINAA*/
+
+/* ================================
+   CONFIGURAÇÃO GERAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* ================================
+ TÍTULOS DAS SEÇÕES
+================================ */
+
+h2 {
+  margin: 60px 20px 30px;
+  padding-bottom: 12px;
+
+  font-size: clamp(28px, 4vw, 40px);
+  color: #804423;
+
+  border-bottom: 3px solid #804423;
+}
+
+
+/* ================================
+ CONTAINER DOS CARDS
+ Serve para todos os grupos:
+ pocoyo, yasmina, vishi...
+================================ */
+
+.pocoyo,
+.yasmina,
+.vishi,
+.bulbassaur,
+.charmander,
+.pikachu,
+.evee,
+.gengar,
+.diglett,
+.magicarp,
+.charizard {
+
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 35px;
+
+  padding: 20px 30px;
+}
+
+
+/* ================================
+ CARD
+================================ */
+
+.card0 {
+
+  font-family: initial;
+
+  width: 300px;
+  min-height: 250px;
+  height: auto;
+  flex: 0 1 300px;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0 #9c8e7d;
+  overflow: hidden;
+  color: #804423;
+  font-size: large;
+  transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+  margin-bottom: 12px;
+}
+
+
+/* ================================
+ CABEÇALHO DO CARD
+================================ */
+
+.head0 {
+
+  font-family: initial;
+
+  font-size: 20px;
+
+  width: 100%;
+  min-height: 42px;
+
+  background: #804423;
+
+  padding: 7px 12px;
+
+  color: #ffffff;
+
+  border-bottom: 3px solid #000000;
+
+  display: flex;
+  align-items: center;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+
+/* ================================
+ CONTEÚDO
+================================ */
+
+.content0 {
+
+  padding: 12px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  overflow-wrap: break-word;
+
+  text-align: justify;
+}
+
+
+/* ================================
+ EFEITO DO CARD
+================================ */
+
+.card0:hover {
+
+  transform: translate(-6px, -6px);
+
+  box-shadow: 18px 18px 0 #9c8e7d;
+}
+
+
+/* ================================
+ SEPARAÇÃO ENTRE SEÇÕES
+================================ */
+
+.pocoyo,
+.yasmina,
+.vishi,
+.bulbassaur,
+.charmander,
+.pikachu,
+.evee,
+.gengar,
+.diglett,
+.magicarp,
+.charizard {
+
+  margin-bottom: 70px;
+}
+
+
+/* ================================
+ PASTE BUTTON
+================================ */
+
+.paste-button {
+
+  position: relative;
+
+  display: block;
+
+  font-family:
+      'Segoe UI',
+      Tahoma,
+      Geneva,
+      Verdana,
+      sans-serif;
+}
+
+
+/* ==================================================
+ TELAS GRANDES
+================================================== */
+
+@media (min-width: 1200px) {
+
+  .pocoyo,
+  .yasmina,
+  .vishi,
+  .bulbassaur,
+  .charmander,
+  .pikachu,
+  .evee,
+  .gengar,
+  .diglett,
+  .magicarp,
+  .charizard {
+
+      gap: 45px;
+
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+
+  .card0 {
+      flex-basis: 300px;
+  }
+}
+
+
+/* ==================================================
+ NOTEBOOKS / TELAS MÉDIAS
+================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .pocoyo,
+  .yasmina,
+  .vishi,
+  .bulbassaur,
+  .charmander,
+  .pikachu,
+  .evee,
+  .gengar,
+  .diglett,
+  .magicarp,
+  .charizard {
+
+      gap: 30px;
+
+      padding: 20px;
+  }
+
+  .card0 {
+      flex: 0 1 280px;
+  }
+}
+
+
+/* ==================================================
+ TABLETS
+================================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  h1 {
+      margin-top: 45px;
+      margin-bottom: 25px;
+  }
+
+  .pocoyo,
+  .yasmina,
+  .vishi,
+  .bulbassaur,
+  .charmander,
+  .pikachu,
+  .evee,
+  .gengar,
+  .diglett,
+  .magicarp,
+  .charizard {
+
+      gap: 25px;
+
+      padding: 15px 20px;
+  }
+
+  .card0 {
+
+      width: 100%;
+      max-width: 320px;
+
+      flex: 1 1 280px;
+  }
+
+  .head0 {
+      font-size: 18px;
+  }
+
+  .content0 {
+      font-size: 14px;
+  }
+}
+
+
+/* ==================================================
+ CELULARES
+================================================== */
+
+@media (max-width: 480px) {
+
+  body {
+      width: 100%;
+  }
+
+  h1 {
+
+      font-size: 28px;
+
+      margin: 35px 15px 20px;
+
+      padding-bottom: 10px;
+  }
+
+
+  .pocoyo,
+  .yasmina,
+  .vishi,
+  .bulbassaur,
+  .charmander,
+  .pikachu,
+  .evee,
+  .gengar,
+  .diglett,
+  .magicarp,
+  .charizard {
+
+      width: 100%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 25px;
+
+      padding: 10px 15px;
+
+      margin-bottom: 50px;
+  }
+
+
+  .card0 {
+
+      width: 100%;
+
+      max-width: 340px;
+
+      min-height: 0;
+
+      flex: none;
+
+      margin: 0 auto 10px;
+
+      box-shadow: 8px 8px 0 #9c8e7d;
+  }
+
+
+  .head0 {
+
+      min-height: 42px;
+
+      height: auto;
+
+      padding: 8px 10px;
+
+      font-size: 17px;
+
+      line-height: 1.3;
+  }
+
+
+  .content0 {
+
+      padding: 12px;
+
+      font-size: 14px;
+
+      line-height: 1.5;
+  }
+
+
+  .card0:hover {
+
+      transform: translateY(-4px);
+
+      box-shadow: 10px 10px 0 #9c8e7d;
+  }
+}
+
+
+/* ==================================================
+ CELULARES MUITO PEQUENOS
+================================================== */
+
+@media (max-width: 360px) {
+
+  h1 {
+      font-size: 24px;
+
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .pocoyo,
+  .yasmina,
+  .vishi,
+  .bulbassaur,
+  .charmander,
+  .pikachu,
+  .evee,
+  .gengar,
+  .diglett,
+  .magicarp,
+  .charizard {
+
+      padding-left: 10px;
+      padding-right: 10px;
+
+      gap: 20px;
+  }
+
+  .card0 {
+
+      max-width: 290px;
+
+      box-shadow: 6px 6px 0 #9c8e7d;
+  }
+
+  .head0 {
+      font-size: 16px;
+  }
+
+  .content0 {
+      font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*PARTE SOBRE NÓSSS CSS INTEIRO DA PÁGINA SOBRE NÓS*/
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* =========================
+ HERO
+========================= */
+
+.hero-section {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 60px 20px 140px;
+}
+
+
+/* =========================
+ QUEM SOMOS
+========================= */
+
+.content-section {
+  width: min(100% - 40px, 1100px);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 800px;
+
+  margin-top: -100px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-content {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 50px auto 80px;
+
+  text-align: justify;
+}
+
+.text-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: initial;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.text-content h2 {
+  margin-bottom: 24px;
+}
+
+
+/* =========================
+ CARROSSEL INFINITO
+========================= */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slider {
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+
+  animation: scrollContinuous 20s linear infinite;
+}
+
+.carousel-group {
+  display: flex;
+
+  gap: 20px;
+  padding-right: 20px;
+
+  flex-shrink: 0;
+}
+
+.carousel-group img {
+  width: clamp(150px, 20vw, 250px);
+  height: clamp(100px, 12vw, 150px);
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Efeito do carrossel */
+
+@keyframes scrollContinuous {
+  from {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+
+/* =========================
+ NOSSOS VALORES
+========================= */
+
+.valores {
+  width: min(100% - 40px, 650px);
+
+  margin: 50px auto 80px;
+
+  text-align: justify;
+}
+
+.valores p {
+  font-family: initial;
+  line-height: 1.6;
+}
+
+
+/* =========================
+ CARDS DOS VALORES
+========================= */
+
+.valores-container {
+  width: min(100% - 40px, 1200px);
+
+  display: grid;
+
+  grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+  gap: 30px;
+
+  margin: 0 auto;
+
+  padding: 40px 0;
+
+  font-family: initial;
+}
+
+.valor-card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: justify;
+}
+
+.valor-card h3 {
+  margin: 0 0 15px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.valor-card p {
+  width: 100%;
+
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* =========================
+ ÍCONES
+========================= */
+
+.icone {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 6px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  margin-bottom: 20px;
+
+  flex-shrink: 0;
+}
+
+.icone-1 {
+  background-color: #804423;
+}
+
+.icone-2 {
+  background-color: #864b2b;
+}
+
+.icone-3 {
+  background-color: #94512d;
+}
+
+.icone-4 {
+  background-color: #804423;
+}
+
+.icone-5 {
+  background-color: #864b2b;
+}
+
+.icone-6 {
+  background-color: #94512d;
+}
+
+
+/* =========================
+ NOSSA HISTÓRIA
+========================= */
+
+.about-section {
+  width: min(100% - 40px, 1100px);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  gap: clamp(30px, 5vw, 60px);
+
+  align-items: center;
+
+  padding: 40px 0;
+
+  min-height: auto;
+}
+
+.image-gallery {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.image-column {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.offset-down {
+  transform: translateY(40px);
+}
+
+.img-style {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Texto da história */
+
+.about-section .text-content {
+  flex: 1;
+
+  min-width: 0;
+
+  max-width: none;
+
+  margin: 0;
+
+  text-align: justify;
+}
+
+
+/* =========================
+ PASTE BUTTON
+========================= */
+
+.paste-button {
+  position: relative;
+  display: block;
+
+  font-family:
+      'Segoe UI',
+      Tahoma,
+      Geneva,
+      Verdana,
+      sans-serif;
+}
+
+
+/* =========================
+ TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-section {
+      padding: 50px 20px 110px;
+  }
+
+  .image-container {
+      margin-top: -80px;
+  }
+
+  .valores-container {
+      grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+      gap: 40px 30px;
+  }
+
+  .about-section {
+      gap: 40px;
+  }
+
+  .carousel-track {
+      animation-duration: 25s;
+  }
+}
+
+
+/* =========================
+ CELULARES E TABLETS PEQUENOS
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+      padding: 45px 15px 90px;
+  }
+
+  .content-section {
+      width: min(100% - 30px, 1100px);
+  }
+
+  .image-container {
+      margin-top: -60px;
+  }
+
+  .text-content {
+      margin: 35px auto 60px;
+  }
+
+
+  /* História */
+
+  .about-section {
+      flex-direction: column;
+
+      width: min(100% - 30px, 700px);
+
+      gap: 40px;
+  }
+
+  .image-gallery {
+      width: 100%;
+  }
+
+  .about-section .text-content {
+      width: 100%;
+  }
+
+
+  /* Remove o deslocamento excessivo */
+
+  .offset-down {
+      transform: translateY(20px);
+  }
+
+
+  /* Carrossel */
+
+  .carousel-group {
+      gap: 15px;
+      padding-right: 15px;
+  }
+
+  .carousel-group img {
+      width: 200px;
+      height: 130px;
+  }
+}
+
+
+/* =========================
+ CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+      padding: 40px 15px 75px;
+  }
+
+  .hero-section h1 {
+      font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .image-container {
+      margin-top: -45px;
+  }
+
+  .text-content {
+      text-align: left;
+      margin: 30px auto 50px;
+  }
+
+  .valores {
+      width: min(100% - 30px, 650px);
+      margin: 40px auto 50px;
+
+      text-align: left;
+  }
+
+
+  /* Valores em uma coluna */
+
+  .valores-container {
+      width: min(100% - 30px, 500px);
+
+      grid-template-columns: 1fr;
+
+      gap: 45px;
+
+      padding: 25px 0;
+  }
+
+  .valor-card {
+      text-align: left;
+  }
+
+
+  /* Carrossel */
+
+  .carousel-group img {
+      width: 160px;
+      height: 110px;
+  }
+
+  .carousel-track {
+      animation-duration: 22s;
+  }
+
+
+  /* História */
+
+  .about-section {
+      width: min(100% - 30px, 600px);
+      padding: 30px 0;
+  }
+
+  .image-gallery {
+      gap: 10px;
+  }
+
+  .image-column {
+      gap: 10px;
+  }
+
+  .offset-down {
+      transform: translateY(15px);
+  }
+
+  .img-style {
+      border-radius: 8px;
+  }
+}
+
+
+/* =========================
+ CELULARES MUITO PEQUENOS
+========================= */
+
+@media (max-width: 380px) {
+
+  .hero-section {
+      padding-bottom: 65px;
+  }
+
+  .image-container {
+      margin-top: -35px;
+  }
+
+  .carousel-group {
+      gap: 10px;
+      padding-right: 10px;
+  }
+
+  .carousel-group img {
+      width: 130px;
+      height: 90px;
+  }
+
+  .image-gallery {
+      gap: 8px;
+  }
+
+  .image-column {
+      gap: 8px;
+  }
+
+  .valores-container {
+      gap: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+/*PÁGINA INTERIRA DE CASAMENTOS, CSS INTEIRO DOS CASAMENTOS*/
+
+/*responsivo*/
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+ CARD NORMAL
+========================= */
+
+.card{
+  width: 100%;
+  max-width: 190px;
+  min-height: 254px;
+
+  padding: 15px;
+
+  border-radius: 30px;
+  background: #e0e0e0;
+
+  box-shadow:
+      15px 15px 30px #bebebe,
+      -15px -15px 30px #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+ CONTAINER DOS GLASS CARDS
+========================= */
+
+.container{
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 40px auto;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+ GLASS CARD
+========================= */
+
+.container .glass{
+  position: relative;
+
+  /* Responsivo */
+  width: min(600px, 90vw);
+  min-height: 300px;
+  height: auto;
+
+  padding: 20px;
+
+  background: linear-gradient(#fff2, transparent);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+
+  border-radius: 10px;
+
+  /* Removemos a margem negativa */
+  margin: 0;
+
+  backdrop-filter: blur(10px);
+
+  transform: rotate(calc(var(--r) * 1deg));
+
+  overflow: hidden;
+}
+
+
+/* =========================
+ EFEITO HOVER
+========================= */
+
+.container:hover .glass{
+  transform: rotate(0deg);
+  margin: 0;
+}
+
+
+/* =========================
+ TEXTO DO CARD
+========================= */
+
+.container .glass::before{
+  content: attr(data-text);
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 40px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #000000;
+
+  font-size: clamp(14px, 2vw, 18px);
+
+  text-align: center;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+ SVG
+========================= */
+
+.container .glass svg{
+  width: 60px;
+  max-width: 20vw;
+
+  height: auto;
+
+  fill: #fff;
+}
+
+
+/* =========================
+ TABLETS
+========================= */
+
+@media (max-width: 900px){
+
+  .container{
+      padding: 15px;
+      gap: 15px;
+  }
+
+  .container .glass{
+      width: min(500px, 90vw);
+      min-height: 280px;
+
+      transform: rotate(0deg);
+  }
+
+}
+
+
+/* =========================
+ CELULARES
+========================= */
+
+@media (max-width: 600px){
+
+  .container{
+      width: 100%;
+      padding: 10px;
+
+      flex-direction: column;
+
+      gap: 20px;
+  }
+
+  .container .glass{
+      width: 100%;
+      min-height: 250px;
+
+      padding: 15px;
+
+      transform: rotate(0deg);
+  }
+
+  .card{
+      max-width: 90%;
+      margin: auto;
+  }
+  .button2{
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================
+ CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px){
+
+  .container{
+      padding: 8px;
+  }
+
+  .container .glass{
+      min-height: 220px;
+      padding: 10px;
+  }
+
+  .container .glass::before{
+      font-size: 14px;
+      min-height: 35px;
+  }
+  
+
+}
+
+
+
+
+
+
+
+/*BOTÃO PARA VOLTAR DAS PÁGINAS DE DICA E TIPOS DE CORPOS*/
+button1 {
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #804423;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+ }
+ 
+ button1 > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+ }
+ 
+ button1:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ button1:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+ }
+ 
+ .paste-button {
+   position: relative;
+   display: block;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+
+
+
+
+
+
+
+/*PÁGINA INTEIRA DO CONTATO, CSS DO CONTATO*/
+/* =========================================
+   ÁREA DE CONTATO
+   ========================================= */
+
+.form-card1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.form-card2 {
+  width: min(1100px, 100%);
+  transition: all 0.3s ease;
+}
+
+.form-card2:hover {
+  transform: none;
+  border-radius: 20px;
+}
+
+
+/* =========================================
+ FORMULÁRIO
+ ========================================= */
+
+.form {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(300px, 1fr);
+  gap: 35px;
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background-color: #804423;
+  border-radius: 35px;
+
+  font-family: initial;
+}
+
+
+/* =========================================
+ IMAGEM
+ ========================================= */
+
+.noivas {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: static;
+}
+
+.noivas img {
+  display: block;
+
+  width: 100% !important;
+  max-width: 430px;
+
+  height: auto !important;
+
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+
+/* =========================================
+ ÁREA DOS CONTATOS
+ ========================================= */
+
+.contatos {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: static;
+}
+
+
+/* =========================================
+ TÍTULO
+ ========================================= */
+
+.form-heading {
+  width: 100%;
+
+  margin: 0 0 25px 0;
+
+  text-align: center;
+
+  color: #DAC8B3;
+
+  font-family: initial;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  background-color: transparent;
+}
+
+
+/* =========================================
+ CAMPOS
+ ========================================= */
+
+.form-field {
+  width: 100%;
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  margin: 0 0 15px 0;
+  padding: 8px 12px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background-color: #ffffff;
+
+  box-shadow: inset 2px 5px 10px rgba(119, 117, 117, 0.25);
+
+  position: static;
+}
+
+
+.input-field {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  color: #000000;
+
+  padding: 8px;
+
+  font-family: initial;
+  font-size: 1rem;
+
+  resize: vertical;
+}
+
+
+.input-field::placeholder {
+  color: #777;
+}
+
+
+/* =========================================
+ BOTÃO
+ ========================================= */
+
+.sendMessage-btn {
+  width: 100%;
+  min-height: 48px;
+
+  margin: 10px 0 0 0;
+  padding: 12px 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+  border: 1px solid white;
+  outline: none;
+
+  background-color: transparent;
+
+  color: white;
+
+  font-family: initial;
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  position: static;
+}
+
+
+.sendMessage-btn:hover {
+  background-color: white;
+  color: #804423;
+
+  box-shadow: inset 2px 5px 10px rgba(255, 255, 255, 0.8);
+
+  transform: translateY(-2px);
+}
+
+
+.sendMessage-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+ MENSAGEM DE SUCESSO
+ ========================================= */
+
+.mensagem-sucesso {
+  display: none;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-top: 15px;
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background-color: #DAC8B3;
+  color: #804423;
+
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+
+/* Quando a mensagem estiver ativa */
+.mensagem-sucesso.ativa {
+  display: block;
+
+  animation: aparecerMensagem 0.4s ease;
+}
+
+
+@keyframes aparecerMensagem {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+ TABLETS
+ ========================================= */
+
+@media (max-width: 900px) {
+
+  .form {
+      grid-template-columns: 1fr;
+
+      max-width: 650px;
+
+      padding: 30px;
+
+      gap: 25px;
+  }
+
+  .noivas img {
+      max-width: 350px;
+  }
+
+  .form-heading {
+      font-size: 1.5rem;
+  }
+}
+
+
+/* =========================================
+ CELULARES
+ ========================================= */
+
+@media (max-width: 600px) {
+
+  .form-card1 {
+      padding: 25px 12px;
+  }
+
+  .form {
+      width: 100%;
+
+      padding: 20px 15px;
+
+      border-radius: 25px;
+
+      gap: 20px;
+  }
+
+  .noivas img {
+      width: 100% !important;
+      max-width: 280px;
+
+      border-radius: 22px;
+  }
+
+  .form-heading {
+      font-size: 1.3rem;
+
+      margin-bottom: 20px;
+  }
+
+  .form-field {
+      min-height: 48px;
+
+      padding: 7px 10px;
+  }
+
+  .input-field {
+      font-size: 0.95rem;
+  }
+
+  .sendMessage-btn {
+      min-height: 48px;
+
+      font-size: 0.95rem;
+  }
+}
+
+
+/* =========================================
+ CELULARES MUITO PEQUENOS
+ ========================================= */
+
+@media (max-width: 380px) {
+
+  .form-card1 {
+      padding: 20px 8px;
+  }
+
+  .form {
+      padding: 15px 12px;
+
+      border-radius: 20px;
+  }
+
+  .noivas img {
+      max-width: 230px;
+  }
+
+  .form-heading {
+      font-size: 1.15rem;
+  }
+}
+
+
+/* =========================================
+ TELAS GRANDES
+ ========================================= */
+
+@media (min-width: 1400px) {
+
+  .form {
+      max-width: 1200px;
+
+      grid-template-columns: 1fr 1fr;
+
+      padding: 45px;
+
+      gap: 50px;
+  }
+
+  .noivas img {
+      max-width: 500px;
+  }
+
+  .form-heading {
+      font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by joe-watson-sbf */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  font-size: large;
+  height: 400px;
+  width: 550px;
+  font-size: medium;
+  font-family: initial;
+
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 20;
+  text-align: center;
+  margin: 0;
+  font-family: initial;
+}
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.479);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #804423;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, rgb(255, 255, 255) 80%,
+      rgb(255, 231, 222) 88%,
+      rgb(255, 211, 195) 50%, rgba(255, 80, 80, 0.603) 48%);
+
+  color: #804423;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, #ffffff 30%, #ffffff 88%,
+      #FA8072 100%, #FA8072 78%);
+
+  color: #804423;
+  transform: rotateY(180deg);
+}
+
+.tomandinho {
+  display: flex;
+  gap: 97px;
+  font-family: initial;
+}
+
+.flip-card.flip-card-inner.flip-card-front.image {
+  height: 5px;
+  width: 5px;
+}
+.flip-card.flip-card-inner.flip-card-front.image{
+height: 5px;
+width: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by joe-watson-sbf */
+.flip-card2 {
+  background-color: transparent;
+  perspective: 1000px;
+  font-size: large;
+  height: 440px;
+  width: 230px;
+  font-size: medium;
+  font-family: initial;
+
+}
+
+.title2 {
+  font-size: 1.5em;
+  font-weight: 20;
+  text-align: center;
+  margin: 0;
+  font-family: initial;
+}
+
+.flip-card-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front2,
+.flip-card-back2 {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.479);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #804423;
+  border-radius: 1rem;
+}
+
+.flip-card-front2 {
+  background: linear-gradient(120deg, rgb(255, 255, 255) 80%,
+      #d6deed 88%,
+      #c0d1ef 50%, #6ba1fe 48%);
+
+  color: #804423;
+}
+
+.flip-card-back2 {
+  background: linear-gradient(120deg, #ffffff 30%, #ffffff 88%,
+      #a0bdef 100%, #7a97cd 78%);
+
+  color: #804423;
+  transform: rotateY(180deg);
+}
+
+.tomandinho2 {
+  display: flex;
+  gap: 97px;
+  font-family: initial;
+}
+
+
+
+.flip-card2.flip-card-inner2.flip-card-front2.image2 {
+  height: 5px;
+  width: 5px;
+}
+.flip-card2.flip-card-inner2.flip-card-front2.image2{
+height: 5px;
+width: 5px;
+}
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+
+.card-3d {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 20s linear infinite;
+  will-change: transform;
+  margin:auto 550px;
+}
+
+.card-3d div {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  background-color: rgb(199, 199, 199);
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+}
+
+.card-3d:hover {
+  animation-play-state: paused !important;
+}
+
+.card-3d:hover div {
+  animation-play-state: paused !important;
+}
+
+.card-3d div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: -0s;
+}
+
+.card-3d div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d div:nth-child(3) {
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d div:nth-child(4) {
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d div:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d div:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d div:nth-child(7) {
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d div:nth-child(8) {
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d div:nth-child(9) {
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d div:nth-child(10) {
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+
+.card-3d2 {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 20s linear infinite;
+  will-change: transform;
+  margin:auto 550px;
+}
+
+.card-3d2 div {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  background-color: rgb(199, 199, 199);
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+}
+
+.card-3d2:hover {
+  animation-play-state: paused !important;
+}
+
+.card-3d2:hover div {
+  animation-play-state: paused !important;
+}
+
+.card-3d2 div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: -0s;
+}
+
+.card-3d2 div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d2 div:nth-child(3) {
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d2 div:nth-child(4) {
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d2 div:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d2 div:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d2 div:nth-child(7) {
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d2 div:nth-child(8) {
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d2 div:nth-child(9) {
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d2 div:nth-child(10) {
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+
+.paste-button {
+  position: relative;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2 {
+  background-color: #ffffff;
+  color: #804423;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: initial;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 13px;
+  position: absolute;
+  z-index: 1;
+  min-width: 200px;
+  background-color: #804423;
+  border: 2px solid #DAC8B3;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+  color: #804423;
+}
+
+.dropdown-content a:focus {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.dropdown-content #top:hover {
+  border-radius: 0px 13px 0px 0px;
+}
+
+.dropdown-content #bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.paste-button:hover button {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.paste-button:hover .dropdown-content {
+  display: block;
+}
+/*fim do cabeçalho*/
+
+
+.testec{
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 40px;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.texto{
+    flex: 1 1 50%;
+    min-width: 0;
+
+    text-align: center;
+    font-family: initial;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: large;
+}
+
+.calculadora{
+    flex: 1 1 50%;
+    min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px){
+
+    .testec{
+        max-width: 95%;
+        gap: 25px;
+        padding: 15px;
+    }
+
+    .texto{
+        flex: 1 1 45%;
+    }
+
+    .calculadora{
+        flex: 1 1 45%;
+    }
+}
+@media (max-width: 700px){
+
+    .testec{
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .texto,
+    .calculadora{
+        width: 100%;
+        flex: none;
+    }
+
+    .texto{
+        text-align: center;
+    }
+
+}
+
+
+/* Container dos botões */
+.botoes-flutuantes {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  z-index: 9999;
+}
+
+/* Link que envolve cada botão */
+.botao-flutuante {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+}
+
+/* Botão */
+.botao01 {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #cc8763, #8d4925);
+  color: white;
+
+  font-size: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.botao01:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+
+  right: 72px;
+  top: 50%;
+
+  transform: translateY(-50%) translateX(10px);
+
+  background-color: #ffffff;
+  color: #804423;
+
+  padding: 8px 12px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  pointer-events: none;
+}
+
+/* Pequena seta do tooltip */
+.tooltip::after {
+  content: "";
+
+  position: absolute;
+
+  right: -6px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+
+  border-color: transparent transparent transparent #ffffff;
+}
+
+/* Mostra o tooltip */
+.botao-flutuante:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================
+ RESPONSIVIDADE
+ ========================= */
+
+@media (max-width: 768px) {
+
+  .botoes-flutuantes {
+      bottom: 20px;
+      right: 15px;
+
+      gap: 10px;
+  }
+
+  .botao-flutuante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: x-small;
+  }
+
+  .botao01 {
+      width: 52px;
+      height: 52px;
+
+      font-size: 24px;
+  }
+
+  .tooltip {
+      right: 62px;
+      font-size: 12px;
+      padding: 7px 10px;
+  }
+}
+.apenas-celular{
+  display: none;
+  gap: -85px;
+  color: #804423;
+}
+@media (max-width: 767px){
+  .apenas-celular{
+    display:block
+    
+  }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  .botoes-flutuantes {
+      bottom: 15px;
+      right: 12px;
+  }
+
+  .botao01 {
+      width: 48px;
+      height: 48px;
+
+      font-size: 22px;
+  }
+
+  .tooltip {
+      right: 58px;
+      font-size: 11px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*cardinhos*/
+/* From Uiverse.io by joe-watson-sbf */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  font-size: large;
+  height: 400px;
+  width: 250px;
+  font-size: medium;
+  font-family: initial;
+
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 20;
+  text-align: center;
+  margin: 0;
+  font-family: initial;
+}
+
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.479);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #804423;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, rgb(255, 255, 255) 80%,
+      rgb(255, 231, 222) 88%,
+      rgb(255, 211, 195) 50%, rgba(255, 80, 80, 0.603) 48%);
+
+  color: #804423;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, #ffffff 30%, #ffffff 88%,
+      #FA8072 100%, #FA8072 78%);
+
+  color: #804423;
+  transform: rotateY(180deg);
+}
+
+.tomandinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(20px, 5vw, 70px);
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding: 20px;
+
+    font-family: initial;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+.flip-card-inner,
+.flip-card-inner2{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card2:hover .flip-card-inner2{
+  transform: rotateY(180deg);
+}
+
+
+/* From Uiverse.io by joe-watson-sbf */
+.flip-card2 {
+  background-color: transparent;
+  perspective: 1000px;
+  font-size: large;
+  height: 400px;
+  width: 250px;
+  font-size: medium;
+  font-family: initial;
+
+}
+
+.title2 {
+  font-size: 1.5em;
+  font-weight: 20;
+  text-align: center;
+  margin: 0;
+  font-family: initial;
+}
+
+
+
+.flip-card-front2,
+.flip-card-back2 {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.479);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #804423;
+  border-radius: 1rem;
+}
+
+.flip-card-front2 {
+  background: linear-gradient(120deg, rgb(255, 255, 255) 80%,
+      #d6deed 88%,
+      #c0d1ef 50%, #6ba1fe 48%);
+
+  color: #804423;
+}
+
+.flip-card-back2 {
+  background: linear-gradient(120deg, #ffffff 30%, #ffffff 88%,
+      #a0bdef 100%, #7a97cd 78%);
+
+  color: #804423;
+  transform: rotateY(180deg);
+}
+
+.tomandinho2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(20px, 5vw, 70px);
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding: 20px;
+
+    font-family: initial;
+    box-sizing: border-box;
+}
+
+.flip-card2.flip-card-inner2.flip-card-front2.image2 {
+  height: 5px;
+  width: 5px;
+}
+.flip-card2.flip-card-inner2.flip-card-front2.image2{
+height: 5px;
+width: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+/* ================================
+   CARROSSEL 3D RESPONSIVO
+================================ */
+
+.card-3d{
+  position: relative;
+
+  /* largura responsiva */
+  width: min(90vw, 400px);
+  height: 150px;
+
+  margin: 50px auto;
+
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+
+  animation: autoRun3d 20s linear infinite;
+
+  will-change: transform;
+}
+
+/* Os cartões individuais */
+
+.card-3d div{
+  position: absolute;
+
+  width: 90px;
+  height: 120px;
+  background-color: rgb(199, 199, 199);
+
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: center center;
+
+  animation: animateBrightness 20s linear infinite;
+
+  transition: 200ms;
+
+  will-change: transform, filter;
+}
+
+/* Imagens */
+
+.card-3d div img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* Pausa a animação */
+
+.card-3d:hover,
+.card-3d:hover div{
+  animation-play-state: paused !important;
+}
+
+.card-3d div:nth-child(1){
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: 0s;
+}
+
+.card-3d div:nth-child(2){
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d div:nth-child(3){
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d div:nth-child(4){
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d div:nth-child(5){
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d div:nth-child(6){
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d div:nth-child(7){
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d div:nth-child(8){
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d div:nth-child(9){
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d div:nth-child(10){
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+@media (max-width: 768px){
+
+  .card-3d{
+      width: 90vw;
+      height: 230px;
+      margin: 40px auto;
+  }
+
+  .card-3d div{
+      width: 70px;
+      height: 100px;
+  }
+
+}
+@media (max-width: 480px){
+
+  .card-3d{
+      width: 100%;
+      max-width: 320px;
+      height: 200px;
+
+      margin: 30px auto;
+  }
+
+  .card-3d div{
+      width: 55px;
+      height: 80px;
+  }
+
+  .card-3d div:nth-child(1){
+      transform: translate(-50%, -50%) rotateY(0deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(2){
+      transform: translate(-50%, -50%) rotateY(36deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(3){
+      transform: translate(-50%, -50%) rotateY(72deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(4){
+      transform: translate(-50%, -50%) rotateY(108deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(5){
+      transform: translate(-50%, -50%) rotateY(144deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(6){
+      transform: translate(-50%, -50%) rotateY(180deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(7){
+      transform: translate(-50%, -50%) rotateY(216deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(8){
+      transform: translate(-50%, -50%) rotateY(252deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(9){
+      transform: translate(-50%, -50%) rotateY(288deg) translateZ(105px);
+  }
+
+  .card-3d div:nth-child(10){
+      transform: translate(-50%, -50%) rotateY(324deg) translateZ(105px);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+/* ================================
+   CARROSSEL 3D RESPONSIVO
+================================ */
+
+.card-3d2{
+  position: relative;
+
+  /* largura responsiva */
+  width: min(90vw, 400px);
+  height: 150px;
+
+  margin: 50px auto;
+
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+
+  animation: autoRun3d 20s linear infinite;
+
+  will-change: transform;
+}
+
+/* Os cartões individuais */
+
+.card-3d2 div{
+  position: absolute;
+
+  width: 90px;
+  height: 120px;
+
+  background-color: rgb(199, 199, 199);
+
+  border: solid 2px lightgray;
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: center center;
+
+  animation: animateBrightness 20s linear infinite;
+
+  transition: 200ms;
+
+  will-change: transform, filter;
+}
+
+/* Imagens */
+
+.card-3d2 div img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* Pausa a animação */
+
+.card-3d2:hover,
+.card-3d2:hover div{
+  animation-play-state: paused !important;
+}
+
+.card-3d2 div:nth-child(1){
+  transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+  animation-delay: 0s;
+}
+
+.card-3d2 div:nth-child(2){
+  transform: translate(-50%, -50%) rotateY(36deg) translateZ(150px);
+  animation-delay: -2s;
+}
+
+.card-3d2 div:nth-child(3){
+  transform: translate(-50%, -50%) rotateY(72deg) translateZ(150px);
+  animation-delay: -4s;
+}
+
+.card-3d2 div:nth-child(4){
+  transform: translate(-50%, -50%) rotateY(108deg) translateZ(150px);
+  animation-delay: -6s;
+}
+
+.card-3d2 div:nth-child(5){
+  transform: translate(-50%, -50%) rotateY(144deg) translateZ(150px);
+  animation-delay: -8s;
+}
+
+.card-3d2 div:nth-child(6){
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px);
+  animation-delay: -10s;
+}
+
+.card-3d2 div:nth-child(7){
+  transform: translate(-50%, -50%) rotateY(216deg) translateZ(150px);
+  animation-delay: -12s;
+}
+
+.card-3d2 div:nth-child(8){
+  transform: translate(-50%, -50%) rotateY(252deg) translateZ(150px);
+  animation-delay: -14s;
+}
+
+.card-3d2 div:nth-child(9){
+  transform: translate(-50%, -50%) rotateY(288deg) translateZ(150px);
+  animation-delay: -16s;
+}
+
+.card-3d2 div:nth-child(10){
+  transform: translate(-50%, -50%) rotateY(324deg) translateZ(150px);
+  animation-delay: -18s;
+}
+
+@media (max-width: 768px){
+
+  .card-3d2{
+      width: 90vw;
+      height: 230px;
+      margin: 40px auto;
+  }
+
+  .card-3d2 div{
+      width: 70px;
+      height: 100px;
+  }
+
+}
+@media (max-width: 480px){
+
+  .card-3d2{
+      width: 100%;
+      max-width: 320px;
+      height: 200px;
+
+      margin: 30px auto;
+  }
+
+  .card-3d2 div{
+      width: 55px;
+      height: 80px;
+  }
+
+  .card-3d2 div:nth-child(1){
+      transform: translate(-50%, -50%) rotateY(0deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(2){
+      transform: translate(-50%, -50%) rotateY(36deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(3){
+      transform: translate(-50%, -50%) rotateY(72deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(4){
+      transform: translate(-50%, -50%) rotateY(108deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(5){
+      transform: translate(-50%, -50%) rotateY(144deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(6){
+      transform: translate(-50%, -50%) rotateY(180deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(7){
+      transform: translate(-50%, -50%) rotateY(216deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(8){
+      transform: translate(-50%, -50%) rotateY(252deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(9){
+      transform: translate(-50%, -50%) rotateY(288deg) translateZ(105px);
+  }
+
+  .card-3d2 div:nth-child(10){
+      transform: translate(-50%, -50%) rotateY(324deg) translateZ(105px);
+  }
+
+}
+
+>>>>>>> ad361d27f010450740dbf28e94af5b5f28eb18c6
