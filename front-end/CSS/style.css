@@ -128,7 +128,17 @@ button:after {
   height: 26px;
 }
 
+.btn-whatsapp {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
 
+.whatsapp-icon {
+  width: 26px; /* Tamanho do ícone */
+  height: 26px;
+}
 
 
  .cards {
@@ -599,6 +609,7 @@ img{
   }
 
   .instagram-icon,
+  .whatsapp-icon,
   .gmail-icon{
     width: 22px;
     height: 22px;
@@ -804,3 +815,4 @@ img{
   }
 
 }
+
