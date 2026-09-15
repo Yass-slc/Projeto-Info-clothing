@@ -148,107 +148,107 @@ const fotosVeus = {
 
   // Gravata
   gravata_tradicional: [
-    "",
-    "",
-    ""
+    "https://images-na.ssl-images-amazon.com/images/I/611v92AM55L._AC_UL600_SR600,600_.jpg",
+    "https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_m/31385/15469752.jpg",
+    "https://a-static.mlcdn.com.br/450pxx450px/gravata-tradicional-luxo-homens-slim-fit-ref-253-hero-men/stylestoremodas/1a8b3eb88df011ed90894201ac185019/85bf1fa8b741f43c04a70e328f7ffef2.jpeg"
   ],
 
   gravata_slim: [
-    "",
-    "",
-    ""
+    "https://img.lojasrenner.com.br/item/581445251/large/12.jpg",
+    "https://a-static.mlcdn.com.br/800x600/gravata-slim-fit-lisa-bege-formatura-e-casamento-kaylong/nettuno/95048n/0d72f11019a9f32b1e6340df41031594.jpeg",
+    "https://tudocommoda.com/wp-content/uploads/2016/03/gravata-slim-n%C3%B3.jpg"
   ],
 
   gravata_ponta_reta: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPUHJSo02h_OxjsJbxhV0e5Q1ilZ1JdvERTQpB_FBt3Bg7kSoM1ARh5KL&s=10",
+    "https://cdn.awsli.com.br/2500x2500/491/491087/produto/257640321/gravata-slim-croche-trico-cinza-chumbo--5--z8ljjh2sy1.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPrmAMQrAgnjYE5Dr-wddrBMDlSvdxO3EPch3yrC30AURsd8xHU1o-36h4&s=10"
   ],
 
   gravata_borboleta: [
-    "",
-    "",
-    ""
+    "https://images.tcdn.com.br/img/img_prod/743485/gravata_borboleta_marrom_masculina_classica_elegante_7828_1_ce9c4a0fdd6cc8922e8dd66f301747dc.jpg",
+    "https://images.tcdn.com.br/img/img_prod/489490/gravata_borboleta_preta_fosca_infantil_para_pajens_3_20260807171001_74359c9ddaff.jpg",
+    "https://www.alastra.com.br/cdn/shop/files/GravataBorboletaVermelha.jpg?v=1776090142"
   ],
 
 
   // Lapela
   lapela_broche: [
-    "",
-    "",
-    ""
+    "https://mrmaximus.com.br/cdn/shop/files/Sb6570523de8f4b6fa80dd8c1b059c616a.webp?v=1715438554&width=800",
+    "https://mrmaximus.com.br/cdn/shop/files/Sddc0eabaa3c14dfcbb45876f5f072b60R.webp?v=1742302272&width=800",
+    "https://i.etsystatic.com/54717487/r/il/7f3539/6990175174/il_570xN.6990175174_d99i.jpg"
   ],
 
   lapela_flor: [
-    "",
-    "",
-    ""
+    "https://cdn.vnda.com.br/floradeserie/2023/04/18/12_4_4_429_LAPELA20AcessC3B3rios20Noivas20e20Noivos20204.jpg?v=1681832936",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RXgbl5qSyhg8DQ4Yg9IEcyE5Z16wLeyouIBJzgOFXjh2qlUYSeEoRr0&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6uQABQrK8RiwASj80GdzLSh8nmM3gzEEfqsmgZH1xpvPyZkc9Cc6dlVzV&s=10"
   ],
 
   lapela_lenco: [
-    "",
-    "",
-    ""
+    "https://media.istockphoto.com/id/2194977479/pt/foto/elegant-businessman-wearing-a-blue-pocket-square-and-matching-tie.jpg?s=612x612&w=0&k=20&c=WQ8wPy_qFPykjBydGT_6pwyeJFliSmgyaYaw_b5woG8=",
+    "https://media.istockphoto.com/id/2186823894/pt/foto/navy-blue-pocket-square-elegantly-tucked-into-the-pocket-of-a-plaid-suit-jacket.jpg?s=612x612&w=0&k=20&c=cxm7aICj6ZWIMIcPjYzQE5pbBNpmb4P8qVf3FB8YJ_4=",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEl8VSAHe_EYqjQRimpcTJ_RL8L36S-3w7LQ_w7xJE_IKnezdqFUMHvg0&s=10"
   ],
 
 
   // Suspensão
   cinto: [
-    "",
-    "",
-    ""
+    "https://pegada.vtexassets.com/arquivos/ids/180574/Cintos-Pegada-Masculino-em-Elastico-e-Couro-Cinza-CI002345-11--3-.jpg?v=638990663831370000",
+    "https://grupooscar.vtexassets.com/arquivos/ids/10688396/Couro-Mania-Cinto-351145-1-Preto_Cafe-Pu5.jpg?v=639021161594300000",
+    "https://images.tcdn.com.br/img/img_prod/747651/cinto_feminino_em_couro_legtimo_reale_1_20251015171117_28edb793744f.jpg"
   ],
 
   suspensorio_x: [
-    "",
-    "",
-    ""
+    "https://m.media-amazon.com/images/I/41nxUtjkuUL._AC_SY1000_.jpg",
+    "https://m.media-amazon.com/images/I/41VXqJ7tswL._AC_SY1000_.jpg",
+    "https://m.media-amazon.com/images/I/610+j8WBDqL._AC_UF894,1000_QL80_.jpg"
   ],
 
   suspensorio_y: [
-    "",
-    "",
-    ""
+    "https://img.kwcdn.com/product/fancy/20213ff5-c6a6-4944-ac27-d1122f366157.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+    "https://m.media-amazon.com/images/I/31bMNuKBJSL._AC_.jpg",
+    "https://viaveneto.com.br/cdn/shop/files/SUREESA23001_01_3.jpg?v=1773422146&width=533"
   ],
 
 
   // Abotuadura
   torpedo: [
-    "",
-    "",
-    ""
+    "https://acdn-us.mitiendanube.com/stores/776/326/products/img_3832-8e610f48ff3194ae3f17056733954425-1024-1024.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_761429-MLB105407777048_012026-O-abotoadura-masculina-p-camisa-social-punho-duplo-c-estojo.webp",
+    "https://acdn-us.mitiendanube.com/stores/776/326/products/img_3869-66da1ed3b8ffc72f9f17056740306429-1024-1024.webp"
   ],
 
   baleia: [
-    "",
-    "",
-    ""
+    "https://baiqueaccessories.com/wp-content/uploads/whale-back-cufflinks.png",
+    "https://www.cufflinkman.co.uk/cdn/shop/products/james-kinross-cufflinks-carbon-reflections-cufflinks-42588525101335.jpg?v=1724161696",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUJL0MDnt0GI3AYcZNJImDGuwGVkiz2EFy29Qx9c7PCGf8QzZXhsfxUg&s=10"
   ],
 
   corrente: [
-    "",
-    "",
-    ""
+    "https://http2.mlstatic.com/D_NQ_NP_708282-MLB78301030665_082024-O-abotoaduras-folhadas-a-ouro-krementz-usa-antigas.webp",
+    "https://i.etsystatic.com/23473689/r/il/bab746/7232859246/il_570xN.7232859246_87be.jpg",
+    "https://s3-sa-east-1.amazonaws.com/arrematearte-farm/cristinagoston/lot_photos/62929/b85c8f0f3eefde5932a8ee35ee53536b0bc73d53_ms.JPG?1508119701"
   ],
 
   barbell: [
-    "",
-    "",
-    ""
+    "https://i0.wp.com/www.canalmasculino.com.br/wp-content/uploads/2014/02/abotoaduras_the_barbell1.jpg",
+    "https://a.1stdibscdn.com/archivesE/upload/j_548/j_20233231476807995476/395_1_223_c_master.jpg",
+    "https://a.1stdibscdn.com/tiffany-co-sterling-silver-figural-globe-barbell-cufflinks-for-sale/j_8493/j_281565421765923795166/j_28156542_1765923795589_bg_processed.jpg?disable=upscale&auto=webp&quality=60&width=640"
   ],
 
 
   // Sapato
   oxford: [
-    "",
-    "",
-    ""
+    "https://assets.sistemawbuy.com.br/arquivos/cd807b26707aff729e16a68e7fd35c27/produtos/650335ac3172e/126306-cinza-68ff90a76d97c_mini.jpeg",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/majorano/media/uploads/produtos/foto/nrwpixzi/sapato-masculino-oxford-maurizio-tan.jpg",
+    "https://cdn.awsli.com.br/1500x1500/1423/1423033/produto/383299365/30001-2-0rum4ymjmy.jpg"
   ],
 
   derby: [
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/enrico/media/uploads/produtos/foto/tumaqudy/sapato-social-derby-sola-de-couro-masculino-preto-boaretto-2.jpg",
     "",
-    "",
-    ""
+    "https://http2.mlstatic.com/D_NQ_NP_887660-MLB110350988891_042026-O-sapato-derby-masculino-social-couro-nobre-natural-legitimo.webp"
   ],
 
   monk_strap: [
