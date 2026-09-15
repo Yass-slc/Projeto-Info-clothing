@@ -6,6 +6,8 @@ body{
    font-weight: 400;
    background-color: #DAC8B3;
    text-align: center;
+   margin: 0;
+    padding: 0;
 }
 
 nav ul{
@@ -50,15 +52,11 @@ header{
 }
 
 .logo {
-  height: 100px;
+  height: 75px;
   width: auto;
   object-fit: contain;
 }
 
-h1{
-  font-size: 40px;
-  color:#804423;
-}
 
 /*aqui ó o cabeçalhinho*/
 button {
@@ -365,7 +363,7 @@ button:after {
   }
 }
 
-
+/*selucar*/
 .mobile-header{
   display: flex;
   align-items: center;

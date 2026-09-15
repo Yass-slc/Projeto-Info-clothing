@@ -15,7 +15,7 @@
     <div class="mobile-header">
 
         <div class="logo-container">
-            <img src="./Assets/IMG/logo png.png"
+            <img src="./Assets/IMG/LogoAmarelo.png"
                  alt="Logo Info Clothing"
                  class="logo">
         </div>
@@ -71,7 +71,14 @@
                     <button>Sobre nós</button>
                 </a>
             </li>
-
+           
+            <a href="amarelo.html">
+                <button type="button" style="border:none; background:none; cursor:pointer;">
+                  
+  <img src="Assets/IMG/LAÇOAMARELOBOTAO.png" alt="Botão" width="100" height="50">
+</button>
+</a>
+          
         </ul>
     </nav>
 
@@ -93,12 +100,10 @@
   
   <div class="conteiner1">
 
-    <div class="card">
+    <div class="card" onclick="abrirCard('evase')">
       <div class="card-image">
-       <a href="https://www.instagram.com/stories/highlights/1811192885278404/">
-
        <img src="./Assets/IMG/evase3.jpg" style="width: 100%; height: 300px;">
-       </a>
+       
       </div>
       <div class="category"> EVASÊ </div>
       <div class="heading">
@@ -109,12 +114,10 @@
   
 
 
-    <div class="card">
+    <div class="card" onclick="abrirCard('sereia')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18101555852353178/">
-
         <img src="./Assets/IMG/SEREIA1.jpeg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
 
       <div class="category"> SEREIA </div>
       <div class="heading">
@@ -124,12 +127,10 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" onclick="abrirCard('semi_sereia')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18078796274324909/">
-
         <img src="./Assets/IMG/Vestido-de-Noiva-Semi-Sereia-com-Calda-2.jpg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
       <div class="category"> SEMI-SEREIA </div>
       <div class="heading">
         <b>Caimento:</b> O alargamento suave permite uma locomoção melhor.<br><br>
@@ -138,12 +139,9 @@
     </div>
 
 
-    <div class="card">
+    <div class="card" onclick="abrirCard('imperio')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18100116104261941/">
-
         <img src="Assets/IMG/império.png" style="width: 100%; height: 300px;">
-        </a>
       </div>
 
       <div class="category"> IMPÉRIO </div>
@@ -153,12 +151,9 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" onclick="abrirCard('reto')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18023112086856540/">
-
         <img src="Assets/IMG/retoo2.jpg" style="width: 100%; height: 300px;">
-        </a>
       </div>
 
       <div class="category"> RETO </div>
@@ -168,12 +163,10 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" onclick="abrirCard('mullet')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18621015265038820/">
-
         <img src="./Assets/IMG/VESTIDO MULLET.jpg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
 
       <div class="category"> MULLET</div>
       <div class="heading">
@@ -183,12 +176,10 @@
     </div>
 
     
-    <div class="card">
+    <div class="card" onclick="abrirCard('princesa')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18096141542528489/">
-
         <img src="./Assets/IMG/princesa2.jpg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
 
       <div class="category"> PRINCESA </div>
       <div class="heading">
@@ -197,12 +188,10 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" onclick="abrirCard('curto')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/18073327883439156/">
-
         <img src="./Assets/IMG/curto2.jpeg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
       <div class="category"> CURTO </div>
       <div class="heading">
         <b>Caimento: </b> Desenha bem a silhueta oferecendo segurança e elegância.<br><br>
@@ -210,12 +199,10 @@
       </div>
     </div>
     
-       <div class="card">
+       <div class="card" onclick="abrirCard('boho')">
       <div class="card-image">
-        <a href="https://www.instagram.com/stories/highlights/17904231861499413/">
-
         <img src="./Assets/IMG/BOHO.jpg" style="width: 100%; height: 300px;">
-      </a></div>
+      </div>
 
       <div class="category"> BOHO </div>
       <div class="heading">
@@ -227,26 +214,280 @@
     </div>
 
 
+    <!-- =========================================
+         MODAL / CARROSSEL
+    ========================================= -->
+
+  <div id="meuModal" class="modal-fundo">
+    <div class="modal-conteudo">
+      <!-- Fechar -->
+      <span class="fechar-btn" onclick="controlarModal(false)">
+        &times;
+      </span>
+      <h3 id="modalTitulo">Mais Opções:</h3>
+      <!-- Carrossel -->
+      <div class="carrossel">
+        <button class="seta seta-esquerda" onclick="imagemAnterior()" aria-label="Imagem anterior">
+          &#10094;
+        </button>
+        <div class="imagem-carrossel">
+          <img id="modalImagem" src="" alt="F!@#">
+        </div>
+        <button class="seta seta-direita" onclick="proximaImagem()" aria-label="Próxima imagem">
+          &#10095;
+        </button>
+      </div>
+      <!-- Contador -->
+      <div id="contadorImagem" class="contador">
+        1 / 3
+      </div>
+      <br>
+      <button onclick="controlarModal(false)" class="fecha">
+        Fechar
+      </button>
+    </div>
+  </div>
+
+  <script src="./JS/modal.js"></script>
+  <style>
+    /* --- 1. ESTILO DO MODAL --- */
+    /* =========================================
+           MODAL
+        ========================================= */
+
+    .modal-fundo {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-conteudo {
+      background: #804423;
+      padding: 25px;
+      border-radius: 10px;
+      width: min(900px, 90vw);
+      max-height: 90vh;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+      text-align: center;
+      color: #e69a71;
+      overflow: hidden;
+    }
+
+    .modal-conteudo h3 {
+      margin: 5px 0 20px;
+      font-size: 1.5rem;
+    }
+
+    /* =========================================
+           BOTÃO FECHAR DO MODAL
+        ========================================= */
+
+    .fechar-btn {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      color: #DAC8B3;
+      z-index: 10;
+      transition: 0.2s;
+    }
+
+    .fechar-btn:hover {
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* =========================================
+           CARROSSEL
+        ========================================= */
+
+    .carrossel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .imagem-carrossel {
+      width: 650px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(236, 236, 236, 0.10);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .imagem-carrossel img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* =========================================
+           SETAS
+        ========================================= */
+
+    .seta {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: #DAC8B3;
+      color: #804423;
+      font-size: 28px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      transition: 0.2s;
+    }
+
+    .seta:hover {
+      transform: scale(1.08);
+      background: #e69a71;
+    }
+
+    /* =========================================
+           CONTADOR
+        ========================================= */
+
+    .contador {
+      margin-top: 12px;
+      color: #DAC8B3;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    /* =========================================
+           BOTÃO FECHAR
+        ========================================= */
+
+    .fecha {
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      color: #804423;
+      background: #DAC8B3;
+      transition: 0.2s;
+    }
+
+    .fecha:hover {
+      transform: scale(1.05);
+      background: #e69a71;
+    }
+
+    /* =========================================
+           RESPONSIVIDADE - CELULAR
+        ========================================= */
+
+    @media (max-width: 600px) {
+
+      .modal-fundo {
+        padding: 15px;
+      }
+
+      .modal-conteudo {
+        width: 90vw;
+        max-width: 400px;
+        max-height: 88vh;
+        padding: 18px 10px;
+        border-radius: 10px;
+      }
+
+      .modal-conteudo h3 {
+        font-size: 1.15rem;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      .carrossel {
+        gap: 5px;
+      }
+
+      .imagem-carrossel {
+        width: 70vw;
+        max-width: 300px;
+        height: 55vh;
+        max-height: 380px;
+        border-radius: 6px;
+      }
+
+      .seta {
+        width: 34px;
+        height: 34px;
+        font-size: 21px;
+      }
+
+      .contador {
+        font-size: 13px;
+        margin-top: 8px;
+      }
+
+      .fecha {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+
+      .fechar-btn {
+        font-size: 26px;
+        top: 5px;
+        right: 10px;
+      }
+    }
+
+    /* =========================================
+           CELULARES MUITO PEQUENOS
+        ========================================= */
+
+    @media (max-width: 380px) {
+
+      .modal-conteudo {
+        width: 92vw;
+        padding: 15px 7px;
+      }
+
+      .imagem-carrossel {
+        width: 65vw;
+        height: 45vh;
+        max-height: 300px;
+      }
+
+      .seta {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
 
 
+    .card {
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer">
+    <footer style="background-color: #ffffff; text-align: center">
       <br>
           <h3>Entre em contato conosco</h3>
       
@@ -255,12 +496,14 @@
             <img src="Assets/IMG/instagram (2).png" alt="Instagram" class="instagram-icon">
         </a>
             
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infoclothing526@gmail.com&su=Assunto&body=Mensagem" target="_blank" class="btn-gmail">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infoclothing526@gmail.com&su=Assunto&body=Mensagem" >
           <img src="Assets/IMG/o-email.png" alt="Gmail" class="gmail-icon">
           </a>
           </div>
       
-          <p>Copyright 2026 - by aulas PW © Facebook | Twitter</p>
-      
+          <p>© 2026 Info Clothing. Todos os direitos reservados.</p>      
           Desenvolvido com muito ♥
-          </foo
+          </footer>
+
+          </body>
+          </html>

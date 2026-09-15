@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medidas</title>
-  <link rel="stylesheet" type="text/css" href="./CSS/medidas.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
   <link rel="icon" href="./Assets/IMG/favicon.ico" type="image/x-icon">
 </head>
 
@@ -16,7 +16,7 @@
         <div class="mobile-header">
     
             <div class="logo-container">
-                <img src="./Assets/IMG/logo png.png"
+                <img src="./Assets/IMG/LogoAmarelo.png"
                      alt="Logo Info Clothing"
                      class="logo">
             </div>
@@ -72,7 +72,14 @@
                         <button>Sobre nós</button>
                     </a>
                 </li>
-    
+                
+               <a href="amarelo.html">
+                <button type="button" style="border:none; background:none; cursor:pointer;">
+                  
+  <img src="Assets/IMG/LAÇOAMARELOBOTAO.png" alt="Botão" width="100" height="50">
+</button>
+</a>
+
             </ul>
         </nav>
     
@@ -91,18 +98,20 @@
         
 
 
-<h1>Descubra seu tipo de corpo</h1><br>
-<!--verificar como tirar as medidas fica melhor, em baixo ou em cima da calculadora-->
+<h1>Descubra seu tipo de corpo</h1>
 <div class="botoes-flutuantes">
 
     <a href="Dnoiva.html" class="botao-flutuante">
       <span class="tooltip">Dica para noivas!</span>
       <button type="button" class="botao01">👰</button>
+      <p class="apenas-celular"><b>Dica para<br> noivas!</b></p>
     </a>
   
     <a href="Dnoivo.html" class="botao-flutuante">
       <span class="tooltip">Dica para noivos!</span>
       <button type="button" class="botao01">🤵</button>
+            <p class="apenas-celular"><b>Dica para<br> noivos!</b></p>
+
     </a>
   
   </div>
@@ -111,6 +120,7 @@
 
 <div class="testec">
   <div class="texto">
+    
 <h2>Como tirar as medidas?</h2><br><br>
 <b>Use um espelho:</b> Para garantir que a fita não esteja torcida ou desnivelada.<br><br>
 <b>Remova roupas volumosas:</b> Use roupas íntimas para obter medidas precisas.<br><br>
@@ -722,38 +732,6 @@ function calcularCorpo() {
         }
 
 
-        /*
-        OVAL TRIÂNGULO
-        ------------------------------
-        Categoria intermediária.
-        */
-
-        else if (
-            cintura >= parteInferior * 0.80 &&
-            parteInferior >= parteSuperior * 1.03
-        ) {
-
-            tipo = "Oval triângulo";
-
-            descricao =
-                "Existe predominância do quadril, mas com uma cintura " +
-                "menos marcada do que na silhueta pera tradicional.";
-
-        }
-
-
-        /*
-        TRAPÉZIO
-        */
-
-        else {
-
-            tipo = "Trapézio";
-
-            descricao =
-                "As proporções apresentam uma transição gradual entre " +
-                "a parte superior, cintura e quadril, formando uma silhueta trapezoidal.";
-        }
 
     }
 
@@ -897,7 +875,7 @@ function calcularCorpo() {
 
         else {
 
-            tipo = "Trapézio";
+            tipo = "Trapézio ";
 
             descricao =
                 "As proporções corporais apresentam uma distribuição gradual " +
@@ -971,62 +949,9 @@ function resetar() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- From Uiverse.io by joe-watson-sbf -->
-    <br><br><br><br>
+<!--Cards para tipo de corpo-->
+    
 <h1>feminino</h1>
-<div class="card-3d">
-    <div><img src="Assets/IMG/vestido evasê aaa.webp" alt="Vestido evasê"></div>
-    <div><img src="Assets/IMG/Y3122-ivory-a-scaled-e1695666480745.jpg" alt="Vestido"></div>
-    <div><img src="Assets/IMG/SEMI.SEREIA2.jpg" alt="Vestido semi sereia"></div>
-    <div><img src="Assets/IMG/images (1).jfif" alt="Vestido"></div>
-    <div><img src="Assets/IMG/curto.jpeg" alt="Vestido curto"></div>
-    <div><img src="Assets/IMG/PIBE.webp" alt="Vestido"></div>
-    <div><img src="Assets/IMG/princesa2.jpg" alt="Vestido princesa"></div>
-    <div><img src="Assets/IMG/reto1.avif" alt="Vestido reto"></div>
-    <div><img src="Assets/IMG/reto4.jpg" alt="Vestido reto"></div>
-    <div><img src="Assets/IMG/SEREIA1.jpeg" alt="Vestido sereia"></div>
-</div>
 
 
     <div class="tomandinho">
@@ -1039,10 +964,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back">
-              <p class="title">Volume concentrado no centro do tronco</p>
-              <p>O corpo maçã ou oval é característico das mulheres mais cheinhas, que têm a cintura e a barriga como as
-                maiores proporções da silhueta se comparadas aos ombros e quadris</p>
-              <p>Clique e descubra seu vestido!</p>
+              <p class="title">Volume concentrado no centro do tronco</p><br>
+              <p>Clique no card e descubra qual os dois tipos de vestidos que mais se adequam para seu tipo de corpo!</p>
             </div>
           </div>
         </a>
@@ -1059,11 +982,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back">
-              <p class="title">Ombros retos, estrutura linear</p>
-              <p>O corpo retangular é aquele que tem proporções muito similares nos ombros e quadris, com uma cintura
-                mais reta e pouco delineada. É uma silhueta mais reta, comum em mulheres altas, magras e com pernas
-                longas.</p>
-              <p>Clique e descubra seu vestido!</p>
+              <p class="title">Ombros retos, estrutura linear</p><br>
+              <p>Clique no card e descubra qual os dois tipos de vestidos que mais se adequam para seu tipo de corpo!</p>
             </div>
           </div>
         </a>
@@ -1079,11 +999,9 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back">
-              <p class="title">Busto e quadris proporcionais</p>
-              <p>O corpo ampulheta, contém curvas bem definidas, com ombros e quadris na mesma proporção e combinados
-                com uma cintura bem marcada. As mulheres com essa silhueta também costumam ter seios fartos e quadris
-                largos.</p>
-              <p>Clique e descubra seu vestido!</p>
+              <p class="title">Busto e quadris proporcionais</p><br>
+              <p>Clique no card e descubra qual os dois tipos de vestidos que mais se adequam para seu tipo de corpo!</p>
+
             </div>
           </div>
         </a>
@@ -1099,10 +1017,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back">
-              <p class="title">Ombros mais estreitos que os quadris</p>
-              <p>O formato pera é o contrário do triângulo invertido. Aqui, os quadris são mais largos do que os ombros
-                e a cintura é fina. Para mulheres com coxas grossas, bumbum grande e seios de pequenos a médios.</p>
-              <p>Clique e descubra seu vestido!</p>
+              <p class="title">Ombros mais estreitos que os quadris</p><br>
+              <p>Clique no card e descubra qual os dois tipos de vestidos que mais se adequam para seu tipo de corpo!</p>
             </div>
           </div>
         </a>
@@ -1118,11 +1034,9 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back">
-              <p class="title">Ombros mais largos que quadris</p>
-              <p>Esse biotipo é marcado por ombros e costas mais largas do que os quadris, que são mais estreitos. Em
-                geral, essas mulheres costumam ter pernas mais finas, cintura pouco marcada e seios grandes, com a parte
-                de cima mais destacada.</p>
-              <p>Clique e descubra seu vestido!</p>
+              <p class="title">Ombros mais largos que quadris</p><br>
+              <p>Clique no card e descubra qual os dois tipos de vestidos que mais se adequam para seu tipo de corpo!</p>
+
             </div>
           </div>
         </a>
@@ -1133,22 +1047,10 @@ function resetar() {
 
 
 <!--....................................MASCULINO.................................-->
-<br><br><br><br>
+<br><br>
 
 <h1>masculino</h1>
 
-<div class="card-3d2">
-  <div><img src="Assets/IMG/italiano2.jpeg" ></div>
-  <div><img src="Assets/IMG/príncipe2.jpeg" ></div>
-  <div><img src="Assets/IMG/risca_giz2.jpeg" ></div>
-  <div><img src="Assets/IMG/sob_medida2.jpeg"></div>
-  <div><img src="Assets/IMG/risca_giz1.jpeg" ></div>
-  <div><img src="Assets/IMG/slim_fit1.jpeg" ></div>
-  <div><img src="Assets/IMG/azul_marinho2.jpeg" ></div>
-  <div><img src="Assets/IMG/slim_fit2.jpeg" ></div>
-  <div><img src="Assets/IMG/cruzado2.jpeg" ></div>
-  <div><img src="Assets/IMG/dois_bot1.jpeg"> </div>
-</div>
 
 
     <div class="tomandinho2">
@@ -1162,10 +1064,9 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back2">
-              <p class="title2">Cintura mais larga<br> que ombros e quadris.</p>
-              <p>Homens com essa silhueta costumam acumular mais peso na região abdominal,
-                 apresentando braços e pernas mais finos e um aspecto arredondado na área do tórax</p>
-              <p>Clique e descubra seu terno!</p>
+              <p class="title2">Cintura mais larga<br> que ombros e quadris.</p><br>
+              <p>Clique no card e descubra qual os dois tipos de ternos que mais se adequam para seu tipo de corpo!</p>
+
             </div>
           </div>
         </a>
@@ -1182,11 +1083,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back2">
-              <p class="title2">Cintura pouco/nada marcada.</p>
-              <p>É caracterizado por ter ombros, cintura e quadris com medidas muito semelhantes,
-                 resultando em uma silhueta reta e com pouca definição de curvas.</p>
-                               <p>Clique e descubra seu terno!</p>
-
+              <p class="title2">Cintura pouco/nada marcada.</p><BR>
+              <p>Clique no card e descubra qual os dois tipos de ternos que mais se adequam para seu tipo de corpo!</p>
             </div>
           </div>
         </a>
@@ -1202,9 +1100,9 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back2">
-              <p class="title2">O padrão de proporção ideal masculina.</p>
-              <p>Suas características essenciais são: ombros e tórax visivelmente largos que se afunilam suavemente em direção a uma cintura e quadris mais estreitos.</p>
-                               <p>Clique e descubra seu terno!</p>
+              <p class="title2">O padrão de proporção ideal masculina.</p><br>
+              <p>Clique no card e descubra qual os dois tipos de ternos que mais se adequam para seu tipo de corpo!</p>
+
 
             </div>
           </div>
@@ -1222,9 +1120,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back2">
-              <p class="title2">Quadris e cintura<br> mais largos que os ombros e o peito.</p>
-              <p>Geralmente, homens com esse biotipo possuem uma parte superior mais fina, peitoral menos desenvolvido e podem apresentar pernas mais robustas ou coxas mais grossas </p>
-                               <p>Clique e descubra seu terno!</p>
+              <p class="title2">Quadris e cintura<br> mais largos que os ombros e o peito.</p><br>
+              <p>Clique no card e descubra qual os dois tipos de ternos que mais se adequam para seu tipo de corpo!</p>
 
             </div>
           </div>
@@ -1243,9 +1140,8 @@ function resetar() {
               <p>Passe o mouse!</p>
             </div>
             <div class="flip-card-back2">
-              <p class="title2">Ombros volumosos e peitoral amplo.</p>
-              <p>Ombros e peitoral largos que são significativamente mais amplos do que a cintura e os quadris. Essa estrutura costuma resultar em um visual atlético e é frequentemente o biotipo natural de atletas ou o resultado de musculação</p>
-                               <p>Clique e descubra seu terno!</p>
+              <p class="title2">Ombros volumosos e peitoral amplo.</p><br>
+              <p>Clique no card e descubra qual os dois tipos de ternos que mais se adequam para seu tipo de corpo!</p>
 
             </div>
           </div>
@@ -1286,7 +1182,7 @@ function resetar() {
     </a>
     </div>
 
-    <p>Copyright 2026 - by aulas PW © Facebook | Twitter</p>
+    <p>© 2026 Info Clothing. Todos os direitos reservados.</p><br>
 
     Desenvolvido com muito ♥
   </footer>
