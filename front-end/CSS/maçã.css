@@ -129,9 +129,32 @@ button:after {
 }
 
 .gmail-icon {
+  width: 27.5px; /* Tamanho do ícone */
+  height: 27.5px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+}
+
+.whatsapp-icon {
   width: 26px; /* Tamanho do ícone */
   height: 26px;
+ 
+  
 }
+
+.containericons {
+  gap: 10px;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+ 
+}
+
 
 
 .paste-button {
@@ -482,6 +505,4 @@ button1:hover {
  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
  transform: translateY(-2px);
 }
-
-
 

@@ -112,8 +112,9 @@ button:after {
 }
 
 .instagram-icon {
-  width: 24px; /* Tamanho do ícone */
-  height: 24px;
+  width: 25px; /* Tamanho do ícone */
+  height: 25px;
+
 }
 
  .btn-gmail {
@@ -124,11 +125,32 @@ button:after {
 }
 
 .gmail-icon {
-  width: 26px; /* Tamanho do ícone */
-  height: 26px;
+  width: 28px; /* Tamanho do ícone */
+  height: 28px;
 }
 
+.btn-whatsapp {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ffffff;  
+  transition: background-color 0.3s;
+ 
+}
 
+.whatsapp-icon {
+  width: 25.5px; /* Tamanho do ícone */
+  height: 25.5px;
+ 
+  
+}
+
+.containericons {
+  gap: 10px;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+ 
+}
 
 .conteiner1 {
   font-family: initial;
