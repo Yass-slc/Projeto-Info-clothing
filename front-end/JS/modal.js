@@ -1,232 +1,341 @@
-
-
-    // VARIÁVEIS DO CARROSSEL 
+/* =========================================
+/*          VARIÁVEIS
+        ========================================= */
 
 let imagensAtuais = [];
 let imagemAtual = 0;
 
 
-// FOTOS
+/* =========================================
+   IMAGENS DE CADA VÉU
 
-const fotos = {
+   COLOQUE OS LINKS DAS OUTRAS FOTOS
+   NOS CAMPOS VAZIOS.
+========================================= */
 
-    voillet: [
-        "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg",
+const fotosVeus = {
+  voillet: [
+    "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg",
+    "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10"
 
-        "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909",
-
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10"
-    ],
-
-
-    ombro: [
-        "", 
-        "", 
-        ""
-    ],
+  ],
 
 
-    cotovelo: [
-        "",
-        "",
-        ""
-    ],
+  ombro: [
+    "",
+    "",
+    ""
+  ],
 
 
-    blusher: [
-        "",
-        "",
-        ""
-    ],
+  cotovelo: [
+    "",
+    "",
+    ""
+  ],
 
 
-    pontadededo: [
-        "",
-        "",
-        ""
-    ],
+  blusher: [
+    "",
+    "",
+    ""
+  ],
 
 
-    ballet: [
-        "",
-        "",
-        ""
-    ],
+  pontadededo: [
+    "",
+    "",
+    ""
+  ],
 
 
-    capela: [
-        "",
-        "",
-        ""
-    ],
+  ballet: [
+    "",
+    "",
+    ""
+  ],
 
 
-    catedral: [
-        "",
-        "",
-        ""
-    ]
+  capela: [
+    "",
+    "",
+    ""
+  ],
 
+
+  catedral: [
+    "",
+    "",
+    ""
+  ],
+
+  coroa: [
+    "",
+    "",
+    ""
+  ],
+  
+  tiara: [
+    "",
+    "",
+    ""
+  ],
+
+  guirlanda: [
+    "",
+    "",
+    ""
+  ],
+
+  pente: [
+    "",
+    "",
+    ""
+  ],
+
+  headbands: [
+    "",
+    "",
+    ""
+  ],
+
+  porta_coque: [
+    "",
+    "",
+    ""
+  ],
+
+  presilhas_e_grampos: [
+    "",
+    "",
+    ""
+  ],
+
+  buque_redondo: [
+    "",
+    "",
+    ""
+  ],
+
+  buque_cascata: [
+    "",
+    "",
+    ""
+  ],
+  
+  buque_flor_unica: [
+    "",
+    "",
+    ""
+  ],
+
+  buque_desconstruido: [
+    "",
+    "",
+    ""
+  ],
+
+  buque_braçada: [
+    "",
+    "",
+    ""
+  ]
 };
 
 
-// ABRIR CARD
+/* =========================================
+   ABRIR CARD
+========================================= */
 
 function abrirCard(tipo) {
 
-    imagensAtuais = fotos[tipo] || [];
-
-    /* Remove imagens vazias */
-
-    imagensAtuais = imagensAtuais.filter(
-        imagem => imagem !== ""
-    );
-
-    /* Se não houver imagens */
-
-    if (imagensAtuais.length === 0) {
-
-        document.getElementById("modalImagem").src = "";
-
-        document.getElementById("contadorImagem").textContent =
-            "Sem imagens disponíveis";
-
-        document.getElementById("meuModal").style.display = "flex";
-
-        return;
-    }
+  imagensAtuais = fotosVeus[tipo] || [];
 
 
-    /* Começa pela primeira foto */
+  /* Remove campos vazios */
 
-    imagemAtual = 0;
+  imagensAtuais = imagensAtuais.filter(
+    imagem => imagem.trim() !== ""
+  );
 
-    /* Atualiza imagem */
 
-    atualizarCarrossel();
+  /* Sempre começa na primeira foto */
 
-    /* Abre modal */
+  imagemAtual = 0;
 
+
+  /* Caso não existam fotos */
+
+  if (imagensAtuais.length === 0) {
+    document.getElementById("modalImagem").src = "";
+    document.getElementById("contadorImagem").textContent =
+      "Sem imagens disponíveis";
     document.getElementById("meuModal").style.display = "flex";
+    return;
+  }
+
+
+  /* Atualiza o carrossel */
+
+  atualizarCarrossel();
+
+
+  /* Abre o modal */
+
+  document.getElementById("meuModal").style.display = "flex";
+
 }
 
 
-// ATUALIZAR CARROSSEL
+/* =========================================
+   ATUALIZAR CARROSSEL
+========================================= */
 
 function atualizarCarrossel() {
 
-    const imagem = document.getElementById("modalImagem");
+  const imagem =
+    document.getElementById("modalImagem");
 
-    const contador = document.getElementById("contadorImagem");
+  const contador =
+    document.getElementById("contadorImagem");
 
-    imagem.src = imagensAtuais[imagemAtual];
 
-    contador.textContent =
-        `${imagemAtual + 1} / ${imagensAtuais.length}`;
+  imagem.src =
+    imagensAtuais[imagemAtual];
+
+
+  contador.textContent =
+    `${imagemAtual + 1} / ${imagensAtuais.length}`;
+
 }
 
-// PRÓXIMA IMAGEM
+
+/* =========================================
+   PRÓXIMA IMAGEM
+========================================= */
 
 function proximaImagem() {
 
-    if (imagensAtuais.length === 0) {
-        return;
-    }
+  if (imagensAtuais.length === 0) {
+    return;
+  }
 
-    imagemAtual++;
 
-    /* Volta para a primeira */
+  imagemAtual++;
 
-    if (imagemAtual >= imagensAtuais.length) {
 
-        imagemAtual = 0;
-    }
+  /* Quando chegar ao final,
+     volta para a primeira */
 
-    atualizarCarrossel();
+  if (imagemAtual >= imagensAtuais.length) {
+
+    imagemAtual = 0;
+
+  }
+
+
+  atualizarCarrossel();
+
 }
 
-// IMAGEM ANTERIOR
+
+/* =========================================
+   IMAGEM ANTERIOR
+========================================= */
 
 function imagemAnterior() {
 
-    if (imagensAtuais.length === 0) {
-        return;
-    }
-
-    imagemAtual--;
-
-    /* Vai para a última */
-
-    if (imagemAtual < 0) {
-
-        imagemAtual = imagensAtuais.length - 1;
-    }
+  if (imagensAtuais.length === 0) {
+    return;
+  }
 
 
-    atualizarCarrossel();
+  imagemAtual--;
+
+
+  /* Se estiver na primeira,
+     vai para a última */
+
+  if (imagemAtual < 0) {
+
+    imagemAtual =
+      imagensAtuais.length - 1;
+
+  }
+
+
+  atualizarCarrossel();
+
 }
 
-// CONTROLAR MODAL
+
+/* =========================================
+   CONTROLAR MODAL
+========================================= */
 
 function controlarModal(abrir) {
 
-    document.getElementById("meuModal").style.display =
-        abrir ? "flex" : "none";
+  document.getElementById("meuModal").style.display =
+    abrir ? "flex" : "none";
+
 }
 
 
-// FECHAR CLICANDO FORA DO MODAL
+/* =========================================
+   FECHAR AO CLICAR FORA
+========================================= */
 
-document.getElementById("meuModal").addEventListener(
-    "click",
-    function(event) {
+document
+  .getElementById("meuModal")
+  .addEventListener("click", function (event) {
 
-        if (event.target === this) {
+    if (event.target === this) {
 
-            controlarModal(false);
-        }
+      controlarModal(false);
+
     }
-);
+
+  });
 
 
-/* TECLADO
+/* =========================================
+   CONTROLES DO TECLADO
+
    ← = anterior
    → = próxima
-   ESC = fechar */
+   ESC = fechar
+========================================= */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+document.addEventListener("keydown", function (event) {
 
-        const modal =
-            document.getElementById("meuModal");
-
-        /* Só funciona quando o modal está aberto */
-
-        if (modal.style.display !== "flex") {
-            return;
-        }
+  const modal =
+    document.getElementById("meuModal");
 
 
-        if (event.key === "ArrowRight") {
+  /* Só executa se o modal estiver aberto */
 
-            proximaImagem();
-
-        }
-
-
-        else if (event.key === "ArrowLeft") {
-
-            imagemAnterior();
-
-        }
+  if (modal.style.display !== "flex") {
+    return;
+  }
 
 
-        else if (event.key === "Escape") {
+  if (event.key === "ArrowRight") {
 
-            controlarModal(false);
+    proximaImagem();
 
-        }
+  }
 
-    }
-);
+  else if (event.key === "ArrowLeft") {
+
+    imagemAnterior();
+
+  }
+
+  else if (event.key === "Escape") {
+
+    controlarModal(false);
+
+  }
+
+});
