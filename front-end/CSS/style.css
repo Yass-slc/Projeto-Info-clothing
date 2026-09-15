@@ -449,6 +449,9 @@ img{
     margin-top: -3px;
     
   }
+  .button2{
+    font-size: 14px;
+  }
 
   .logo{
     height: 70px;
@@ -1826,55 +1829,33 @@ h2 {
 /*PÁGINA INTERIRA DE CASAMENTOS, CSS INTEIRO DOS CASAMENTOS*/
 
 /*responsivo*/
+/* =========================================
+   CONFIGURAÇÃO GERAL
+========================================= */
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-  
-}
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* =========================
- CARD NORMAL
-========================= */
-
-.card{
+html,
+body {
   width: 100%;
-  max-width: 190px;
-  min-height: 254px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-  padding: 15px;
-
-  border-radius: 30px;
-  background: #e0e0e0;
-
-  box-shadow:
-      15px 15px 30px #bebebe,
-      -15px -15px 30px #ffffff;
-
-  overflow: hidden;
+img {
+  max-width: 100%;
 }
 
 
-/* =========================
+/* =========================================
  CONTAINER DOS GLASS CARDS
-========================= */
+========================================= */
 
-.container{
+.container {
   position: relative;
 
   width: 100%;
@@ -1884,38 +1865,46 @@ img{
   padding: 20px;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
   flex-wrap: wrap;
 
-  gap: 20px;
+  gap: 25px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 
-/* =========================
+/* =========================================
  GLASS CARD
-========================= */
+========================================= */
 
-.container .glass{
+.container .glass {
   position: relative;
 
-  /* Responsivo */
   width: min(600px, 90vw);
-  min-height: 300px;
-  height: auto;
 
-  padding: 20px;
+  /*
+     Mantém proporção próxima da imagem original
+     sem deixar o card excessivamente alto.
+  */
+  aspect-ratio: 2 / 1;
+
+  min-height: 0;
+
+  padding: 10px;
 
   background: linear-gradient(#fff2, transparent);
 
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  box-shadow:
+      0 25px 25px rgba(0, 0, 0, 0.25);
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -1923,7 +1912,6 @@ img{
 
   border-radius: 10px;
 
-  /* Removemos a margem negativa */
   margin: 0;
 
   backdrop-filter: blur(10px);
@@ -1934,21 +1922,46 @@ img{
 }
 
 
-/* =========================
- EFEITO HOVER
-========================= */
+/* =========================================
+ IMAGENS DOS GLASS CARDS
+========================================= */
 
-.container:hover .glass{
+.container .glass img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+     NÃO ESTICA A IMAGEM.
+     Mantém a proporção original.
+  */
+  object-fit: contain;
+
+  object-position: center;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  border-radius: 6px;
+}
+
+
+/* =========================================
+ EFEITO HOVER
+========================================= */
+
+.container:hover .glass {
   transform: rotate(0deg);
   margin: 0;
 }
 
 
-/* =========================
- TEXTO DO CARD
-========================= */
+/* =========================================
+ TEXTO/DESCRIÇÃO SOBRE A IMAGEM
+========================================= */
 
-.container .glass::before{
+.container .glass::before {
   content: attr(data-text);
 
   position: absolute;
@@ -1957,6 +1970,7 @@ img{
   left: 0;
 
   width: 100%;
+
   min-height: 40px;
 
   padding: 8px;
@@ -1964,6 +1978,7 @@ img{
   background: rgba(255, 255, 255, 0.05);
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -1974,15 +1989,20 @@ img{
   text-align: center;
 
   overflow-wrap: break-word;
+
+  z-index: 2;
+
+  pointer-events: none;
 }
 
 
-/* =========================
+/* =========================================
  SVG
-========================= */
+========================================= */
 
-.container .glass svg{
+.container .glass svg {
   width: 60px;
+
   max-width: 20vw;
 
   height: auto;
@@ -1991,85 +2011,143 @@ img{
 }
 
 
-/* =========================
+/* =========================================
  TABLETS
-========================= */
+========================================= */
 
-@media (max-width: 900px){
+@media (max-width: 1100px) {
 
-  .container{
-      padding: 15px;
-      gap: 15px;
-  }
-
-  .container .glass{
-      width: min(500px, 90vw);
-      min-height: 280px;
-
-      transform: rotate(0deg);
-  }
-
-}
-
-
-/* =========================
- CELULARES
-========================= */
-
-@media (max-width: 600px){
-
-  .container{
+  .container {
       width: 100%;
-      padding: 10px;
 
-      flex-direction: column;
+      padding: 20px 15px;
 
       gap: 20px;
   }
 
-  .container .glass{
-      width: 100%;
-      min-height: 250px;
+  .container .glass {
+      width: min(520px, 90vw);
 
-      padding: 15px;
+      aspect-ratio: 2 / 1;
 
       transform: rotate(0deg);
   }
 
-  .card{
-      max-width: 90%;
-      margin: auto;
+}
+
+
+/* =========================================
+ TABLETS PEQUENOS
+========================================= */
+
+@media (max-width: 900px) {
+
+  .container {
+      padding: 15px;
+
+      gap: 20px;
   }
-  .button2{
-    font-size: 14px;
+
+  .container .glass {
+      width: min(500px, 92vw);
+
+      aspect-ratio: 2 / 1;
+
+      transform: rotate(0deg);
   }
 
 }
 
 
-/* =========================
- CELULARES PEQUENOS
-========================= */
+/* =========================================
+ CELULARES
+========================================= */
 
-@media (max-width: 400px){
+@media (max-width: 600px) {
 
-  .container{
-      padding: 8px;
-  }
+  .container {
+      width: 100%;
 
-  .container .glass{
-      min-height: 220px;
       padding: 10px;
+
+      flex-direction: column;
+
+      gap: 25px;
+
+      align-items: center;
   }
 
-  .container .glass::before{
-      font-size: 14px;
-      min-height: 35px;
+  .container .glass {
+      width: calc(100vw - 30px);
+
+      max-width: 500px;
+
+      /*
+         Mantém o formato proporcional.
+      */
+      aspect-ratio: 2 / 1;
+
+      padding: 8px;
+
+      transform: rotate(0deg);
+
+      margin: 0;
   }
-  
+
+  .container .glass img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+  }
+
+  .container .glass::before {
+      font-size: 14px;
+
+      min-height: 35px;
+
+      padding: 6px;
+  }
 
 }
 
+
+/* =========================================
+ CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 400px) {
+
+  .container {
+      padding: 8px;
+
+      gap: 20px;
+  }
+
+  .container .glass {
+      width: calc(100vw - 20px);
+
+      aspect-ratio: 2 / 1;
+
+      padding: 6px;
+  }
+
+  .container .glass img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+  }
+
+  .container .glass::before {
+      font-size: 13px;
+
+      min-height: 32px;
+
+      padding: 5px;
+  }
+
+}
 
 
 
@@ -3156,63 +3234,6 @@ width: 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.button2 {
-  background-color: #ffffff;
-  color: #804423;
-  padding: 10px 15px;
-  font-size: 18px;
-  font-weight: 500;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  cursor: pointer;
-  font-family: initial;
-}
-
-.dropdown-content {
-  display: none;
-  font-size: 13px;
-  position: absolute;
-  z-index: 1;
-  min-width: 200px;
-  background-color: #804423;
-  border: 2px solid #DAC8B3;
-  border-radius: 0px 15px 15px 15px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-  color: #ffffff;
-  padding: 8px 10px;
-  text-decoration: none;
-  display: block;
-  transition: 0.1s;
-}
-
-.dropdown-content a:hover {
-  background-color: #ffffff;
-  color: #804423;
-}
-
-.dropdown-content a:focus {
-  background-color: #212121;
-  color: #ffffff;
-}
-
-.dropdown-content #top:hover {
-  border-radius: 0px 13px 0px 0px;
-}
-
-.dropdown-content #bottom:hover {
-  border-radius: 0px 0px 13px 13px;
-}
-
-.paste-button:hover button {
-  border-radius: 15px 15px 0px 0px;
-}
-
-.paste-button:hover .dropdown-content {
-  display: block;
-}
 /*fim do cabeçalho*/
 
 
@@ -4104,5 +4125,3 @@ width: 5px;
   }
 
 }
-
->>>>>>> ad361d27f010450740dbf28e94af5b5f28eb18c6
