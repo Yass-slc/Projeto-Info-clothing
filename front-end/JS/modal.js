@@ -247,144 +247,138 @@ const fotosVeus = {
 
   derby: [
     "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/enrico/media/uploads/produtos/foto/tumaqudy/sapato-social-derby-sola-de-couro-masculino-preto-boaretto-2.jpg",
-    "",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-4nhH-IW6JD8uN92-6fTnm3RdpWkcoNh1OwqvRrDd9w&s=10",
     "https://http2.mlstatic.com/D_NQ_NP_887660-MLB110350988891_042026-O-sapato-derby-masculino-social-couro-nobre-natural-legitimo.webp"
   ],
 
   monk_strap: [
-    "",
-    "",
-    ""
+    "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lsfg3tc435jx15",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/manutt/media/uploads/produtos/foto/lenbclup/inserir-um-subtitulo-21.jpg",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/villione/media/uploads/produtos/foto/luerbnfw/1000x1000__0010_monk-strap-2.jpg"
   ],
 
   loafer: [
-    "",
-    "",
-    ""
+    "https://www.louie.com.br/loja/image/cache/data/colecao-2024/LOOKS-SITE/loafer-matteo-look-7-550x550.jpg",
+    "https://img.irroba.com.br/filters:fill(fff):quality(80)/jacomett/catalog/produtos/5172-preto/5172-preto-2.jpg",
+    "https://www.louie.com.br/loja/image/cache/data/colecao-2025/LOOKS/look-groutie-cam-1-550x550.jpg"
   ],
 
-  sapato_brogue: [
-    "",
-    "",
-    ""
+  brogue: [
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/enrico/media/uploads/produtos/foto/ohyegyyt/sapato-social-wingtip-derby-brogue-masculino-boaretto-marrom-conhaque-9.jpg",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/wallford/media/uploads/produtos/foto/uxqsgift/9c0a2c39-0b8b-4486-9fc0-6d7087d6f800.png",
+    "https://img.irroba.com.br/filters:fill(fff):quality(80)/jacomett/catalog/produtos/mch005-preto/mch005-preto-2.jpg"
   ],
 
 
   // Vestidos
   evase: [
-    "",
-    "",
-    ""
+    "https://tuttisposa.com.br/wp-content/uploads/2024/01/MT3237-ivory-tea-rose-b-scaled.jpg",
+    "https://tuttisposa.com.br/wp-content/uploads/2022/12/Y22273_F22_Campaign_0372.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFu5vJGhJUkJP4vB985F7Vp6ecJasgw0bfYJCXBIgZNSSafzZD7-_xIoPf&s=10"
   ],
 
   sereia: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyWdg3O_bn15jg6xxjyUj00BJNdB_4-pU3heARKer1I6Py9wx8BVzZrwU&s=10",
+    "https://http2.mlstatic.com/D_NQ_NP_679205-MLB110157766836_042026-O-vestido-de-noiva-sereia-iser2-queen-manga-longa-renda-cauda.webp",
+    "https://tuttisposa.com.br/wp-content/uploads/2022/12/Y22262_F22_Campaign_5670.jpg"
   ],
 
   semi_sereia: [
-    "",
-    "",
-    ""
+    "https://acdn-us.mitiendanube.com/stores/001/205/666/products/design-sem-nome-2025-10-16t095046-080-56bbcb0c62f9991ad617606190417403-480-0.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ6tRc8OWldz_jCktIl3OU9V9aA6asFDxTxA5ni1hRCh3MqvIZrBlqHO8&s=10",
+    "https://static.wixstatic.com/media/fb4cf6_805069f357e145eebaee0b289afa800e~mv2_d_2419_3629_s_4_2.jpg/v1/fill/w_1110,h_1665,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb4cf6_805069f357e145eebaee0b289afa800e~mv2_d_2419_3629_s_4_2.jpg"
   ],
 
   imperio: [
-    "",
-    "",
-    ""
+    "https://revista.icasei.com.br/wp-content/uploads/2025/08/vestido-de-noiva-corte-imperio-2.jpeg",
+    "https://i.ebayimg.com/images/g/-MkAAeSwszZqKMUC/s-l1200.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHejcQz90QgcMEtwcHaCNvu1eAA9QoqBF25BW3-SOne39SyFM9D9HMgPY&s=10"
   ],
 
   reto: [
-    "",
-    "",
-    ""
+    "https://atelienataliaviana.com/wp-content/uploads/2022/03/3499127844e315d1eb060d223ccb0aaa.jpeg",
+    "https://lapisdenoiva.com/wp-content/uploads/2025/01/Lynn-Shapiro-Photography-_Easy-Resize.com_.jpg?x42625",
+    "https://tudocommoda.com/wp-content/uploads/2020/03/15-vestido-de-noiva-reto-com-decote-sem-al%C3%A7as.jpg"
   ],
 
   mullet: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGXcpqV6tvSNoLBszoD7kret0s0Qoy09CK07KJ_Kbt9ZnJqU5L1rRURE&s=10",
+    "https://http2.mlstatic.com/D_707673-MLB114438230715_072026-O.jpg",
+    "https://cdn0.casamentos.com.br/usr/1/4/4/3/cfb_2x_594040.jpg"
   ],
 
   princesa: [
-    "",
-    "",
-    ""
-  ],
-
-  brogue: [
-    "",
-    "",
-    ""
+    "https://http2.mlstatic.com/D_NQ_NP_626924-MLB96204108608_102025-O-vestido-noiva-princesa-manga-longa-romntico-luxo-bordado.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjBXp0IAvzBzMenQOYzjACTQyeOH0wq8WhKznrDDJWwO_528R8jnLaS0Ec&s=10",
+    "https://atelienataliaviana.com/wp-content/uploads/2022/01/cda80cf763e495a6dbbabf69c886520a.jpg"
   ],
 
   curto: [
-    "",
-    "",
-    ""
+    "https://images.tcdn.com.br/img/img_prod/586312/vestido_simples_curto_civil_com_detalhe_costas_1443_1_cd0cda26e6869a43b4f8ef1f240c6ff3.jpg",
+    "https://a-static.mlcdn.com.br/450pxx450px/vestido-noiva-curto-debutante-15-anos-com-peito-de-renda-augui-noiva/auguicabeloefesta/9442594606/f7aa34b1c74a319d9ac337c1f7619095.jpeg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rpUAbII7H9_FQ0Ks5wEBRndKAAYPzvSqa5UrNz-74JEE0lQwyeq7rWrV&s=10"
   ],
 
   boho: [
-    "",
-    "",
-    ""
+    "https://www.deboranoivas.com.br/wp-content/uploads/2024/10/www.deboranoivas.com.br-img-3824-500x780.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14NWKdw1ODFSaAdOVUIDBaaTXxre36NrPpQhCRDzAuyGzNghpvxEX5AqN&s=10",
+    "https://http2.mlstatic.com/D_709615-MLB85114602572_052025-O.jpg"
   ],
 
 
   // Ternos
   classico: [
-    "",
-    "",
-    ""
+    "https://www.deboranoivas.com.br/wp-content/uploads/2025/05/www.deboranoivas.com.br-lucashenriqueph-68-500x780.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EQtfRzi7WjMuAyGc37gZxeGx9ptL0eoo1UV9Ys2UeInmC9_4omR2g7Bj&s=10",
+    "https://onefabday.com/wp-content/uploads/2025/10/Sheena_T_Photography_-_Anna__Conall_Wedding-52.jpg?w=1024"
   ],
 
   slim: [
-    "",
-    "",
-    ""
+    "https://blog.noivah.com.br/wp-content/uploads/2024/07/slim-fit-683x1024.jpg",
+    "https://blacktie.com.br/wp-content/uploads/2024/03/WhatsApp-Image-2024-01-30-at-14.45.56-1.jpeg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpuxakvFtGqeY1MdpISwss0GxwIAnS73_s0Rd-WSLeImWM6mWZUBwllg&s=10"
   ],
 
   italiano: [
-    "",
-    "",
-    ""
+    "https://http2.mlstatic.com/D_NQ_NP_920576-MLB90548579170_082025-O-terno-masculino-plus-italiano-noivo-poliviscose-elastano.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlR1vQqG5wCi-6AcwxcME5whkbON2FSkM0ksSQXfCmDgChNiGr9DHeHew&s=10",
+    "https://mazzinistore.com.br/cdn/shop/files/freepik__enhance__17179.png?v=1757945816&width=2000"
   ],
 
   fraque: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6vBeJA7apa9AnDDjw2nxHOtcQEDZTJvH-cim79eW3KMp2Zi4Q6_bUcNq7&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwTVG8jDFfURgA1OMeQpaiLEPbffMSvlGIF6NSp4Fkg&s=10",
+    "https://http2.mlstatic.com/D_716936-MLB111760033185_052026-C.jpg"
   ],
 
   meio_fraque: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmWa8sSjxbslIjEY7HjdYq2o9F6Ga5D-7iUP627orAP_kDLyveQlwwR4bf&s=10",
+    "https://www.srestilo.com.br/arquivos/produtos/produto_capa-56.jpg",
+    "https://rosesnoivas.com.br/wp-content/uploads/2024/08/TERNO-AZUL-SERENITY-NOIVO-PADRINHO-2-scaled.jpg"
   ],
 
   smoking: [
-    "",
-    "",
-    ""
+    "https://http2.mlstatic.com/D_NQ_NP_944988-MLB105803771646_022026-O-para-terno-smoking-do-noivo-3-pecas.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_791383-MLB97912410948_112025-O.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnu66aU_3uZXwqtXum7O8kDNd5FyS429hmJ5TDRfGYSxpid2s8sUrnPF2&s=10"
   ],
 
   risca_de_giz: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVnTriQWCHMSEoLjHaTj9QxSw3ny1dE_4kTOrexpZBgh1HAkQeTyyk4gok&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxmXxP5mM557KjzU2I-keXDRAxy9-qVzvzgAX1CmsDf9XkguntotAk16s&s=10",
+    "https://tudocommoda.com/wp-content/uploads/2016/12/terno-risca-de-giz-casamento.jpg"
   ],
 
   gales: [
-    "",
-    "",
-    ""
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPSbKnOC8RyjIdB5liDV7CI3RnoIHiQ6ty0aD60q9zCWUXvzGwgue-APM&s=10",
+    "https://http2.mlstatic.com/D_NQ_NP_940202-MLB116586548361_082026-O-terno-italiano-xadrez-principe-de-gales.webp",
+    "https://usemister.cdn.magazord.com.br/img/2026/01/produto/1678/img-3329.jpg?ims="
   ],
 
   cruzadinho: [
-    "",
-    "",
-    ""
+    "https://i.etsystatic.com/32206548/r/il/0d1949/5257239175/il_570xN.5257239175_fbq6.jpg",
+    "https://www.constancezahn.com/wp-content/uploads/2017/03/0003-constance-zahn-abotoamento-cruzado-traje-noivo.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOm28AOltGsfOFJ5NF_g2K1JmTSvZjYrMKz_LXpi_mFG5nG_d93LZdtM&s=10"
   ],
 };
 
