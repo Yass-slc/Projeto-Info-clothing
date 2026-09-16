@@ -1617,3 +1617,305 @@ width: 5px;
 
 
 
+/* ========================================
+   CALCULADORA DE TIPO DE CORPO
+======================================== */
+
+.calculadora-corpo {
+    width: min(100% - 30px, 950px);
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+
+    font-family: initial;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.calc-cabecalho {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.calc-cabecalho h1 {
+    color: #804423;
+
+    margin-bottom: 10px;
+
+    font-family: "Cinzel", sans-serif;
+}
+
+.calc-cabecalho p {
+    color: #804423;
+
+    line-height: 1.6;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   BOTÕES FEMININO / MASCULINO
+======================================== */
+
+.sexo-escolha {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.sexo-btn {
+    border: 2px solid #804423;
+
+    background-color: #ffffff;
+
+    color: #804423;
+
+    padding: 12px 35px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.sexo-btn:hover,
+.sexo-btn.ativo {
+    background-color: #804423;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.form-corpo h2 {
+    color: #804423;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.medidas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo label {
+    color: #804423;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #DAC8B3;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #804423;
+
+    box-shadow:
+        0 0 0 3px rgba(128, 68, 35, 0.15);
+}
+
+
+/* ========================================
+   BOTÃO CALCULAR
+======================================== */
+
+.calcular-btn {
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 14px 30px;
+
+    background-color: #804423;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.calcular-btn:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   ESCONDER FORMULÁRIO
+======================================== */
+
+.oculto {
+    display: none;
+}
+
+
+/* ========================================
+   RESULTADO
+======================================== */
+
+.resultado-corpo {
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background-color: #DAC8B3;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    color: #804423;
+}
+
+.resultado-corpo.mostrar {
+    display: block;
+
+    animation: aparecerResultado 0.5s ease;
+}
+
+.resultado-corpo h2 {
+    font-family: "Cinzel", sans-serif;
+
+    margin-bottom: 12px;
+}
+
+.resultado-corpo p {
+    line-height: 1.7;
+
+    margin: 0 auto;
+
+    max-width: 700px;
+}
+
+@keyframes aparecerResultado {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    .calculadora-corpo {
+        padding: 25px 20px;
+    }
+
+    .medidas-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 480px) {
+
+    .calculadora-corpo {
+        width: calc(100% - 20px);
+
+        padding: 20px 15px;
+
+        margin: 25px auto;
+    }
+
+    .calc-cabecalho h1 {
+        font-size: 27px;
+    }
+
+    .sexo-escolha {
+        gap: 8px;
+    }
+
+    .sexo-btn {
+        width: 50%;
+
+        padding: 11px 5px;
+
+        font-size: 15px;
+    }
+
+    .calcular-btn {
+        width: 100%;
+    }
+
+}

@@ -116,26 +116,26 @@
   
   </div>
   
-
-
 <div class="testec">
   <div class="texto">
     
-<h2>Como tirar as medidas?</h2><br><br>
+<h2>Como tirar as medidas?</h2>
 <b>Use um espelho:</b> Para garantir que a fita não esteja torcida ou desnivelada.<br><br>
 <b>Remova roupas volumosas:</b> Use roupas íntimas para obter medidas precisas.<br><br>
 <b>Coloque os pés juntos:</b> Evite separar os pés para uma medição mais precisa.<br><br>
 <b>Ombros:</b> Peça para alguém medir de uma ponta a outra na parte mais larga,<br> ou olhe no espelho a largura visual dos ombros.<br>
 <br><b>Cintura:</b> Meça a parte mais fina do seu tronco, que fica logo acima do umbigo.<br>
 <br><b>Quadril:</b> Meça a circunferência na parte mais larga do bumbum.<br>
-<br><b>Busto:</b> passe a fita ao sobre os mamilos, e por baixo dos braços, envolvendo as costas.<br><br>
+<br><b>Quadril alto:</b> Meça a circunferência na altura dos ossos do quadril (pelve).<br>
+<br><b>Busto:</b> passe a fita ao sobre os mamilos, e por baixo dos braços, envolvendo as costas.<br>
 
 <br><b>Lembrete!</b> Todo corpo é perfeito do jeito que tem que ser e você deve vestir seu vestido ou terno dos sonhos, aquele o qual o seu coração escolher e seu corpo se adaptar melhor.
  Nosso trabalho é auxiliar as pessoas com informações importantes, para que tudo ocorra perfeitamente e que se os mesmos sintam-se mais confortáveis com suas vestimentas nesse dia tão especial.<br><br>
- "Que o amor seja a melhor forma de começar e terminar o dia."<br>
  “A beleza começa no momento em que você decide ser você mesma(o).”<br><br>
 </div>
 <br><br>
+
+
 <div class="calculadora">
 
 
@@ -530,7 +530,6 @@
 
 </div>
 
-
 <script>
 
 function calcularCorpo() {
@@ -543,19 +542,28 @@ function calcularCorpo() {
 
     const error = document.getElementById("error");
 
-    // VALIDAÇÃO
+    /* VERIFICAÇÃO DAS MEDIDAS */
+
     if (
-        !busto || busto <= 0 ||
-        !quadrilAlto || quadrilAlto <= 0 ||
-        !ombros || ombros <= 0 ||
-        !cintura || cintura <= 0 ||
-        !quadril || quadril <= 0
+        isNaN(busto) ||
+        isNaN(quadrilAlto) ||
+        isNaN(ombros) ||
+        isNaN(cintura) ||
+        isNaN(quadril) ||
+        busto <= 0 ||
+        quadrilAlto <= 0 ||
+        ombros <= 0 ||
+        cintura <= 0 ||
+        quadril <= 0
     ) {
         error.classList.add("show");
         return;
     }
 
     error.classList.remove("show");
+
+
+    /* SEXO ESCOLHIDO */
 
     const sexo = document.querySelector(
         'input[name="sexo"]:checked'
@@ -564,32 +572,23 @@ function calcularCorpo() {
 
     /*
     ----------------------------------------------------
-    NORMALIZAÇÃO DOS OMBROS
+    CONVERSÃO DA LARGURA DOS OMBROS
+    PARA UMA MEDIDA DE COMPARAÇÃO
     ----------------------------------------------------
-
-    A largura dos ombros normalmente é medida de uma
-    extremidade à outra, enquanto busto/quadril são
-    circunferências.
-
-    Para comparação, fazemos uma estimativa da
-    "proporção visual" dos ombros.
-
-    O fator pode ser ajustado conforme a metodologia
-    desejada.
     */
 
-    const ombrosEstimados = ombros * 2.35;
+    const ombrosComparacao = ombros * 2.35;
 
 
     /*
     ----------------------------------------------------
-    MEDIDAS DERIVADAS
+    MEDIDAS PRINCIPAIS
     ----------------------------------------------------
     */
 
     const parteSuperior = Math.max(
         busto,
-        ombrosEstimados
+        ombrosComparacao
     );
 
     const parteInferior = Math.max(
@@ -597,43 +596,25 @@ function calcularCorpo() {
         quadril
     );
 
-    const relacaoCinturaSuperior =
-        cintura / parteSuperior;
-
-    const relacaoCinturaInferior =
-        cintura / parteInferior;
-
-    const diferencaSuperiorInferior =
-        parteSuperior - parteInferior;
-
-    const diferencaBustoQuadril =
-        busto - quadril;
-
-    const diferencaOmbrosQuadril =
-        ombrosEstimados - quadril;
-
-
-    /*
-    ----------------------------------------------------
-    CLASSIFICAÇÃO
-    ----------------------------------------------------
-    */
 
     let tipo = "";
     let descricao = "";
 
 
-    // ==============================
-    // FEMININO
-    // ==============================
+    /*
+    ====================================================
+                    FEMININO
+    ====================================================
+    */
 
     if (sexo === "feminino") {
 
+
         /*
         AMPULHETA
-        ------------------------------
-        Parte superior e inferior
-        semelhantes e cintura bem menor.
+
+        Parte superior e quadril semelhantes,
+        com cintura bem menor.
         */
 
         if (
@@ -642,80 +623,55 @@ function calcularCorpo() {
             cintura <= parteInferior * 0.78
         ) {
 
-            tipo = "Ampulheta" ;
+            tipo = "Ampulheta";
 
             descricao =
-                "Os ombros/busto e o quadril apresentam proporções semelhantes, " +
-                "enquanto a cintura é significativamente mais marcada.";
+                "Seu tipo de corpo é Ampulheta.";
 
         }
 
 
         /*
         TRIÂNGULO INVERTIDO
-        ------------------------------
-        Parte superior claramente maior.
+
+        Parte superior maior que o quadril.
         */
 
         else if (
-            parteSuperior > parteInferior * 1.08 &&
-            cintura >= quadril * 0.78
+            parteSuperior >= parteInferior * 1.08
         ) {
+
             tipo = "Triângulo invertido";
+
             descricao =
-                "A região dos ombros e do busto tende a ser mais larga que " +
-                "a região do quadril, criando uma silhueta mais ampla na parte superior.";
+                "Seu tipo de corpo é Triângulo invertido.";
 
         }
 
 
         /*
         PERA
-        ------------------------------
-        Quadril claramente maior.
+
+        Quadril maior que a parte superior.
         */
 
         else if (
-            parteInferior > parteSuperior * 1.08 &&
-            cintura < parteInferior * 0.84
+            parteInferior >= parteSuperior * 1.08
         ) {
 
             tipo = "Pera";
 
             descricao =
-                "O quadril é proporcionalmente mais largo que a parte superior " +
-                "do corpo, com uma cintura relativamente marcada.";
-
-        }
-
-
-        /*
-        RETÂNGULO
-        ------------------------------
-        Pouca diferença entre cintura,
-        parte superior e quadril.
-        */
-
-        else if (
-            cintura >= parteSuperior * 0.80 &&
-            cintura >= parteInferior * 0.80 &&
-            Math.abs(parteSuperior - parteInferior) <= 10
-        ) {
-
-            tipo = "Retângulo";
-
-            descricao =
-                "As medidas da parte superior, cintura e quadril apresentam " +
-                "diferenças relativamente pequenas, criando uma silhueta mais uniforme.";
+                "Seu tipo de corpo é Pera.";
 
         }
 
 
         /*
         MAÇÃ
-        ------------------------------
-        Região central mais larga,
-        cintura pouco marcada.
+
+        Cintura pouco marcada em relação
+        ao busto e quadril.
         */
 
         else if (
@@ -726,169 +682,142 @@ function calcularCorpo() {
             tipo = "Maçã";
 
             descricao =
-                "A região central do corpo apresenta maior volume relativo " +
-                "e a cintura tende a ser menos marcada.";
-
-        }
-
-
-
-    }
-
-
-    // ==============================
-    // MASCULINO
-    // ==============================
-
-    else {
-
-        /*
-        TRAPÉZIO
-        ------------------------------
-        Ombros mais largos que a cintura
-        e quadril, mas sem contraste extremo.
-        */
-
-        if (
-            parteSuperior > parteInferior * 1.05 &&
-            cintura < parteSuperior * 0.88 &&
-            cintura >= parteInferior * 0.82
-        ) {
-
-            tipo = "Trapézio";
-
-            descricao =
-                "Os ombros e a parte superior são moderadamente mais largos " +
-                "que a cintura e o quadril, criando uma silhueta equilibrada.";
-
-        }
-
-
-        /*
-        TRIÂNGULO INVERTIDO
-        ------------------------------
-        Parte superior significativamente
-        maior.
-        */
-
-        else if (
-            parteSuperior > parteInferior * 1.12 &&
-            parteSuperior > cintura * 1.18
-        ) {
-
-            tipo = "Triângulo invertido";
-
-            descricao =
-                "Os ombros e a parte superior do corpo são significativamente " +
-                "mais largos que o quadril.";
+                "Seu tipo de corpo é Maçã.";
 
         }
 
 
         /*
         RETÂNGULO
+
+        Caso as proporções não se enquadrem
+        nos formatos anteriores.
         */
 
-        else if (
-            Math.abs(parteSuperior - parteInferior) <= 8 &&
-            cintura >= parteSuperior * 0.84
-        ) {
+        else {
 
             tipo = "Retângulo";
 
             descricao =
-                "Ombros, cintura e quadril apresentam medidas relativamente " +
-                "próximas, formando uma silhueta mais reta.";
+                "Seu tipo de corpo é Retângulo.";
 
         }
 
-
-        /*
-        MAÇÃ
-        */
-
-        else if (
-            cintura >= parteSuperior * 0.90 &&
-            cintura >= parteInferior * 0.90
-        ) {
-
-            tipo = "Maçã";
-
-            descricao =
-                "A região central do corpo apresenta maior proporção, " +
-                "com uma cintura menos definida.";
-
-        }
-
-
-        /*
-        OVAL TRIÂNGULO
-        */
-
-        else if (
-            cintura >= parteInferior * 0.88 &&
-            parteInferior > parteSuperior
-        ) {
-
-            tipo = "Oval triângulo";
-
-            descricao =
-                "A região central apresenta maior volume e o quadril " +
-                "é ligeiramente predominante em relação à parte superior.";
-
-        }
-
-
-        /*
-        PERA
-        */
-
-        else if (
-            parteInferior > parteSuperior * 1.07
-        ) {
-
-            tipo = "Pera";
-
-            descricao =
-                "O quadril apresenta maior proporção que a parte superior " +
-                "do corpo.";
-
-        }
-
-
-        /*
-        AMPULHETA
-        */
-
-        else if (
-            Math.abs(parteSuperior - parteInferior) <= 8 &&
-            cintura < parteSuperior * 0.80
-        ) {
-
-            tipo = "Ampulheta";
-            descricao =
-                "A parte superior e o quadril apresentam proporções semelhantes, " +
-                "com cintura significativamente mais estreita.";
-
-        }
-
-
-        else {
-
-            tipo = "Trapézio ";
-
-            descricao =
-                "As proporções corporais apresentam uma distribuição gradual " +
-                "entre a parte superior, cintura e quadril.";
-
-        }
     }
 
 
     /*
-    ----------------------------------------------------
-    MOSTRAR RESULTADO
-    ----------------------------------------------------
+    ====================================================
+                    MASCULINO
+    ====================================================
+    */
+
+    else {
+
+
+        /*
+        OVAL
+
+        Cintura próxima ou maior que peito
+        e quadril.
+        */
+
+        if (
+            cintura >= parteSuperior * 0.92 &&
+            cintura >= parteInferior * 0.92
+        ) {
+
+            tipo = "Oval";
+
+            descricao =
+                "Seu tipo de corpo é Oval.";
+
+        }
+
+
+        /*
+        TRIÂNGULO INVERTIDO
+
+        Parte superior claramente maior
+        que a parte inferior.
+        */
+
+        else if (
+            parteSuperior >= parteInferior * 1.10 &&
+            parteSuperior >= cintura * 1.15
+        ) {
+
+            tipo = "Triângulo invertido";
+
+            descricao =
+                "Seu tipo de corpo é Triângulo invertido.";
+
+        }
+
+
+        /*
+        TRIÂNGULO
+
+        Quadril maior que a parte superior.
+        */
+
+        else if (
+            parteInferior >= parteSuperior * 1.06 &&
+            cintura >= parteSuperior * 0.80
+        ) {
+
+            tipo = "Triângulo";
+
+            descricao =
+                "Seu tipo de corpo é Triângulo.";
+
+        }
+
+
+        /*
+        TRAPÉZIO
+
+        Parte superior um pouco maior,
+        com cintura menor.
+        */
+
+        else if (
+            parteSuperior >= parteInferior * 1.03 &&
+            parteSuperior >= cintura * 1.08 &&
+            cintura < parteSuperior * 0.90
+        ) {
+
+            tipo = "Trapézio";
+
+            descricao =
+                "Seu tipo de corpo é Trapézio.";
+
+        }
+
+
+        /*
+        RETÂNGULO
+
+        Caso as medidas apresentem
+        proporções próximas.
+        */
+
+        else {
+
+            tipo = "Retângulo";
+
+            descricao =
+                "Seu tipo de corpo é Retângulo.";
+
+        }
+
+    }
+
+
+    /*
+    ====================================================
+                    MOSTRAR RESULTADO
+    ====================================================
     */
 
     document.getElementById("tipoCorpo").textContent = tipo;
@@ -899,26 +828,31 @@ function calcularCorpo() {
         (cintura / quadril).toFixed(2);
 
     document.getElementById("difBustoQuadril").textContent =
-        diferencaBustoQuadril.toFixed(1) + " cm";
+        (busto - quadril).toFixed(1) + " cm";
 
     document.getElementById("difOmbrosQuadril").textContent =
-        diferencaOmbrosQuadril.toFixed(1) + " cm";
+        (ombrosComparacao - quadril).toFixed(1) + " cm";
 
-    document.getElementById("resultado").classList.add("show");
 
-    document.getElementById("resetar").classList.add("show");
+    document.getElementById("resultado")
+        .classList.add("show");
 
-    document.getElementById("resultado").scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+    document.getElementById("resetar")
+        .classList.add("show");
+
+
+    document.getElementById("resultado")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 }
 
 
 /*
-----------------------------------------------------
-RESETAR
-----------------------------------------------------
+====================================================
+                    RESETAR
+====================================================
 */
 
 function resetar() {
@@ -943,10 +877,16 @@ function resetar() {
         behavior: "smooth"
     });
 }
-</script></div></div>
+
+</script>
+
+</div></div>
 
 
 
+
+
+  
 
 
 <!--Cards para tipo de corpo-->
