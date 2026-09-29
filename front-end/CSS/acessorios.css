@@ -138,8 +138,8 @@ button:after {
 }
 
 .whatsapp-icon {
-  width: 25.5px; /* Tamanho do ícone */
-  height: 25.5px;
+  width: 27.4px; /* Tamanho do ícone */
+  height: 27.4px;
  
   
 }
@@ -423,7 +423,7 @@ button:after {
   }
 
   .logo{
-      width: 180px;
+      width: 150px;
       max-width: 70%;
       height: auto;
   }
