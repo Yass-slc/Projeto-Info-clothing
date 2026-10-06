@@ -347,7 +347,7 @@ const fotosVeus = {
 
   fraque: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6vBeJA7apa9AnDDjw2nxHOtcQEDZTJvH-cim79eW3KMp2Zi4Q6_bUcNq7&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzwTVG8jDFfURgA1OMeQpaiLEPbffMSvlGIF6NSp4Fkg&s=10",
+    "https://cdn0.casamentos.com.br/usr/5/5/4/8/cfb_2x_1067716.jpg",
     "https://http2.mlstatic.com/D_716936-MLB111760033185_052026-C.jpg"
   ],
 

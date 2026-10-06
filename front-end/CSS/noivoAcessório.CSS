@@ -132,8 +132,8 @@ button:after {
 }
 
 .gmail-icon {
-  width: 28px; /* Tamanho do ícone */
-  height: 28px;
+  width: 31px; /* Tamanho do ícone */
+  height: 24px;
   
 }
 
@@ -145,8 +145,9 @@ button:after {
 }
 
 .whatsapp-icon {
-  width: 27.4px; /* Tamanho do ícone */
-  height: 27.4px;
+  width: 27px; /* Tamanho do ícone */
+  height: 27px;
+ 
  
   
 }

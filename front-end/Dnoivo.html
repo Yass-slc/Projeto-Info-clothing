@@ -10,7 +10,7 @@
     <script src="./JS/dropdown.js" defer></script>
   <link rel="icon" href="./Assets/IMG/favicon.ico" type="image/x-icon">
 </head>
-<body style="background-color: #DAC8B3; text-align: center">
+<head style="background-color: #DAC8B3; text-align: center">
 
     <header>
 
@@ -98,117 +98,130 @@
         </script>
 
 
-<h1>Combinações perfeitas para noivos</h1>
+ 
+<h1>Combinações perfeitas para noivas</h1>
+<br>
+<title>Guia da Noiva - Info Clothing</title>
 
 <style>
 
-    /* Filtros */
-    
-    .filtros{
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:10px;
-        margin-bottom:30px;
-    }
-    
-    .filtro-btn{
-        padding:10px 18px;
-        border:none;
-        border-radius:30px;
-        cursor:pointer;
-        background:#804423;
-        color:white;
-        font-family: initial;
-       transition:0.3s;
-    }
-    
-    .filtro-btn:hover{
-        background:#c9977d;
-        transform:translateY(-3px);
-    }
-    
-    /* Tabela */
-    
-    .tabela-container{
-        overflow-x:auto;
-    }
-    
-    table{
-        width:100%;
-        max-width:1300px;
-        margin:auto;
-        border-collapse:collapse;
-        background:white;
-        border-radius:15px;
-        overflow:hidden;
-        box-shadow:0 5px 20px rgba(0,0,0,0.15);
-    }
-    
-    thead{
-        background:#804423;
-        color:white;
-    }
-    
-    th, td{
-        padding:15px;
-        border-bottom:1px solid #eee;
-    }
-    
-    tbody tr{
-        transition:0.3s;
-    }
-    
-    tbody tr:hover{
-        background:#f5e6da;
-    }
-    
+
+
+/* Filtros */
+
+.filtros{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.filtro-btn{
+    padding:10px 18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#804423;
+    color:white;
+    font-family: initial;
+   transition:0.3s;
+}
+
+.filtro-btn:hover{
+    background:#c9977d;
+    transform:translateY(-3px);
+}
+
+/* Tabela */
+
+.tabela-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+thead{
+    background:#804423;
+    color:white;
+}
+
+th, td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr{
+    transition:0.3s;
+}
+
+tbody tr:hover{
+    background:#f5e6da;
+}
+
+td img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+td img:hover{
+    transform:scale(1.08);
+}
+
+.tipo{
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
     td img{
-        width:120px;
-        height:120px;
-        object-fit:cover;
-        border-radius:10px;
-        transition:0.3s;
+        width:80px;
+        height:80px;
     }
-    
-    td img:hover{
-        transform:scale(1.08);
+
+    th,td{
+        font-size:0.8rem;
+        padding:10px;
     }
-    
-    .tipo{
-        font-weight:bold;
-    }
-    
-    @media(max-width:768px){
-    
-        td img{
-            width:80px;
-            height:80px;
-        }
-    
-        th,td{
-            font-size:0.8rem;
-            padding:10px;
-        }
-    }
-    
-    </style>
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="tabela-container">
 
 <table>
 
-    <thead>
-        <tr>
-            <th>Tipo</th>
-            <th>Terno</th>
-            <th>Sapato</th>
-            <th>Gravata</th>
-            <th>Descrição</th>
-        </tr>
-    </thead>
 
-    
-        <tr>
-            <td>Igreja</td>
+<thead>
+<tr>
+    <th>Tipo</th>
+    <th>Terno</th>
+    <th>Sapato</th>
+    <th>Gravata</th>
+    <th>Descrição</th>
+ </tr>
+ </thead>
+
+<tbody>
+
+<tr class="linha" data-tipo="igreja">
+
+ <td><b>Igreja</b></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLxxj624MXIFLtjEOZntHQNmlKos9L6Y2KYNE3nw5GxkGRSGKZFdsaZxX_&s=10" alt="TAM">
                 <p>Terno Azul-Marinho</p></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu0jAZUdi6Rr1Bo7Geq1eRAC8kka_noppkv3hDjSK7rA&s" alt="OM">
@@ -218,7 +231,7 @@
             <td>Elegância tradicional para cerimônias clássicas e sofisticadas.</td>
         </tr>
         <tr>
-            <td>Campo</td>
+            <td><b>Campo</b></td>
             <td><img src="https://vertsophistique.com.br/wp-content/uploads/2026/05/087A6980-480x600.jpg" alt="TB">
                 <p>Terno Bege</p></td>
             <td><img src="https://lojaviego.com.br/cdn/shop/files/Mocassim_Masculino_Marrom_em_Couro_Dolph_11_1080x.jpg?v=1720905022" alt="MM">
@@ -228,7 +241,7 @@
             <td>Visual leve e natural, perfeito para casamentos ao ar livre.</td>
         </tr>
         <tr>
-            <td>Praia</td>
+            <td><b>Praia</b></td>
             <td><img src="https://lurodrigues.com.br/wp-content/uploads/2024/12/10-1-terno-noivo-casamento-riviera-bege.jpg" alt="TBC">
                 <p>Terno Bege-Claro</p></td>
             <td><img src="https://d2r9epyceweg5n.cloudfront.net/stores/002/381/260/rte/Mocassim%20Masculino%20Branco%20Loafer%20Casual%20%C3%89vora%203.webp" alt="MB/B">
@@ -238,7 +251,7 @@
             <td>Combinação fresca e confortável para cerimônias à beira-mar.</td>
         </tr>
         <tr>
-            <td>Moderno</td>
+            <td><b>Moderno</b></td>
             <td><img src="https://lurodrigues.com.br/wp-content/uploads/2025/12/06-1-terno-noivo-casamento-bravura-cinza-chumbo.jpg" alt="TCC">
                 <p>Terno Cinza-Chumbo</p></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcM-0ulm2t7lvSc2FDCI8ZYJW6V7yltmlwnaE01Hrgur_EP6MtKq-f03U&s=10" alt="OP">
@@ -248,7 +261,7 @@
             <td>Estilo minimalista e contemporâneo para noivos modernos.</td>
         </tr>
         <tr>
-            <td>Noturno Elegante</td>
+            <td><b>Noturno Elegante</b></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyPMt4XRYruxNjbCjee4v9dO2hT8p0OVZ6j0-4gopuSW8fZFGLkt6isWQ&s=10" alt="TP">
                 <p>Terno Preto</p></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcM-0ulm2t7lvSc2FDCI8ZYJW6V7yltmlwnaE01Hrgur_EP6MtKq-f03U&s=10" alt="OP">
@@ -258,7 +271,7 @@
             <td>Visual sofisticado e marcante para casamentos durante a noite.</td>
         </tr>
         <tr>
-            <td>Luxuoso</td>
+            <td><b>Luxuoso</b></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCfsyJhHuyB1A353zkr5YcjyP3sy6WFshbgJo9WisqFg&s=10" alt="SP">
                 <p>Smoking Preto</p></td>
             <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcM-0ulm2t7lvSc2FDCI8ZYJW6V7yltmlwnaE01Hrgur_EP6MtKq-f03U&s=10" alt="OP">
@@ -271,6 +284,52 @@
 
 </table>
 <br>
+
+
+</div>
+
+<script>
+
+function filtrar(tipo){
+
+    const linhas = document.querySelectorAll(".linha");
+
+    linhas.forEach(linha => {
+
+        if(tipo === "todos"){
+            linha.style.display = "";
+        }
+        else if(linha.dataset.tipo === tipo){
+            linha.style.display = "";
+        }
+        else{
+            linha.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -340,16 +399,16 @@
   <div class="containericons">
         
             <a href="https://www.instagram.com/infoclothing526" target="_blank" class="btn-instagram">
-              <img src="Assets/IMG/instagram (2).png" alt="Instagram" class="instagram-icon">
+                 <img src="Assets/IMG/INSTAGRANZITO.png" alt="Instagram" class="instagram-icon">
           </a>
       
               
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=infoclothing526@gmail.com&su=Assunto&body=Mensagem">
-            <img src="Assets/IMG/o-email.png" alt="Gmail" class="gmail-icon">
+            <img src="Assets/IMG/GGGGGMAIL.png" alt="Gmail" class="gmail-icon">
             </a>
           
             <a href="https://wa.me/5511937777986?text=Olá, gostaria de mais informações sobre o trabalho de vocês!" target="_blank" class="btn-whatsapp"> 
-            <img src="Assets/IMG/WHATSAPP_PNG.png" alt="WhatsApp" class="whatsapp-icon">
+            <img src="Assets/IMG/WHATSAPPPPPPPPP-removebg-preview.png" alt="WhatsApp" class="whatsapp-icon">
             </a>
             
           </div>
