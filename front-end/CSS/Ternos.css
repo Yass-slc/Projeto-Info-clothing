@@ -525,6 +525,11 @@ body {
       width: 100%;
   }
 
+  .dropdown-content{
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
 }
 /*Fim do seculaaaarr*/
 
