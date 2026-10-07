@@ -16,7 +16,7 @@ const fotosVeus = {
   // Véus
   voillet: [
     "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg",
-    "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909",
+    "https://http2.mlstatic.com/D_NQ_NP_606692-MLB85241183798_062025-O-veu-noiva-rosto-chapeu-voilet-vintage-tule-classico-ch1.webp",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10"
 
   ],
@@ -24,28 +24,28 @@ const fotosVeus = {
 
   ombro: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNqobXar0LNl3Daca9P7AQfV7tJXjKIpphifJOoy7zUitJVxxpSgvg8rD&s=10",
-    "https://i.etsystatic.com/8264119/r/il/3f926d/3282622421/il_570xN.3282622421_i30x.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nTWPbGosy-cDBmtK1aROCbqFYSV-d8EdThC1oMFUjphjW9GlpvQY-vQ&s=10",
     "https://pt.lunss.com/uploads/product/0/1/01021/short-pearl-raw-cut-wedding-veil-2.webp"
   ],
 
 
   cotovelo: [
     "https://pt.lunss.com/uploads/product/0/1/01040/two-tier-corded-lace-edge-elbow-length-short-bridal-veil-1.webp",
-    "https://noivinhadebrasilia.wordpress.com/wp-content/uploads/2015/07/veu-cotovelo.jpg?w=640",
+    "https://www.princessly.com/cdn/shop/products/2-layers-elbow-length-lace-wedding-veil-823_1024x1024.jpg?v=1669101837",
     "https://atelienataliaviana.com/wp-content/uploads/2022/04/623d517a76577c0e7d5b66995eb78ded.jpeg"
   ],
 
 
   blusher: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm90hyCxbfmzIWHDiW9P93G7FrVL4sru_1eCgioUJSGVVfS77BkrLTxFhf&s=10",
-    "https://revista.icasei.com.br/wp-content/uploads/2017/03/Tudo-o-que-voce-precisa-saber-sobre-veus-abre.jpg",
+    "https://images.tcdn.com.br/img/img_prod/1275784/veu_de_noiva_cascata_laisa_1_300cm_755_1_2b6fb5facb5099f91dc2a884e6dacd61.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEpnNwEqRthAcb8CFujwhoVib_TC4eG5jtGIPYeCKRX_fEoajGIWB7Mjy&s=10"
   ],
 
 
   pontadededo: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZJG1XiBu5-XnE_JinJX0nk5pieYDeHT7pGdBiCcqUBNpdROqjPfnhfT8&s=10",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOkPA1XPR8-bKNqr1LqEqfMpatRZ_ulSxLgJ6qvST4AbPf-OozfkwBsLU&s=10",
+    "https://i.etsystatic.com/54481890/r/il/6ea913/7011027824/il_340x270.7011027824_ctiv.jpg",
     "https://clubenoivas.com/wp-content/uploads/2017/11/0089E96D-36BB-4E3F-99F2-A6A2ADD641DA-788x1024.jpeg"
   ],
 
@@ -53,7 +53,7 @@ const fotosVeus = {
   ballet: [
     "https://dcdn-us.mitiendanube.com/stores/006/800/156/products/vl280055_2-745a4ed828a6a2631b17640885190191-1024-1024.webp",
     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4RAIxcNCA2L7B83XbifCCDMACOnz_TnmLNKIkq_DmSgluI3XOY0PudRTs4edOb9BWnZsg_qdG1pBOedxPMZMBTmM_dnwtXvTPzOp9DrnLthf7Rtviq-eAs0Y_VQQ1EK88MQEJKhIl4v4/s1600/veu+ponta+do+dedo.jpg",
-    "https://cdn0.casamentos.com.br/article-vendor/0210/original/1280/jpg/16275e30-5b49-47cd-b874-02534f8e8966_13_160210-164132250210825.jpeg"
+    "https://blog.usealtar.com.br/wp-content/uploads/2023/12/veu-de-noiva-valsa.webp"
   ],
 
 
@@ -80,7 +80,7 @@ const fotosVeus = {
   tiara: [
     "https://boutiquedanoiva.com.br/wp-content/uploads/2020/06/tiara-de-noiva-boho-floral.jpg",
     "https://m.media-amazon.com/images/I/71mbkoVEFvL._AC_UF1000,1000_QL80_.jpg",
-    "https://noivadeluxo.com.br/wp-content/uploads/2024/07/317.png"
+    "https://image.made-in-china.com/365f3j00sTchUSZWZnzp/Tiara-de-Cristal-Tiara-de-Noiva-Tiara-de-Casamento-para-Mulheres.webp"
   ],
 
   guirlanda: [
@@ -150,7 +150,7 @@ const fotosVeus = {
   gravata_tradicional: [
     "https://images-na.ssl-images-amazon.com/images/I/611v92AM55L._AC_UL600_SR600,600_.jpg",
     "https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_m/31385/15469752.jpg",
-    "https://a-static.mlcdn.com.br/450pxx450px/gravata-tradicional-luxo-homens-slim-fit-ref-253-hero-men/stylestoremodas/1a8b3eb88df011ed90894201ac185019/85bf1fa8b741f43c04a70e328f7ffef2.jpeg"
+    "https://m.media-amazon.com/images/I/41iBTsqa3jL._AC_SY350_.jpg"
   ],
 
   gravata_slim: [
@@ -160,14 +160,14 @@ const fotosVeus = {
   ],
 
   gravata_ponta_reta: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPUHJSo02h_OxjsJbxhV0e5Q1ilZ1JdvERTQpB_FBt3Bg7kSoM1ARh5KL&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOjqmrBL7JlyGnfmPX5NyBTZ1AYmqhOlQD7Q4C3REuPlX-_YGNyZeluOw&s=10",
     "https://cdn.awsli.com.br/2500x2500/491/491087/produto/257640321/gravata-slim-croche-trico-cinza-chumbo--5--z8ljjh2sy1.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPrmAMQrAgnjYE5Dr-wddrBMDlSvdxO3EPch3yrC30AURsd8xHU1o-36h4&s=10"
+    "https://www.figaret.com/cdn/shop/files/10ACRTRICOTXSE0001-3.jpg?v=1738242760"
   ],
 
   gravata_borboleta: [
     "https://images.tcdn.com.br/img/img_prod/743485/gravata_borboleta_marrom_masculina_classica_elegante_7828_1_ce9c4a0fdd6cc8922e8dd66f301747dc.jpg",
-    "https://images.tcdn.com.br/img/img_prod/489490/gravata_borboleta_preta_fosca_infantil_para_pajens_3_20260807171001_74359c9ddaff.jpg",
+    "https://cdn.vnda.com.br/ofrancesgravataria/2023/05/05/15_5_8_800_Gravata_Borboleta_Essential_Sand_2023_2.jpg?v=1683309899",
     "https://www.alastra.com.br/cdn/shop/files/GravataBorboletaVermelha.jpg?v=1776090142"
   ],
 
@@ -175,38 +175,38 @@ const fotosVeus = {
   // Lapela
   lapela_broche: [
     "https://mrmaximus.com.br/cdn/shop/files/Sb6570523de8f4b6fa80dd8c1b059c616a.webp?v=1715438554&width=800",
-    "https://mrmaximus.com.br/cdn/shop/files/Sddc0eabaa3c14dfcbb45876f5f072b60R.webp?v=1742302272&width=800",
-    "https://i.etsystatic.com/54717487/r/il/7f3539/6990175174/il_570xN.6990175174_d99i.jpg"
+    "https://cdn.vnda.com.br/ofrancesgravataria/2017/09/08/pidl000002-pin-de-lapela-olive-864.jpg?v=1504895370",
+    "https://mrmaximus.com.br/cdn/shop/files/Sddc0eabaa3c14dfcbb45876f5f072b60R.webp?v=1742302272&width=800"
   ],
 
   lapela_flor: [
     "https://cdn.vnda.com.br/floradeserie/2023/04/18/12_4_4_429_LAPELA20AcessC3B3rios20Noivas20e20Noivos20204.jpg?v=1681832936",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RXgbl5qSyhg8DQ4Yg9IEcyE5Z16wLeyouIBJzgOFXjh2qlUYSeEoRr0&s=10",
+    "https://noivinhaflor.com.br/wp-content/uploads/2023/05/WhatsApp-Image-2023-03-06-at-10.25.50.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6uQABQrK8RiwASj80GdzLSh8nmM3gzEEfqsmgZH1xpvPyZkc9Cc6dlVzV&s=10"
   ],
 
   lapela_lenco: [
-    "https://media.istockphoto.com/id/2194977479/pt/foto/elegant-businessman-wearing-a-blue-pocket-square-and-matching-tie.jpg?s=612x612&w=0&k=20&c=WQ8wPy_qFPykjBydGT_6pwyeJFliSmgyaYaw_b5woG8=",
     "https://media.istockphoto.com/id/2186823894/pt/foto/navy-blue-pocket-square-elegantly-tucked-into-the-pocket-of-a-plaid-suit-jacket.jpg?s=612x612&w=0&k=20&c=cxm7aICj6ZWIMIcPjYzQE5pbBNpmb4P8qVf3FB8YJ_4=",
+    "https://acdn-us.mitiendanube.com/stores/450/224/products/presidente-lenco-2720d-cinza1-828aa5d983a4ef121f16879896261607-640-0.webp",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEl8VSAHe_EYqjQRimpcTJ_RL8L36S-3w7LQ_w7xJE_IKnezdqFUMHvg0&s=10"
   ],
 
 
   // Suspensão
   cinto: [
-    "https://pegada.vtexassets.com/arquivos/ids/180574/Cintos-Pegada-Masculino-em-Elastico-e-Couro-Cinza-CI002345-11--3-.jpg?v=638990663831370000",
+    "https://img.irroba.com.br/fit-in/600x600/filters:format(webp):fill(fff):quality(80)/madokcom/catalog/0412-caramelo.jpg",
     "https://grupooscar.vtexassets.com/arquivos/ids/10688396/Couro-Mania-Cinto-351145-1-Preto_Cafe-Pu5.jpg?v=639021161594300000",
-    "https://images.tcdn.com.br/img/img_prod/747651/cinto_feminino_em_couro_legtimo_reale_1_20251015171117_28edb793744f.jpg"
+    "https://http2.mlstatic.com/D_NQ_NP_939530-MLB99730579613_112025-O-cinto-masculino-140ao150-em-couro-100-casual-social-preto.webp"
   ],
 
   suspensorio_x: [
-    "https://m.media-amazon.com/images/I/41nxUtjkuUL._AC_SY1000_.jpg",
+    "https://www.comofazeremcasa.net/wp-content/uploads/2013/07/como-fazer-suspensorio-presente-9.jpg",
     "https://m.media-amazon.com/images/I/41VXqJ7tswL._AC_SY1000_.jpg",
-    "https://m.media-amazon.com/images/I/610+j8WBDqL._AC_UF894,1000_QL80_.jpg"
+    ""
   ],
 
   suspensorio_y: [
-    "https://img.kwcdn.com/product/fancy/20213ff5-c6a6-4944-ac27-d1122f366157.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmnNPmoEYYCBzP_ddsjFEmhw0j4gNBr9QUdOACutWBPWjGqyzIEI40htNO&s=10",
     "https://m.media-amazon.com/images/I/31bMNuKBJSL._AC_.jpg",
     "https://viaveneto.com.br/cdn/shop/files/SUREESA23001_01_3.jpg?v=1773422146&width=533"
   ],
@@ -273,7 +273,7 @@ const fotosVeus = {
   // Vestidos
   evase: [
     "https://tuttisposa.com.br/wp-content/uploads/2024/01/MT3237-ivory-tea-rose-b-scaled.jpg",
-    "https://tuttisposa.com.br/wp-content/uploads/2022/12/Y22273_F22_Campaign_0372.jpg",
+    "https://www.deboranoivas.com.br/wp-content/uploads/2025/08/www.deboranoivas.com.br-uc-02-06--500x780.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFu5vJGhJUkJP4vB985F7Vp6ecJasgw0bfYJCXBIgZNSSafzZD7-_xIoPf&s=10"
   ],
 
@@ -290,9 +290,9 @@ const fotosVeus = {
   ],
 
   imperio: [
-    "https://revista.icasei.com.br/wp-content/uploads/2025/08/vestido-de-noiva-corte-imperio-2.jpeg",
+    "https://revista.icasei.com.br/wp-content/uploads/2025/08/vestido-de-noiva-corte-imperio-1.jpeg",
     "https://i.ebayimg.com/images/g/-MkAAeSwszZqKMUC/s-l1200.webp",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHejcQz90QgcMEtwcHaCNvu1eAA9QoqBF25BW3-SOne39SyFM9D9HMgPY&s=10"
+    "https://atelienataliaviana.com/wp-content/uploads/2022/02/lucky_star-01-b_1691x-768x1024.webp"
   ],
 
   reto: [
@@ -321,7 +321,7 @@ const fotosVeus = {
 
   boho: [
     "https://www.deboranoivas.com.br/wp-content/uploads/2024/10/www.deboranoivas.com.br-img-3824-500x780.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14NWKdw1ODFSaAdOVUIDBaaTXxre36NrPpQhCRDzAuyGzNghpvxEX5AqN&s=10",
+    "https://acdn-us.mitiendanube.com/stores/655/369/products/vestido-ombro-noiva-1-5ad6b631800ce2491a17103601160095-1024-1024.webp",
     "https://http2.mlstatic.com/D_709615-MLB85114602572_052025-O.jpg"
   ],
 

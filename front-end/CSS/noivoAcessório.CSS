@@ -50,12 +50,12 @@ header{
 
 .logo-container {
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 20px;
 }
 
 .logo {
-  height: 75px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -604,3 +604,59 @@ button:after {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.paste-button:hover:not(.is-open) .dropdown-content {
+  display: none;
+}
+
+.paste-button.is-open .dropdown-content {
+  display: block;
+}
+
+.paste-button:hover:not(.is-open) .button2 {
+  border-radius: 15px;
+}
+
+.paste-button.is-open .button2 {
+  border-radius: 15px 15px 0 0;
+}
+
+.paste-button.is-open .button2::after {
+  width: 100%;
+  left: 0;
+}
+
+.paste-button.line-dismissed .button2::after {
+  width: 0;
+  left: 50%;
+}
