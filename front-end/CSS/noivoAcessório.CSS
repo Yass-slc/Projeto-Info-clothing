@@ -372,9 +372,82 @@ button:after {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .paste-button:hover:not(.is-open) .dropdown-content {
+    display: none;
+  }
+  
+  .paste-button.is-open .dropdown-content {
+    display: block;
+  }
+  
+  .paste-button:hover:not(.is-open) .button2 {
+    border-radius: 15px;
+  }
+  
+  .paste-button.is-open .button2 {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .paste-button.is-open .button2::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .paste-button.line-dismissed .button2::after {
+    width: 0;
+    left: 50%;
+  }
+
+
+
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .carousel-inner img {
+      height: 400px;
+  }
 
+  
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .paste-button:hover:not(.is-open) .dropdown-content {
+    display: none;
+  }
+  
+  .paste-button.is-open .dropdown-content {
+    display: block;
+  }
+  
+  .paste-button:hover:not(.is-open) .button2 {
+    border-radius: 15px;
+  }
+  
+  .paste-button.is-open .button2 {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .paste-button.is-open .button2::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .paste-button.line-dismissed .button2::after {
+    width: 0;
+    left: 50%;
+  }
+}
 
 /*CELULARES BEM PEQUENOS KKK*/
 @media (max-width: 480px){
@@ -407,7 +480,11 @@ button:after {
     width: 22px;
     height: 22px;
   }
+
+  
+
 }
+
 
 
 
@@ -490,6 +567,40 @@ button:after {
   #Topo .button2{
       width: 100%;
   }
+
+
+  
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .paste-button:hover:not(.is-open) .dropdown-content {
+    display: none;
+  }
+  
+  .paste-button.is-open .dropdown-content {
+    display: block;
+  }
+  
+  .paste-button:hover:not(.is-open) .button2 {
+    border-radius: 15px;
+  }
+  
+  .paste-button.is-open .button2 {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .paste-button.is-open .button2::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .paste-button.line-dismissed .button2::after {
+    width: 0;
+    left: 50%;
+  }
+
 
 }
 
