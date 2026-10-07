@@ -16,7 +16,7 @@ const fotosVeus = {
   // Véus
   voillet: [
     "https://static.wixstatic.com/media/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg/v1/fill/w_480,h_654,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/02fdb0_4034a34591fc421a89107dbea8f4f312~mv2.jpg",
-    "https://claudia.abril.com.br/wp-content/uploads/2016/10/voilette-noivas_4.jpg?crop=1&resize=1212,909",
+    "https://http2.mlstatic.com/D_NQ_NP_606692-MLB85241183798_062025-O-veu-noiva-rosto-chapeu-voilet-vintage-tule-classico-ch1.webp",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkEDLrcvY_iwac0_ELHhs7NhOblfMesQ6ye2GF0dc3TXh9QtjG_8wEgglM&s=10"
 
   ],
@@ -24,28 +24,28 @@ const fotosVeus = {
 
   ombro: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPNqobXar0LNl3Daca9P7AQfV7tJXjKIpphifJOoy7zUitJVxxpSgvg8rD&s=10",
-    "https://i.etsystatic.com/8264119/r/il/3f926d/3282622421/il_570xN.3282622421_i30x.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nTWPbGosy-cDBmtK1aROCbqFYSV-d8EdThC1oMFUjphjW9GlpvQY-vQ&s=10",
     "https://pt.lunss.com/uploads/product/0/1/01021/short-pearl-raw-cut-wedding-veil-2.webp"
   ],
 
 
   cotovelo: [
     "https://pt.lunss.com/uploads/product/0/1/01040/two-tier-corded-lace-edge-elbow-length-short-bridal-veil-1.webp",
-    "https://noivinhadebrasilia.wordpress.com/wp-content/uploads/2015/07/veu-cotovelo.jpg?w=640",
+    "https://www.princessly.com/cdn/shop/products/2-layers-elbow-length-lace-wedding-veil-823_1024x1024.jpg?v=1669101837",
     "https://atelienataliaviana.com/wp-content/uploads/2022/04/623d517a76577c0e7d5b66995eb78ded.jpeg"
   ],
 
 
   blusher: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm90hyCxbfmzIWHDiW9P93G7FrVL4sru_1eCgioUJSGVVfS77BkrLTxFhf&s=10",
-    "https://revista.icasei.com.br/wp-content/uploads/2017/03/Tudo-o-que-voce-precisa-saber-sobre-veus-abre.jpg",
+    "https://images.tcdn.com.br/img/img_prod/1275784/veu_de_noiva_cascata_laisa_1_300cm_755_1_2b6fb5facb5099f91dc2a884e6dacd61.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEpnNwEqRthAcb8CFujwhoVib_TC4eG5jtGIPYeCKRX_fEoajGIWB7Mjy&s=10"
   ],
 
 
   pontadededo: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ZJG1XiBu5-XnE_JinJX0nk5pieYDeHT7pGdBiCcqUBNpdROqjPfnhfT8&s=10",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOkPA1XPR8-bKNqr1LqEqfMpatRZ_ulSxLgJ6qvST4AbPf-OozfkwBsLU&s=10",
+    "https://i.etsystatic.com/54481890/r/il/6ea913/7011027824/il_340x270.7011027824_ctiv.jpg",
     "https://clubenoivas.com/wp-content/uploads/2017/11/0089E96D-36BB-4E3F-99F2-A6A2ADD641DA-788x1024.jpeg"
   ],
 
@@ -53,7 +53,7 @@ const fotosVeus = {
   ballet: [
     "https://dcdn-us.mitiendanube.com/stores/006/800/156/products/vl280055_2-745a4ed828a6a2631b17640885190191-1024-1024.webp",
     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4RAIxcNCA2L7B83XbifCCDMACOnz_TnmLNKIkq_DmSgluI3XOY0PudRTs4edOb9BWnZsg_qdG1pBOedxPMZMBTmM_dnwtXvTPzOp9DrnLthf7Rtviq-eAs0Y_VQQ1EK88MQEJKhIl4v4/s1600/veu+ponta+do+dedo.jpg",
-    "https://cdn0.casamentos.com.br/article-vendor/0210/original/1280/jpg/16275e30-5b49-47cd-b874-02534f8e8966_13_160210-164132250210825.jpeg"
+    "https://blog.usealtar.com.br/wp-content/uploads/2023/12/veu-de-noiva-valsa.webp"
   ],
 
 
