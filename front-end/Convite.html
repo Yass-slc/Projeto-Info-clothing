@@ -1,0 +1,1594 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nosso Casamento | Info Clothing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+
+
+  <style>
+    /* =========================
+       CONFIGURAÇÕES GERAIS
+    ========================= */
+
+    :root {
+      --bege: #DAC8B3;
+      --marrom: #804423;
+      --marrom-escuro: #4a2c20;
+      --creme: #fffaf5;
+      --branco: #ffffff;
+      --texto: #4c4038;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--creme);
+      color: var(--texto);
+      font-family:initial;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: initial;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    h1, h2, h3, nav, label {
+      font-family:initial;
+    }
+
+    h2 {
+      color: var(--marrom);
+      font-size:40px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      margin: 0 auto 30px;
+      max-width: 650px;
+    }
+
+    .secao {
+      padding: 65px 20px;
+      scroll-margin-top: 75px;
+    }
+
+    .conteudo {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .botao {
+      display: inline-block;
+      border: none;
+      background: var(--marrom);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .botao:hover {
+      background: var(--marrom-escuro);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--branco);
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    .menu {
+      max-width: 1200px;
+      margin: auto;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      color: var(--marrom);
+      font-family:initial;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .links a {
+      color: var(--marrom);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .menu-toggle {
+      display: none;
+      color: var(--marrom);
+      border: 1px solid var(--bege);
+      border-radius: 5px;
+      background: white;
+      padding: 5px 12px;
+      font-size: 25px;
+    }
+
+    /* =========================
+       CAPA
+    ========================= */
+
+    .capa {
+      min-height: 75vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      color: white;
+      background:
+        linear-gradient(#24160b75, #24160b75),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .capa-conteudo {
+      max-width: 800px;
+      text-shadow: 0 2px 8px #0008;
+    }
+
+    .capa .pequeno {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    .capa h1 {
+      font-size: clamp(2rem, 7vw, 4.5rem);
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    .capa p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .capa .botao {
+      background: var(--creme);
+      color: var(--marrom);
+      text-shadow: none;
+    }
+
+    /* =========================
+       HISTÓRIA DO CASAL
+    ========================= */
+
+    .historia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .historia img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .historia h2 {
+      text-align: left;
+    }
+
+    .historia p {
+      white-space: pre-line;
+    }
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    .galeria {
+      background: #f0e6da;
+    }
+
+    .fotos {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .fotos img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .fotos img:hover {
+      transform: scale(1.025);
+    }
+
+    /* =========================
+       DETALHES
+    ========================= */
+
+    .detalhes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .detalhe {
+      text-align: center;
+      padding: 25px 18px;
+      background: white;
+      border: 1px solid var(--bege);
+      border-radius: 8px;
+    }
+
+    .detalhe .simbolo {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .detalhe h3 {
+      color: var(--marrom);
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .detalhe p {
+      overflow-wrap: anywhere;
+    }
+
+    /* =========================
+       PRESENTES
+    ========================= */
+
+    .presentes {
+      background: #f0e6da;
+    }
+
+    .lista-presentes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .presente {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px #0000000a;
+    }
+
+    .presente .emoji {
+      font-size: 2.5rem;
+    }
+
+    .presente h3 {
+      color: var(--marrom);
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .preco {
+      color: var(--marrom);
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    .carrinho {
+      max-width: 650px;
+      margin: 30px auto 0;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--bege);
+    }
+
+    .carrinho h3 {
+      color: var(--marrom);
+      margin-bottom: 10px;
+    }
+
+    .item-carrinho {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .remover {
+      border: none;
+      background: none;
+      color: #9b2c2c;
+      text-decoration: underline;
+    }
+
+    /* =========================
+       CONFIRMAÇÃO DE PRESENÇA
+    ========================= */
+
+    .formulario {
+      max-width: 750px;
+      margin: auto;
+      padding: 25px;
+      background: white;
+      border: 1px solid var(--bege);
+      border-radius: 8px;
+    }
+
+    .campos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 15px;
+      min-width: 0;
+    }
+
+    .campo.completo {
+      grid-column: 1 / -1;
+    }
+
+    .campo label {
+      color: var(--marrom);
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .campo input,
+    .campo textarea,
+    .campo select {
+      width: 100%;
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid #cbb9a6;
+      border-radius: 5px;
+      background: white;
+      color: var(--texto);
+    }
+
+    .campo textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .opcoes {
+      display: flex;
+      gap: 208px;
+      flex-wrap: wrap;
+      
+    }
+
+    .opcoes label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family:initial;
+      font-weight: normal;
+    }
+
+    /* =========================
+       PERSONALIZAÇÃO
+    ========================= */
+
+    .personalizacao {
+      background: #DAC8B3;
+      border-top: 1px solid var(--bege);
+    }
+
+    .painel {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px;
+      border: 1px solid var(--bege);
+      border-radius: 8px;
+      background: var(--creme);
+    }
+
+    .painel h3 {
+      color: var(--marrom);
+      margin: 22px 0 12px;
+    }
+
+    .painel h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .painel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .campo-foto {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 15px;
+      padding: 14px;
+      background: white;
+      border: 1px solid var(--bege);
+      border-radius: 8px;
+      min-width: 0;
+    }
+
+    .campo-foto label {
+      color: var(--marrom);
+      font-size:15px;
+      font-weight: bold;
+    }
+
+    .campo-foto input[type="file"] {
+      width: 100%;
+      min-width: 0;
+      font-size: 0.85rem;
+    }
+
+    .campo-foto input[type="url"] {
+      width: 100%;
+      min-width: 0;
+      padding: 9px;
+      border: 1px solid #cbb9a6;
+      border-radius: 5px;
+    }
+
+    .aviso {
+      background: #f0e6da;
+      border-radius: 5px;
+      padding: 12px;
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    #mensagemStatus {
+      margin-top: 12px;
+      color: var(--marrom);
+      overflow-wrap: anywhere;
+    }
+
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    footer {
+      background: var(--marrom);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    /* =========================
+       RESPONSIVIDADE
+    ========================= */
+
+    @media (max-width: 800px) {
+      .menu {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 0;
+      }
+
+      .links.aberto {
+        display: flex;
+      }
+
+      .historia {
+        grid-template-columns: 1fr;
+      }
+
+      .historia img {
+        height: 350px;
+      }
+
+      .fotos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .detalhes {
+        grid-template-columns: 1fr;
+      }
+
+      .lista-presentes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .secao {
+        padding: 45px 15px;
+      }
+
+      .capa {
+        min-height: 65vh;
+      }
+
+      .capa .pequeno {
+        letter-spacing: 2px;
+      }
+
+      .fotos {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .fotos img {
+        height: 190px;
+      }
+
+      .lista-presentes {
+        grid-template-columns: 1fr;
+      }
+
+      .campos,
+      .painel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .campo.completo {
+        grid-column: auto;
+      }
+
+      .formulario,
+      .painel {
+        padding: 16px;
+      }
+
+      .historia img {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       MENU DE NAVEGAÇÃO
+  ========================= -->
+
+  <header>
+    <nav class="menu">
+
+        <div class="logo-container">
+            <a href="index.html"><img src="./Assets/IMG/logo png.png"
+                alt="Logo Info Clothing"
+                class="logo"></a>
+        </div>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <div class="links" id="menuLinks">
+        <a href="#inicio">Início</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#detalhes">Detalhes</a>
+        <a href="#presentes">Presentes</a>
+        <a href="#confirmacao">Confirmar presença</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         CAPA DO CONVITE
+    ========================= -->
+
+    <section class="capa" id="inicio">
+      <div class="capa-conteudo">
+        <p class="pequeno">Com amor, convidamos você</p>
+
+        <h1 id="nomesCapa">Nome Noiva &amp; Nome Noivo</h1>
+
+        <p id="dataCapa">20 de dezembro de 2026</p>
+
+        <a class="botao" href="#confirmacao">
+          Confirmar presença
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         HISTÓRIA DO CASAL
+    ========================= -->
+
+    <section class="secao" id="historia">
+      <div class="conteudo historia">
+        <img
+          id="foto-historia"
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80"
+          alt="Foto dos noivos"
+        >
+
+        <div>
+          <h2>Nossa história</h2>
+
+          <p id="textoHistoria">Toda grande história começa de alguma forma.
+Desde o nosso primeiro encontro, descobrimos que queríamos compartilhar a vida, os sonhos e os momentos especiais.
+Agora, queremos celebrar esse amor ao lado das pessoas que fazem parte da nossa história.
+
+Esperamos você para viver esse dia inesquecível conosco!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         GALERIA DE FOTOS
+    ========================= -->
+
+    <section class="secao galeria" id="galeria">
+      <div class="conteudo">
+        <h2>Nossos momentos</h2>
+
+        <p class="subtitulo">
+          Algumas lembranças da nossa história de amor.
+        </p>
+
+        <div class="fotos">
+          <img
+            id="gal1"
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80"
+            alt="Momento especial dos noivos 1"
+            loading="lazy"
+          >
+
+          <img
+            id="gal2"
+            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80"
+            alt="Momento especial dos noivos 2"
+            loading="lazy"
+          >
+
+          <img
+            id="gal3"
+            src="https://delikatessenbuffet.com.br/storage/app/uploads/1RtWYJ8q64HtyuvFCyUYsjkQ051gYhDjmXkR94wa.jpg"
+            alt="Momento especial dos noivos 3"
+            loading="lazy"
+          >
+
+          <img
+            id="gal4"
+            src="https://setimoregistrocivil.com.br/site/images/2020/09/16/casamento2.png"
+            alt="Momento especial dos noivos 4"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         DETALHES DO CASAMENTO
+    ========================= -->
+
+    <section class="secao" id="detalhes">
+      <div class="conteudo">
+        <h2>Detalhes do grande dia</h2>
+
+        <p class="subtitulo">
+          Preparamos tudo com muito carinho. Confira as informações!
+        </p>
+
+        <div class="detalhes">
+          <article class="detalhe">
+            <div class="simbolo">📅</div>
+            <h3>Data e horário</h3>
+            <p id="dataDetalhe">20 de dezembro de 2026</p>
+            <p id="horaDetalhe">16h00</p>
+          </article>
+
+          <article class="detalhe">
+            <div class="simbolo">📍</div>
+            <h3>Local</h3>
+            <p id="localDetalhe">Espaço para cerimônia</p>
+
+            <p>
+              <a id="linkMapa" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+                Ver localização
+              </a>
+            </p>
+          </article>
+
+          <article class="detalhe">
+            <div class="simbolo">👔 👗</div>
+            <h3>Traje</h3>
+            <p id="trajeDetalhe">Esporte Fino</p>
+          </article>
+        </div>
+
+        <p style="text-align:center; margin-top:25px;">
+          <a
+            class="botao"
+            href="https://www.waze.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            id="linkWaze"
+          >
+            Abrir Waze
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         LISTA DE PRESENTES
+    ========================= -->
+
+    <section class="secao presentes" id="presentes">
+      <div class="conteudo">
+        <h2>Lista de presentes</h2>
+
+        <p class="subtitulo">
+          Sua presença é o nosso maior presente! Se desejar,
+          você também pode escolher uma lembrança para nós.
+        </p>
+
+        <div class="lista-presentes">
+
+          <article class="presente">
+            
+          <img
+          id="gal4"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhufTlWZGHbINsvnaPvcAcemRDkxcPnyF5EwVQ_UYe3SCc6SB8LK-je0&s=10"
+          alt="Momento especial dos noivos 4"
+          loading="lazy"
+        >
+            <h3>Ajuda para nosso lar</h3>
+            <p>Um carinho para começar nossa vida juntos.</p>
+            <p class="preco">R$ 300,00</p>
+
+            <button
+              class="botao"
+              type="button"
+              data-presente="Ajuda para nosso lar"
+              data-preco="100"
+            >
+              Adicionar
+            </button>
+          </article>
+
+          <article class="presente">
+
+
+          <img
+          id="gal4"
+          src="https://www.xingoparquehotel.com.br/website/wp-content/uploads/gal-acomodacoes-xingo-parque-hotel-lua-de-mel-9.jpg"
+          alt="Momento especial dos noivos 4"
+          loading="lazy"
+        >            <h3>Lua de mel</h3>
+            <p>Uma contribuição para nossa viagem especial.</p>
+            <p class="preco">R$ 200,00</p>
+
+            <button
+              class="botao"
+              type="button"
+              data-presente="Lua de mel"
+              data-preco="200"
+            >
+              Adicionar
+            </button>
+          </article>
+
+          <article class="presente">
+          <img
+          id="gal4"
+          src="https://mapadomeuceu.com.br/wp-content/uploads/2021/02/Jantar-romantico-com-pisca-pisca-Imagem-no-Pinterest-de-Catraca-Livre.jpg"
+          alt="Momento especial dos noivos 4"
+          loading="lazy" >               
+             <h3>Jantar romântico</h3>
+            <p>Experências de culinárias novas e refinadas.</p>
+            <p class="preco">R$ 100,00</p>
+
+            <button
+              class="botao"
+              type="button"
+              data-presente="Jantar romântico"
+              data-preco="150"
+            >
+              Adicionar
+            </button>
+          </article>
+
+        </div>
+
+        <div class="carrinho">
+          <h3>Meu carrinho</h3>
+
+          <div id="itensCarrinho">
+            <p>Nenhum presente selecionado.</p>
+          </div>
+
+          <p style="margin-top:15px;">
+            <strong>Total: <span id="totalCarrinho">R$ 0,00</span></strong>
+          </p>
+
+          <button class="botao" type="button" id="enviarPresentes" style="margin-top:15px;">
+            Enviar seleção pelo WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONFIRMAÇÃO DE PRESENÇA
+    ========================= -->
+
+    <section class="secao" id="confirmacao">
+      <div class="conteudo">
+        <h2>Confirme sua presença</h2>
+
+        <p class="subtitulo">
+          Ficaremos muito felizes em celebrar esse momento com você.
+          Preencha os campos abaixo para confirmar.
+        </p>
+
+        <form class="formulario" id="formConfirmacao">
+          <div class="campos">
+
+            <div class="campo completo">
+              <label for="nomeConvidado">Nome completo *</label>
+              <input
+                type="text"
+                id="nomeConvidado"
+                name="nome"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="campo completo">
+              <label>Você estará presente? *</label>
+
+              <div class="opcoes">
+                <label>
+                  <input type="radio" name="presenca" value="Sim" required>
+                  Sim
+                </label>
+
+                <label>
+                  <input type="radio" name="presenca" value="Não" required>
+                  Não 
+                </label>
+              </div>
+            </div>
+
+            <div class="campo">
+<label for="criancas">Número de crianças</label>              
+              <input
+                type="number"
+                id="criancas"
+                name="criancas"
+                min="0"
+                max="30"
+                value="0"
+              >
+            </div>
+
+            <div class="campo">
+              <label for="emailConvidado">E-mail de confirmação *</label>
+              <input
+                type="email"
+                id="emailConvidado"
+                name="email"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="campo completo">
+              <label for="telefoneConvidado">Telefone / WhatsApp *</label>
+              <input
+                type="tel"
+                id="telefoneConvidado"
+                name="telefone"
+                autocomplete="tel"
+                placeholder="(00) 00000-0000"
+                required
+              >
+            </div>
+
+            <div class="campo completo">
+              <label for="mensagemConvidado">Mensagem adicional</label>
+              <textarea
+                id="mensagemConvidado"
+                name="mensagem"
+                placeholder="Deixe uma mensagem carinhosa para os noivos..."
+              ></textarea>
+            </div>
+
+          </div>
+
+          <button class="botao" type="submit">
+            Enviar confirmação pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================
+         PAINEL DE PERSONALIZAÇÃO
+    ========================= -->
+
+    <section class="secao personalizacao" id="personalizar">
+      <div class="conteudo">
+        <h2>Personalize seu convite</h2>
+
+        <p class="subtitulo">
+          Edite as informações e escolha fotos do seu dispositivo
+          para visualizar o convite com a sua história.
+        </p>
+
+        <div class="painel">
+
+          <h3>Informações dos noivos</h3>
+
+          <div class="painel-grid">
+            <div class="campo">
+              <label for="nomeNoiva">Nome da primeira pessoa</label>
+              <input id="nomeNoiva" type="text" value="Nome Noiva">
+            </div>
+
+            <div class="campo">
+              <label for="nomeNoivo">Nome da segunda pessoa</label>
+              <input id="nomeNoivo" type="text" value="Nome Noivo">
+            </div>
+
+            <div class="campo">
+              <label for="dataCasamento">Data do casamento</label>
+              <input id="dataCasamento" type="date" value="2026-12-20">
+            </div>
+
+            <div class="campo">
+              <label for="horaCasamento">Horário</label>
+              <input id="horaCasamento" type="time" value="16:00">
+            </div>
+
+            <div class="campo">
+              <label for="localCasamento">Local do casamento</label>
+              <input id="localCasamento" type="text" value="Espaço para cerimônia">
+            </div>
+
+            <div class="campo">
+              <label for="trajeCasamento">Traje recomendado</label>
+              <input id="trajeCasamento" type="text" value="Esporte Fino">
+            </div>
+
+            <div class="campo completo">
+              <label for="mapaCasamento">Link do Google Maps</label>
+              <input id="mapaCasamento" type="url" placeholder="https://maps.google.com/...">
+            </div>
+
+            <div class="campo completo">
+              <label for="whatsappNoivos">WhatsApp dos noivos</label>
+              <input
+                id="whatsappNoivos"
+                type="tel"
+                placeholder="5511999999999"
+              >
+              <small>Informe o número com código do país e DDD, somente números.</small>
+            </div>
+
+            <div class="campo completo">
+              <label for="historiaEdit">Texto sobre o casal</label>
+              <textarea id="historiaEdit">Toda grande história começa de alguma forma.
+Desde o nosso primeiro encontro, descobrimos que queríamos compartilhar a vida, os sonhos e os momentos especiais.
+Agora, queremos celebrar esse amor ao lado das pessoas que fazem parte da nossa história.
+
+Esperamos você para viver esse dia inesquecível conosco!</textarea>
+            </div>
+          </div>
+
+          <h3>Escolha as fotos do seu dispositivo</h3>
+
+          <p>
+            Use os botões abaixo para procurar imagens no computador
+            ou selecionar fotos da galeria do celular.
+          </p>
+
+          <div class="aviso">
+            <strong>Atenção:</strong> a seleção local atualiza a prévia
+            neste navegador. Para que os convidados também vejam essas
+            fotos pelo link do convite, será necessário hospedar as imagens
+            online ou junto do site publicado.
+          </div>
+
+          <div class="painel-grid">
+
+            <div class="campo-foto">
+              <label for="arquivoCapa">Foto de capa</label>
+              <input type="file" id="arquivoCapa" accept="image/*">
+
+              <label for="urlCapa">Ou informe um link público</label>
+              <input type="url" id="urlCapa" placeholder="https://...">
+            </div>
+
+            <div class="campo-foto">
+              <label for="arquivoHistoria">Foto da história</label>
+              <input type="file" id="arquivoHistoria" accept="image/*">
+
+              <label for="urlHistoria">Ou informe um link público</label>
+              <input type="url" id="urlHistoria" placeholder="https://...">
+            </div>
+
+            <div class="campo-foto">
+              <label for="arquivoGaleria1">Foto da galeria 1</label>
+              <input type="file" id="arquivoGaleria1" accept="image/*">
+              <label for="urlGaleria1">Ou informe um link público</label>
+              <input type="url" id="urlGaleria1" placeholder="https://...">
+            </div>
+
+            <div class="campo-foto">
+              <label for="arquivoGaleria2">Foto da galeria 2</label>
+              <input type="file" id="arquivoGaleria2" accept="image/*">
+              <label for="urlGaleria2">Ou informe um link público</label>
+              <input type="url" id="urlGaleria2" placeholder="https://...">
+            </div>
+
+            <div class="campo-foto">
+              <label for="arquivoGaleria3">Foto da galeria 3</label>
+              <input type="file" id="arquivoGaleria3" accept="image/*">
+              <label for="urlGaleria3">Ou informe um link público</label>
+              <input type="url" id="urlGaleria3" placeholder="https://...">
+            </div>
+
+            <div class="campo-foto">
+              <label for="arquivoGaleria4">Foto da galeria 4</label>
+              <input type="file" id="arquivoGaleria4" accept="image/*">
+              <label for="urlGaleria4">Ou informe um link público</label>
+              <input type="url" id="urlGaleria4" placeholder="https://...">
+            </div>
+
+          </div>
+
+          <button class="botao" type="button" id="aplicarPersonalizacao">
+            Aplicar informações
+          </button>
+
+          <button class="botao" type="button" id="compartilharConvite">
+            Compartilhar convite
+          </button>
+
+          <p id="mensagemStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       RODAPÉ
+  ========================= -->
+
+  <footer>
+    <p id="nomesRodape">Nome Noiva &amp; Nome Noivo</p>
+    <p>Feito com amor para celebrar um dia especial.</p>
+    <p>Info Clothing</p>
+  </footer>
+
+  <script>
+    /* =========================
+       CONFIGURAÇÕES
+    ========================= */
+
+    // Coloque o número dos noivos no painel de personalização.
+    // Formato: código do país + DDD + número, somente dígitos.
+    let whatsappNoivos = "";
+
+    const $ = (id) => document.getElementById(id);
+
+    const presentesSelecionados = [];
+
+    const imagens = [
+      { campo: "arquivoCapa", url: "urlCapa", destino: "capa" },
+      { campo: "arquivoHistoria", url: "urlHistoria", destino: "foto-historia" },
+      { campo: "arquivoGaleria1", url: "urlGaleria1", destino: "gal1" },
+      { campo: "arquivoGaleria2", url: "urlGaleria2", destino: "gal2" },
+      { campo: "arquivoGaleria3", url: "urlGaleria3", destino: "gal3" },
+      { campo: "arquivoGaleria4", url: "urlGaleria4", destino: "gal4" }
+    ];
+
+    // Guarda as URLs temporárias das imagens selecionadas.
+    const urlsTemporarias = {};
+
+    /* =========================
+       MENU PARA CELULAR
+    ========================= */
+
+    $("menuToggle").addEventListener("click", function() {
+      const links = $("menuLinks");
+      const aberto = links.classList.toggle("aberto");
+
+      $("menuToggle").setAttribute("aria-expanded", String(aberto));
+      $("menuToggle").setAttribute(
+        "aria-label",
+        aberto ? "Fechar menu" : "Abrir menu"
+      );
+    });
+
+    document.querySelectorAll("#menuLinks a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        $("menuLinks").classList.remove("aberto");
+        $("menuToggle").setAttribute("aria-expanded", "false");
+      });
+    });
+
+    /* =========================
+       ESCOLHER FOTOS
+    ========================= */
+
+    imagens.forEach(function(item) {
+      const campo = $(item.campo);
+
+      campo.addEventListener("change", function() {
+        const arquivo = campo.files && campo.files[0];
+
+        if (!arquivo) return;
+
+        if (!arquivo.type.startsWith("image/")) {
+          alert("Selecione um arquivo de imagem.");
+          campo.value = "";
+          return;
+        }
+
+        // Evita arquivos muito grandes causando lentidão na prévia.
+        if (arquivo.size > 12 * 1024 * 1024) {
+          alert("Escolha uma imagem de até 12 MB.");
+          campo.value = "";
+          return;
+        }
+
+        // Libera a URL anterior deste campo, se houver.
+        if (urlsTemporarias[item.destino]) {
+          URL.revokeObjectURL(urlsTemporarias[item.destino]);
+        }
+
+        const urlLocal = URL.createObjectURL(arquivo);
+        urlsTemporarias[item.destino] = urlLocal;
+
+        $(item.destino).src = urlLocal;
+
+        // Limpa o link externo para deixar claro que a foto local está ativa.
+        $(item.url).value = "";
+
+        $("mensagemStatus").textContent =
+          "Foto aplicada à prévia. Para compartilhar esta foto com os convidados, hospede-a online.";
+      });
+    });
+
+    /* =========================
+       APLICAR LINK DE FOTO
+    ========================= */
+
+    imagens.forEach(function(item) {
+      $(item.url).addEventListener("change", function() {
+        const endereco = $(item.url).value.trim();
+
+        if (!endereco) return;
+
+        try {
+          const url = new URL(endereco);
+
+          if (!["http:", "https:"].includes(url.protocol)) {
+            throw new Error("Link inválido");
+          }
+
+          // Ao usar um link, deixa de usar a foto local daquele campo.
+          if (urlsTemporarias[item.destino]) {
+            URL.revokeObjectURL(urlsTemporarias[item.destino]);
+            delete urlsTemporarias[item.destino];
+          }
+
+          $(item.destino).src = url.href;
+          $(item.campo).value = "";
+
+          $("mensagemStatus").textContent =
+            "Link da foto aplicado à prévia.";
+        } catch (erro) {
+          alert("Informe um link válido começando com https:// ou http://");
+          $(item.url).value = "";
+        }
+      });
+    });
+
+    /* =========================
+       FORMATAR DATA
+    ========================= */
+
+    function formatarData(valor) {
+      if (!valor) return "Data a definir";
+
+      const partes = valor.split("-");
+
+      if (partes.length !== 3) return valor;
+
+      return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    }
+
+    /* =========================
+       APLICAR PERSONALIZAÇÃO
+    ========================= */
+
+    function aplicarPersonalizacao() {
+      const nome1 = $("nomeNoiva").value.trim() || "Noivos";
+      const nome2 = $("nomeNoivo").value.trim();
+
+      const nomes = nome2 ? `${nome1} & ${nome2}` : nome1;
+      const data = formatarData($("dataCasamento").value);
+      const hora = $("horaCasamento").value || "Horário a definir";
+      const local = $("localCasamento").value.trim() || "Local a definir";
+      const traje = $("trajeCasamento").value.trim() || "A definir";
+      const historia = $("historiaEdit").value.trim();
+
+      $("nomesCapa").textContent = nomes;
+      $("nomesRodape").textContent = nomes;
+      $("dataCapa").textContent = data;
+
+      $("dataDetalhe").textContent = data;
+      $("horaDetalhe").textContent = hora;
+      $("localDetalhe").textContent = local;
+      $("trajeDetalhe").textContent = traje;
+
+      $("textoHistoria").textContent = historia;
+
+      const linkMapa = $("mapaCasamento").value.trim();
+
+      if (linkMapa) {
+        try {
+          const url = new URL(linkMapa);
+
+          if (!["http:", "https:"].includes(url.protocol)) {
+            throw new Error("Link inválido");
+          }
+
+          $("linkMapa").href = url.href;
+          $("linkWaze").href =
+            "https://www.waze.com/ul?ll=" +
+            encodeURIComponent(local) +
+            "&navigate=yes";
+        } catch (erro) {
+          alert("O link do mapa precisa ser um endereço HTTP ou HTTPS válido.");
+          $("linkMapa").href = "https://maps.google.com/";
+          $("linkWaze").href = "https://www.waze.com/";
+        }
+      } else {
+        $("linkMapa").href =
+          "https://www.google.com/maps/search/?api=1&query=" +
+          encodeURIComponent(local);
+
+        $("linkWaze").href =
+          "https://www.waze.com/ul?q=" +
+          encodeURIComponent(local) +
+          "&navigate=yes";
+      }
+
+      whatsappNoivos = $("whatsappNoivos").value.replace(/\D/g, "");
+
+      $("mensagemStatus").textContent =
+        "Informações aplicadas à prévia do convite.";
+    }
+
+    $("aplicarPersonalizacao").addEventListener(
+      "click",
+      aplicarPersonalizacao
+    );
+
+    /* =========================
+       CARRINHO DE PRESENTES
+    ========================= */
+
+    document.querySelectorAll("[data-presente]").forEach(function(botao) {
+      botao.addEventListener("click", function() {
+        const nome = botao.dataset.presente;
+        const preco = Number(botao.dataset.preco);
+
+        presentesSelecionados.push({ nome, preco });
+
+        atualizarCarrinho();
+      });
+    });
+
+    function moeda(valor) {
+      return valor.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+      });
+    }
+
+    function atualizarCarrinho() {
+      const container = $("itensCarrinho");
+      container.replaceChildren();
+
+      if (presentesSelecionados.length === 0) {
+        container.textContent = "Nenhum presente selecionado.";
+      } else {
+        presentesSelecionados.forEach(function(item, indice) {
+          const linha = document.createElement("div");
+          linha.className = "item-carrinho";
+
+          const descricao = document.createElement("span");
+          descricao.textContent = `${item.nome} — ${moeda(item.preco)}`;
+
+          const remover = document.createElement("button");
+          remover.className = "remover";
+          remover.type = "button";
+          remover.textContent = "Remover";
+
+          remover.addEventListener("click", function() {
+            presentesSelecionados.splice(indice, 1);
+            atualizarCarrinho();
+          });
+
+          linha.append(descricao, remover);
+          container.appendChild(linha);
+        });
+      }
+
+      const total = presentesSelecionados.reduce(function(soma, item) {
+        return soma + item.preco;
+      }, 0);
+
+      $("totalCarrinho").textContent = moeda(total);
+    }
+
+    /* =========================
+       ENVIAR PRESENTES PELO WHATSAPP
+    ========================= */
+
+    $("enviarPresentes").addEventListener("click", function() {
+      if (presentesSelecionados.length === 0) {
+        alert("Adicione pelo menos um presente ao carrinho.");
+        return;
+      }
+
+      if (!whatsappNoivos) {
+        alert("Preencha o WhatsApp dos noivos no painel de personalização.");
+        $("whatsappNoivos").focus();
+        return;
+      }
+
+      const lista = presentesSelecionados.map(function(item) {
+        return `- ${item.nome}: ${moeda(item.preco)}`;
+      }).join("\n");
+
+      const total = presentesSelecionados.reduce(function(soma, item) {
+        return soma + item.preco;
+      }, 0);
+
+      const mensagem =
+        `Olá! Escolhi estes presentes para os noivos:\n\n` +
+        `${lista}\n\nTotal: ${moeda(total)}\n\n` +
+        `Gostaria de combinar os próximos passos.`;
+
+      abrirWhatsApp(mensagem);
+    });
+
+    /* =========================
+       CONFIRMAÇÃO DE PRESENÇA
+    ========================= */
+
+    $("formConfirmacao").addEventListener("submit", function(evento) {
+      evento.preventDefault();
+
+      aplicarPersonalizacao();
+
+      if (!whatsappNoivos) {
+        alert("Preencha o WhatsApp dos noivos no painel de personalização.");
+        $("whatsappNoivos").focus();
+        return;
+      }
+
+      const nome = $("nomeConvidado").value.trim();
+      const presenca = document.querySelector(
+        'input[name="presenca"]:checked'
+      );
+
+      if (!presenca) {
+        alert("Selecione se você estará presente.");
+        return;
+      }
+
+      const criancas = $("criancas").value || "0";
+      const email = $("emailConvidado").value.trim();
+      const telefone = $("telefoneConvidado").value.trim();
+      const mensagemExtra = $("mensagemConvidado").value.trim();
+
+      const mensagem =
+        `*Confirmação de presença - Casamento*\n\n` +
+        `Nome: ${nome}\n` +
+        `Presença: ${presenca.value}\n` +
+        `Número de crianças: ${criancas}\n` +
+        `E-mail: ${email}\n` +
+        `Telefone: ${telefone}\n` +
+        `Mensagem: ${mensagemExtra || "Nenhuma"}\n\n` +
+        `Casamento de ${$("nomesCapa").textContent}\n` +
+        `Data: ${$("dataCapa").textContent}`;
+
+      abrirWhatsApp(mensagem);
+    });
+
+    /* =========================
+       ABRIR WHATSAPP
+    ========================= */
+
+    function abrirWhatsApp(mensagem) {
+      if (!whatsappNoivos) {
+        alert("Informe o WhatsApp dos noivos antes de continuar.");
+        return;
+      }
+
+      const endereco =
+        "https://wa.me/" +
+        whatsappNoivos +
+        "?text=" +
+        encodeURIComponent(mensagem);
+
+      window.open(endereco, "_blank", "noopener,noreferrer");
+    }
+
+    /* =========================
+       COMPARTILHAR CONVITE
+    ========================= */
+
+    $("compartilharConvite").addEventListener("click", async function() {
+      aplicarPersonalizacao();
+
+      const urlAtual = new URL(window.location.href);
+
+      // Dados textuais podem ser compartilhados na URL.
+      const dados = {
+        nome1: $("nomeNoiva").value,
+        nome2: $("nomeNoivo").value,
+        data: $("dataCasamento").value,
+        hora: $("horaCasamento").value,
+        local: $("localCasamento").value,
+        traje: $("trajeCasamento").value,
+        mapa: $("mapaCasamento").value,
+        historia: $("historiaEdit").value
+      };
+
+      urlAtual.searchParams.set("convite", JSON.stringify(dados));
+
+      const link = urlAtual.href;
+
+      if (window.location.protocol === "file:") {
+        alert(
+          "Para compartilhar o convite com outras pessoas, publique o site primeiro, por exemplo, no Vercel."
+        );
+        return;
+      }
+
+      try {
+        if (navigator.share) {
+          await navigator.share({
+            title: "Nosso convite de casamento",
+            text: "Você está convidado para o nosso casamento!",
+            url: link
+          });
+        } else if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(link);
+          alert("Link do convite copiado!");
+        } else {
+          window.prompt("Copie o link do convite:", link);
+        }
+      } catch (erro) {
+        if (erro.name !== "AbortError") {
+          alert("Não foi possível compartilhar automaticamente. Tente copiar o link.");
+        }
+      }
+    });
+
+    /* =========================
+       CARREGAR DADOS DO LINK
+    ========================= */
+
+    function carregarConviteDoLink() {
+      const parametros = new URLSearchParams(window.location.search);
+      const texto = parametros.get("convite");
+
+      if (!texto) return;
+
+      try {
+        const dados = JSON.parse(texto);
+
+        $("nomeNoiva").value = dados.nome1 || "";
+        $("nomeNoivo").value = dados.nome2 || "";
+        $("dataCasamento").value = dados.data || "";
+        $("horaCasamento").value = dados.hora || "";
+        $("localCasamento").value = dados.local || "";
+        $("trajeCasamento").value = dados.traje || "";
+        $("mapaCasamento").value = dados.mapa || "";
+        $("historiaEdit").value = dados.historia || "";
+
+        aplicarPersonalizacao();
+      } catch (erro) {
+        console.error("Não foi possível carregar os dados do convite.", erro);
+      }
+    }
+
+    carregarConviteDoLink();
+    atualizarCarrinho();
+  </script>
+
+</body>
+</html>
