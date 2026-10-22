@@ -59,90 +59,92 @@ const fotosVeus = {
 
   capela: [
     "https://http2.mlstatic.com/D_NQ_NP_718425-MLA110259673430_052026-O.webp",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe4BEg9hfaKiz3V9gfM4QQL6rJ7ekgnBlFuFo-B5gx9TLxdZUoIfOv5ZM&s=10",
+    "https://i.pinimg.com/736x/99/6f/9c/996f9ccfa72f51b141ee14607a3719e0.jpg",
     "https://img.ltwebstatic.com/v4/p/spmp/2026/06/02/45/178037976595fb9dadbe92a49d216e68579c4e6d1e_thumbnail_405x552.png"
   ],
 
 
   catedral: [
     "https://blog.usealtar.com.br/wp-content/uploads/2023/12/veu-de-noiva-catedral-2.jpg",
-    "https://dcdn-us.mitiendanube.com/stores/001/893/589/products/img_4681-ac13d816bc74da49f217499367351735-480-0.webp",
+    "https://canary.contestimg.wish.com/api/webimage/5a542e515cc9a67692bb04c1-large.jpg?cache_buster=0af98632ac54b7c1ad07f69187f38821",
     "https://images.nexusapp.co/assets/4e/f2/80/111584979.jpg"
   ],
 
   // Grinalda
   coroa: [
     "https://acdn-us.mitiendanube.com/stores/001/086/775/products/coroa-de-noiva-758-10q1-dff49dfb46b1f516d516681199314870-640-0.webp",
-    "https://http2.mlstatic.com/D_NQ_NP_808804-MLB110597221317_042026-O-coroa-tiara-noiva-delicada-casamento-debutante-linda-festa.webp",
-    "https://http2.mlstatic.com/D_NQ_NP_952940-MLB111415801036_052026-O-tiara-coroa-noiva-casamento-debutante-festa-allora-noivas.webp"
+    "https://i.pinimg.com/736x/4e/d6/c3/4ed6c3ec0c8cc1e9e8cfc4d543669f22.jpg",
+    "https://http2.mlstatic.com/D_NQ_NP_808804-MLB110597221317_042026-O-coroa-tiara-noiva-delicada-casamento-debutante-linda-festa.webp"
   ],
   
   tiara: [
     "https://boutiquedanoiva.com.br/wp-content/uploads/2020/06/tiara-de-noiva-boho-floral.jpg",
-    "https://m.media-amazon.com/images/I/71mbkoVEFvL._AC_UF1000,1000_QL80_.jpg",
-    "https://image.made-in-china.com/365f3j00sTchUSZWZnzp/Tiara-de-Cristal-Tiara-de-Noiva-Tiara-de-Casamento-para-Mulheres.webp"
+    "https://http2.mlstatic.com/D_NQ_NP_656657-MLM42057227134_062020-O.webp",
+    "https://tudocommoda.com/wp-content/uploads/2020/02/35-noiva-com-tiara-delicada.jpg"
   ],
 
   guirlanda: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69-Ih-lYBrD3ZyhQpZmkBrEkcdIzPQeRT7rlVwd0KrNIZv81iBnnFPrs6&s=10",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74btpLl2rs2UBuQu3zm4LS_pe3JWXwkiHHv3WxWt3vpfvCXL9x8r9n8k5&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4POt_AJd4_hjH0GH1hP1ePee9YYVSlYzot223Y2Op7sIZ5XXNndBhpSx&s=10"
+    "https://http2.mlstatic.com/D_NQ_NP_865638-MLB52009029010_102022-O.webp",
+    "https://i.pinimg.com/736x/99/95/07/999507e807d97c2d773971a860a4575c.jpg"
   ],
 
   pente: [
-    "https://cdn.awsli.com.br/600x1000/630/630796/produto/36441579/fc59458a47.jpg",
     "https://boutiquedanoiva.com.br/wp-content/uploads/2019/12/pente-boho-prata.jpg",
-    "https://www.pietraefiori.com.br/wp-content/uploads/2024/03/MG_7789-scaled.jpg"
+     "https://i.etsystatic.com/12885825/r/il/0d3ef9/3179537261/il_794xN.3179537261_kmq8.jpg",
+    "https://bridalstylesboutique.com/cdn/shop/products/AirBrush_20220527122539.jpg?v=1653671230&width=1080"
   ],
 
   headbands: [
     "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQN1q9IT8VVNoNSKB3a-hPmfwBohTleTmQT8jKuOW7_2Xa6silm",
-    "https://www.lulus.com/images/product/xlarge/8292301_1686676.jpg?w=375&hdpi=1",
+    "https://i.etsystatic.com/22979256/r/il/a100b3/5027683965/il_fullxfull.5027683965_ai64.jpg",
     "https://m.media-amazon.com/images/I/71fKBjbmcBL._AC_UL450_SY450_QL70_.jpg"
   ],
 
   porta_coque: [
     "https://blog.reisman.com.br/wp-content/uploads/2024/12/porta-coque-683x1024.jpg",
-    "https://cdn0.casamentos.com.br/usr/4/8/6/9/cfb_1075330.jpg",
+    "https://tse2.mm.bing.net/th/id/OIP.Pqf0roGzmbNkfQ4E8EEM-AHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     "https://a-static.mlcdn.com.br/618x463/porta-coque-p-noiva-c-strass-unidade-damasa/damasa/149/15f49c4e15d5870390b37d221c987e3b.jpg"
   ],
 
   presilhas_e_grampos: [
     "https://cdn.awsli.com.br/2500x2500/630/630796/produto/370230917/whatsapp-image-2023-04-09-at-11-55-34--3--901twtr3n6.jpeg",
+    "https://i.etsystatic.com/57453037/r/il/0341b0/6893119806/il_570xN.6893119806_4tzy.jpg",
     "https://images.nexusapp.co/assets/2d/82/37/718429063.jpg",
-    "https://i.etsystatic.com/57453037/r/il/0341b0/6893119806/il_570xN.6893119806_4tzy.jpg"
   ],
 
 
   // Buquê
   buque_redondo: [
-    "https://www.oficinadasflores.com/userfiles/produtos/d09b3da9d849ed5a5c3e5514a83e041d.jpg",
+    "https://taquariflores.com.br/wp-content/uploads/2024/12/Buque-de-Noiva-Redondo-com-Gipsofila.jpg",
     "https://http2.mlstatic.com/D_NQ_NP_603493-MLB77757522162_072024-O-buque-de-noiva-redondo-azul-serenity.webp",
-    "https://blog.usealtar.com.br/wp-content/uploads/2022/07/buque-redondo.jpg"
+    "https://taquariflores.com.br/wp-content/uploads/2025/02/buque-de-noiva-redondo-com-girassois.jpg"
   ],
 
   buque_cascata: [
-    "https://enrose.net/cdn/shop/files/2454ddf6237604cb9963152f4132a0d0.jpg?v=1774758499&width=1445",
-    "https://s3-sa-east-1.amazonaws.com/casarpontocom-inspiracoes/wp-content/uploads/2015/12/buque-cascata-02-600x902.jpg",
-    "https://taquariflores.com.br/wp-content/uploads/2024/12/buque-de-noiva-cascata-com-denphale-pink-e-angelica-600x600.jpg"
+    "https://s3-sa-east-1.amazonaws.com/casarpontocom-inspiracoes/wp-content/uploads/2015/12/buque-cascata-05-600x901.jpg",
+    "https://ohflordelicadezas.com/wp-content/uploads/2026/01/Buque-de-noiva-cascata-2.png",
+    "https://tse3.mm.bing.net/th/id/OIP.cBb1hUli4nJP5sQ-NIVoEQHaJ3?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
   ],
   
   buque_flor_unica: [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUjPQ97HXTeBYK-q1UeeTm8NUiVGlqR5VgJpJqy3RUenChYIelpsVInk&s=10",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9YP2cLxuna1ZGrdQfebX9IPVvUrK_ouH-m07kUGKp3Ecg2A4x8u3-74Z0&s=10",
+    "https://blog.reisman.com.br/wp-content/uploads/elementor/thumbs/e051270ad32fdf33d6bd1169a34df706-pgmzh5ia0samfaus3cyckpok5lmi61g49n6y1up78s.jpeg",
+    "https://static.novaflor.com.br/images/product/33516gg2.jpg",
     "https://www.noivaansiosa.com.br/wp-content/uploads/2021/09/Buque-flor-unica-1.jpeg"
   ],
 
   buque_desconstruido: [
-    "https://buongiorno.vtexassets.com/arquivos/ids/203685/BUQUE-DE-NOIVA--DESCONSTRUIDO--EM-TONS--TERROSOS-1.jpg?v=638575378063600000",
     "https://lapisdenoiva.com/wp-content/uploads/2025/02/buque-de-noiva-3.webp?x42625",
+        "https://buongiorno.vtexassets.com/arquivos/ids/203685/BUQUE-DE-NOIVA--DESCONSTRUIDO--EM-TONS--TERROSOS-1.jpg?v=638575378063600000",
+
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThEU6eqS2vtvoZHXiV0xLMWLoUQeDe61V5eeK_fcCFnMcI8GVP-6-MCiU&s=10"
   ],
 
   buque_braçada: [
     "https://inesquecivelcasamento.com.br/wp-content/uploads/2023/01/c92da5e65862964c0dfe6b073f023dc6.jpg",
-    "https://blog.reisman.com.br/wp-content/uploads/2021/12/2b06f4b65e488b4142d1fe49a29756d8.jpeg",
-    "https://tuttisposa.com.br/blog-imagens/wp-content/uploads/2019/07/buque-bracada.jpg"
+        "https://www.internacionalflores.com.br/wp-content/uploads/2019/08/bq-bracada-de-astromelias.jpg",
+    "https://tuttisposa.com.br/blog-imagens/wp-content/uploads/2019/07/buque-bracada.jpg",
+
   ],
 
 
@@ -202,7 +204,7 @@ const fotosVeus = {
   suspensorio_x: [
     "https://www.comofazeremcasa.net/wp-content/uploads/2013/07/como-fazer-suspensorio-presente-9.jpg",
     "https://m.media-amazon.com/images/I/41VXqJ7tswL._AC_SY1000_.jpg",
-    ""
+    "https://cdn0.casamentos.com.br/usr/6/9/7/3/cfb_391790.jpg"
   ],
 
   suspensorio_y: [
@@ -213,36 +215,38 @@ const fotosVeus = {
 
 
   // Abotuadura
-  torpedo: [
-    "https://acdn-us.mitiendanube.com/stores/776/326/products/img_3832-8e610f48ff3194ae3f17056733954425-1024-1024.webp",
+  torpedo: [ 
     "https://http2.mlstatic.com/D_NQ_NP_761429-MLB105407777048_012026-O-abotoadura-masculina-p-camisa-social-punho-duplo-c-estojo.webp",
-    "https://acdn-us.mitiendanube.com/stores/776/326/products/img_3869-66da1ed3b8ffc72f9f17056740306429-1024-1024.webp"
+    "https://acdn-us.mitiendanube.com/stores/776/326/products/img_3832-8e610f48ff3194ae3f17056733954425-1024-1024.webp",
+    "https://www.aceitosim.com.br/wp-content/uploads/2018/03/abotoadura-para-noivos.jpg"
   ],
 
   baleia: [
+    "https://azhul.com.br/cdn/shop/products/Sce9433fb0d50490ca8facfe726ee39a6L_92633a29-10e5-4381-98ce-fc5f7537c48d.jpg?v=1680626044&width=144501335.jpg?v=1724161696",
     "https://baiqueaccessories.com/wp-content/uploads/whale-back-cufflinks.png",
-    "https://www.cufflinkman.co.uk/cdn/shop/products/james-kinross-cufflinks-carbon-reflections-cufflinks-42588525101335.jpg?v=1724161696",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUJL0MDnt0GI3AYcZNJImDGuwGVkiz2EFy29Qx9c7PCGf8QzZXhsfxUg&s=10"
+    "https://tse3.mm.bing.net/th/id/OIP.KX28L0vR_U_nEGArmKICGgHaLH?r=0&w=600&h=900&rs=1&pid=ImgDetMain&o=7&rm=3"
   ],
 
   corrente: [
-    "https://http2.mlstatic.com/D_NQ_NP_708282-MLB78301030665_082024-O-abotoaduras-folhadas-a-ouro-krementz-usa-antigas.webp",
+    "https://tse3.mm.bing.net/th/id/OIP.MpYrPrDkQDZblSVAXqXeugHaJQ?r=0&pid=ImgDet&w=184&h=230&c=7&dpr=1,3&o=7&rm=3",
     "https://i.etsystatic.com/23473689/r/il/bab746/7232859246/il_570xN.7232859246_87be.jpg",
-    "https://s3-sa-east-1.amazonaws.com/arrematearte-farm/cristinagoston/lot_photos/62929/b85c8f0f3eefde5932a8ee35ee53536b0bc73d53_ms.JPG?1508119701"
+    "https://i.etsystatic.com/12278175/r/il/d4220d/2435900824/il_fullxfull.2435900824_9hkl.jpg"
   ],
 
   barbell: [
-    "https://i0.wp.com/www.canalmasculino.com.br/wp-content/uploads/2014/02/abotoaduras_the_barbell1.jpg",
-    "https://a.1stdibscdn.com/archivesE/upload/j_548/j_20233231476807995476/395_1_223_c_master.jpg",
-    "https://a.1stdibscdn.com/tiffany-co-sterling-silver-figural-globe-barbell-cufflinks-for-sale/j_8493/j_281565421765923795166/j_28156542_1765923795589_bg_processed.jpg?disable=upscale&auto=webp&quality=60&width=640"
+    "https://img.vuahanghieu.com/unsafe/0x0/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/news/content/2025/07/khuy-mang-set-la-gi-cach-su-dung-khuy-mang-set-dung-cach-1-jpg-1752035409-09072025113009.jpg",
+     "https://a.1stdibscdn.com/tiffany-co-sterling-silver-figural-globe-barbell-cufflinks-for-sale/j_8493/j_281565421765923795166/j_28156542_1765923795589_bg_processed.jpg?disable=upscale&auto=webp&quality=60&width=640",
+    "https://www.chicagostyleweddings.com/wp-content/uploads/2019/06/Robey-3604.jpg",
+   
   ],
 
 
   // Sapato
   oxford: [
     "https://assets.sistemawbuy.com.br/arquivos/cd807b26707aff729e16a68e7fd35c27/produtos/650335ac3172e/126306-cinza-68ff90a76d97c_mini.jpeg",
-    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/majorano/media/uploads/produtos/foto/nrwpixzi/sapato-masculino-oxford-maurizio-tan.jpg",
-    "https://cdn.awsli.com.br/1500x1500/1423/1423033/produto/383299365/30001-2-0rum4ymjmy.jpg"
+    "https://cdn.awsli.com.br/1500x1500/1423/1423033/produto/383299365/30001-2-0rum4ymjmy.jpg",
+    "https://blog.difrancacalcados.com.br/wp-content/uploads/2024/07/image-40-683x1024.png",
+    
   ],
 
   derby: [
