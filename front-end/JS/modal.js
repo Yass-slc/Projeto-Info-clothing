@@ -193,6 +193,12 @@ const fotosVeus = {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEl8VSAHe_EYqjQRimpcTJ_RL8L36S-3w7LQ_w7xJE_IKnezdqFUMHvg0&s=10"
   ],
 
+  lapela_lego: [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZSErOfX7nJM8u0ctso35wD-ui_BF3M_bgelxvlAQY-hNLIVcRyL4dgLOO&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyojasTekBRpEbAuzSs4OC_3AalcZjXZtOcpn6vdb1pXNGrIjwoSokJQs&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTefV2hed19XJ07IQSgczN1caMu0YX9GRHS6zaN5S6P5SO2qvDWK8nHV0gI&s=10"
+  ],
+
 
   // Suspensão
   cinto: [
