@@ -384,6 +384,16 @@ const fotosVeus = {
     "https://www.constancezahn.com/wp-content/uploads/2017/03/0003-constance-zahn-abotoamento-cruzado-traje-noivo.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOm28AOltGsfOFJ5NF_g2K1JmTSvZjYrMKz_LXpi_mFG5nG_d93LZdtM&s=10"
   ],
+
+
+  // Sapatos Noivas
+
+SapatosNoiva: [
+  "https://chibinski.com.br/cdn/shop/files/SCB07NVEBA2-S7_2.jpg?v=1788273818&width=1946",
+  
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWPaoKztBymQKJcCVLGEN0pTWk5yaOi4SAx-C2rbK-FQ&s=10"
+]
+
 };
 
 
