@@ -251,14 +251,14 @@ const fotosVeus = {
 
   derby: [
     "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/enrico/media/uploads/produtos/foto/tumaqudy/sapato-social-derby-sola-de-couro-masculino-preto-boaretto-2.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-4nhH-IW6JD8uN92-6fTnm3RdpWkcoNh1OwqvRrDd9w&s=10",
-    "https://http2.mlstatic.com/D_NQ_NP_887660-MLB110350988891_042026-O-sapato-derby-masculino-social-couro-nobre-natural-legitimo.webp"
+    "https://http2.mlstatic.com/D_NQ_NP_887660-MLB110350988891_042026-O-sapato-derby-masculino-social-couro-nobre-natural-legitimo.webp",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-4nhH-IW6JD8uN92-6fTnm3RdpWkcoNh1OwqvRrDd9w&s=10"
   ],
 
   monk_strap: [
-    "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lsfg3tc435jx15",
-    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/manutt/media/uploads/produtos/foto/lenbclup/inserir-um-subtitulo-21.jpg",
-    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/villione/media/uploads/produtos/foto/luerbnfw/1000x1000__0010_monk-strap-2.jpg"
+    "https://modamasculinajournal.com.br/wp-content/uploads/2023/01/527fb2be266dcb693d534601c6cbe2c0.png",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/villione/media/uploads/produtos/foto/luerbnfw/1000x1000__0010_monk-strap-2.jpg",
+    "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/manutt/media/uploads/produtos/foto/lenbclup/inserir-um-subtitulo-21.jpg"
   ],
 
   loafer: [
@@ -268,9 +268,9 @@ const fotosVeus = {
   ],
 
   brogue: [
+    "https://pacco.com.br/cdn/shop/files/3000VIN_CHARLES-COM-MODELO-COM-MEIA-SITE.png?v=1772922771&width=1080",
     "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/enrico/media/uploads/produtos/foto/ohyegyyt/sapato-social-wingtip-derby-brogue-masculino-boaretto-marrom-conhaque-9.jpg",
     "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/wallford/media/uploads/produtos/foto/uxqsgift/9c0a2c39-0b8b-4486-9fc0-6d7087d6f800.png",
-    "https://img.irroba.com.br/filters:fill(fff):quality(80)/jacomett/catalog/produtos/mch005-preto/mch005-preto-2.jpg"
   ],
 
 
