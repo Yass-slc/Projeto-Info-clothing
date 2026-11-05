@@ -395,37 +395,60 @@ const fotosVeus = {
   // Sapatos Noivas
 
  scarpinaberto: [
-
-
+  "https://down-br.img.susercontent.com/file/br-11134207-81zu6-ml580px860hx69",
+"https://tse1.explicit.bing.net/th/id/OIP.w1zT1e5ECuEOTeB8p9w99wHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+"https://tse1.explicit.bing.net/th/id/OIP.CA1VCe7xmwwi4yM4EaUu1gHaJQ?r=0&w=2400&h=3000&rs=1&pid=ImgDetMain&o=7&rm=3"
  ],
 
 
  ScarpinFechado: [
-
+"https://www.helenicecampelo.com.br/wp-content/uploads/2022/05/MG_9706-1-scaled-e1694024840655.jpg",
+"https://ph-cdn3.ecosweb.com.br/imagens01/foto/mkp195/calcado-feminino/sapatos/scarpin-feminino-salto-fino-vizzano-1421110-branco_2315072_600_1.jpg",
+"https://tse1.explicit.bing.net/th/id/OIP.UBEIAHFP9fXM4WJcPvuOvwHaHa?r=0&w=500&h=500&rs=1&pid=ImgDetMain&o=7&rm=3"
  ],
 
  SandáliaTiras: [
-  
+  "https://tse1.explicit.bing.net/th/id/OIP.NGuCL0Y9YXMriwdOhHFn-AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+  "https://durvalcalcados.fbitsstatic.net/img/p/sandalia-noiva-tiras-strass-salto-taca-485d-11385-71362/268856-5.jpg?w=530&h=530&v=202505301159",
+  "https://cdn.awsli.com.br/600x700/1052/1052238/produto/313960696/img_9879-f1tf0nt91a.jpeg"
  ],
 
  SaltoBloco: [
-
-
+"https://down-br.img.susercontent.com/file/br-11134207-7r98p-llvc0rda9esr1a",
+"https://tse2.mm.bing.net/th/id/OIP.EJ_eJ4ArhD_PCRVLeMu_nAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+"https://img-va.myshopline.com/image/store/1706153727057/cgyhq1278-white-4_1000x.jpg?w=1000&h=1400&q=80"
  ],
 
  Slingback: [
-
+"https://chibinski.com.br/cdn/shop/files/SPB07NCOOF0-S7.jpg?v=1778086377&width=1445",
+"https://tse4.mm.bing.net/th/id/OIP.nT7JkiXnR7CLh-XuuDmfbAHaIO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+"https://i.etsystatic.com/52171346/r/il/cc3fd5/6237087175/il_fullxfull.6237087175_qyjh.jpg"
  ],
 
  Sapatilha: [
-
-
+"https://coisasdamaria.com/wp-content/uploads/escolher-sapatos-noiva.jpg",
+"https://tse1.explicit.bing.net/th/id/OIP.f_OVP9MqHEiWGbyhb8nFwwHaLF?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+"https://festas.site/wp-content/uploads/2020/05/Noiva-de-sapato-baixo.jpg"
  ],
 
  Rasteirinha: [
-
+"https://i.pinimg.com/736x/17/4b/20/174b202c67fdddb1590f1e04ea2108dc.jpg",
+"https://cdn.shopify.com/s/files/1/0569/3351/5347/files/White_wedding_shoes27.jpg?v=1711937322",
+"https://tse1.mm.bing.net/th/id/OIP.kWDwEyV0HejjyQRwxAVgRAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
  ], 
 
+ 
+ Mule: [
+"https://images.asos-media.com/products/be-mine-bridal-leora-heeled-mules-ivory-lace/209174674-1-ivorylacesatin?$n_640w$&wid=513&fit=constrain",
+"https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/20/210/1149/107/4/196447420/196447420_5_1_720x928.webp?w=1920&q=75",
+"https://tse4.mm.bing.net/th/id/OIP.mgTBDW3-xmy5PsiQjG221AHaLH?r=0&w=600&h=900&rs=1&pid=ImgDetMain&o=7&rm=3"
+ ], 
+ 
+ Tênis: [
+"https://mariee.com.br/wp-content/uploads/img/blog/2377/noivas-de-tnis-inspiraes-para-noivasque-no-querem-deixar-o-conforto-de-lado-a1b697e299538059a681.jpg",
+"https://i.etsystatic.com/37327128/r/il/18a559/7683106083/il_fullxfull.7683106083_pj2n.jpg",
+"https://tse1.explicit.bing.net/th/id/OIP.gDP7c35uj3aI-sJfypASoQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+ ], 
 };
 
 

@@ -533,6 +533,9 @@
 
       .menu-toggle {
         display: block;
+        top: 50px;
+        
+        
       }
 
       .links {
@@ -613,6 +616,20 @@
         height: 280px;
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </style>
 </head>
 
@@ -622,34 +639,43 @@
        MENU DE NAVEGAÇÃO
   ========================= -->
 
-  <header>
+  
+<header>
     <nav class="menu">
 
         <div class="logo-container">
-            <a href="index.html"><img src="./Assets/IMG/logo png.png"
-                alt="Logo Info Clothing"
-                class="logo"></a>
+            <a href="index.html">
+                <img
+                    src="./Assets/IMG/logo png.png"
+                    alt="Logo Info Clothing"
+                    class="logo"
+                >
+            </a>
         </div>
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
 
-      <div class="links" id="menuLinks">
-        <a href="#inicio">Início</a>
-        <a href="#historia">Nossa história</a>
-        <a href="#galeria">Fotos</a>
-        <a href="#detalhes">Detalhes</a>
-        <a href="#presentes">Presentes</a>
-        <a href="#confirmacao">Confirmar presença</a>
-      </div>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menuLinks"
+        >
+            ☰
+        </button>
+
+        <div class="links" id="menuLinks">
+            <a href="#inicio">Início</a>
+            <a href="#historia">Nossa história</a>
+            <a href="#galeria">Fotos</a>
+            <a href="#detalhes">Detalhes</a>
+            <a href="#presentes">Presentes</a>
+            <a href="#confirmacao">Confirmar presença</a>
+        </div>
+
     </nav>
-  </header>
+</header>
+
 
   <main>
 
