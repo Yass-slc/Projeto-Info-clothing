@@ -395,9 +395,9 @@ const fotosVeus = {
   // Sapatos Noivas
 
  scarpinaberto: [
-  "https://down-br.img.susercontent.com/file/br-11134207-81zu6-ml580px860hx69",
+  "https://i.pinimg.com/736x/65/a6/55/65a655bcf794a41acc4f7c58d4bd0d99.jpg",
 "https://tse1.explicit.bing.net/th/id/OIP.w1zT1e5ECuEOTeB8p9w99wHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-"https://tse1.explicit.bing.net/th/id/OIP.CA1VCe7xmwwi4yM4EaUu1gHaJQ?r=0&w=2400&h=3000&rs=1&pid=ImgDetMain&o=7&rm=3"
+"https://i.pinimg.com/736x/73/b8/f5/73b8f5ccb75075ce1a930d3b45b6a66d.jpg"
  ],
 
 

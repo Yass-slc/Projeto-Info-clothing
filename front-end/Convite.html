@@ -104,61 +104,6 @@
       transform: translateY(-2px);
     }
 
-    /* =========================
-       MENU
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--branco);
-      box-shadow: 0 2px 8px #00000012;
-    }
-
-    .menu {
-      max-width: 1200px;
-      margin: auto;
-      padding: 24px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo {
-      color: var(--marrom);
-      font-family:initial;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .links a {
-      color: var(--marrom);
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    .menu-toggle {
-      display: none;
-      color: var(--marrom);
-      border: 1px solid var(--bege);
-      border-radius: 5px;
-      background: white;
-      padding: 5px 12px;
-      font-size: 25px;
-    }
 
     /* =========================
        CAPA
@@ -638,43 +583,84 @@
   <!-- =========================
        MENU DE NAVEGAÇÃO
   ========================= -->
+ <header>
 
-  
-<header>
-    <nav class="menu">
+    <div class="mobile-header">
 
         <div class="logo-container">
-            <a href="index.html">
-                <img
-                    src="./Assets/IMG/logo png.png"
-                    alt="Logo Info Clothing"
-                    class="logo"
-                >
-            </a>
+            <a href="index.html"><img src="./Assets/IMG/logo png.png"
+                alt="Logo Info Clothing"
+                class="logo"></a>
         </div>
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="menuLinks"
-        >
+        <div class="menu-mobile" onclick="toggleMenu()">
             ☰
-        </button>
-
-        <div class="links" id="menuLinks">
-            <a href="#inicio">Início</a>
-            <a href="#historia">Nossa história</a>
-            <a href="#galeria">Fotos</a>
-            <a href="#detalhes">Detalhes</a>
-            <a href="#presentes">Presentes</a>
-            <a href="#confirmacao">Confirmar presença</a>
         </div>
 
+    </div>
+
+    <nav id="Topo">
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <button>Início</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="inicio.html">
+                    <button>Vestidos</button>
+                </a>
+            </li>
+
+            <li>
+                <div class="paste-button">
+                    <button class="button2">
+                        Acessórios ▼
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="acessorios.html">Feminino</a>
+                        <a href="noivoAcessório.html">Masculino</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="Ternos.html">
+                    <button>Ternos</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="contato.html">
+                    <button>Contato</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="sobre.html">
+                    <button>Sobre nós</button>
+                </a>
+            </li>
+           
+
+        </ul>
     </nav>
+
 </header>
+  <br>
+
+  <script>
+    function toggleMenu() {
+
+      const menu = document.querySelector("#Topo ul");
+
+      menu.classList.toggle("ativo");
+
+    }
+  </script>
 
 
   <main>
@@ -850,7 +836,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               class="botao"
               type="button"
               data-presente="Ajuda para nosso lar"
-              data-preco="100"
+              data-preco="300"
             >
               Adicionar
             </button>
@@ -892,7 +878,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               class="botao"
               type="button"
               data-presente="Jantar romântico"
-              data-preco="150"
+              data-preco="100"
             >
               Adicionar
             </button>
@@ -1034,12 +1020,12 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
           <div class="painel-grid">
             <div class="campo">
               <label for="nomeNoiva">Nome da primeira pessoa</label>
-              <input id="nomeNoiva" type="text" value="Nome Noiva">
+              <input id="nomeNoiva" type="text" value="Nome">
             </div>
 
             <div class="campo">
               <label for="nomeNoivo">Nome da segunda pessoa</label>
-              <input id="nomeNoivo" type="text" value="Nome Noivo">
+              <input id="nomeNoivo" type="text" value="Nome">
             </div>
 
             <div class="campo">
@@ -1053,7 +1039,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             </div>
 
             <div class="campo">
-              <label for="localCasamento">Local do casamento</label>
+              <label for="localCasamento">Local do casamento (nome exato)</label>
               <input id="localCasamento" type="text" value="Espaço para cerimônia">
             </div>
 
@@ -1063,7 +1049,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             </div>
 
             <div class="campo completo">
-              <label for="mapaCasamento">Link do Google Maps</label>
+              <label for="mapaCasamento">Link do Google Maps (opcional)</label>
               <input id="mapaCasamento" type="url" placeholder="https://maps.google.com/...">
             </div>
 
@@ -1082,7 +1068,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               <textarea id="historiaEdit">Toda grande história começa de alguma forma.
 Desde o nosso primeiro encontro, descobrimos que queríamos compartilhar a vida, os sonhos e os momentos especiais.
 Agora, queremos celebrar esse amor ao lado das pessoas que fazem parte da nossa história.
-
+Se puder, contribua para o nosso casamento, pois não haverá corte de gravata na festividade.
 Esperamos você para viver esse dia inesquecível conosco!</textarea>
             </div>
           </div>
@@ -1169,7 +1155,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
   ========================= -->
 
   <footer>
-    <p id="nomesRodape">Nome Noiva &amp; Nome Noivo</p>
+    <p id="nomesRodape">Nome  &amp; Nome </p>
     <p>Feito com amor para celebrar um dia especial.</p>
     <p>Info Clothing</p>
   </footer>
@@ -1184,6 +1170,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     let whatsappNoivos = "";
 
     const $ = (id) => document.getElementById(id);
+    // Identifica quando o convite está sendo acessado por um convidado.
+const parametrosURL = new URLSearchParams(window.location.search);
+
+const modoConvidado = parametrosURL.get("modo") === "convidado";
+
+
 
     const presentesSelecionados = [];
 
@@ -1199,27 +1191,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     // Guarda as URLs temporárias das imagens selecionadas.
     const urlsTemporarias = {};
 
-    /* =========================
-       MENU PARA CELULAR
-    ========================= */
-
-    $("menuToggle").addEventListener("click", function() {
-      const links = $("menuLinks");
-      const aberto = links.classList.toggle("aberto");
-
-      $("menuToggle").setAttribute("aria-expanded", String(aberto));
-      $("menuToggle").setAttribute(
-        "aria-label",
-        aberto ? "Fechar menu" : "Abrir menu"
-      );
-    });
-
-    document.querySelectorAll("#menuLinks a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        $("menuLinks").classList.remove("aberto");
-        $("menuToggle").setAttribute("aria-expanded", "false");
-      });
-    });
+    
 
     /* =========================
        ESCOLHER FOTOS
@@ -1254,7 +1226,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         const urlLocal = URL.createObjectURL(arquivo);
         urlsTemporarias[item.destino] = urlLocal;
 
-        $(item.destino).src = urlLocal;
+      if (item.destino === "capa") {
+    document.querySelector(".capa").style.background =
+        `linear-gradient(#24160b75, #24160b75), url("${urlLocal}") center/cover no-repeat`;
+} else {
+    $(item.destino).src = urlLocal;
+}
 
         // Limpa o link externo para deixar claro que a foto local está ativa.
         $(item.url).value = "";
@@ -1287,7 +1264,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
             delete urlsTemporarias[item.destino];
           }
 
-          $(item.destino).src = url.href;
+          if (item.destino === "capa") {
+    document.querySelector(".capa").style.background =
+        `linear-gradient(#24160b75, #24160b75), url("${url.href}") center/cover no-repeat`;
+} else {
+    $(item.destino).src = url.href;
+}
           $(item.campo).value = "";
 
           $("mensagemStatus").textContent =
@@ -1506,8 +1488,6 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         `Nome: ${nome}\n` +
         `Presença: ${presenca.value}\n` +
         `Número de crianças: ${criancas}\n` +
-        `E-mail: ${email}\n` +
-        `Telefone: ${telefone}\n` +
         `Mensagem: ${mensagemExtra || "Nenhuma"}\n\n` +
         `Casamento de ${$("nomesCapa").textContent}\n` +
         `Data: ${$("dataCapa").textContent}`;
@@ -1544,18 +1524,30 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
       const urlAtual = new URL(window.location.href);
 
       // Dados textuais podem ser compartilhados na URL.
-      const dados = {
-        nome1: $("nomeNoiva").value,
-        nome2: $("nomeNoivo").value,
-        data: $("dataCasamento").value,
-        hora: $("horaCasamento").value,
-        local: $("localCasamento").value,
-        traje: $("trajeCasamento").value,
-        mapa: $("mapaCasamento").value,
-        historia: $("historiaEdit").value
-      };
+     const dados = {
+
+    nome1: $("nomeNoiva").value,
+    nome2: $("nomeNoivo").value,
+
+    data: $("dataCasamento").value,
+    hora: $("horaCasamento").value,
+
+    local: $("localCasamento").value,
+    traje: $("trajeCasamento").value,
+
+    mapa: $("mapaCasamento").value,
+    historia: $("historiaEdit").value,
+
+    // WhatsApp necessário para a confirmação de presença.
+    whatsapp: $("whatsappNoivos").value
+
+}; 
 
       urlAtual.searchParams.set("convite", JSON.stringify(dados));
+
+// Define que o link compartilhado será aberto no modo convidado.
+urlAtual.searchParams.set("modo", "convidado");
+
 
       const link = urlAtual.href;
 
@@ -1589,6 +1581,27 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     /* =========================
        CARREGAR DADOS DO LINK
     ========================= */
+// ================================================
+// CONTROLE DE ACESSO AO CONVITE
+// ================================================
+
+function configurarModoConvite() {
+    const painel = $("personalizar");
+
+    if (modoConvidado) {
+        painel.style.display = "none";
+        painel.setAttribute("aria-hidden", "true");
+    } else {
+        painel.style.display = "";
+        painel.setAttribute("aria-hidden", "false");
+    }
+}
+
+
+
+
+
+
 
     function carregarConviteDoLink() {
       const parametros = new URLSearchParams(window.location.search);
@@ -1607,6 +1620,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         $("trajeCasamento").value = dados.traje || "";
         $("mapaCasamento").value = dados.mapa || "";
         $("historiaEdit").value = dados.historia || "";
+        $("whatsappNoivos").value = dados.whatsapp || "";
 
         aplicarPersonalizacao();
       } catch (erro) {
@@ -1614,8 +1628,14 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
       }
     }
 
-    carregarConviteDoLink();
-    atualizarCarrinho();
+    // Carrega as informações personalizadas do convite.
+carregarConviteDoLink();
+
+// Define se o acesso é dos noivos ou dos convidados.
+configurarModoConvite();
+
+// Atualiza o carrinho de presentes.
+atualizarCarrinho();
   </script>
 
 </body>
