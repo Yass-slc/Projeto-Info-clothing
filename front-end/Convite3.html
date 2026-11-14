@@ -1618,6 +1618,7 @@ const modoConvidado = parametrosURL.get("modo") === "convidado";
 
       try {
         aplicarPersonalizacao();
+
         const idConvite = gerarUuid();
         const dados = await prepararDadosDoConvite(idConvite);
 
@@ -1635,29 +1636,41 @@ const modoConvidado = parametrosURL.get("modo") === "convidado";
         urlCompartilhamento.searchParams.set("modo", "convidado");
         const link = urlCompartilhamento.href;
 
-        $("mensagemStatus").textContent = "Convite salvo! Preparando o compartilhamento...";
+        // Após as operações assíncronas, usamos cópia do link em vez da janela nativa.
+        let linkCopiado = false;
 
-        if (navigator.share) {
-          await navigator.share({
-            title: "Nosso convite de casamento",
-            text: "Você está convidado para o nosso casamento!",
-            url: link
-          });
-        } else if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(link);
-          alert("Convite salvo! O link foi copiado para compartilhar com os convidados.");
-        } else {
-          window.prompt("Convite salvo! Copie o link para enviar aos convidados:", link);
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(link);
+            linkCopiado = true;
+          } catch (erroClipboard) {
+            console.warn("Não foi possível copiar automaticamente o link:", erroClipboard);
+          }
         }
-        $("mensagemStatus").textContent = "Convite salvo e link preparado para compartilhar.";
+
+        if (linkCopiado) {
+          $("mensagemStatus").textContent =
+            "Convite salvo! Link copiado. Agora é só colar no WhatsApp e enviar aos convidados.";
+          alert(
+            "Convite salvo com sucesso!\n\n" +
+            "O link foi copiado. Abra o WhatsApp, entre na conversa desejada e cole o link."
+          );
+        } else {
+          $("mensagemStatus").textContent =
+            "Convite salvo! Copie o link exibido na janela para compartilhar.";
+          window.prompt(
+            "Convite salvo com sucesso! Copie este link e envie pelo WhatsApp:",
+            link
+          );
+        }
       } catch (erro) {
-        if (erro && erro.name === "AbortError") {
-          $("mensagemStatus").textContent = "Convite salvo. O compartilhamento foi cancelado; você pode clicar novamente para gerar outro link.";
-        } else {
-          console.error("Erro ao compartilhar convite:", erro);
-          $("mensagemStatus").textContent = erro.message || "Ocorreu um erro ao salvar o convite.";
-          alert(erro.message || "Não foi possível salvar o convite. Confira sua conexão e a configuração do Supabase.");
-        }
+        console.error("Erro ao salvar convite:", erro);
+        $("mensagemStatus").textContent =
+          erro.message || "Ocorreu um erro ao salvar o convite.";
+        alert(
+          erro.message ||
+          "Não foi possível salvar o convite. Confira sua conexão e a configuração do Supabase."
+        );
       } finally {
         botao.disabled = false;
         botao.textContent = "Compartilhar convite";
