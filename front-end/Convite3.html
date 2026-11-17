@@ -19,6 +19,29 @@
        CONFIGURAÇÕES GERAIS
     ========================= */
 
+/*PARA CELULARES*/
+@media (max-width: 768px){
+
+  header{
+    padding-top: 5px;
+  }
+
+  .logo-container{
+    position: absolute;
+    left: 54%;
+    transform: translateX(-50%);
+    margin-top: -3px;
+    
+  }
+  .button2{
+    font-size: 16px;
+  }
+
+  .logo{
+    height: 105px;
+
+  }}
+
     :root {
       --bege: #DAC8B3;
       --marrom: #804423;
@@ -766,22 +789,18 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
 
         <div class="detalhes">
           <article class="detalhe">
-            <div class="simbolo">📅</div>
+            <div class="simbolo">📅 🕦</div>
             <h3>Data e horário</h3>
             <p id="dataDetalhe">20 de dezembro de 2026</p>
             <p id="horaDetalhe">16h00</p>
           </article>
 
           <article class="detalhe">
-            <div class="simbolo">📍</div>
+            <div class="simbolo">📍 ⛪</div>
             <h3>Local</h3>
             <p id="localDetalhe">Espaço para cerimônia</p>
 
-            <p>
-              <a id="linkMapa" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
-                Ver localização
-              </a>
-            </p>
+          
           </article>
 
           <article class="detalhe">
@@ -790,18 +809,17 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             <p id="trajeDetalhe">Esporte Fino</p>
           </article>
         </div>
-
-        <p style="text-align:center; margin-top:25px;">
-          <a
-            class="botao"
-            href="https://www.waze.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            id="linkWaze"
-          >
-            Abrir Waze
-          </a>
-        </p>
+<p style="text-align:center; margin-top:25px;">
+  <a
+    class="botao"
+    href="https://maps.google.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="linkAbrirMapa"
+  >
+    Abrir no mapa
+  </a>
+</p>
       </div>
     </section>
 
@@ -1349,36 +1367,32 @@ const modoConvidado = parametrosURL.get("modo") === "convidado";
 
       $("textoHistoria").textContent = historia;
 
-      const linkMapa = $("mapaCasamento").value.trim();
+       const linkMapa = $("mapaCasamento").value.trim();
 
-      if (linkMapa) {
-        try {
-          const url = new URL(linkMapa);
+if (linkMapa) {
+  try {
+    const url = new URL(linkMapa);
 
-          if (!["http:", "https:"].includes(url.protocol)) {
-            throw new Error("Link inválido");
-          }
+    if (!["http:", "https:"].includes(url.protocol)) {
+      throw new Error("Link inválido");
+    }
 
-          $("linkMapa").href = url.href;
-          $("linkWaze").href =
-            "https://www.waze.com/ul?ll=" +
-            encodeURIComponent(local) +
-            "&navigate=yes";
-        } catch (erro) {
-          alert("O link do mapa precisa ser um endereço HTTP ou HTTPS válido.");
-          $("linkMapa").href = "https://maps.google.com/";
-          $("linkWaze").href = "https://www.waze.com/";
-        }
-      } else {
-        $("linkMapa").href =
-          "https://www.google.com/maps/search/?api=1&query=" +
-          encodeURIComponent(local);
+    $("linkMapa").href = url.href;
 
-        $("linkWaze").href =
-          "https://www.waze.com/ul?q=" +
-          encodeURIComponent(local) +
-          "&navigate=yes";
-      }
+  } catch (erro) {
+    alert("O link do mapa precisa ser um endereço HTTP ou HTTPS válido.");
+    $("linkMapa").href = "https://maps.google.com/";
+  }
+
+} else {
+  $("linkMapa").href =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(local);
+}
+
+// O botão inferior recebe exatamente o mesmo link do botão superior.
+$("linkAbrirMapa").href = $("linkMapa").href;
+
 
       whatsappNoivos = $("whatsappNoivos").value.replace(/\D/g, "");
 
@@ -1605,77 +1619,121 @@ const modoConvidado = parametrosURL.get("modo") === "convidado";
 
       return dados;
     }
+$("compartilharConvite").addEventListener("click", async function() {
+  if (window.location.protocol === "file:") {
+    alert("Publique o site no Vercel antes de compartilhar o convite.");
+    return;
+  }
 
-    $("compartilharConvite").addEventListener("click", async function() {
-      if (window.location.protocol === "file:") {
-        alert("Publique o site no Vercel antes de compartilhar o convite.");
-        return;
+  // Abre uma aba durante o clique para evitar bloqueio do navegador.
+  const janelaWhatsApp = window.open("about:blank", "_blank");
+
+  const botao = $("compartilharConvite");
+  botao.disabled = true;
+  botao.textContent = "Salvando convite...";
+
+  $("mensagemStatus").textContent =
+    "Salvando o convite para preparar o WhatsApp...";
+
+  try {
+    aplicarPersonalizacao();
+
+    const idConvite = gerarUuid();
+    const dados = await prepararDadosDoConvite(idConvite);
+
+    $("mensagemStatus").textContent =
+      "Salvando as informações do convite...";
+
+    const { error: erroBanco } = await supabaseClient
+      .from("convites")
+      .insert([{ id: idConvite, dados: dados }]);
+
+    if (erroBanco) {
+      throw new Error(
+        `Não foi possível salvar o convite: ${erroBanco.message}`
+      );
+    }
+
+    const urlCompartilhamento = new URL(
+      window.location.pathname,
+      window.location.origin
+    );
+
+    urlCompartilhamento.searchParams.set("id", idConvite);
+    urlCompartilhamento.searchParams.set("modo", "convidado");
+
+    const link = urlCompartilhamento.href;
+
+    const mensagemWhatsApp =
+      "Você está convidado para o nosso casamento! 💍\n\n" +
+      "Acesse nosso convite pelo link abaixo e confira todos os detalhes:\n" +
+      link;
+
+    const enderecoWhatsApp =
+      "https://wa.me/?text=" + encodeURIComponent(mensagemWhatsApp);
+
+    if (janelaWhatsApp && !janelaWhatsApp.closed) {
+      janelaWhatsApp.location.href = enderecoWhatsApp;
+
+      $("mensagemStatus").textContent =
+        "Convite salvo! Abrimos o WhatsApp com a mensagem e o link prontos. Escolha a conversa e envie.";
+
+    } else {
+      // Alternativa caso o navegador bloqueie a abertura do WhatsApp.
+      let linkCopiado = false;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(link);
+          linkCopiado = true;
+        } catch (erroClipboard) {
+          console.warn(
+            "Não foi possível copiar automaticamente o link:",
+            erroClipboard
+          );
+        }
       }
 
-      const botao = $("compartilharConvite");
-      botao.disabled = true;
-      botao.textContent = "Salvando convite...";
-
-      try {
-        aplicarPersonalizacao();
-
-        const idConvite = gerarUuid();
-        const dados = await prepararDadosDoConvite(idConvite);
-
-        $("mensagemStatus").textContent = "Salvando as informações do convite...";
-        const { error: erroBanco } = await supabaseClient
-          .from("convites")
-          .insert([{ id: idConvite, dados: dados }]);
-
-        if (erroBanco) {
-          throw new Error(`Não foi possível salvar o convite: ${erroBanco.message}`);
-        }
-
-        const urlCompartilhamento = new URL(window.location.pathname, window.location.origin);
-        urlCompartilhamento.searchParams.set("id", idConvite);
-        urlCompartilhamento.searchParams.set("modo", "convidado");
-        const link = urlCompartilhamento.href;
-
-        // Após as operações assíncronas, usamos cópia do link em vez da janela nativa.
-        let linkCopiado = false;
-
-        if (navigator.clipboard && window.isSecureContext) {
-          try {
-            await navigator.clipboard.writeText(link);
-            linkCopiado = true;
-          } catch (erroClipboard) {
-            console.warn("Não foi possível copiar automaticamente o link:", erroClipboard);
-          }
-        }
-
-        if (linkCopiado) {
-          $("mensagemStatus").textContent =
-            "Convite salvo! Link copiado. Agora é só colar no WhatsApp e enviar aos convidados.";
-          alert(
-            "Convite salvo com sucesso!\n\n" +
-            "O link foi copiado. Abra o WhatsApp, entre na conversa desejada e cole o link."
-          );
-        } else {
-          $("mensagemStatus").textContent =
-            "Convite salvo! Copie o link exibido na janela para compartilhar.";
-          window.prompt(
-            "Convite salvo com sucesso! Copie este link e envie pelo WhatsApp:",
-            link
-          );
-        }
-      } catch (erro) {
-        console.error("Erro ao salvar convite:", erro);
+      if (linkCopiado) {
         $("mensagemStatus").textContent =
-          erro.message || "Ocorreu um erro ao salvar o convite.";
+          "Convite salvo, mas o navegador bloqueou a abertura do WhatsApp. O link foi copiado.";
+
         alert(
-          erro.message ||
-          "Não foi possível salvar o convite. Confira sua conexão e a configuração do Supabase."
+          "O convite foi salvo, mas o navegador bloqueou a abertura do WhatsApp.\n\n" +
+          "O link foi copiado. Cole-o no WhatsApp ou permita pop-ups para abrir automaticamente."
         );
-      } finally {
-        botao.disabled = false;
-        botao.textContent = "Compartilhar convite";
+
+      } else {
+        $("mensagemStatus").textContent =
+          "Convite salvo, mas o navegador bloqueou a abertura do WhatsApp.";
+
+        window.prompt(
+          "Convite salvo! Copie o link para enviar pelo WhatsApp:",
+          link
+        );
       }
-    });
+    }
+
+  } catch (erro) {
+    if (janelaWhatsApp && !janelaWhatsApp.closed) {
+      janelaWhatsApp.close();
+    }
+
+    console.error("Erro ao salvar convite:", erro);
+
+    $("mensagemStatus").textContent =
+      erro.message || "Ocorreu um erro ao salvar o convite.";
+
+    alert(
+      erro.message ||
+      "Não foi possível salvar o convite. Confira sua conexão e a configuração do Supabase."
+    );
+
+  } finally {
+    botao.disabled = false;
+    botao.textContent = "Compartilhar convite";
+  }
+});
 
     /* =========================
        CARREGAR DADOS DO CONVITE

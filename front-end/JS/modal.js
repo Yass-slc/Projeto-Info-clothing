@@ -351,7 +351,7 @@ const fotosVeus = {
 
   italiano: [
     "https://http2.mlstatic.com/D_NQ_NP_920576-MLB90548579170_082025-O-terno-masculino-plus-italiano-noivo-poliviscose-elastano.webp",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlR1vQqG5wCi-6AcwxcME5whkbON2FSkM0ksSQXfCmDgChNiGr9DHeHew&s=10",
+    "https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxvjg6pudpz328",
     "https://mazzinistore.com.br/cdn/shop/files/freepik__enhance__17179.png?v=1757945816&width=2000"
   ],
 
@@ -363,7 +363,7 @@ const fotosVeus = {
 
   meio_fraque: [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmWa8sSjxbslIjEY7HjdYq2o9F6Ga5D-7iUP627orAP_kDLyveQlwwR4bf&s=10",
-    "https://www.srestilo.com.br/arquivos/produtos/produto_capa-56.jpg",
+    "https://i.pinimg.com/originals/69/c4/47/69c447d55c912144ab65c83b3a1bb1b7.jpg",
     "https://rosesnoivas.com.br/wp-content/uploads/2024/08/TERNO-AZUL-SERENITY-NOIVO-PADRINHO-2-scaled.jpg"
   ],
 
