@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/style.css">
+ 
+  <title>Lojas de Casamento Perto de Você</title>
+  
+</head>
+<body>
+
+  <h1>Lojas de Casamento Perto de Você</h1>
+  <p>Digite o que você procura e veja as lojas mais próximas de onde você está.</p>
+
+  <!-- Campo de busca com algumas sugestões -->
+  <input type="text" id="busca" list="sugestoes" placeholder="Ex: vestido de noiva">
+  <datalist id="sugestoes">
+    <option value="Vestido de noiva">
+    <option value="Terno para noivo">
+    <option value="Alianças de casamento">
+    <option value="Buquê de noiva">
+    <option value="Decoração de casamento">
+    <option value="Sapatos para noiva">
+    <option value="Convites de casamento">
+  </datalist>
+  <button onclick="buscarLojas()">Buscar</button>
+
+  <p id="mensagem"></p>
+
+  <div id="mapa"></div>
+  <div id="lista"></div>
+
+ 
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #faf6f1;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #8b5e3c;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    input {
+      width: 260px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #8b5e3c;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #8b5e3c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6f4a2e;
+    }
+
+    #mapa {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      border: 2px solid #8b5e3c;
+      border-radius: 8px;
+    }
+
+    #lista {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .loja {
+      background-color: white;
+      border: 1px solid #e0d5c7;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+    }
+
+    .loja h3 {
+      margin: 0 0 5px 0;
+      color: #8b5e3c;
+    }
+
+    .loja p {
+      margin: 3px 0;
+      max-width: none;
+    }
+
+    .loja a {
+      color: #8b5e3c;
+    }
+  </style>
+
+<script src="./JS/localizacao.js"></script>
+</body>
+</html>
