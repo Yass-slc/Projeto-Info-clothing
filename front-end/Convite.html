@@ -19,6 +19,36 @@
        CONFIGURAÇÕES GERAIS
     ========================= */
 
+
+/* ==========================
+   CELULARES
+========================== */
+
+
+/*PARA CELULARES*/
+@media (max-width: 768px) {
+
+  header{
+    padding-top: 110px;
+  }
+
+  .logo-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -3px;
+    
+  }
+  .button2{
+    font-size: 14px;
+  }
+
+  .logo{
+    height: 70px;
+
+  }
+}
+
     :root {
       --bege: #DAC8B3;
       --marrom: #804423;
@@ -92,7 +122,7 @@
       display: inline-block;
       border: none;
       background: var(--marrom);
-      color: white;
+      color: #DAC8B3;
       padding: 12px 22px;
       border-radius: 5px;
       text-decoration: none;
@@ -104,61 +134,6 @@
       transform: translateY(-2px);
     }
 
-    /* =========================
-       MENU
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--branco);
-      box-shadow: 0 2px 8px #00000012;
-    }
-
-    .menu {
-      max-width: 1200px;
-      margin: auto;
-      padding: 24px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo {
-      color: var(--marrom);
-      font-family:initial;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .links a {
-      color: var(--marrom);
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    .menu-toggle {
-      display: none;
-      color: var(--marrom);
-      border: 1px solid var(--bege);
-      border-radius: 5px;
-      background: white;
-      padding: 5px 12px;
-      font-size: 25px;
-    }
 
     /* =========================
        CAPA
@@ -533,6 +508,9 @@
 
       .menu-toggle {
         display: block;
+        top: 50px;
+        
+        
       }
 
       .links {
@@ -613,6 +591,20 @@
         height: 280px;
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </style>
 </head>
 
@@ -621,35 +613,90 @@
   <!-- =========================
        MENU DE NAVEGAÇÃO
   ========================= -->
+ <header>
 
-  <header>
-    <nav class="menu">
+    <div class="mobile-header">
 
         <div class="logo-container">
             <a href="index.html"><img src="./Assets/IMG/logo png.png"
                 alt="Logo Info Clothing"
                 class="logo"></a>
         </div>
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
 
-      <div class="links" id="menuLinks">
-        <a href="#inicio">Início</a>
-        <a href="#historia">Nossa história</a>
-        <a href="#galeria">Fotos</a>
-        <a href="#detalhes">Detalhes</a>
-        <a href="#presentes">Presentes</a>
-        <a href="#confirmacao">Confirmar presença</a>
-      </div>
+        <div class="menu-mobile" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+
+    <nav id="Topo">
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <button>Início</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="inicio.html">
+                    <button>Vestidos</button>
+                </a>
+            </li>
+
+            <li>
+                <div class="paste-button">
+                    <button class="button2">
+                        Acessórios ▼
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="acessorios.html">Feminino</a>
+                        <a href="noivoAcessório.html">Masculino</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="Ternos.html">
+                    <button>Ternos</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="contato.html">
+                    <button>Contato</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="sobre.html">
+                    <button>Sobre nós</button>
+                </a>
+            </li>
+           
+
+        </ul>
     </nav>
-  </header>
+
+</header>
+  <br>
+
+  <script>
+    function toggleMenu() {
+
+      const menu = document.querySelector("#Topo ul");
+
+      menu.classList.toggle("ativo");
+
+    }
+  </script>
+
+
+
+
+
+
 
   <main>
 
@@ -765,11 +812,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             <h3>Local</h3>
             <p id="localDetalhe">Espaço para cerimônia</p>
 
-            <p>
-              <a id="linkMapa" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
-                Ver localização
-              </a>
-            </p>
+           
           </article>
 
           <article class="detalhe">
@@ -779,17 +822,18 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
           </article>
         </div>
 
-        <p style="text-align:center; margin-top:25px;">
-          <a
-            class="botao"
-            href="https://www.waze.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            id="linkWaze"
-          >
-            Abrir Waze
-          </a>
-        </p>
+     <p style="text-align:center; margin-top:25px;">
+  <a
+    class="botao"
+    href="https://maps.google.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="linkAbrirMapa"
+  >
+    Abrir no mapa
+  </a>
+</p>
+       
       </div>
     </section>
 
@@ -824,7 +868,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               class="botao"
               type="button"
               data-presente="Ajuda para nosso lar"
-              data-preco="100"
+              data-preco="300"
             >
               Adicionar
             </button>
@@ -866,7 +910,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               class="botao"
               type="button"
               data-presente="Jantar romântico"
-              data-preco="150"
+              data-preco="100"
             >
               Adicionar
             </button>
@@ -1008,12 +1052,12 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
           <div class="painel-grid">
             <div class="campo">
               <label for="nomeNoiva">Nome da primeira pessoa</label>
-              <input id="nomeNoiva" type="text" value="Nome Noiva">
+              <input id="nomeNoiva" type="text" value="Nome">
             </div>
 
             <div class="campo">
               <label for="nomeNoivo">Nome da segunda pessoa</label>
-              <input id="nomeNoivo" type="text" value="Nome Noivo">
+              <input id="nomeNoivo" type="text" value="Nome">
             </div>
 
             <div class="campo">
@@ -1027,7 +1071,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             </div>
 
             <div class="campo">
-              <label for="localCasamento">Local do casamento</label>
+              <label for="localCasamento">Local do casamento (nome exato)</label>
               <input id="localCasamento" type="text" value="Espaço para cerimônia">
             </div>
 
@@ -1037,7 +1081,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
             </div>
 
             <div class="campo completo">
-              <label for="mapaCasamento">Link do Google Maps</label>
+              <label for="mapaCasamento">Link do Google Maps (opcional)</label>
               <input id="mapaCasamento" type="url" placeholder="https://maps.google.com/...">
             </div>
 
@@ -1056,7 +1100,7 @@ Esperamos você para viver esse dia inesquecível conosco!</p>
               <textarea id="historiaEdit">Toda grande história começa de alguma forma.
 Desde o nosso primeiro encontro, descobrimos que queríamos compartilhar a vida, os sonhos e os momentos especiais.
 Agora, queremos celebrar esse amor ao lado das pessoas que fazem parte da nossa história.
-
+Se puder, contribua para o nosso casamento, pois não haverá corte de gravata na festividade.
 Esperamos você para viver esse dia inesquecível conosco!</textarea>
             </div>
           </div>
@@ -1143,7 +1187,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
   ========================= -->
 
   <footer>
-    <p id="nomesRodape">Nome Noiva &amp; Nome Noivo</p>
+    <p id="nomesRodape">Nome  &amp; Nome </p>
     <p>Feito com amor para celebrar um dia especial.</p>
     <p>Info Clothing</p>
   </footer>
@@ -1158,6 +1202,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     let whatsappNoivos = "";
 
     const $ = (id) => document.getElementById(id);
+    // Identifica quando o convite está sendo acessado por um convidado.
+const parametrosURL = new URLSearchParams(window.location.search);
+
+const modoConvidado = parametrosURL.get("modo") === "convidado";
+
+
 
     const presentesSelecionados = [];
 
@@ -1173,27 +1223,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     // Guarda as URLs temporárias das imagens selecionadas.
     const urlsTemporarias = {};
 
-    /* =========================
-       MENU PARA CELULAR
-    ========================= */
-
-    $("menuToggle").addEventListener("click", function() {
-      const links = $("menuLinks");
-      const aberto = links.classList.toggle("aberto");
-
-      $("menuToggle").setAttribute("aria-expanded", String(aberto));
-      $("menuToggle").setAttribute(
-        "aria-label",
-        aberto ? "Fechar menu" : "Abrir menu"
-      );
-    });
-
-    document.querySelectorAll("#menuLinks a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        $("menuLinks").classList.remove("aberto");
-        $("menuToggle").setAttribute("aria-expanded", "false");
-      });
-    });
+    
 
     /* =========================
        ESCOLHER FOTOS
@@ -1228,7 +1258,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         const urlLocal = URL.createObjectURL(arquivo);
         urlsTemporarias[item.destino] = urlLocal;
 
-        $(item.destino).src = urlLocal;
+      if (item.destino === "capa") {
+    document.querySelector(".capa").style.background =
+        `linear-gradient(#24160b75, #24160b75), url("${urlLocal}") center/cover no-repeat`;
+} else {
+    $(item.destino).src = urlLocal;
+}
 
         // Limpa o link externo para deixar claro que a foto local está ativa.
         $(item.url).value = "";
@@ -1261,7 +1296,12 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
             delete urlsTemporarias[item.destino];
           }
 
-          $(item.destino).src = url.href;
+          if (item.destino === "capa") {
+    document.querySelector(".capa").style.background =
+        `linear-gradient(#24160b75, #24160b75), url("${url.href}") center/cover no-repeat`;
+} else {
+    $(item.destino).src = url.href;
+}
           $(item.campo).value = "";
 
           $("mensagemStatus").textContent =
@@ -1315,34 +1355,31 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
 
       const linkMapa = $("mapaCasamento").value.trim();
 
-      if (linkMapa) {
-        try {
-          const url = new URL(linkMapa);
+if (linkMapa) {
+  try {
+    const url = new URL(linkMapa);
 
-          if (!["http:", "https:"].includes(url.protocol)) {
-            throw new Error("Link inválido");
-          }
+    if (!["http:", "https:"].includes(url.protocol)) {
+      throw new Error("Link inválido");
+    }
 
-          $("linkMapa").href = url.href;
-          $("linkWaze").href =
-            "https://www.waze.com/ul?ll=" +
-            encodeURIComponent(local) +
-            "&navigate=yes";
-        } catch (erro) {
-          alert("O link do mapa precisa ser um endereço HTTP ou HTTPS válido.");
-          $("linkMapa").href = "https://maps.google.com/";
-          $("linkWaze").href = "https://www.waze.com/";
-        }
-      } else {
-        $("linkMapa").href =
-          "https://www.google.com/maps/search/?api=1&query=" +
-          encodeURIComponent(local);
+    $("linkMapa").href = url.href;
 
-        $("linkWaze").href =
-          "https://www.waze.com/ul?q=" +
-          encodeURIComponent(local) +
-          "&navigate=yes";
-      }
+  } catch (erro) {
+    alert("O link do mapa precisa ser um endereço HTTP ou HTTPS válido.");
+    $("linkMapa").href = "https://maps.google.com/";
+  }
+
+} else {
+  $("linkMapa").href =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(local);
+}
+
+// O botão inferior recebe exatamente o mesmo link do botão superior.
+$("linkAbrirMapa").href = $("linkMapa").href;
+
+      
 
       whatsappNoivos = $("whatsappNoivos").value.replace(/\D/g, "");
 
@@ -1480,8 +1517,6 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         `Nome: ${nome}\n` +
         `Presença: ${presenca.value}\n` +
         `Número de crianças: ${criancas}\n` +
-        `E-mail: ${email}\n` +
-        `Telefone: ${telefone}\n` +
         `Mensagem: ${mensagemExtra || "Nenhuma"}\n\n` +
         `Casamento de ${$("nomesCapa").textContent}\n` +
         `Data: ${$("dataCapa").textContent}`;
@@ -1511,58 +1546,146 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
     /* =========================
        COMPARTILHAR CONVITE
     ========================= */
+$("compartilharConvite").addEventListener("click", async function() {
+  if (window.location.protocol === "file:") {
+    alert("Publique o site no Vercel antes de compartilhar o convite.");
+    return;
+  }
 
-    $("compartilharConvite").addEventListener("click", async function() {
-      aplicarPersonalizacao();
+  // Abre uma aba durante o clique para evitar bloqueio do navegador.
+  const janelaWhatsApp = window.open("about:blank", "_blank");
 
-      const urlAtual = new URL(window.location.href);
+  const botao = $("compartilharConvite");
+  botao.disabled = true;
+  botao.textContent = "Salvando convite...";
 
-      // Dados textuais podem ser compartilhados na URL.
-      const dados = {
-        nome1: $("nomeNoiva").value,
-        nome2: $("nomeNoivo").value,
-        data: $("dataCasamento").value,
-        hora: $("horaCasamento").value,
-        local: $("localCasamento").value,
-        traje: $("trajeCasamento").value,
-        mapa: $("mapaCasamento").value,
-        historia: $("historiaEdit").value
-      };
+  $("mensagemStatus").textContent =
+    "Salvando o convite para preparar o WhatsApp...";
 
-      urlAtual.searchParams.set("convite", JSON.stringify(dados));
+  try {
+    aplicarPersonalizacao();
 
-      const link = urlAtual.href;
+    const idConvite = gerarUuid();
+    const dados = await prepararDadosDoConvite(idConvite);
 
-      if (window.location.protocol === "file:") {
-        alert(
-          "Para compartilhar o convite com outras pessoas, publique o site primeiro, por exemplo, no Vercel."
-        );
-        return;
-      }
+    $("mensagemStatus").textContent =
+      "Salvando as informações do convite...";
 
-      try {
-        if (navigator.share) {
-          await navigator.share({
-            title: "Nosso convite de casamento",
-            text: "Você está convidado para o nosso casamento!",
-            url: link
-          });
-        } else if (navigator.clipboard && window.isSecureContext) {
+    const { error: erroBanco } = await supabaseClient
+      .from("convites")
+      .insert([{ id: idConvite, dados: dados }]);
+
+    if (erroBanco) {
+      throw new Error(
+        `Não foi possível salvar o convite: ${erroBanco.message}`
+      );
+    }
+
+    const urlCompartilhamento = new URL(
+      window.location.pathname,
+      window.location.origin
+    );
+
+    urlCompartilhamento.searchParams.set("id", idConvite);
+    urlCompartilhamento.searchParams.set("modo", "convidado");
+
+    const link = urlCompartilhamento.href;
+
+    const mensagemWhatsApp =
+      "Você está convidado para o nosso casamento! 💍\n\n" +
+      "Acesse nosso convite pelo link abaixo e confira todos os detalhes:\n" +
+      link;
+
+    const enderecoWhatsApp =
+      "https://wa.me/?text=" + encodeURIComponent(mensagemWhatsApp);
+
+    if (janelaWhatsApp && !janelaWhatsApp.closed) {
+      janelaWhatsApp.location.href = enderecoWhatsApp;
+
+      $("mensagemStatus").textContent =
+        "Convite salvo! Abrimos o WhatsApp com a mensagem e o link prontos. Escolha a conversa e envie.";
+
+    } else {
+      // Alternativa caso o navegador bloqueie a abertura do WhatsApp.
+      let linkCopiado = false;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
           await navigator.clipboard.writeText(link);
-          alert("Link do convite copiado!");
-        } else {
-          window.prompt("Copie o link do convite:", link);
-        }
-      } catch (erro) {
-        if (erro.name !== "AbortError") {
-          alert("Não foi possível compartilhar automaticamente. Tente copiar o link.");
+          linkCopiado = true;
+        } catch (erroClipboard) {
+          console.warn(
+            "Não foi possível copiar automaticamente o link:",
+            erroClipboard
+          );
         }
       }
-    });
+
+      if (linkCopiado) {
+        $("mensagemStatus").textContent =
+          "Convite salvo, mas o navegador bloqueou a abertura do WhatsApp. O link foi copiado.";
+
+        alert(
+          "O convite foi salvo, mas o navegador bloqueou a abertura do WhatsApp.\n\n" +
+          "O link foi copiado. Cole-o no WhatsApp ou permita pop-ups para abrir automaticamente."
+        );
+
+      } else {
+        $("mensagemStatus").textContent =
+          "Convite salvo, mas o navegador bloqueou a abertura do WhatsApp.";
+
+        window.prompt(
+          "Convite salvo! Copie o link para enviar pelo WhatsApp:",
+          link
+        );
+      }
+    }
+
+  } catch (erro) {
+    if (janelaWhatsApp && !janelaWhatsApp.closed) {
+      janelaWhatsApp.close();
+    }
+
+    console.error("Erro ao salvar convite:", erro);
+
+    $("mensagemStatus").textContent =
+      erro.message || "Ocorreu um erro ao salvar o convite.";
+
+    alert(
+      erro.message ||
+      "Não foi possível salvar o convite. Confira sua conexão e a configuração do Supabase."
+    );
+
+  } finally {
+    botao.disabled = false;
+    botao.textContent = "Compartilhar convite";
+  }
+});
 
     /* =========================
        CARREGAR DADOS DO LINK
     ========================= */
+// ================================================
+// CONTROLE DE ACESSO AO CONVITE
+// ================================================
+
+function configurarModoConvite() {
+    const painel = $("personalizar");
+
+    if (modoConvidado) {
+        painel.style.display = "none";
+        painel.setAttribute("aria-hidden", "true");
+    } else {
+        painel.style.display = "";
+        painel.setAttribute("aria-hidden", "false");
+    }
+}
+
+
+
+
+
+
 
     function carregarConviteDoLink() {
       const parametros = new URLSearchParams(window.location.search);
@@ -1581,6 +1704,7 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
         $("trajeCasamento").value = dados.traje || "";
         $("mapaCasamento").value = dados.mapa || "";
         $("historiaEdit").value = dados.historia || "";
+        $("whatsappNoivos").value = dados.whatsapp || "";
 
         aplicarPersonalizacao();
       } catch (erro) {
@@ -1588,8 +1712,14 @@ Esperamos você para viver esse dia inesquecível conosco!</textarea>
       }
     }
 
-    carregarConviteDoLink();
-    atualizarCarrinho();
+    // Carrega as informações personalizadas do convite.
+carregarConviteDoLink();
+
+// Define se o acesso é dos noivos ou dos convidados.
+configurarModoConvite();
+
+// Atualiza o carrinho de presentes.
+atualizarCarrinho();
   </script>
 
 </body>
