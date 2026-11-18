@@ -1,3 +1,43 @@
+const navigation = document.querySelector("#Topo ul");
+
+if (navigation && !navigation.querySelector('a[href="Localizacao.html"]')) {
+  const item = document.createElement("li");
+  const link = document.createElement("a");
+  const button = document.createElement("button");
+
+  link.href = "Localizacao.html";
+  button.textContent = "Localização";
+  link.append(button);
+  item.append(link);
+  navigation.append(item);
+}
+
+const mobileMenuToggle = document.querySelector(".menu-mobile");
+
+if (mobileMenuToggle) {
+  mobileMenuToggle.setAttribute("role", "button");
+  mobileMenuToggle.setAttribute("tabindex", "0");
+  mobileMenuToggle.setAttribute("aria-controls", "Topo");
+  mobileMenuToggle.setAttribute("aria-expanded", "false");
+  mobileMenuToggle.setAttribute("aria-label", "Abrir menu");
+
+  mobileMenuToggle.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+
+    event.preventDefault();
+    window.toggleMenu();
+  });
+}
+
+window.toggleMenu = function () {
+  const menu = document.querySelector("#Topo ul");
+  if (!menu) return;
+
+  const isOpen = menu.classList.toggle("ativo");
+  mobileMenuToggle?.setAttribute("aria-expanded", String(isOpen));
+  mobileMenuToggle?.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+};
+
 function setMenuOpen(menu, isOpen) {
   menu.classList.toggle("is-open", isOpen);
   menu.classList.toggle("line-dismissed", !isOpen);
