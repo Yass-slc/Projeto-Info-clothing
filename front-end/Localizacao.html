@@ -3,114 +3,1256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./CSS/style.css">
- 
   <title>Lojas de Casamento Perto de Você</title>
-  
-</head>
-<body>
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+  <script src="./JS/dropdown.js" defer></script>
+  <link rel="icon" href="./Assets/IMG/favicon.ico" type="image/x-icon">
 
-  <h1>Lojas de Casamento Perto de Você</h1>
-  <p>Digite o que você procura e veja as lojas mais próximas de onde você está.</p>
+  <!-- Abre as conexões com os serviços do mapa antes de precisar deles -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
+  <link rel="preconnect" href="https://overpass-api.de" crossorigin>
+  <link rel="preconnect" href="https://router.project-osrm.org" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 
-  <!-- Campo de busca com algumas sugestões -->
-  <input type="text" id="busca" list="sugestoes" placeholder="Ex: vestido de noiva">
-  <datalist id="sugestoes">
-    <option value="Vestido de noiva">
-    <option value="Terno para noivo">
-    <option value="Alianças de casamento">
-    <option value="Buquê de noiva">
-    <option value="Decoração de casamento">
-    <option value="Sapatos para noiva">
-    <option value="Convites de casamento">
-  </datalist>
-  <button onclick="buscarLojas()">Buscar</button>
 
-  <p id="mensagem"></p>
 
-  <div id="mapa"></div>
-  <div id="lista"></div>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
- 
-    <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #faf6f1;
+      background-color: #ffffff;
       color: #333;
-      text-align: center;
       margin: 0;
-      padding: 20px;
     }
 
-    h1 {
-      color: #8b5e3c;
+    /* Cabeçalho */
+    header2 {
+      text-align: center;
+      padding: 30px 15px 10px 15px;
     }
 
-    p {
-      max-width: 600px;
-      margin: 10px auto;
+    header2 h1 {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      color: #5c3d2e;
+      margin: 0 0 8px 0;
     }
 
-    input {
-      width: 260px;
-      padding: 12px;
+    header2 p {
+      margin: 0;
+      color: #777;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    /* Barra de pesquisa com menu */
+    .barra {
+      display: flex;
+      gap: 10px;
+    }
+
+    .entrada {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .entrada input {
+      width: 100%;
+      padding: 14px 85px 14px 18px;
       font-size: 16px;
-      border: 1px solid #8b5e3c;
-      border-radius: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
     }
 
-    button {
-      background-color: #8b5e3c;
-      color: white;
+    .entrada input:focus {
+      border-color: #5c3d2e;
+    }
+
+    /* Setinha */
+    .seta {
+      position: absolute;
+      right: 5px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+      background: none;
       border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 6px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .seta::after {
+      content: "";
+      display: block;
+      width: 7px;
+      height: 7px;
+      margin: 0 auto;
+      position: relative;
+      top: -2px;
+      border-right: 1.5px solid #a08a7c;
+      border-bottom: 1.5px solid #a08a7c;
+      transform: rotate(45deg);
+    }
+
+    .seta:hover {
+      background: none;
+    }
+
+    .seta:hover::after {
+      border-color: #5c3d2e;
+    }
+
+    /* X para limpar a pesquisa (só aparece quando tem texto) */
+    .x {
+      display: none;
+      position: absolute;
+      right: 45px;
+      top: 15px;
+      width: 36px;
+      height: 40px;
+      background: none;
+      border: none;
+      color: #a08a7c;
+      font-size: 22px;
+      line-height: 1;
+      padding: 0;
       cursor: pointer;
     }
 
-    button:hover {
-      background-color: #6f4a2e;
+    .x.visivel {
+      display: block;
+    }
+
+    .x:hover {
+      background: none;
+      color: #5c3d2e;
+    }
+
+    /* Menu que desce */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      max-height: 320px;
+      overflow-y: auto;
+      z-index: 2000;
+    }
+
+    .menu.aberto {
+      display: block;
+    }
+
+    .menu .grupo {
+      background-color: #f5efe9;
+      color: #5c3d2e;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 8px 16px;
+    }
+
+    .menu .opcao {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu .opcao:hover {
+      background-color: #faf6f1;
+    }
+
+    button2 {
+      background-color: #5c3d2e;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button2:hover {
+      background-color: #43291d;
+    }
+
+    #mensagem {
+      margin: 18px 0 10px 0;
+      font-weight: bold;
+      color: #5c3d2e;
+    }
+
+    /* Botões do mapa */
+    .barra-mapa {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .barra-mapa button2 {
+      background-color: white;
+      color: #5c3d2e;
+      border: 1px solid #c9b8a8;
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+
+    .barra-mapa button2:hover {
+      background-color: #f5efe9;
+    }
+
+    /* O texto da rota fica numa linha só dele, em cima dos dois botões */
+    #rota {
+      order: -1;
+      width: 100%;
+      min-height: 20px;
+      font-size: 15px;
+      color: #1a5fb4;
     }
 
     #mapa {
       width: 100%;
-      max-width: 800px;
       height: 400px;
-      margin: 20px auto;
-      border: 2px solid #8b5e3c;
       border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
+    .leaflet-control-attribution {
+      font-size: 10px;
+    }
+
+    /* Lista de lojas */
     #lista {
-      max-width: 700px;
-      margin: 20px auto;
-      text-align: left;
+      margin-top: 20px;
     }
 
     .loja {
-      background-color: white;
-      border: 1px solid #e0d5c7;
+      display: flex;
+      border: 1px solid #e5ddd5;
       border-radius: 8px;
-      padding: 12px 16px;
-      margin-bottom: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
     }
 
-    .loja h3 {
-      margin: 0 0 5px 0;
-      color: #8b5e3c;
+    .foto {
+      position: relative;
+      width: 190px;
+      min-height: 170px;
+      flex-shrink: 0;
+      background-color: #e9dccf;
     }
 
-    .loja p {
-      margin: 3px 0;
-      max-width: none;
+    .foto img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .loja a {
-      color: #8b5e3c;
+    .info {
+      padding: 14px 16px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .info h3 {
+      margin: 0 0 6px 0;
+      color: #5c3d2e;
+      font-family: Georgia, serif;
+      word-wrap: break-word;
+    }
+
+    .tipo {
+      display: inline-block;
+      background-color: #f1e4d6;
+      color: #5c3d2e;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .info p {
+      margin: 4px 0;
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+
+    .info .descricao {
+      color: #666;
+    }
+
+    .info button2 {
+      margin-top: 8px;
+      padding: 9px 16px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #1a5fb4;
+    }
+
+    /* Celular */
+    @media (max-width: 600px) {
+      header2 h1 {
+        font-size: 24px;
+      }
+
+      .barra {
+        flex-direction: column;
+      }
+
+      .barra > button {
+        width: 100%;
+      }
+
+      #mapa {
+        height: 320px;
+      }
+
+      .loja {
+        flex-direction: column;
+      }
+
+      .foto {
+        width: 100%;
+        min-height: 160px;
+      }
+
+      .info button {
+        width: 100%;
+      }
     }
   </style>
+</head>
 
-<script src="./JS/localizacao.js"></script>
+
+<body style="background-color: #DAC8B3; text-align: center">
+
+
+<header>
+
+    <div class="mobile-header">
+
+        <div class="logo-container">
+            <a href="index.html"><img src="./Assets/IMG/logo png.png"
+                alt="Logo Info Clothing"
+                class="logo"></a>
+        </div>
+
+        <div class="menu-mobile" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+
+    <nav id="Topo">
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <button>Início</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="inicio.html">
+                    <button>Vestidos</button>
+                </a>
+            </li>
+
+            <li>
+                <div class="paste-button">
+                    <button class="button2">
+                        Acessórios ▼
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="acessorios.html">Feminino</a>
+                        <a href="noivoAcessório.html">Masculino</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="Ternos.html">
+                    <button>Ternos</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="contato.html">
+                    <button>Contato</button>
+                </a>
+            </li>
+
+            <li>
+                <a href="sobre.html">
+                    <button>Sobre nós</button>
+                </a>
+            </li>
+            <li>
+              <a href="Localizacao.html">
+                <button>Localização</button>
+              </a>
+            </li>
+       </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+
+
+  <header2>
+    <h1>Lojas de Casamento Perto de Você</h1>
+    <p>Encontre onde comprar o que você precisa para o grande dia.</p>
+  </header2>
+
+  <main>
+
+    <!-- Barra de pesquisa -->
+    <div class="barra">
+      <div class="entrada" id="entrada">
+        <input type="text" id="busca" placeholder="O que você procura? Ex: vestido de noiva"
+               onkeydown="if (event.key == 'Enter') buscarLojas()" oninput="mostrarX()">
+        <button2 class="x" id="botaoX" onmousedown="event.preventDefault()" onclick="limparPesquisa(event)" aria-label="Limpar pesquisa">×</button2>
+        <button2 class="seta" onclick="alternarMenu()" aria-label="Ver opções"></button2>
+
+        <!-- Menu com as opções -->
+        <div class="menu" id="menu">
+          <div class="grupo">Para a noiva</div>
+          <div class="opcao" onclick="escolher('vestido de noiva')">Vestidos de noiva</div>
+          <div class="opcao" onclick="escolher('sapato de noiva')">Sapatos de noiva</div>
+          <div class="opcao" onclick="escolher('acessórios para noiva')">Acessórios para noiva</div>
+          <div class="opcao" onclick="escolher('buquê de noiva')">Buquê</div>
+
+          <div class="grupo">Para o noivo</div>
+          <div class="opcao" onclick="escolher('terno para noivo')">Ternos</div>
+          <div class="opcao" onclick="escolher('sapato de noivo')">Sapatos de noivo</div>
+          <div class="opcao" onclick="escolher('acessórios para noivo')">Acessórios para noivo</div>
+
+          <div class="grupo">Cerimônia</div>
+          <div class="opcao" onclick="escolher('alianças')">Alianças</div>
+          <div class="opcao" onclick="escolher('decoração de casamento')">Decoração</div>
+        </div>
+      </div>
+
+      <button2 onclick="buscarLojas()">Buscar</button2>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <div class="barra-mapa">
+      <button2 onclick="centralizar()">Onde estou</button2>
+      <button2 onclick="limparRota()">Limpar rota</button2>
+      <span id="rota"></span>
+    </div>
+
+    <div id="mapa"></div>
+    <div id="lista"></div>
+  </main>
+
+  <script>
+    // Avisa na tela se a biblioteca do mapa não carregou
+    if (typeof L == "undefined") {
+      document.getElementById("mensagem").textContent =
+        "O mapa não carregou. Confira sua internet ou se alguma extensão está bloqueando o site.";
+    }
+
+    var mapa;
+    var minhaPosicao = null;
+    var marcadores = [];
+    var lojasAtuais = [];
+    var linhaRota = null;
+    var guardados = {}; // guarda buscas já feitas, para ficar mais rápido
+    var numeroBusca = 0; // ajuda a ignorar buscas antigas
+    var numeroRota = 0;  // ajuda a ignorar rotas antigas
+    var pedidosAtivos = { controladores: [], limite: null }; // buscas de lojas em andamento
+    var controladorRota = null; // rota em andamento
+
+    // Distâncias de busca em metros: começa perto e vai aumentando até achar lojas.
+    // Quanto maior o raio, mais pesada a consulta, por isso são só 3 etapas.
+    var raios = [5000, 10000, 25000];
+    var tempos = [8, 12, 15]; // segundos que o servidor pode gastar em cada etapa
+
+    // ----- Fonte dos dados das lojas -----
+    // Cole aqui sua chave gratuita do Geoapify (https://myprojects.geoapify.com).
+    // Com a chave preenchida, a busca usa o Geoapify (feito para sites e apps).
+    // Sem a chave, a página continua usando o Overpass, que é um serviço público
+    // compartilhado e costuma ficar sobrecarregado.
+    // Dica: no painel do Geoapify, restrinja a chave ao domínio do seu site.
+    var GEOAPIFY_KEY = "0beb3e05a97f4f84b7e63f1aafe56544";
+
+    // Acima desse raio, os filtros por nome (mais pesados) não são usados
+    var raioMaximoFiltroPorNome = 5000;
+
+    // Guarda as buscas no navegador por 12 horas, para não repetir a consulta
+    var validadeCache = 12 * 60 * 60 * 1000;
+
+    function lerCache(chave) {
+      if (guardados[chave]) {
+        return guardados[chave];
+      }
+      try {
+        var salvo = JSON.parse(localStorage.getItem("lojasCasamento:" + chave));
+        if (salvo && Date.now() - salvo.quando < validadeCache && salvo.lojas.length > 0) {
+          guardados[chave] = salvo.lojas;
+          return salvo.lojas;
+        }
+      } catch (erro) {
+        // sem localStorage (modo privado, por exemplo): segue sem cache salvo
+      }
+      return null;
+    }
+
+    function gravarCache(chave, lojas) {
+      guardados[chave] = lojas;
+      try {
+        localStorage.setItem("lojasCasamento:" + chave, JSON.stringify({ quando: Date.now(), lojas: lojas }));
+      } catch (erro) {
+        // ignora se não der para salvar
+      }
+    }
+
+    // Cancela as buscas de lojas que ainda estão esperando resposta
+    function cancelarPedidos() {
+      clearTimeout(pedidosAtivos.limite);
+      for (var i = 0; i < pedidosAtivos.controladores.length; i++) {
+        pedidosAtivos.controladores[i].abort();
+      }
+      pedidosAtivos = { controladores: [], limite: null };
+    }
+
+    // Cada categoria tem: nome, descrição, foto, palavras que a pessoa pode digitar
+    // e tipos de loja a procurar. A ordem importa: a primeira que combinar é a escolhida.
+    var categorias = [
+      {
+        nome: "Sapatos",
+        descricao: "Costuma vender sapatos e sapatilhas para a noiva, o noivo e o cortejo.",
+        foto: "imagens/sapatos.jpg",
+        palavras: ["sapato", "sapatilha", "scarpin"],
+        geoapify: "commercial.clothing.shoes",
+        filtros: ['["shop"="shoes"]']
+      },
+      {
+        nome: "Alianças e joias",
+        descricao: "Costuma vender alianças, anéis, brincos e colares para a cerimônia.",
+        foto: "imagens/joias.jpg",
+        palavras: ["alianca", "joia", "anel", "brinco", "colar"],
+        geoapify: "commercial.jewelry,commercial",
+        filtros: ['["shop"="jewelry"]']
+      },
+      {
+        nome: "Flores e buquê",
+        descricao: "Costuma vender buquês, arranjos e flores para a cerimônia e a festa.",
+        foto: "imagens/flores.jpg",
+        palavras: ["buque", "flor"],
+        geoapify: "commercial.florist,commercial",
+        filtros: ['["shop"="florist"]']
+      },
+      {
+        nome: "Acessórios",
+        descricao: "Costuma vender véus, gravatas, bolsas e outros detalhes para completar o look.",
+        foto: "imagens/acessorios.jpg",
+        palavras: ["acessorio", "gravata", "abotoadura", "cinto", "bolsa", "veu", "grinalda", "tiara"],
+        geoapify: "commercial.clothing.accessories,commercial.jewelry,commercial",
+        filtros: ['["shop"="fashion_accessories"]', '["shop"="jewelry"]', '["shop"="boutique"]',
+                  '["shop"="clothes"]["name"~"noiva|noivo|social|bridal",i]']
+      },
+      {
+        nome: "Ternos e trajes",
+        descricao: "Costuma vender ternos e trajes para o noivo e os padrinhos.",
+        foto: "imagens/ternos.jpg",
+        palavras: ["terno", "noivo", "traje", "padrinho", "smoking"],
+        geoapify: "commercial.clothing",
+        filtros: ['["shop"="tailor"]',
+                  '["shop"="clothes"]["name"~"terno|noivo|social|alfaiataria",i]']
+      },
+      {
+        nome: "Vestidos e noivas",
+        descricao: "Costuma vender vestidos de noiva, de madrinha e de daminha.",
+        foto: "imagens/vestidos.jpg",
+        palavras: ["vestido", "noiva", "madrinha", "daminha"],
+        geoapify: "commercial.clothing.women",
+        filtros: ['["shop"="wedding"]', '["shop"="bridal"]',
+                  '["shop"="clothes"]["name"~"noiva|noivas|bridal|vestido",i]']
+      },
+      {
+        nome: "Casamento em geral",
+        descricao: "Costuma oferecer produtos e serviços para casamentos e festas.",
+        foto: "imagens/casamento.jpg",
+        palavras: ["casamento", "cerimonia", "decoracao", "festa", "convite", "lembrancinha"],
+        geoapify: "commercial.wedding,commercial.florist,commercial.gift_and_souvenir",
+        filtros: ['["shop"="wedding"]', '["shop"="bridal"]', '["shop"="party"]', '["shop"="florist"]']
+      }
+    ];
+
+    // Cria o mapa (começa mostrando o Brasil)
+    mapa = L.map("mapa", { maxZoom: 19 }).setView([-14.2, -51.9], 4);
+
+    // Tira o nome "Leaflet" do canto, mas mantém o crédito do OpenStreetMap (obrigatório)
+    mapa.attributionControl.setPrefix(false);
+
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap",
+      maxZoom: 19
+    }).addTo(mapa);
+
+    // Pede a localização da pessoa
+    if (!navigator.geolocation) {
+      document.getElementById("mensagem").textContent = "Seu navegador não suporta localização.";
+    } else {
+      document.getElementById("mensagem").textContent = "Buscando sua localização...";
+      // Aceita uma posição de até 5 minutos atrás (bem mais rápido que esperar o GPS)
+      navigator.geolocation.getCurrentPosition(achouLocal, erroLocal, {
+        enableHighAccuracy: false,
+        timeout: 15000,
+        maximumAge: 300000
+      });
+    }
+
+    function achouLocal(posicao) {
+      minhaPosicao = {
+        lat: posicao.coords.latitude,
+        lng: posicao.coords.longitude
+      };
+
+      mapa.setView([minhaPosicao.lat, minhaPosicao.lng], 16);
+
+      // Bolinha azul mostra onde a pessoa está
+      L.circleMarker([minhaPosicao.lat, minhaPosicao.lng], {
+        radius: 9,
+        color: "white",
+        weight: 3,
+        fillColor: "#1a73e8",
+        fillOpacity: 1
+      }).addTo(mapa).bindPopup("Você está aqui");
+
+      document.getElementById("mensagem").textContent = "Pronto! Escolha ou digite o que você procura.";
+    }
+
+    function erroLocal(erro) {
+      var texto = "Não foi possível pegar sua localização.";
+
+      if (erro.code == 1) {
+        texto += " O acesso foi negado. Clique no cadeado ao lado do endereço, permita a localização e recarregue a página.";
+      } else if (erro.code == 2) {
+        texto += " Sua localização está indisponível. Confira se o GPS ou a localização do computador está ligado.";
+      } else if (erro.code == 3) {
+        texto += " Demorou demais. Recarregue a página e tente de novo.";
+      }
+
+      document.getElementById("mensagem").textContent = texto;
+    }
+
+    // ----- Menu da barra de pesquisa -----
+
+    function alternarMenu() {
+      document.getElementById("menu").classList.toggle("aberto");
+    }
+
+    function fecharMenu() {
+      document.getElementById("menu").classList.remove("aberto");
+    }
+
+    // Fecha o menu quando a pessoa clica fora dele
+    document.addEventListener("click", function (evento) {
+      if (!document.getElementById("entrada").contains(evento.target)) {
+        fecharMenu();
+      }
+    });
+
+    // Mostra o X só quando tem alguma coisa escrita no campo
+    function mostrarX() {
+      var botao = document.getElementById("botaoX");
+
+      if (document.getElementById("busca").value != "") {
+        botao.classList.add("visivel");
+      } else {
+        botao.classList.remove("visivel");
+      }
+    }
+
+    // Preenche o campo com a opção escolhida (com a primeira letra maiúscula)
+    // Só preenche o campo: a busca começa quando a pessoa clica em "Buscar" (ou aperta Enter)
+    function escolher(texto) {
+      var campo = document.getElementById("busca");
+      campo.value = texto.charAt(0).toUpperCase() + texto.slice(1);
+      mostrarX();
+      fecharMenu();
+      campo.focus();
+    }
+
+    // ----- Funções de apoio -----
+
+    // Tira acentos e deixa tudo minúsculo, para comparar mais fácil
+    function limpar(texto) {
+      return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    // Procura a categoria que combina com o que a pessoa digitou
+    function descobrirCategoria(texto) {
+      var limpo = limpar(texto);
+
+      for (var i = 0; i < categorias.length; i++) {
+        for (var j = 0; j < categorias[i].palavras.length; j++) {
+          if (limpo.includes(categorias[i].palavras[j])) {
+            return categorias[i];
+          }
+        }
+      }
+      return null; // não é sobre casamento
+    }
+
+    // Evita que caracteres especiais quebrem o HTML
+    function seguro(texto) {
+      return String(texto)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // Troca as abreviações em inglês do horário por português
+    function traduzirHorario(horario) {
+      var trocas = [["Mo", "Seg"], ["Tu", "Ter"], ["We", "Qua"], ["Th", "Qui"], ["Fr", "Sex"],
+                    ["Sa", "Sáb"], ["Su", "Dom"], ["PH", "feriados"], ["off", "fechado"]];
+
+      for (var i = 0; i < trocas.length; i++) {
+        horario = horario.split(trocas[i][0]).join(trocas[i][1]);
+      }
+      return horario;
+    }
+
+    // Calcula a distância em km entre dois pontos
+    function distancia(lat1, lng1, lat2, lng2) {
+      var raio = 6371;
+      var dLat = (lat2 - lat1) * Math.PI / 180;
+      var dLng = (lng2 - lng1) * Math.PI / 180;
+      var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLng / 2) * Math.sin(dLng / 2);
+      return raio * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    // ----- Botões do mapa -----
+
+    // Volta o mapa para a posição da pessoa
+    function centralizar() {
+      if (minhaPosicao == null) {
+        document.getElementById("mensagem").textContent = "Ainda não temos sua localização.";
+        return;
+      }
+      mapa.setView([minhaPosicao.lat, minhaPosicao.lng], 17);
+    }
+
+    function limparMarcadores() {
+      for (var i = 0; i < marcadores.length; i++) {
+        mapa.removeLayer(marcadores[i]);
+      }
+      marcadores = [];
+    }
+
+    function limparRota() {
+      numeroRota++; // se tinha uma rota sendo calculada, ela não aparece mais
+      if (controladorRota != null) {
+        controladorRota.abort();
+        controladorRota = null;
+      }
+      if (linhaRota != null) {
+        mapa.removeLayer(linhaRota);
+        linhaRota = null;
+      }
+      document.getElementById("rota").textContent = "";
+    }
+
+    // Apaga tudo da pesquisa: texto, lista, marcadores e rota
+    function limparPesquisa(evento) {
+      if (evento) {
+        evento.stopPropagation();
+      }
+
+      // Primeiro limpa o texto, antes de qualquer outra coisa
+      var campo = document.getElementById("busca");
+      campo.value = "";
+      mostrarX();
+
+      numeroBusca++; // se tinha uma busca em andamento, ela não aparece mais
+      cancelarPedidos(); // e para de esperar a resposta dos servidores
+      document.getElementById("lista").innerHTML = "";
+      lojasAtuais = [];
+      limparMarcadores();
+      limparRota();
+      fecharMenu();
+
+      if (minhaPosicao != null) {
+        document.getElementById("mensagem").textContent = "Pronto! Escolha ou digite o que você procura.";
+        mapa.setView([minhaPosicao.lat, minhaPosicao.lng], 16);
+      } else {
+        document.getElementById("mensagem").textContent = "";
+      }
+
+      campo.focus(); // deixa o cursor no campo, pronto para digitar de novo
+    }
+
+    // ----- Busca de lojas -----
+
+    function buscarLojas() {
+      var mensagem = document.getElementById("mensagem");
+      var texto = document.getElementById("busca").value;
+
+      fecharMenu();
+
+      if (texto == "") {
+        mensagem.textContent = "Digite ou escolha o que você procura.";
+        return;
+      }
+
+      if (minhaPosicao == null) {
+        mensagem.textContent = "Ainda não temos sua localização. Permita o acesso e recarregue a página.";
+        return;
+      }
+
+      // Só aceita buscas sobre casamento
+      var categoria = descobrirCategoria(texto);
+      if (categoria == null) {
+        mensagem.textContent = "Aqui você só pode buscar itens de casamento, como vestidos, ternos, sapatos, acessórios, alianças, buquê e decoração.";
+        return;
+      }
+
+      // Limpa o que tinha da busca anterior
+      numeroBusca++;
+      var idBusca = numeroBusca;
+      cancelarPedidos();
+      document.getElementById("lista").innerHTML = "";
+      lojasAtuais = [];
+      limparMarcadores();
+      limparRota();
+
+      // Se essa busca já foi feita (nesta página ou numa visita anterior), usa o resultado guardado
+      var chave = categoria.nome + minhaPosicao.lat.toFixed(2) + minhaPosicao.lng.toFixed(2);
+      var salvas = lerCache(chave);
+      if (salvas) {
+        mostrarLojas(salvas, categoria);
+        return;
+      }
+
+      mensagem.textContent = "Procurando lojas perto de você...";
+      procurar(categoria, 0, chave, idBusca);
+    }
+
+    // Procura lojas dentro de um raio. Se não achar nenhuma, tenta um raio maior.
+    function procurar(categoria, posicaoRaio, chave, idBusca) {
+      var mensagem = document.getElementById("mensagem");
+      var raio = raios[posicaoRaio];
+      if (GEOAPIFY_KEY) {
+  procurarGeoapify(
+    categoria,
+    posicaoRaio,
+    chave,
+    idBusca
+  );
+  return;
+}
+
+      // Buscas perto são rápidas; as longes ganham mais tempo
+      var tempo = tempos[posicaoRaio];
+
+      var consulta = "[out:json][timeout:" + tempo + "];(";
+      for (var j = 0; j < categoria.filtros.length; j++) {
+        // Filtro por nome (com ~) é pesado: só vale a pena em raios curtos
+        if (raio > raioMaximoFiltroPorNome && categoria.filtros[j].indexOf("~") != -1) {
+          continue;
+        }
+        consulta += "nwr" + categoria.filtros[j] + "(around:" + raio + "," + minhaPosicao.lat + "," + minhaPosicao.lng + ");";
+      }
+      // "qt" ordena por região do mapa (mais rápido que ordenar por número)
+      consulta += ");out center qt 300;";
+
+      // Pergunta para dois servidores ao mesmo tempo e usa o que responder primeiro
+      var servidores = [
+        "https://overpass-api.de/api/interpreter",
+        "https://overpass.kumi.systems/api/interpreter"
+      ];
+
+      // Se um servidor travar, a busca é cancelada depois do tempo limite
+      // (antes ela podia ficar esperando para sempre)
+      cancelarPedidos();
+      var meusControladores = [];
+      pedidosAtivos.controladores = meusControladores;
+      pedidosAtivos.limite = setTimeout(cancelarPedidos, (tempo + 4) * 1000);
+
+      var pedidos = servidores.map(function (servidor) {
+        var controlador = new AbortController();
+        meusControladores.push(controlador);
+
+        return fetch(servidor + "?data=" + encodeURIComponent(consulta), { signal: controlador.signal })
+          .then(function (resposta) {
+            if (!resposta.ok) {
+              throw new Error("código " + resposta.status);
+            }
+            return resposta.json();
+          });
+      });
+
+      Promise.any(pedidos)
+        .then(function (dados) {
+          cancelarPedidos(); // o servidor mais lento não precisa mais responder
+
+          // Se a pessoa já fez outra busca ou limpou, ignora esta
+          if (idBusca != numeroBusca) {
+            return;
+          }
+
+          var lojas = montarLojas(dados.elements);
+
+          if (lojas.length > 0) {
+            gravarCache(chave, lojas);
+            mostrarLojas(lojas, categoria);
+          } else if (posicaoRaio + 1 < raios.length) {
+            mensagem.textContent = "Não achamos nada tão perto. Ampliando a busca...";
+            procurar(categoria, posicaoRaio + 1, chave, idBusca);
+          } else {
+            mensagem.textContent = "Não encontramos lojas cadastradas para essa busca na sua região. Tente outra opção.";
+          }
+        })
+       .catch(function (erro) {
+  console.error("Erro Overpass:", erro);
+
+  if (idBusca == numeroBusca) {
+    mensagem.textContent =
+      "Não foi possível localizar lojas neste momento. Tente novamente em alguns minutos.";
+  }
+});
+    }
+function procurarGeoapify(
+  categoria,
+  posicaoRaio,
+  chave,
+  idBusca
+) {
+  var raio = raios[posicaoRaio];
+
+   var categoriaGeo =
+  categoria.geoapify;
+
+  var url =
+    "https://api.geoapify.com/v2/places" +
+    "?categories=" + categoriaGeo +
+    "&filter=circle:" +
+    minhaPosicao.lng + "," +
+    minhaPosicao.lat + "," +
+    raio +
+    "&limit=20" +
+    "&apiKey=" +
+    "0beb3e05a97f4f84b7e63f1aafe56544";
+
+    console.log("URL GEOAPIFY:", url);
+
+  fetch(url)
+    .then(function(resposta) {
+      return resposta.json();
+    })
+    .then(function(dados) {
+      console.log("Resposta Geoapify:", dados);
+      console.log("Quantidade encontrada:", dados.features.length);
+      console.log("Categoria:", categoria.nome);
+      var lojas = [];
+
+      
+      dados.features.forEach(function(item) {
+
+
+  if (!item.properties.name &&
+    !item.properties.street) {
+  return;
+}
+  lojas.push({
+    nome: item.properties.name,
+          rua:
+            item.properties.street || "",
+
+          numero:
+            item.properties.housenumber || "",
+
+          bairro:
+            item.properties.suburb || "",
+
+          cidade:
+            item.properties.city || "",
+
+          telefone:
+            item.properties.phone || "",
+
+          horario:
+            item.properties.opening_hours || "",
+
+          site:
+            item.properties.website || "",
+
+          descricao:
+            categoria.descricao,
+
+          lat:
+            item.properties.lat,
+
+          lng:
+            item.properties.lon,
+
+          km:
+            distancia(
+              minhaPosicao.lat,
+              minhaPosicao.lng,
+              item.properties.lat,
+              item.properties.lon
+            )
+        });
+
+      });
+
+      if (lojas.length > 0) {
+
+  gravarCache(chave, lojas);
+  mostrarLojas(lojas, categoria);
+
+} else if (posicaoRaio + 1 < raios.length) {
+
+  procurarGeoapify(
+    categoria,
+    posicaoRaio + 1,
+    chave,
+    idBusca
+  );
+
+} else {
+
+  document.getElementById("mensagem").textContent =
+    "Nenhuma loja encontrada.";
+
+}
+
+    })
+    .catch(function(erro) {
+
+      console.error(
+        "Geoapify:",
+        erro
+      );
+
+      document.getElementById(
+        "mensagem"
+      ).textContent =
+        "Erro ao consultar o Geoapify.";
+
+    });
+}
+    // Transforma a resposta do servidor em uma lista simples de lojas
+    function montarLojas(elementos) {
+      var lojas = [];
+
+      for (var i = 0; i < elementos.length; i++) {
+        var e = elementos[i];
+        var latLoja = e.lat || (e.center && e.center.lat);
+        var lngLoja = e.lon || (e.center && e.center.lon);
+
+        // Só entram lojas que têm nome e posição
+        if (e.tags && e.tags.name && latLoja && lngLoja) {
+          var site = e.tags.website || e.tags["contact:website"] || "";
+
+          // O site só vale se começar com http
+          if (site != "" && site.indexOf("http") != 0) {
+            site = "http://" + site;
+          }
+
+          lojas.push({
+            nome: e.tags.name,
+            rua: e.tags["addr:street"] || "",
+            numero: e.tags["addr:housenumber"] || "",
+            bairro: e.tags["addr:suburb"] || "",
+            cidade: e.tags["addr:city"] || "",
+            telefone: e.tags.phone || e.tags["contact:phone"] || "",
+            horario: e.tags.opening_hours || "",
+            site: site,
+            descricao: e.tags.description || "",
+            km: distancia(minhaPosicao.lat, minhaPosicao.lng, latLoja, lngLoja),
+            lat: latLoja,
+            lng: lngLoja
+          });
+        }
+      }
+
+      return lojas;
+    }
+
+    function mostrarLojas(lojas, categoria) {
+      var mensagem = document.getElementById("mensagem");
+
+      // Recalcula a distância (o resultado guardado pode ser de outra posição) e
+      // deixa as mais próximas primeiro, ficando com no máximo 10
+      for (var m = 0; m < lojas.length; m++) {
+        lojas[m].km = distancia(minhaPosicao.lat, minhaPosicao.lng, lojas[m].lat, lojas[m].lng);
+      }
+      lojas.sort(function (a, b) { return a.km - b.km; });
+      lojas = lojas.slice(0, 10);
+      lojasAtuais = lojas;
+
+      if (lojas[0].km > 15) {
+        mensagem.textContent = "Não achamos lojas na sua cidade. As mais próximas estão a " +
+                               lojas[0].km.toFixed(0) + " km de você:";
+      } else {
+        mensagem.textContent = "Lojas perto de você:";
+      }
+
+      var pontos = [[minhaPosicao.lat, minhaPosicao.lng]];
+      var html = "";
+
+      for (var k = 0; k < lojas.length; k++) {
+        var l = lojas[k];
+
+        // Monta o endereço com o que tiver disponível
+        var endereco = "";
+        if (l.rua != "") {
+          endereco = l.rua;
+          if (l.numero != "") endereco += ", " + l.numero;
+        }
+        if (l.bairro != "") endereco += (endereco != "" ? " - " : "") + l.bairro;
+        if (l.cidade != "") endereco += (endereco != "" ? " - " : "") + l.cidade;
+        if (endereco == "") endereco = "Endereço não informado";
+
+        var descricao = l.descricao != "" ? l.descricao : categoria.descricao;
+
+        // Marcador da loja no mapa
+        var marcador = L.marker([l.lat, l.lng]).addTo(mapa).bindPopup(seguro(l.nome));
+        marcadores.push(marcador);
+        pontos.push([l.lat, l.lng]);
+
+        // Card da loja (se a foto não existir, o quadro da foto some)
+        html += '<div class="loja">';
+        html += '<div class="foto"><img src="' + categoria.foto + '" alt="" loading="lazy" decoding="async" onerror="this.parentNode.style.display=\'none\'"></div>';
+        html += '<div class="info">';
+        html += "<h3>" + seguro(l.nome) + "</h3>";
+        html += '<span class="tipo">' + categoria.nome + "</span>";
+        html += '<p class="descricao">' + seguro(descricao) + "</p>";
+        html += "<p><b>Endereço:</b> " + seguro(endereco) + "</p>";
+        html += "<p><b>Distância:</b> " + l.km.toFixed(1) + " km de você</p>";
+        if (l.horario != "") {
+          html += "<p><b>Horário:</b> " + seguro(traduzirHorario(l.horario)) + "</p>";
+        }
+        if (l.telefone != "") {
+          html += "<p><b>Telefone:</b> " + seguro(l.telefone) + "</p>";
+        }
+        if (l.site != "") {
+          html += '<p><a target="_blank" rel="noopener" href="' + seguro(l.site) + '">Site da loja</a></p>';
+        }
+        html += '<button onclick="tracarRota(' + k + ', true)">Ver rota no mapa</button>';
+        html += "</div></div>";
+      }
+
+      // Coloca todos os cards de uma vez (mais rápido)
+      document.getElementById("lista").innerHTML = html;
+
+      // Mostra a pessoa e todas as lojas no mapa, e já traça a rota até a mais próxima
+      mapa.fitBounds(pontos, { padding: [30, 30], maxZoom: 17 });
+      tracarRota(0, false);
+    }
+
+    // Desenha no mapa o caminho da pessoa até a loja, sem sair do site
+    function tracarRota(numero, clicou) {
+      console.log("Loja clicada:", numero);
+console.log("Dados da loja:", lojasAtuais[numero]);
+
+
+
+      var loja = lojasAtuais[numero];
+      var info = document.getElementById("rota");
+
+      numeroRota++;
+      var idRota = numeroRota;
+
+      // Cancela a rota anterior que ainda estivesse sendo calculada
+      if (controladorRota != null) {
+        controladorRota.abort();
+      }
+      controladorRota = new AbortController();
+
+      info.textContent = "Calculando rota...";
+      if (clicou) {
+        document.getElementById("mapa").scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      var url = "https://router.project-osrm.org/route/v1/driving/" +
+                minhaPosicao.lng + "," + minhaPosicao.lat + ";" +
+                loja.lng + "," + loja.lat + "?overview=simplified&geometries=geojson";
+
+      // "simplified" traz bem menos pontos no traçado, então baixa e desenha mais rápido
+      fetch(url, { signal: controladorRota.signal })
+        .then(function (resposta) { return resposta.json(); })
+        .then(function (dados) {
+          // Se a pessoa limpou ou pediu outra rota, ignora esta
+          if (idRota != numeroRota) {
+            return;
+          }
+
+          if (dados.code != "Ok") {
+            info.textContent = "Não foi possível traçar a rota até essa loja.";
+            return;
+          }
+
+          var rota = dados.routes[0];
+          var km = (rota.distance / 1000).toFixed(1);
+          var minutos = Math.round(rota.duration / 60);
+          var tempo = minutos + " min";
+          if (minutos >= 60) {
+            tempo = Math.floor(minutos / 60) + " h " + (minutos % 60) + " min";
+          }
+
+          if (linhaRota != null) {
+            mapa.removeLayer(linhaRota);
+          }
+
+          linhaRota = L.geoJSON(rota.geometry, {
+            style: { color: "#1a73e8", weight: 5 }
+          }).addTo(mapa);
+
+          info.textContent = "Rota até " + loja.nome + ": " + km + " km, cerca de " + tempo + " de carro.";
+
+          // Só aproxima o mapa da rota se a pessoa clicou no botão
+          if (clicou) {
+            mapa.fitBounds(linhaRota.getBounds(), { padding: [30, 30], maxZoom: 17 });
+            marcadores[numero].openPopup();
+          }
+        })
+        .catch(function () {
+          if (idRota == numeroRota) {
+            info.textContent = "Não deu para calcular a rota agora. Tente de novo.";
+          }
+        });
+    }
+  </script>
+
 </body>
 </html>
